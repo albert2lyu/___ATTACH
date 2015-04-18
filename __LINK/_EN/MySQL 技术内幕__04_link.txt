@@ -1,0 +1,3 @@
+http://www.kitebird.com/mysql-book/
+
+http://www.kitebird.com/cgi-perl/errata.pl?book=mysql4-08-1

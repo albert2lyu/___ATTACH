@@ -1,0 +1,18 @@
+
+Preface
+Chapter 1: Power Tools for Editing
+Chapter 2: Understanding Basic Operations
+Chapter 3: Understanding Regular Expression Syntax
+Chapter 4: Writing sed Scripts
+Chapter 5: Basic sed Commands
+Chapter 6: Advanced sed Commands
+Chapter 7: Writing Scripts for awk
+Chapter 8: Conditionals, Loops, and Arrays
+Chapter 9: Functions
+Chapter 10: The Bottom Drawer
+Chapter 11: A Flock of awks
+Chapter 12: Full-Featured Applications
+Chapter 13: A Miscellany of Scripts
+Appendix A: Quick Reference for sed
+Appendix B: Quick Reference for awk
+Appendix C: Supplement for Chapter 12

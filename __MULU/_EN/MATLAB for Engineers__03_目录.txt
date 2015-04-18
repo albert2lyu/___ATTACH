@@ -1,0 +1,179 @@
+
+ABOUT THIS BOOK XI
+DEDICATION AND ACKNOWLEDGMENTS XV
+1 ? ABOUT MATLAB? 1
+ 1.1 What Is MATLAB?? 1
+ 1.2 Student Edition of MATLAB? 2
+ 1.3 How Is MATLAB? Used in Industry? 3
+ 1.4 Problem Solving in Engineering and Science 5
+2 ?MATLAB? ENVIRONMENT 9
+ 2.1 Getting Started 9
+ 2.2 MATLAB? Windows 11
+ 2.3 Solving Problems with MATLAB? 18
+ 2.4 Saving Your Work 42
+ Summary 52
+ MATLAB? Summary 54
+ Key Terms 55
+ Problems 55
+3 ?BUILT-IN MATLAB? FUNCTIONS 63
+ Introduction 63
+ 3.1 Using Built-In Functions 63
+ 3.2 Using the Help Feature 65
+ 3.3 Elementary Math Functions 68
+ 3.4 Trigonometric Functions 76
+ 3.5 Data Analysis Functions 80
+ 3.6 Random Numbers 100
+ 3.7 Complex Numbers 104
+ 3.8 Computational Limitations 108
+ 3.9 Special Values and Miscellaneous Functions 109
+v
+vi Contents
+ 3.10 Summary 111
+ MATLAB? Summary 112
+ Key Terms 113
+ Problems 114
+4 ?MANIPULATING MATLAB? MATRICES 121
+ 4.1 Manipulating Matrices 121
+ 4.2 Problems with Two Variables 128
+ 4.3 Special Matrices 135
+ Summary 141
+ MATLAB? Summary 142
+ Key Terms 142
+ Problems 142
+5 ?PLOTTING 149
+ Introduction 149
+ 5.1 Two-Dimensional Plots 149
+ 5.2 Subplots 166
+ 5.3 Other Types of Two-Dimensional Plots 168
+ 5.4 Three-Dimensional Plotting 183
+ 5.5 Editing Plots from the Menu Bar 189
+ 5.6 Creating Plots from the Workspace Window 191
+ 5.7 Saving Your Plots 192
+ Summary 193
+ MATLAB? Summary 193
+ Problems 195
+6 ?USER-DEFINED FUNCTIONS 205
+ Introduction 205
+ 6.1 Creating Function M-Files 205
+ 6.2 Creating Your Own Toolbox of Functions 224
+ 6.3 Anonymous Functions and Function Handles 226
+ 6.4 Function Functions 227
+ 6.5 Subfunctions 228
+ Summary 231
+ MATLAB? Summary 232
+ Key Terms 233
+ Problems 233
+7 ?USER-CONTROLLED INPUT AND OUTPUT 240
+ Introduction 240
+ 7.1 User-Def ned Input 240
+ 7.2 Output Options 244
+ 7.3 Graphical Input 254
+Contents vii
+ 7.4 More Cell Mode Features 255
+ 7.5 Reading and Writing Data from Files 260
+ 7.6 Debugging Your Code 263
+ Summary 266
+ MATLAB? Summary 267
+ Key Terms 268
+ Problems 268
+8 ?LOGICAL FUNCTIONS AND SELECTION STRUCTURES 273
+ Introduction 273
+ 8.1 Relational and Logical Operators 274
+ 8.2 Flowcharts and Pseudocode 276
+ 8.3 Logical Functions 277
+ 8.4 Selection Structures 284
+ 8.5 Debugging 300
+ Summary 301
+ MATLAB? Summary 301
+ Key Terms 302
+ Problems 302
+9 ?REPETITION STRUCTURES 311
+ Introduction 311
+ 9.1 For Loops 312
+ 9.2 While Loops 320
+ 9.3 Break and Continue 328
+ 9.4 Midpoint Break Loops 329
+ 9.5 Nested Loops 333
+ 9.6 Improving the Eff ciency of Loops 334
+ Summary 336
+ Key Terms 337
+ Problems 337
+10 ?MATRIX ALGEBRA 343
+ Introduction 343
+ 10.1 Matrix Operations and Functions 343
+ 10.2 Solutions of Systems of Linear Equations 363
+ 10.3 Special Matrices 379
+ Summary 381
+ MATLAB? Summary 383
+ Key Terms 384
+ Problems 384
+11 ?OTHER KINDS OF ARRAYS 391
+ Introduction 391
+ 11.1 Data Types 392
+ 11.2 Multidimensional Arrays 401
+viii Contents
+ 11.3 Character Arrays 403
+ 11.4 Cell Arrays 408
+ 11.5 Structure Arrays 409
+ Summary 417
+ MATLAB? Summary 417
+ Key Terms 418
+ Problems 418
+12 ?SYMBOLIC MATHEMATICS 424
+ Introduction 424
+ 12.1 Symbolic Algebra 425
+ 12.2 Solving Expressions and Equations 435
+ 12.3 Symbolic Plotting 446
+ 12.4 Calculus 454
+ 12.5 Differential Equations 468
+ 12.6 Converting Symbolic Expressions to MATLAB? Functions 470
+ Summary 471
+ MATLAB? Summary 473
+ Problems 474
+13 ?NUMERICAL TECHNIQUES 484
+ 13.1 Interpolation 484
+ 13.2 Curve Fitting 494
+ 13.3 Using the Interactive Fitting Tools 505
+ 13.4 Differences and Numerical Differentiation 512
+ 13.5 Numerical Integration 520
+ 13.6 Solving Differential Equations Numerically 526
+ Summary 533
+ MATLAB? Summary 535
+ Key Terms 536
+ Problems 536
+14 ?ADVANCED GRAPHICS 545
+ Introduction 545
+ 14.1 Images 545
+ 14.2 Handle Graphics 561
+ 14.3 Animation 565
+ 14.4 Other Visualization Techniques 571
+ 14.5 Introduction to Volume Visualization 573
+ Summary 576
+ MATLAB? Summary 577
+ Key Terms 578
+ Problems 579
+Contents ix
+15 ?CREATING GRAPHICAL USER INTERFACES 581
+ Introduction 581
+ 15.1 A Simple GUI with One User Interaction 582
+ 15.2 A Graphical User Interface with Multiple User
+Interactions¡ªReady_Aim_Fire 590
+ 15.3 An Improved Ready_Aim_Fire Program 593
+ 15.4 A Much Better Ready_Aim_Fire Program 594
+ 15.5 Built-In GUI Templates 598
+ Summary 602
+ Key Terms 602
+ Problems 602
+16 ?SIMULINK?¡ªA BRIEF INTRODUCTION 604
+ Introduction 604
+ 16.1  Applications 604
+ 16.2 Getting Started 605
+ 16.3 Solving Differential Equations with Simulink? 613
+ Summary 618
+ Key Terms 619
+ Problems 619
+APPENDIX A ?SPECIAL CHARACTERS, COMMANDS, AND
+FUNCTIONS 623
+APPENDIX B ? SCALING TECHNIQUES 638
+APPENDIX C ? THE READY_AIM_FIRE GUI 641
+INDEX 646

@@ -1,0 +1,105 @@
+
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . vii
+1. The Seven Stages of Visualizing Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Why Data Display Requires Planning 2
+An Example 6
+Iteration and Combination 14
+Principles 15
+Onward 18
+2. Getting Started with Processing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+Sketching with Processing 20
+Exporting and Distributing Your Work 23
+Examples and Reference 24
+Functions 27
+Sketching and Scripting 28
+Ready? 30
+3. Mapping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+Drawing a Map 31
+Locations on a Map 32
+Data on a Map 34
+Using Your Own Data 51
+Next Steps 53
+4. Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 54
+Milk, Tea, and Coffee (Acquire and Parse) 55
+Cleaning the Table (Filter and Mine) 55
+A Simple Plot (Represent and Refine) 57
+Labeling the Current Data Set (Refine and Interact) 59
+Drawing Axis Labels (Refine) 62
+Choosing a Proper Representation (Represent and Refine) 73
+Using Rollovers to Highlight Points (Interact) 76
+Ways to Connect Points (Refine) 77
+Text Labels As Tabbed Panes (Interact) 83
+Interpolation Between Data Sets (Interact) 87
+End of the Series 92
+5. Connections and Correlations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+Changing Data Sources 94
+Problem Statement 95
+Preprocessing 96
+Using the Preprocessed Data (Acquire, Parse, Filter, Mine) 111
+Displaying the Results (Represent) 118
+Returning to the Question (Refine) 121
+Sophisticated Sorting: Using Salary As a Tiebreaker (Mine) 126
+Moving to Multiple Days (Interact) 127
+Smoothing Out the Interaction (Refine) 132
+Deployment Considerations (Acquire, Parse, Filter) 133
+6. Scatterplot Maps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+Preprocessing 145
+Loading the Data (Acquire and Parse) 155
+Drawing a Scatterplot of Zip Codes (Mine and Represent) 157
+Highlighting Points While Typing (Refine and Interact) 158
+Show the Currently Selected Point (Refine) 162
+Progressively Dimming and Brightening Points (Refine) 165
+Zooming In (Interact) 167
+Changing How Points Are Drawn When Zooming (Refine) 177
+Deployment Issues (Acquire and Refine) 178
+Next Steps 180
+7. Trees, Hierarchies, and Recursion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182
+Using Recursion to Build a Directory Tree 182
+Using a Queue to Load Asynchronously (Interact) 186
+An Introduction to Treemaps 189
+Which Files Are Using the Most Space? 194
+Viewing Folder Contents (Interact) 199
+Improving the Treemap Display (Refine) 201
+Flying Through Files (Interact) 208
+Next Steps 219
+8. Networks and Graphs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 220
+Simple Graph Demo 220
+A More Complicated Graph 229
+Approaching Network Problems 240
+Advanced Graph Example 242
+Mining Additional Information 262
+9. Acquiring Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+Where to Find Data 265
+Tools for Acquiring Data from the Internet 266
+Locating Files for Use with Processing 268
+Loading Text Data 270
+Dealing with Files and Folders 276
+Listing Files in a Folder 277
+Asynchronous Image Downloads 281
+Using openStream( ) As a Bridge to Java 284
+Dealing with Byte Arrays 284
+Advanced Web Techniques 284
+Using a Database 288
+Dealing with a Large Number of Files 295
+10. Parsing Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 296
+Levels of Effort 296
+Tools for Gathering Clues 298
+Text Is Best 299
+Text Markup Languages 303
+Regular Expressions (regexps) 316
+Grammars and BNF Notation 316
+Compressed Data 317
+Vectors and Geometry 320
+Binary Data Formats 325
+Advanced Detective Work 328
+11. Integrating Processing with Java . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 331
+Programming Modes 331
+Additional Source Files (Tabs) 334
+The Preprocessor 335
+API Structure 336
+Embedding PApplet into Java Applications 338
+Using Java Code in a Processing Sketch 342
+Using Libraries 343
+Building with the Source for processing.core 343
+Bibliography . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349

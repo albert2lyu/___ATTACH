@@ -1,0 +1,151 @@
+
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xi
+1. Programming on the Web . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+The Request/Response Cycle 3
+What Is Google App Engine? 5
+What Is a ¡°Cloud¡±? 6
+Why Did Google Build App Engine and Give It Away for Free? 7
+What Is the Google Infrastructure Cloud? 8
+Enter the Application Engine 9
+Your Application Must Be a Good Citizen in the Google Cloud 10
+How the Cloud Runs Your Application 11
+Why You Really Want to Run in the Cloud 12
+The Simplest App Engine Application 13
+Summary 14
+Exercises 15
+2. HTML and CSS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+A Brief History of HTML and CSS 18
+HyperText Markup Language (HTML) 18
+A Well-Formed HTML Document 20
+Validating Your HTML 22
+HyperText Links (Anchor Tags) 23
+Multiple Files 25
+Lists in HTML 26
+Specifying Styles Using CSS 27
+Styling Tags with CSS 27
+Exerting More Control over Markup 30
+Validating CSS 32
+Tools to Help You Work with CSS 33
+Building the Navigation Menu 34
+The CSS Box Model 37
+Adding Navigation Hints for Users 39
+Summary 40
+Exercises 42
+3. Python . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+What Is Programming? 43
+About Python 44
+Installing Python 45
+The Essence of Programming 46
+Input, Processing, and Output 47
+Conditional Steps: A Number-Guessing Web Application 48
+Variables and Expressions 52
+Naming Variables 53
+Constants 54
+Handling Text Data Using Strings 55
+Using the String Library 56
+Types and Conversion 57
+Variables with Many Values at the Same Time: Lists 59
+Repeated Code: Loops 60
+Python¡¯s Backpack: Dictionaries 63
+Looping Through a Dictionary 64
+Stored and Reused Code: Python Functions 65
+Turning Traceback to Our Advantage Using Try and Except 68
+Object-Oriented Python 70
+Comments in Python 71
+The Tao of Programming 71
+Summary 72
+Exercises 72
+4. Sending Data to Your Application . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+Making an HTTP Request 75
+Hacking the HTTP Protocol 77
+The HTTP Protocol Standards 79
+Watching HTTP in Action 79
+HTML: Building a Form 81
+Sending Form Data to the Server Using POST 82
+Handling Form Data in the App Engine Server 83
+Sending Form Data to the Server Using GET 87
+App Engine Log 88
+Looking at All the Data Available on an HTTP Request 89
+Advanced: Multipart POST Data with File Upload 93
+Summary 96
+Exercises 96
+5. The App Engine webapp Framework . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99
+A Trivial App Engine Application 99
+An Equivalent Trivial webapp Application 100
+The Handler Callback Pattern 102
+Looking at the Handler Code 102
+What Is ¡°self¡± and Why Is It There? 103
+Number Guessing Using the webapp Framework 105
+Web Server Logs 109
+Summary 112
+Exercises 112
+6. Templates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+Template Syntax 113
+Using the Templates from Python 114
+The Number-Guessing Game Using Templates 116
+Abstraction and Separation of Concerns: ¡°Model View Controller¡± 118
+Building a Multiscreen Application 118
+Static Files in App Engine 120
+Referencing Static Files 121
+Generalizing Template Lookup with Multiple Templates 121
+Extending Base Templates 123
+Conditional Processing Templates 125
+Replacing More Than One Block in the Base Template 129
+Extending Our Application 131
+Syntax Errors 139
+More on Templates 141
+Summary 141
+Exercises 141
+7. Cookies and Sessions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+HTTP Cookies 143
+Logging In and Logging Out Using Sessions 145
+Installing the Simple Session Utility 146
+Using the Session to Mark Login and Logout 146
+Changing the User Interface for a Logged-In User 148
+Summary 150
+Exercises 150
+8. App Engine Datastore . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+The Model-View-Controller Pattern 153
+Defining Models 154
+Adding a New Account Form 155
+Adding a User Account 156
+Looking Through the Datastore 159
+Logging In and Checking Accounts and Passwords 160
+Retrieving and Displaying Many Objects 161
+Terminology: Different Types of Keys 164
+References Between Data Models 165
+Interactions Between Models 166
+Putting the Primary Key into Session 168
+Adding the Chat Feature 169
+Summary 174
+Exercises 174
+9. JavaScript, jQuery, and AJAX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177
+jQuery 178
+Create a View of the Chat Messages in HTML 178
+Asynchronously Updating a <div> Using AJAX 181
+Summary 183
+Exercises 183
+10. Running Your Application on the Google Infrastructure . . . . . . . . . . . . . . . . . . . . . 185
+Application Engine Accounts 185
+Creating an Application on App Engine 186
+Uploading Your Application 187
+Testing Your Application 187
+Logs, Statistics, and Other Features 188
+Uploading New Versions 190
+Collaboration on Applications 191
+Summary 192
+Exercises 192
+11. Memory Cache . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+The Rules of Memory Cache 194
+Using the Memory Cache 195
+Using the Application Console to Examine Memory Cache 196
+Using a Memory Cache in Your Application 197
+Building a Session Store Using Memory Cache 198
+Sessions and Memory Cache 202
+Summary 204
+Exercises 204
+A. Installing and Running Google App Engine on Windows XP . . . . . . . . . . . . . . . . . . 205
+B. Installing and Running Google App Engine on Windows Vista . . . . . . . . . . . . . . . . 213
+C. Installing and Running Google App Engine on a Macintosh System . . . . . . . . . . . . 219
+D. Installing and Running Google App Engine on a Linux System . . . . . . . . . . . . . . . . 227
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 235

@@ -1,0 +1,589 @@
+
+Acknowledgments
+Introduction
+Intended Audience
+Prerequisites
+Required Development Tools and Hardware
+Use of the D3DX Library
+Using the DirectX SDK Documentation and SDK Samples
+Clarity
+Sample Programs and Online Supplements
+Demo Project Setup in Visual Studio 2010
+Create a Win32 Project
+Linking the DirectX Libraries
+Setting up the Search Paths
+Adding the Source Code and Building the Project
+PART I MATHEMATICAL PREREQUISITES
+Chapter 1 Vector Algebra
+1.1 Vectors
+1.1.1 Vectors and Coordinate Systems
+1.1.2 Left-Handed Versus Right-Handed Coordinate Systems
+1.1.3 Basic Vector Operations
+1.2 Length and Unit Vectors
+1.3 The Dot Product
+1.3.1 Orthogonalization
+1.4 The Cross Product
+1.4.1 Pseudo 2D Cross Product
+1.4.2 Orthogonalization with the Cross Product
+1.5 Points
+1.6 XNA Math Vectors
+1.6.1 Vector Types
+1.6.2 Loading and Storage Methods
+1.6.3 Parameter Passing
+1.6.4 Constant Vectors
+1.6.5 Overloaded Operators
+1.6.6 Miscellaneous
+1.6.7 Setter Functions
+1.6.8 Vector Functions
+1.6.9 Floating-Point Error
+1.7 Summary
+1.8 Exercises
+Chapter 2 Matrix Algebra
+2.1 Definition
+2.2 Matrix Multiplication
+2.2.1 Definition
+2.2.2 Vector-Matrix Multiplication
+2.2.3 Associativity
+2.3 The Transpose of a Matrix
+2.4 The Identity Matrix
+2.5 The Determinant of a Matrix
+2.5.1 Matrix Minors
+2.5.2 Definition
+2.6 The Adjoint of a Matrix
+2.7 The Inverse of a Matrix
+2.8 XNA Matrices
+2.8.1 Matrix Types
+2.8.2 Matrix Functions
+2.8.3 XNA Matrix Sample Program
+2.9 Summary
+2.10 Exercises
+Chapter 3 Transformations
+3.1 Linear Transformations
+3.1.1 Definition
+3.1.2 Matrix Representation
+3.1.3 Scaling
+3.1.4 Rotation
+3.2 Affine Transformations
+3.2.1 Homogeneous Coordinates
+3.2.2 Definition and Matrix Representation
+3.2.2 Translation
+3.2.3 Affine Matrices for Scaling and Rotation
+3.2.4 Geometric Interpretation of an Affine Transformation Matrix.
+3.3 Composition of Transformations
+3.4 Change of Coordinate Transformations
+3.4.1 Vectors
+3.4.2 Points
+3.4.3 Matrix Representation
+3.4.4 Associativity and Change of Coordinate Matrices
+3.4.5 Inverses and Change of Coordinate Matrices
+3.5 Transformation Matrix versus Change of Coordinate Matrix
+3.6 XNA Math Transformation Functions
+3.7 Summary
+3.8 Exercises
+PART II DIRECT 3D FOUNDATIONS
+Chapter 4 Direct3D Initialization
+4.1 Preliminaries
+4.1.1 Direct3D Overview
+4.1.2 COM
+4.1.3 Textures and Data Resource Formats
+4.1.4 The Swap Chain and Page Flipping
+4.1.5 Depth Buffering
+4.1.6 Texture Resource Views
+4.1.7 Multisampling Theory
+4.1.8 Multisampling in Direct3D
+4.1.9 Feature Levels
+4.2 Initializing Direct3D
+4.2.1 Create the Device and Context
+4.2.2 Check 4X MSAA Quality Support
+4.2.3 Describe the Swap Chain
+4.2.4 Create the Swap Chain
+4.2.5 Create the Render Target View
+4.2.6 Create the Depth/Stencil Buffer and View
+4.2.7 Bind the Views to the Output Merger Stage
+4.2.8 Set the Viewport
+4.3 Timing and Animation
+4.3.1 The Performance Timer
+4.3.2 Game Timer Class
+4.3.3 Time Elapsed Between Frames
+4.3.4 Total Time
+4.4 The Demo Application Framework
+4.4.1 D3DApp
+4.4.2 Non-Framework Methods
+4.4.3 Framework Methods
+4.4.4 Frame Statistics
+4.4.5 The Message Handler
+4.4.6 Going Full Screen
+4.4.7 The ¡°Init Direct3D¡± Demo
+4.5 Debugging Direct3D Applications
+4.6 Summary
+4.7 Exercises
+Chapter 5 The Rendering Pipeline
+5.1 The 3D Illusion
+5.2 Model Representation
+5.3 Basic Computer Color
+5.3.1 Color Operations
+5.3.2 128-Bit Color
+5.3.3 32-Bit Color
+5.4 Overview of the Rendering Pipeline
+5.5 The Input Assembler Stage
+5.5.1 Vertices
+5.5.2 Primitive Topology
+5.5.2.1 Point List
+5.5.2.2 Line Strip
+5.5.2.3 Line List
+5.5.2.4 Triangle Strip
+5.5.2.5 Triangle List
+5.5.2.6 Primitives with Adjacency
+5.5.2.7 Control Point Patch List
+5.5.3 Indices
+5.6 The Vertex Shader Stage
+5.6.1 Local Space and World Space
+5.6.2 View Space
+5.6.3 Projection and Homogeneous Clip Space
+5.6.3.1 Denning a Frustum
+5.6.3.2 Projecting Vertices
+5.6.3.3 Normalized Device Coordinates (NDC)
+5.6.3.4 Writing the Projection Equation with a Matrix
+5.6.3.5 Normalized Depth Value
+5.6.3.6 XMMatrixPerspectiveFovLH
+5.7 The Tessellation Stages
+5.8 The Geometry Shader Stage
+5.9 Clipping
+5.10 The Rasterization Stage
+5.10.1 Viewport Transform
+5.10.2 Backface Culling
+5.10.3 Vertex Attribute Interpolation
+5.11 The Pixel Shader Stage
+5.12 The Output Merger Stage
+5.13 Summary
+5.14 Exercises
+Chapter 6 Drawing in Direct3D
+6.1 Vertices and Input Layouts
+6.2 Vertex Buffers
+6.3 Indices and Index Buffers
+6.4 Example Vertex Shader
+6.5 Constant Buffers
+6.6 Example Pixel Shader
+6.7 Render States
+6.8 Effects
+6.8.1 Effect Files
+6.8.2 Compiling Shaders
+6.8.3 Interfacing with Effects from the C++ Application
+6.8.4 Using Effects to Draw
+6.8.5 Compiling an Effect at Build Time
+6.8.6 The Effects Framework as a "Shader Generator"
+6.8.7 What the Assembly Looks Like
+6.9 Box Demo
+6.10 Hills Demo
+6.10.1 Generating the Grid Vertices
+6.10.2 Generating the Grid Indices
+6.10.3 Applying the Height Function
+6.11 Shapes Demo
+6.11.1 Generating a Cylinder Mesh
+6.11.1.1 Cylinder Side Geometry
+6.11.1.2 Cap Geometry
+6.11.2 Generating a Sphere Mesh
+6.11.3 Generating a Geosphere Mesh
+6.11.4 Demo Code
+6.12 Loading Geometry from the File
+6.13 Dynamic Vertex Buffers
+6.14 Summary
+6.15 Exercises
+Chapter 7 Lighting
+7.1 Light and Material Interaction
+7.2 Normal Vectors
+7.2.1 Computing Normal Vectors
+7.2.2 Transforming Normal Vectors
+7.3 Lambert¡¯s Cosine Law
+7.4 Diffuse Lighting
+7.5 Ambient Lighting
+7.6 Specular Lighting
+7.7 Brief Recap
+7.8 Specifying Materials
+7.9 Parallel Lights
+7.10 Point Lights
+7.10.1 Attenuation
+7.10.2 Range
+7.11 Spotlights
+7.12 Implementation
+7.12.1 Lighting Structures
+7.12.2 Structure Packing
+7.12.3 Implementing Directional Lights
+7.12.4 Implementing Point Lights
+7.12.5 Implementing Spotlights
+7.13 Lighting Demo
+7.13.1 Effect File
+7.13.2 C++ Application Code
+7.13.3 Normal Computation
+7.14 Lit Skull Demo
+7.15 Summary
+7.16 Exercises
+Chapter 8 Texturing
+8.1 Texture and Resource Recap
+8.2 Texture Coordinates
+8.3 Creating and Enabling a Texture
+8.4 Filters
+8.4.1 Magnification
+8.4.2 Minification
+8.4.2.1 Creating of Mipmaps
+8.4.3 Anisotropic Filtering
+8.5 Sampling Textures
+8.6 Textures and Materials
+8.7 Crate Demo
+8.7.1 Specifying Texture Coordinates
+8.7.2 Creating the Texture
+8.7.3 Setting the Texture
+8.7.4 Updated Basic Effect
+8.8 Address Modes
+8.9 Transforming Textures
+8.10 Textured Hills and Waves Demo
+8.10.1 Grid Texture Coordinate Generation
+8.10.2 Texture Tiling
+8.10.3 Texture Animation
+8.11 Compressed Texture Formats
+8.12 Summary
+8.13 Exercises
+Chapter 9 Blending
+9.1 The Blending Equation
+9.2 Blend Operations
+9.3 Blend Factors
+9.4 Blend State
+9.5 Examples
+9.5.1 No Color Write
+9.5.2 Adding/Subtracting
+9.5.3 Multiplying
+9.5.4 Transparency
+9.5.5 Blending and the Depth Buffer
+9.6 Alpha Channels
+9.7 Clipping Pixels
+9.8 Fog
+9.9 Summary
+9.10 Exercises
+Chapter 10 Stenciling
+10.1 Depth/Stencil Formats and Clearing
+10.2 The Stencil Test
+10.3 The Depth/Stencil State Block
+10.3.1 Depth Settings
+10.3.2 Stencil Settings
+10.3.3 Creating and Binding a Depth/Stencil State
+10.3.4 Depth/Stencil States in Effect Files
+10.4 Implementing Planar Mirrors
+10.4.1 Mirror Overview
+10.4.2 Defining the Mirror Depth/Stencil States
+10.4.3 Drawing the Scene
+10.4.4 Winding Order and Reflections
+10.5 Implementing Planar Shadows
+10.5.1 Parallel Light Shadows
+10.5.2 Point Light Shadows
+10.5.3 General Shadow Matrix
+10.5.4 Using the Stencil Buffer to Prevent Double Blending
+10.5.5 Shadow Code
+10.6 Summary
+10.7 Exercises
+Chapter 11 The Geometry Shader
+11.1 Programming Geometry Shaders
+11.2 Tree Billboards Demo
+11.2.1 Overview
+11.2.2 Vertex Structure
+11.2.3 The Effect File
+11.2.4 SV_PrimitiveID
+11.3 Texture Arrays
+11.3.1 Overview
+11.3.2 Sampling a Texture Array
+11.3.3 Loading Texture Arrays
+11.3.4 Texture Subresources
+11.4 Alpha-To-Coverage
+11.5 Summary
+11.6 Exercises
+Chapter 12 The Compute Shader
+12.1 Threads and Thread Groups
+12.2 A Simple Compute Shader
+12.3 Data Input and Output Resources
+12.3.1 Texture Inputs
+12.3.2 Texture Outputs and Unordered Access Views (UAVs)
+12.3.3 Indexing and Sampling Textures
+12.3.4 Structured Buffer Resources
+12.3.5 Copying CS Results to System Memory
+12.4 Thread Identification System Values
+12.5 Append and Consume Buffers
+12.6 Shared Memory and Synchronization
+12.7 Blur Demo
+12.7.1 Blurring Theory
+12.7.2 Render-to-Texture
+12.7.3 Blur Implementation Overview
+12.7.4 Compute Shader Program
+12.8 Further Resources
+12.9 Summary
+12.10 Exercises
+Chapter 13 The Tessellation Stages
+13.1 Tessellation Primitive Types
+13.1.1 Tessellation and the Vertex Shader
+13.2 The Hull Shader
+13.2.1 Constant Hull Shader
+13.2.2 Control Point Hull Shader
+13.3 The Tessellation Stage
+13.3.1 Quad Patch Tessellation Examples
+13.3.2 Triangle Patch Tessellation Examples
+13.4 The Domain Shader
+13.5 Tessellating a Quad
+13.6 Cubic B¨¦zier Quad Patches
+13.6.1 B¨¦zier Curves
+13.6.2 Cubic B¨¦zier Surfaces
+13.6.3 Cubic B¨¦zier Surface Evaluation Code
+13.6.4 Defining the Patch Geometry
+13.7 Summary
+13.8 Exercises
+PART III TOPICS
+Chapter 14 Building a First Person Camera ,
+14.1 View Transform Review
+14.2 The Camera Class
+14.3 Selected Method Implementations
+14.3.1 XMVECTOR Return Variations
+14.3.2 SetLens
+14.3.3 Derived Frustum Info
+14.3.4 Transforming the Camera
+14.3.5 Building the View Matrix
+14.4 Camera Demo Comments
+14.5 Summary
+14.6 Exercises
+Chapter 15 Instancing and Frustum Culling
+15.1 Hardware Instancing
+15.1.1 The Vertex Shader
+15.1.2 Streaming Instanced Data
+15.1.3 Drawing Instanced Data
+15.1.4 Creating the Instanced Buffer
+15.2 Bounding Volumes and Frustums
+15.2.1 XNA Collision
+15.2.2 Boxes
+15.2.2.1 Rotations and Axis-Aligned Bounding Boxes
+15.2.3 Spheres
+15.2.4 Frustums
+15.2.4.1 Constructing the Frustum Planes
+15.2.4.2 Frustum/Sphere Intersection
+15.2.4.3 Frustum/AABB Intersection
+15.3 Frustum Culling
+15.4 Summary
+15.5 Exercises
+Chapter 16 Picking
+16.1 Screen to Projection Window Transform
+16.2 World/Local Space Picking Ray
+16.3 Ray/Mesh Intersection
+16.3.1 Ray/AABB Intersection
+16.3.2 Ray/Sphere Intersection
+16.3.3 Ray/Triangle Intersection
+16.4 Demo Application
+16.5 Summary
+16.6 Exercises
+Chapter 17 Cube Mapping
+17.1 Cube Mapping
+17.2 Environment Maps
+17.2.1 Loading and Using Cube Maps in Direct3D
+17.3 Texturing a Sky
+17.4 Modeling Reflections
+17.5 Dynamic Cube Maps
+17.5.1 Building the Cube Map and Render Target Views
+17.5.2 Building the Depth Buffer and Viewport
+17.5.3 Setting up the Cube Map Camera
+17.5.4 Drawing into the Cube Map
+17.6 Dynamic Cube Maps with the Geometry Shader
+17.7 Summary
+17.8 Exercises
+Chapter 18 Normal Mapping and Displacement Mapping ¡­..
+18.1 Motivation
+18.2 Normal Maps
+18.3 Texture/Tangent Space
+18.4 Vertex Tangent Space
+18.5 Transforming Between Tangent Space and Object Space
+18.6 Normal Mapping Shader Code
+18.7 Displacement Mapping
+18.8 Displacement Mapping Shader Code
+18.8.1 Primitive Type
+18.8.2 Vertex Shader
+18.8.3 Hull Shader
+18.8.4 Domain Shader
+18.9 Summary
+18.10 Exercises
+Chapter 19 Terrain Rendering
+19.1 Heightmaps
+19.1.1 Creating a Heightmap
+19.1.2 Loading a RAW File
+19.1.3 Smoothing
+19.1.4 Heightmap Shader Resource View
+19.2 Terrain Tessellation
+19.2.1 Grid Construction
+19.2.2 Terrain Vertex Shader
+19.2.3 Tessellation Factors
+19.2.4 Displacement Mapping
+19.2.5 Tangent and Normal Vector Estimation
+19.3 Frustum Culling Patches
+19.4 Texturing
+19.5 Terrain Height
+19.6 Summary
+19.7 Exercises
+Chapter 20 Particle Systems and Stream-Out
+20.1 Particle Representation
+20.2 Particle Motion
+20.3 Randomness
+20.4 Blending and Particle Systems
+20.5 Stream-Out
+20.5.1 Creating a Geometry Shader for Stream-Out
+20.5.2 Stream-Out Only
+20.5.3 Creating a Vertex Buffer for Stream-Out
+20.5.4 Binding to the SO Stage
+20.5.5 Unbinding from the Stream-Out Stage
+20.5.6 Auto Draw
+20.5.7 Ping-Ponging Vertex Buffers
+20.6 GPU Based Particle System
+20.6.1 Particle Effects
+20.6.2 The Particle System Class
+20.6.3 Emitter Particles
+20.6.4 The Initialization Vertex Buffer
+20.6.5 The Update/Draw Method
+20.7 Fire
+20.8 Rain
+20.9 Summary
+20.10 Exercises
+Chapter 21 Shadow Mapping
+21.1 Rendering Scene Depth
+21.2 Orthographic Projections
+21.3 Projective Texture Coordinates
+21.3.1 Code Implementation
+21.3.2 Points Outside the Frustum
+21.3.3 Orthographic Projections
+21.4 Shadow Mapping
+21.4.1 Algorithm Description
+21.4.2 Biasing and Aliasing
+21.4.3 PCF Filtering
+21.4.4 Building the Shadow Map
+21.4.5 The Shadow Factor
+21.4.6 The Shadow Map Test
+21.4.7 Rendering the Shadow Map
+21.5 Large PCF Kernels
+21.5.1 The DDX and DDY Functions
+21.5.2 Solution to the Large PCF Kernel Problem
+21.5.3 An Alternative Solution to the Large PCF Kernel Problem..
+21.6 Summary
+21.7 Exercises
+Chapter 22 Ambient Occlusion
+22.1 Ambient Occlusion via Ray Casting
+22.2 Screen Space Ambient Occlusion
+22.2.1 Render Normals and Depth Pass
+22.2.2 Ambient Occlusion Pass
+22.2.2.1 Reconstruct View Space Position
+22.2.2.2 Generate Random Samples
+22.2.2.3 Generate the Potential Occluding Points
+22.2.2.4 Perform the Occlusion Test
+22.2.2.5 Finishing the Calculation
+22.2.2.6 Implementation
+22.2.3 Blur Pass
+22.2.4 Using the Ambient Occlusion Map
+22.3 Summary
+22.4 Exercises
+Chapter 23 Meshes
+23.1 m3d Format
+23.1.1 Header
+23.1.2 Materials
+23.1.3 Subsets
+23.1.4 Vertices and Triangle Indices
+23.2 Mesh Geometry
+23.3 Basic Model
+23.4 Mesh Viewer Demo
+23.5 Summary
+23.6 Exercises
+Chapter 24 Quaternions
+24.1 Review of the Complex Numbers
+24.1.1 Definitions
+24.1.2 Geometric Interpretation
+24.1.3 Polar Representation and Rotations
+24.2 Quaternion Algebra
+24.2.1 Definition and Basic Operations
+24.2.2 Special Products
+24.2.3 Properties
+24.2.4 Conversions
+24.2.5 Conjugate and Norm
+24.2.6 Inverses
+24.2.7 Polar Representation
+24.3 Unit Quaternions and Rotations
+24.3.1 Rotation Operator
+24.3.2 Quaternion Rotation Operator to Matrix
+24.3.3 Matrix to Quaternion Rotation Operator
+24.3.4 Composition
+24.4 Quaternion Interpolation
+24.5 XNA Math Quaternion Functions
+24.6 Rotation Demo
+24.7 Summary
+24.8 Exercises
+Chapter 25 Character Animation
+25.1 Frame Hierarchies
+25.1.1 Mathematical Formulation
+25.2 Skinned Meshes
+25.2.1 Definitions
+25.2.2 Reformulating a Bones To-Root Transform
+25.2.3 The Offset Transform
+25.2.4 Animating the Skeleton
+25.2.5 Calculating the Final Transform
+25.3 Vertex Blending
+25.4 Loading . m3d Animation Data
+25.4.1 Skinned Vertex Data
+25.4.2 Bone Offset Transforms
+25.4.3 Hierarchy
+25.4.4 Animation Data
+25.4.5 M3DLoader
+25.5 Character Animation Demo
+25.6 Summary
+25.7 Exercises
+Appendix A: Introduction to Windows Programming
+A.l Overview
+A.1.1 Resources
+A.1.2 Events, the Message Queue, Messages, and the Message Loop¡­
+A.1.3 GUI
+A.1.4 Unicode
+A.2 Basic Windows Application
+A.3 Explaining the Basic Windows Application
+A.3.1 Includes, Global Variables, and Prototypes
+A.3.2 WinMain
+A.3.3 WNDCLASS and Registration
+A.3.4 Creating and Displaying the Window
+A.3.5 The Message Loop
+A.3.6 The Window Procedure
+A.3.7 The MessageBox Function
+A.4 A Better Message Loop
+A.5 Summary
+A.6 Exercises
+Appendix B: High Level Shader Language Reference
+Variable Types
+Scalar Types
+Vector Types
+Swizzles
+Matrix Types
+Arrays
+Structures
+The typedef Keyword
+Variable Prefixes
+Casting
+Keywords and Operators
+Keywords
+Operators
+Program Flow
+Functions
+User-Defined Functions
+Built-in Functions
+Appendix C: Some Analytic Geometry
+C.1 Rays, Lines, and Segments
+C.2 Parallelograms
+C.3 Triangles
+C.4 Planes
+C.4.1 XNA Math Planes
+C.4.2 Point/Plane Spatial Relation
+C.4.3 Construction
+C.4.4 Normalizing a Plane
+C.4.5 Transforming a Plane
+C.4.6 Nearest Point on a Plane to a Given Point
+C.4.7 Ray/Plane Intersection
+C.4.8 Reflecting Vectors
+C.4.9 Reflecting Points
+C.4.10 Reflection Matrix
+C.5 Exercises
+Appendix D: Solutions to Exercises
+Bibliography and Further Reading
+Index

@@ -1,0 +1,233 @@
+
+Title Page
+Copyright
+Dedication
+Credits
+About the Authors
+About the Technical Editor
+Acknowledgments
+Introduction
+Who Should Read This Book
+How This Book Is Organized
+Minimum Requirements
+Where to Go from Here
+Part I: The Linux Command Line
+Chapter 1: Starting with Linux Shells
+What Is Linux?
+Linux Distributions
+Summary
+Chapter 2: Getting to the Shell
+10
+The Linux Command Line & Shell Scripting Bible 2nd Edition
+Terminal Emulation
+The terminfo Database
+The Linux Console
+The xterm Terminal
+The Konsole Terminal
+The GNOME Terminal
+Summary
+Chapter 3: Basic bash Shell Commands
+Starting the Shell
+The Shell Prompt
+The bash Manual
+Filesystem Navigation
+File and Directory Listing
+File Handling
+Directory Handling
+Viewing File Contents
+Summary
+Chapter 4: More bash Shell Commands
+Monitoring Programs
+Monitoring Disk Space
+Working with Data Files
+Summary
+Chapter 5: Using Linux Environment Variables
+What Are Environment Variables?
+Setting Environment Variables
+Removing Environment Variables
+Default Shell Environment Variables
+Setting the PATH Environment Variable
+Locating System Environment Variables
+Variable Arrays
+Using Command Aliases
+11
+The Linux Command Line & Shell Scripting Bible 2nd Edition
+Summary
+Chapter 6: Understanding Linux File Permissions
+Linux Security
+Using Linux Groups
+Decoding File Permissions
+Changing Security Settings
+Sharing Files
+Summary
+Chapter 7: Managing Filesystems
+Exploring Linux Filesystems
+Working with Filesystems
+Logical Volume Managers
+Summary
+Chapter 8: Installing Software
+Package Management Primer
+The Debian-Based Systems
+The Red Hat¨CBased Systems
+Installing from Source Code
+Summary
+Chapter 9: Working with Editors
+The vim Editor
+The emacs Editor
+The KDE Family of Editors
+The GNOME Editor
+Summary
+Part II: Shell Scripting Basics
+12
+The Linux Command Line & Shell Scripting Bible 2nd Edition
+Chapter 10: Basic Script Building
+Using Multiple Commands
+Creating a Script File
+Displaying Messages
+Using Variables
+Redirecting Input and Output
+Pipes
+Performing Math
+Exiting the Script
+Summary
+Chapter 11: Using Structured Commands
+Working with the if-then Statement
+The if-then-else Statement
+Nesting ifs
+The test Command
+Compound Condition Testing
+Advanced if-then Features
+The case Command
+Summary
+Chapter 12: More Structured Commands
+The for Command
+The C-Style for Command
+The while Command
+The until Command
+Nesting Loops
+Looping on File Data
+Controlling the Loop
+Processing the Output of a Loop
+Summary
+Chapter 13: Handling User Input
+13
+The Linux Command Line & Shell Scripting Bible 2nd Edition
+Command Line Parameters
+Special Parameter Variables
+Being Shifty
+Working with Options
+Standardizing Options
+Getting User Input
+Summary
+Chapter 14: Presenting Data
+Understanding Input and Output
+Redirecting Output in Scripts
+Redirecting Input in Scripts
+Creating Your Own Redirection
+Listing Open File Descriptors
+Suppressing Command Output
+Using Temporary Files
+Logging Messages
+Summary
+Chapter 15: Script Control
+Handling Signals
+Running Scripts in Background Mode
+Running Scripts Without a Console
+Job Control
+Being Nice
+Running Like Clockwork
+Summary
+Part III: Advanced Shell Scripting
+Chapter 16: Creating Functions
+Basic Script Functions
+Returning a Value
+14
+The Linux Command Line & Shell Scripting Bible 2nd Edition
+Using Variables in Functions
+Array Variables and Functions
+Function Recursion
+Creating a Library
+Using Functions on the Command Line
+Summary
+Chapter 17: Writing Scripts for Graphical Desktops
+Creating Text Menus
+Doing Windows
+Getting Graphic
+Summary
+Chapter 18: Introducing sed and gawk
+Text Manipulation
+The sed Editor Basics
+Summary
+Chapter 19: Regular Expressions
+What Are Regular Expressions?
+Defining BRE Patterns
+Extended Regular Expressions
+Regular Expressions in Action
+Summary
+Chapter 20: Advanced sed
+Multiline Commands
+The Hold Space
+Negating a Command
+Changing the Flow
+Pattern Replacement
+Using sed in Scripts
+Creating sed Utilities
+15
+The Linux Command Line & Shell Scripting Bible 2nd Edition
+Summary
+Chapter 21: Advanced gawk
+Using Variables
+Working with Arrays
+Using Patterns
+Structured Commands
+Formatted Printing
+Built-in Functions
+User-Defined Functions
+Summary
+Chapter 22: Working with Alternative Shells
+What Is the dash Shell?
+The dash Shell Features
+Scripting in dash
+The zsh Shell
+Parts of the zsh Shell
+Scripting with zsh
+Summary
+Part IV: Advanced Shell Scripting
+Topics
+Chapter 23: Using a Database
+The MySQL Database
+The PostgreSQL Database
+Working with Tables
+Using the Database in Your Scripts
+Summary
+Chapter 24: Using the Web
+16
+The Linux Command Line & Shell Scripting Bible 2nd Edition
+The Lynx Program
+The cURL Program
+Networking with zsh
+Summary
+Chapter 25: Using E-mail
+The Basics of Linux E-Mail
+Setting Up Your Server
+Sending a Message with Mailx
+The Mutt Program
+Summary
+Chapter 26: Writing Script Utilities
+Monitoring Disk Space
+Performing Backups
+Managing User Accounts
+Summary
+Chapter 27: Advanced Shell Scripts
+Monitoring System Statistics
+Problem-Tracking Database
+Summary
+Appendix A: Quick Guide to bash Commands
+Built-in Commands
+bash Commands
+Environment Variables
+Appendix B: Quick Guide to sed and gawk
+The sed Editor
+The gawk Program
+Index
+

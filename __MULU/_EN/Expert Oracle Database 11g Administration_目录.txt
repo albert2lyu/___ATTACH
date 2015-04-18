@@ -1,0 +1,1084 @@
+
+About the Author . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxxvii
+About the Technical Reviewer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .xxxix
+Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .xli
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xliii
+PART 1 ¡ö ¡ö ¡ö Background, Data Modeling, UNIX/
+Linux, and SQL*Plus
+¡öCHAPTER 1 The Oracle DBA¡¯s World  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+The Oracle DBA¡¯s Role . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+The DBA¡¯s Security Role  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+The DBA¡¯s System Management Role  . . . . . . . . . . . . . . . . . . . . . . . . . 5
+The DBA¡¯s Database Design Role . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+DBA Job Classifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+Types of Databases  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Online Transaction Processing and Decision-Support
+System Databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Development, Test, and Production Databases. . . . . . . . . . . . . . . . . . 9
+Training and Certification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Training  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Certification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+Resources and Organizations for Oracle DBAs . . . . . . . . . . . . . . . . . 13
+Oracle by Example  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Oracle Database Two-Day DBA Course . . . . . . . . . . . . . . . . . . . . . . . 14
+Oracle MetaLink . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+Oracle Web Conference . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+The Daily Routine of a Typical Oracle DBA  . . . . . . . . . . . . . . . . . . . . . . . . 15
+Some General Advice . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Know When You Need Help . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Remember You Are Not Alone . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Think Outside the Box  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Primum Non Nocere . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+viii ¡öCO N T E N T S
+¡öCHAPTER 2 Relational Database Modeling and Database Design . . . . 19
+Relational Databases: A Brief Introduction . . . . . . . . . . . . . . . . . . . . . . . . . 19
+The Relational Database Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+Database Schemas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+Relational Algebra. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+Relational Calculus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+SQL. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+Relational Database Life Cycle  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+Requirements Gathering and Analysis . . . . . . . . . . . . . . . . . . . . . . . . 23
+Logical Database Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+Physical Database Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+Implementing the Physical Design  . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+Reverse-Engineering a Database  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+Object-Relational and Object Databases  . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+The Relational Model  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+The Object Model  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+The Object-Relational Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+Semi-Structured Data Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+¡öCHAPTER 3 Essential UNIX (and Linux) for the Oracle DBA . . . . . . . . . . . 43
+Overview of UNIX and Linux Operating Systems . . . . . . . . . . . . . . . . . . . . 43
+UNIX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+Linux. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+Midrange Systems  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+Understanding the UNIX Shell(s) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+Accessing the UNIX System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+Overview of Basic UNIX Commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+Getting Help: The man Command . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+Changing the Prompt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+Finding Files and Directories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+Controlling the Output of Commands . . . . . . . . . . . . . . . . . . . . . . . . . 52
+Showing the Contents of Files. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+Comparing Files  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+Understanding Operating-System and Shell Variables . . . . . . . . . . . 53
+Redirecting Input and Output. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+Protecting Files from Being Overwritten  . . . . . . . . . . . . . . . . . . . . . . 57
+Navigating Files and Directories in UNIX  . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Files in the UNIX System  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Linking Files  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+¡öC ON TE N TS ix
+Managing Files  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+Permissions: Reading from or Writing to Files in UNIX. . . . . . . . . . . 59
+Directory Management. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+Editing Files with the vi Editor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+Creating and Modifying Files Using vi  . . . . . . . . . . . . . . . . . . . . . . . . 63
+Moving Around with the head and tail Commands . . . . . . . . . . . . . . 65
+Extracting and Sorting Text . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+Using grep to Match Patterns  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+Cutting, Pasting, and Joining Text  . . . . . . . . . . . . . . . . . . . . . . . . . . . 66
+Shell Scripting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+What Is a Shell Program?. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+Using Shell Variables  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+Evaluating Expressions with the test Command . . . . . . . . . . . . . . . . 69
+Executing Shell Programs with Command-Line Arguments  . . . . . . 70
+Analyzing a Shell Script . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
+Flow-Control Structures in Korn Shell Programming  . . . . . . . . . . . . 71
+Dealing with UNIX Processes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+Gathering Process Information with ps  . . . . . . . . . . . . . . . . . . . . . . . 74
+Running Processes after Logging Out  . . . . . . . . . . . . . . . . . . . . . . . . 75
+Running Processes in the Background . . . . . . . . . . . . . . . . . . . . . . . . 75
+Terminating Processes with the kill Command . . . . . . . . . . . . . . . . . 75
+UNIX System Administration and the Oracle DBA . . . . . . . . . . . . . . . . . . . 76
+UNIX Backup and Restore Utilities  . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+The crontab and Automating Scripts  . . . . . . . . . . . . . . . . . . . . . . . . . 77
+Using Telnet. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+Remote Login and Remote Copy. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+Using SSH, the Secure Shell  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+Using FTP to Send and Receive Files . . . . . . . . . . . . . . . . . . . . . . . . . 79
+UNIX System Performance Monitoring Tools . . . . . . . . . . . . . . . . . . . 80
+Disks and Storage in UNIX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+Disk Storage Configuration Choices . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+Monitoring Disk Usage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+Disk Storage, Performance, and Availability . . . . . . . . . . . . . . . . . . . 87
+RAID Systems  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 88
+RAID Levels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+Choosing the Ideal Disk Configuration . . . . . . . . . . . . . . . . . . . . . . . . 90
+Redundant Disk Controllers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
+RAID and Backups  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
+RAID and Oracle  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+x ¡öCO N T E N T S
+Other Storage Technologies  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+Storage Area Networks  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+Networked Attached Storage. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+InfiniBand . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+Automatic Storage Management  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+Oracle and Storage System Compatibility . . . . . . . . . . . . . . . . . . . . . 95
+¡öCHAPTER 4 Using SQL*Plus and Oracle Enterprise Manager . . . . . . . . . 97
+Starting a SQL*Plus Session  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+Setting the Environment. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 98
+Starting a SQL*Plus Session from the Command Line . . . . . . . . . . . 98
+Connecting by Using the CONNECT Command . . . . . . . . . . . . . . . . 100
+Connectionless SQL*Plus Session with /NOLOG . . . . . . . . . . . . . . . 101
+Connecting to SQL*Plus Through a Windows GUI . . . . . . . . . . . . . . 101
+Operating in SQL*Plus  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+Exiting SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102
+SQL*Plus and SQL Commands  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+SQL*Plus Security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+Setting the SQL*Plus Environment with the SET Command  . . . . . 106
+Setting Common SQL*Plus Variables . . . . . . . . . . . . . . . . . . . . . . . . 107
+SQL*Plus Error Logging  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+SQL*Plus Command-Line Options  . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+SQL*Plus Administrative Commands  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
+CLEAR Command  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
+STORE Command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
+SHOW Command  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116
+Key SQL*Plus ¡°Working¡± Commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . 118
+SQLPROMPT Command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 118
+DESCRIBE Command  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 119
+HOST Command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 119
+SPOOL Command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
+ACCEPT and PROMPT Commands  . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+EXECUTE Command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+PAUSE Command  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+Commands for Formatting Output and Reporting . . . . . . . . . . . . . . . . . . 122
+BREAK Command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+COLUMN Command  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+COMPUTE Command  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+REPFOOTER Command  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+REPHEADER Command  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+BTITLE and TTITLE Commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+¡öC ON TE N TS xi
+Creating Command Files in SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+Saving the SQL Buffer Contents to a File . . . . . . . . . . . . . . . . . . . . . 124
+Executing SQL Scripts in SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+Creating a Windows Batch Script . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+DEFINE and UNDEFINE Commands. . . . . . . . . . . . . . . . . . . . . . . . . . 126
+Predefined SQL*Plus Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+Using Comments in SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+Listing SQL Commands  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+Editing Within SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+Inserting and Deleting Lines  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
+Adding to Text . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131
+Incorporating Comments with the REMARK Command  . . . . . . . . . 132
+Copying Tables with the COPY Command . . . . . . . . . . . . . . . . . . . . 132
+Making DML Changes Permanent with SQL*Plus . . . . . . . . . . . . . . 133
+Creating Web Pages Using SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . 134
+Key SQL*Plus Database Administration Commands . . . . . . . . . . . . . . . . . 134
+RECOVER Command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+STARTUP and SHUTDOWN Commands  . . . . . . . . . . . . . . . . . . . . . . 134
+ARCHIVE LOG Command  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+Using SQL to Generate SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+Oracle SQL Developer  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 136
+Oracle Enterprise Manager  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 136
+Benefits of Using OEM to Manage Databases . . . . . . . . . . . . . . . . . 137
+OEM Architecture and Components . . . . . . . . . . . . . . . . . . . . . . . . . 139
+Configuring and Using the Database Control . . . . . . . . . . . . . . . . . . 140
+Accessing the Database Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+A Brief Tour of the Database Control  . . . . . . . . . . . . . . . . . . . . . . . . 144
+Performance  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+Availability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 146
+Server. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 146
+Schema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+Data Movement. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+Software and Support  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+Oracle Software Cloning  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+Configuring Using the Setup Page  . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+The Related Links Section and the Advisor Central Page  . . . . . . . 150
+Creating Database Control Roles  . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+Linking to MetaLink  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+Policy-Based Configuration Framework. . . . . . . . . . . . . . . . . . . . . . 151
+Tracking Database Feature-Usage Statistics. . . . . . . . . . . . . . . . . . 151
+OEM Grid Control  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+xii ¡öCO N T E N T S
+Managing the Management Agent . . . . . . . . . . . . . . . . . . . . . . . . . . 156
+The Oracle Management Service  . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Connecting to the Grid Control  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Logging Into the Grid Control. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Features of the Grid Control. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+Using the Grid Control Home Page . . . . . . . . . . . . . . . . . . . . . . . . . . 159
+Monitoring Your Entire System with the Grid Control . . . . . . . . . . . 159
+PART 2 ¡ö ¡ö ¡ö Oracle Database 11 g Architecture,
+Schema, and Transaction
+Management
+¡öCHAPTER 5 Oracle Database 11 g Architecture  . . . . . . . . . . . . . . . . . . . . . . 165
+Oracle Database Structures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 165
+Logical Database Structures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 165
+Physical Database Structures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 173
+Other Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 176
+Oracle Processes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 179
+Interaction Between the User and Oracle Processes  . . . . . . . . . . . 179
+The Server Process. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 179
+The Background Processes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 180
+Oracle Memory Structures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 186
+Understanding Main Memory  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 186
+The System Global Area. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 187
+The Program Global Area . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+A Simple Oracle Database Transaction  . . . . . . . . . . . . . . . . . . . . . . . . . . 196
+Committing and Rolling Back  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 197
+Committing a Transaction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 197
+Rolling Back a Transaction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 198
+Data Consistency and Data Concurrency . . . . . . . . . . . . . . . . . . . . . . . . . 198
+The Database Writer and the Write Ahead Protocol . . . . . . . . . . . . 199
+The System Change Number. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 199
+Undo Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200
+Backup and Recovery Architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201
+User-Managed Backup and Recovery  . . . . . . . . . . . . . . . . . . . . . . . 201
+RMAN . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201
+Oracle Secure Backup  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 202
+Flashback Recovery Techniques. . . . . . . . . . . . . . . . . . . . . . . . . . . . 202
+¡öC ON TE N TS xiii
+The Oracle Data Dictionary and the Dynamic Performance Views  . . . . 202
+The Oracle Data Dictionary  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 203
+The Dynamic Performance (V$) Views . . . . . . . . . . . . . . . . . . . . . . . 204
+The Three Sets of Data Dictionary Views . . . . . . . . . . . . . . . . . . . . . 204
+How Is the Data Dictionary Created?  . . . . . . . . . . . . . . . . . . . . . . . . 204
+Using the Static Data Dictionary Views  . . . . . . . . . . . . . . . . . . . . . . . . . . 204
+The Oracle Optimizer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+Talking to the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+Connecting to Oracle  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+Oracle Enterprise Manager  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 206
+SQL*Plus  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+Oracle Utilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+Data Pump Export and Import . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+SQL*Loader . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+LogMiner . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+Automatic Diagnostic Repository Control Interface . . . . . . . . . . . . . 208
+Scheduling and Resource Management  . . . . . . . . . . . . . . . . . . . . . . . . . 208
+The Oracle Scheduler. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 208
+Database Resource Manager  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 208
+Automatic Database Management  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 208
+Automatic Database Diagnostic Monitor  . . . . . . . . . . . . . . . . . . . . . 209
+Automatic Undo Retention Tuning  . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+Automatic Optimizer Statistics Collection  . . . . . . . . . . . . . . . . . . . . 209
+Automatic Storage Management  . . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+Automatic SQL Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+Common Manageability Infrastructure . . . . . . . . . . . . . . . . . . . . . . . . . . . 210
+Automatic Workload Repository  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 210
+Active Session History  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 210
+Server-Generated Alerts  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 211
+Automated Tasks Feature  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 211
+Advisory Framework. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 212
+Change Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 212
+Efficient Managing and Monitoring . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 213
+¡öCHAPTER 6 Managing Tablespaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 215
+Tablespace Extent Sizing and Space Management  . . . . . . . . . . . . . . . . 216
+Allocating the Extent Size: Autoallocate vs. Uniform  . . . . . . . . . . . 216
+Automatic vs. Manual Segment Space Management. . . . . . . . . . . 217
+xiv ¡öCO N T E N T S
+Creating Tablespaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 218
+Data Files and Tablespaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 219
+Extent Allocation and Deallocation  . . . . . . . . . . . . . . . . . . . . . . . . . . 220
+Storage Parameters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 220
+Storage Allocation to Database Objects . . . . . . . . . . . . . . . . . . . . . . 222
+Adding Space to a Tablespace  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 223
+Removing Tablespaces  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+Number of User Tablespaces  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225
+Tablespace Quotas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 226
+Proactive Tablespace Space Alerts. . . . . . . . . . . . . . . . . . . . . . . . . . 226
+Managing Logging of Redo Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . 227
+Renaming Tablespaces  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 228
+Read-Only Tablespaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 229
+Taking Tablespaces Offline . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 229
+Temporary Tablespaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 229
+Creating a Temporary Tablespace  . . . . . . . . . . . . . . . . . . . . . . . . . . 230
+Altering a Temporary Tablespace . . . . . . . . . . . . . . . . . . . . . . . . . . . 231
+Shrinking Temporary Tablespaces . . . . . . . . . . . . . . . . . . . . . . . . . . 231
+Default Temporary Tablespace . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 232
+Temporary Tablespace Groups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 233
+Default Permanent Tablespaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 235
+Bigfile Tablespaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 236
+Restrictions on Using Bigfile Tablespaces . . . . . . . . . . . . . . . . . . . . 237
+Creating Bigfile Tablespaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 237
+Altering a Bigfile Tablespace . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 238
+Viewing Bigfile Tablespace Information . . . . . . . . . . . . . . . . . . . . . . 238
+Managing the Sysaux Tablespace  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 238
+Creating the Sysaux Tablespace . . . . . . . . . . . . . . . . . . . . . . . . . . . . 239
+Usage Restrictions for the Sysaux Tablespace . . . . . . . . . . . . . . . . 240
+Encrypting Tablespaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 240
+Why You Need Encrypted Tablespaces  . . . . . . . . . . . . . . . . . . . . . . 240
+Creating the Oracle Wallet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 241
+Creating an Encrypted Tablespace . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+Data Dictionary Views for Managing Tablespaces  . . . . . . . . . . . . . . . . . 243
+DBA_TABLESPACES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 243
+DBA_FREE_SPACE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 243
+DBA_SEGMENTS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 244
+DBA_DATA_FILES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 245
+DBA_TABLESPACE_GROUPS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 246
+V$DATAFILE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 246
+V$FILESTAT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 246
+¡öC ON TE N TS xv
+Easy File Management with Oracle Managed Files  . . . . . . . . . . . . . . . . 247
+Benefits of Using OMF . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 248
+Creating Oracle Managed Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 248
+Different Types of Oracle Managed Files . . . . . . . . . . . . . . . . . . . . . 250
+Copying Files Between Two Databases . . . . . . . . . . . . . . . . . . . . . . . . . . 253
+COPY_FILE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 253
+GET_FILE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254
+PUT_FILE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254
+Finding Out How Much Free Space Is Left . . . . . . . . . . . . . . . . . . . . . . . . 255
+Working with Operating System Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . 256
+Using the UTL_FILE Package. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 256
+Key UTL_FILE Procedures and Functions  . . . . . . . . . . . . . . . . . . . . 257
+Exceptions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 258
+A Simple Example Using the UTL_FILE Package. . . . . . . . . . . . . . . 258
+¡öCHAPTER 7 Schema Management  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 261
+Types of SQL Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 261
+System-Control Statements. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 262
+Session-Control Statements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 262
+Embedded SQL Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 262
+Data Manipulation Language Statements  . . . . . . . . . . . . . . . . . . . . 263
+Transaction-Control Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . 263
+Data Definition Language Statements . . . . . . . . . . . . . . . . . . . . . . . 264
+Oracle Schemas  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+Oracle Tables  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265
+Estimating the Table Size  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 266
+Creating a Simple Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 268
+What Is a Null Value? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 269
+Default Values for Columns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 270
+Virtual Columns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 270
+Adding a Column to a Table  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 271
+Dropping a Column from a Table  . . . . . . . . . . . . . . . . . . . . . . . . . . . 271
+Renaming a Table Column. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 272
+Renaming a Table. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 272
+Removing All Data from a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . 272
+Creating a New Table with the CTAS Option . . . . . . . . . . . . . . . . . . 273
+Placing a Table in Read-Only Mode . . . . . . . . . . . . . . . . . . . . . . . . . 273
+Table Compression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 274
+Dropping Tables  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 276
+xvi ¡öCO N T E N T S
+Special Oracle Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 277
+Temporary Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 277
+Index-Organized Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 278
+External Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 280
+Partitioned Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 280
+Range Partitioning  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281
+Interval Partitioning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 282
+Hash Partitioning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 283
+List Partitioning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 284
+Reference Partitioning  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 284
+Virtual Column-Based Partitioning  . . . . . . . . . . . . . . . . . . . . . . . . . . 286
+System Partitioning  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 287
+Composite Partitioning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 287
+Partition Maintenance Operations. . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+Data Dictionary Views for Managing Tables  . . . . . . . . . . . . . . . . . . . . . . 292
+Clusters  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295
+Hash Clusters  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 296
+Oracle Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 296
+Guidelines for Creating Indexes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+Oracle Index Schemes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 298
+Estimating the Size of an Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 298
+Creating an Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 299
+Special Types of Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300
+Bitmap Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+Reverse-Key Indexes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+Key-Compressed Indexes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+Function-Based Indexes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 302
+Partitioned Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 302
+Invisible Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+Monitoring Index Usage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 304
+Index Maintenance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 305
+Managing Database Integrity Constraints  . . . . . . . . . . . . . . . . . . . . . . . . 306
+Primary Key Constraints. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 306
+Not Null Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 307
+Check Constraints. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 307
+Unique Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 307
+Referential Integrity Constraints  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 308
+Integrity Constraint States . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 308
+Rely Constraints  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 310
+Deferrable and Immediate Constraints. . . . . . . . . . . . . . . . . . . . . . . 310
+¡öC ON TE N TS xvii
+Constraint- and Index-Related Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . 310
+DBA_CONSTRAINTS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 310
+DBA_CONS_COLUMNS  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 311
+Using Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 312
+Using Materialized Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314
+Query Rewriting  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 315
+The Rewrite_or_Error Hint. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 315
+Rewrite Integrity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 316
+Refreshing Materialized View Data . . . . . . . . . . . . . . . . . . . . . . . . . . 316
+Using the DBMS_MVIEW Package  . . . . . . . . . . . . . . . . . . . . . . . . . . 317
+Creating Materialized Views  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 317
+Creating the Materialized View . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 318
+Using the SQL Access Advisor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 320
+Using the OEM Database Control  . . . . . . . . . . . . . . . . . . . . . . . . . . . 320
+Using the DBMS_ADVISOR Package. . . . . . . . . . . . . . . . . . . . . . . . . 323
+Using the QUICK_TUNE Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . 324
+Using Synonyms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 324
+Creating a Public Synonym  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+Creating a Private Synonym  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326
+Dropping a Synonym  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326
+Managing Synonyms  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326
+Switching to a Different Schema  . . . . . . . . . . . . . . . . . . . . . . . . . . . 327
+Using Sequences  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 327
+Using Triggers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 328
+Viewing Object Information  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 329
+Views for Managing Database Objects. . . . . . . . . . . . . . . . . . . . . . . 329
+DBA_OBJECTS  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 329
+DBA_TABLES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 330
+DBA_EXTERNAL_TABLES  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 330
+DBA_TAB_PARTITIONS  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 330
+DBA_PART_TABLES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 331
+DBA_TAB_MODIFICATIONS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 331
+DBA_TAB_COLUMNS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 332
+DBA_VIEWS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 332
+DBA_MVIEWS  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+DBA_INDEXES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+DBA_IND_COLUMNS  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+INDEX_STATS  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+xviii ¡öCO N T E N T S
+¡öCHAPTER 8 Oracle Transaction Management . . . . . . . . . . . . . . . . . . . . . . . . 337
+Oracle Transactions  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 337
+COMMIT Statement  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 338
+ROLLBACK Statement  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 339
+Transaction Properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 340
+Transaction Concurrency Control  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 341
+Concurrency Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 341
+Schedules and Serializability. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 342
+Isolation Levels and the ISO Transaction Standard . . . . . . . . . . . . . . . . . 342
+Oracle¡¯s Isolation Levels  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 344
+Transaction- and Statement-Level Consistency . . . . . . . . . . . . . . . 345
+Changing the Default Isolation Level  . . . . . . . . . . . . . . . . . . . . . . . . 345
+Implementing Oracle¡¯s Concurrency Control . . . . . . . . . . . . . . . . . . . . . . 347
+Oracle Locking Methods  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 348
+Oracle Lock Types  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 348
+Allowing DDL Locks to Wait for DML Locks. . . . . . . . . . . . . . . . . . . 350
+Explicit Table Locking. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350
+Explicit Locking in Oracle. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 351
+Managing Oracle Locks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 353
+Using Undo Data to Provide Read Consistency . . . . . . . . . . . . . . . . . . . . 356
+Automatic Undo Management. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 356
+Guaranteed Undo Retention . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 362
+Using the OEM to Manage Undo Data  . . . . . . . . . . . . . . . . . . . . . . . 365
+Flashback Error Correction Using Undo Data . . . . . . . . . . . . . . . . . . . . . . 366
+Querying Old Data with Flashback Query  . . . . . . . . . . . . . . . . . . . . 367
+Flashback Using the DBMS_FLASHBACK Package . . . . . . . . . . . . . . . . . 368
+Flashback Versions Query . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 369
+Flashback Transaction Query  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 372
+Using Flashback Transaction Query and Flashback
+Versions Query Together. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 375
+The Flashback Table Feature  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 376
+Transaction Management  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 380
+Discrete Transactions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 380
+Autonomous Transactions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 380
+Resumable Space Allocation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 382
+Resumable Operations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 383
+Common Resumable Errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 383
+Using the Resumable Space Allocation Feature  . . . . . . . . . . . . . . . 383
+Notification of Suspended Operations  . . . . . . . . . . . . . . . . . . . . . . . 386
+Operation-Suspended Alert . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 386
+Monitoring Resumable Space Allocation . . . . . . . . . . . . . . . . . . . . . 386
+¡öC ON TE N TS xix
+Managing Long Transactions  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 386
+Benefits of Using the Workspace Manager . . . . . . . . . . . . . . . . . . . 387
+Table Versioning and Workspaces  . . . . . . . . . . . . . . . . . . . . . . . . . . 387
+PART 3 ¡ö ¡ö ¡ö Installing Oracle Database 11 g,
+Upgrading, and Creating Databases
+¡öCHAPTER 9 Installing and Upgrading to Oracle Database 11 g  . . . . . . 391
+Installing Oracle  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 391
+Reviewing the Documentation  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 392
+Determining Disk and Memory Requirements. . . . . . . . . . . . . . . . . 392
+Optimal Flexible Architecture  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 393
+Mount Points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 394
+Directory and File-Naming Conventions. . . . . . . . . . . . . . . . . . . . . . 394
+Performing Preinstallation Tasks  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400
+Checking the Preinstallation Requirements . . . . . . . . . . . . . . . . . . . 400
+System Administrator¡¯s Preinstallation Tasks . . . . . . . . . . . . . . . . . 401
+Oracle Owner¡¯s Preinstallation Tasks . . . . . . . . . . . . . . . . . . . . . . . . 410
+A Final Checklist for the Installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 413
+Accessing the Installation Software  . . . . . . . . . . . . . . . . . . . . . . . . . 414
+Installing the Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 416
+Using Response Files to Install Oracle Software . . . . . . . . . . . . . . . 421
+After the Installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 422
+System Administrator¡¯s Post-Installation Tasks  . . . . . . . . . . . . . . . 423
+Oracle Owner¡¯s Post-Installation Tasks . . . . . . . . . . . . . . . . . . . . . . 424
+Uninstalling Oracle  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425
+Removing All Oracle Databases Running on Your Server  . . . . . . . 425
+Removing the Oracle Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 426
+Upgrading to Oracle Database 11 g . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 426
+Routes to Oracle Database 11 g . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 426
+Upgrade Methods and Tools  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 427
+The Manual Upgrade Process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 427
+The Database Upgrade Assistant  . . . . . . . . . . . . . . . . . . . . . . . . . . . 428
+The Pre-Upgrade Information Tool . . . . . . . . . . . . . . . . . . . . . . . . . . 428
+The Post-Upgrade Status Tool. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 429
+Preparing the Database for the Upgrade . . . . . . . . . . . . . . . . . . . . . 430
+xx ¡öCO N T E N T S
+Upgrading with the DBUA  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 430
+Starting the DBUA . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 430
+Running the DBUA  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 431
+Restoring the Pre-Upgrade Database . . . . . . . . . . . . . . . . . . . . . . . . 433
+Upgrading Manually  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 434
+Upgrade and Downgrade Scripts  . . . . . . . . . . . . . . . . . . . . . . . . . . . 434
+Creating a Spool File  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 434
+Running the Pre-Upgrade Information Tool . . . . . . . . . . . . . . . . . . . 435
+Backing up the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 437
+Copying the Parameter File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 437
+Starting Up the New Database  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 437
+Running the Upgrade Script. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 438
+Running the Upgrade Actions Script. . . . . . . . . . . . . . . . . . . . . . . . . 438
+Restarting the Instance  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 438
+Running the Post Upgrade Actions Script  . . . . . . . . . . . . . . . . . . . . 439
+Checking for Invalid Objects  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 439
+Recompiling and Validating Objects . . . . . . . . . . . . . . . . . . . . . . . . . 439
+Running the Post-Upgrade Status Tool  . . . . . . . . . . . . . . . . . . . . . . 440
+Ending the Spool File  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 441
+Restarting the New Database  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 441
+After the Upgrade  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 441
+Resetting Passwords for Stronger Password Protection  . . . . . . . . 441
+Downgrading to an Old Version . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 441
+¡öCHAPTER 10 Creating a Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 443
+Getting Ready to Create the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . 443
+Installing the Oracle Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 444
+Creating the File System for the Database  . . . . . . . . . . . . . . . . . . . 444
+Ensuring Sufficient Memory Allocation. . . . . . . . . . . . . . . . . . . . . . . 445
+Getting Necessary Authorizations . . . . . . . . . . . . . . . . . . . . . . . . . . . 446
+Setting the OS Environment Variables  . . . . . . . . . . . . . . . . . . . . . . . 446
+Creating the Parameter File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 446
+Types of Database Parameter Files  . . . . . . . . . . . . . . . . . . . . . . . . . 446
+The Initialization Parameter File  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 447
+Changing the Initialization Parameter Values  . . . . . . . . . . . . . . . . . 448
+Important Oracle Database 11 g Initialization Parameters  . . . . . . . 449
+Undocumented Initialization Parameters . . . . . . . . . . . . . . . . . . . . . 473
+Viewing the Current Initialization Parameter Values . . . . . . . . . . . . 473
+¡öC ON TE N TS xxi
+Creating a New Database  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 474
+Manual Creation  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 474
+Using the DBCA to Create a Database . . . . . . . . . . . . . . . . . . . . . . . 486
+Using a Server Parameter File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 493
+Creating a Server Parameter File  . . . . . . . . . . . . . . . . . . . . . . . . . . . 494
+Setting the Scope of Dynamic Parameter Changes  . . . . . . . . . . . . 496
+Creating an SPFILE or PFILE from Memory . . . . . . . . . . . . . . . . . . . 497
+Starting Up and Shutting Down the Database from SQL*Plus . . . . . . . . 497
+Starting the Database. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 497
+Automatically Starting Databases . . . . . . . . . . . . . . . . . . . . . . . . . . . 499
+Restricting Database Access . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 501
+Shutting Down the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 502
+Quiescing a Database. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 505
+Suspending a Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 505
+Dropping a Database  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 506
+Using the Data Dictionary to Monitor Database Status. . . . . . . . . . 507
+What Next?  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 507
+PART 4 ¡ö ¡ö ¡ö Connectivity and User Management
+¡öCHAPTER 11 Connectivity and Networking . . . . . . . . . . . . . . . . . . . . . . . . . . . . 511
+Oracle Networking and Database Connectivity . . . . . . . . . . . . . . . . . . . . 511
+Networking Concepts: How Oracle Networking Works . . . . . . . . . . . . . . 513
+How a Web Application Connects to Oracle . . . . . . . . . . . . . . . . . . . 513
+Database Instance Names . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 514
+Global Database Names . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 514
+Database Service Names. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 514
+Connect Descriptors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 514
+Connect Identifiers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 515
+Connect Strings. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 515
+Establishing Oracle Connectivity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 516
+The Oracle Client  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 517
+Installing the Oracle Client. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 518
+Using the TWO_TASK Environment Variable . . . . . . . . . . . . . . . . . . 519
+The Instant Client  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 519
+Installing the Instant Client  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 519
+xxii ¡öCO N T E N T S
+The Listener and Connectivity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 520
+Automatic Service Registration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 521
+Listener Commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 522
+Listener Management  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 523
+Naming and Connectivity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 525
+The Local Naming Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 525
+The Easy Connect Naming Method . . . . . . . . . . . . . . . . . . . . . . . . . . 529
+Database Resident Connection Pooling  . . . . . . . . . . . . . . . . . . . . . . 531
+The External Naming Method  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 533
+The Directory Naming Method  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 534
+Oracle and Java Database Connectivity . . . . . . . . . . . . . . . . . . . . . . . . . . 537
+Establishing Database Connectivity  . . . . . . . . . . . . . . . . . . . . . . . . . 538
+Working with the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 538
+A Complete Program  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 541
+¡öCHAPTER 12 User Management and Database Security  . . . . . . . . . . . . . . 543
+Managing Users  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 544
+Temporary and Default Tablespaces  . . . . . . . . . . . . . . . . . . . . . . . . 544
+Creating a New User. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 544
+Altering a User. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 547
+Dropping a User  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 547
+Creating and Using User Profiles. . . . . . . . . . . . . . . . . . . . . . . . . . . . 548
+Managing Resources  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 554
+The Database Resource Manager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 554
+Using the Database Resource Manager . . . . . . . . . . . . . . . . . . . . . . 555
+Using OEM to Administer the Database Resource Manager  . . . . . 566
+Controlling Database Access . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 567
+Privileges in an Oracle Database  . . . . . . . . . . . . . . . . . . . . . . . . . . . 567
+Roles  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574
+Using Views and Stored Procedures to Manage Privileges . . . . . . 577
+DBA Views for Managing Users, Roles, and Privileges. . . . . . . . . . 577
+Fine-Grained Data Access . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 578
+Auditing Database Usage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 586
+Standard Auditing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 587
+Fine-Grained Auditing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 593
+Authenticating Users  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 596
+Database Authentication  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 596
+External Authentication  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 601
+Proxy Authentication. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 602
+Centralized User Authorization  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 602
+¡öC ON TE N TS xxiii
+Enterprise User Security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 603
+Shared Schemas. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 603
+Single Sign-On  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 603
+Data Encryption . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 603
+Tablespace Encryption . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 608
+Oracle Internet Directory  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611
+Database Security Dos and Don¡¯ts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611
+Automatic Secure Configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611
+User Accounts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611
+Passwords . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611
+Operating System Authentication . . . . . . . . . . . . . . . . . . . . . . . . . . . 612
+Database Auditing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 612
+Granting Privileges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 612
+Dealing with Environments with Multiple DBAs  . . . . . . . . . . . . . . . 613
+Protecting the Data Dictionary  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 613
+Setting Permissions  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 613
+The Network and the Listener . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 614
+Fine-Grained Network Access Control . . . . . . . . . . . . . . . . . . . . . . . 615
+Oracle¡¯s Advanced Security Option. . . . . . . . . . . . . . . . . . . . . . . . . . 618
+Application Security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 618
+Useful Techniques for Managing Users . . . . . . . . . . . . . . . . . . . . . . 619
+PART 5 ¡ö ¡ö ¡ö Data Loading, Backup,
+and Recovery
+¡öCHAPTER 13 Loading and Transforming Data . . . . . . . . . . . . . . . . . . . . . . . . . 625
+An Overview of Extraction, Transformation, and Loading  . . . . . . . . . . . 625
+Using the SQL*Loader Utility  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 627
+Exploring the SQL*Loader Control File . . . . . . . . . . . . . . . . . . . . . . . 628
+Generating Data During the Load . . . . . . . . . . . . . . . . . . . . . . . . . . . 636
+Invoking SQL*Loader  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 637
+Exploring the Loader Log File  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 638
+Using Return Codes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 639
+Using the Direct-Path Loading Method  . . . . . . . . . . . . . . . . . . . . . . 639
+Some Useful SQL*Loader Data-Loading Techniques . . . . . . . . . . . 642
+xxiv ¡öCO N T E N T S
+Using External Tables to Load Data  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 645
+Creating the External Table Layer. . . . . . . . . . . . . . . . . . . . . . . . . . . 646
+Populating External Tables  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 649
+Using an External Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 652
+Using SQL*Loader to Generate External Table
+Creation Statements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
+Transforming Data  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 656
+Deriving the Data from Existing Tables  . . . . . . . . . . . . . . . . . . . . . . 656
+Using SQL to Transform Data  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 657
+Using the SQL MODEL Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 666
+Using Oracle Streams for Replication and Information Sharing  . . . . . . 670
+Exploring the Streams Architecture  . . . . . . . . . . . . . . . . . . . . . . . . . 671
+Setting Up Oracle Streams. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 671
+¡öCHAPTER 14 Using Data Pump Export and Import  . . . . . . . . . . . . . . . . . . . . 677
+Introduction to the Data Pump Technology  . . . . . . . . . . . . . . . . . . . . . . . 677
+Benefits of the Data Pump Technology  . . . . . . . . . . . . . . . . . . . . . . 678
+Uses for Data Pump Export and Import  . . . . . . . . . . . . . . . . . . . . . . 679
+Data Pump Components  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 680
+Data-Access Methods  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 680
+Data Pump Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 681
+Data Pump Privileges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 685
+The Mechanics of a Data Pump Job . . . . . . . . . . . . . . . . . . . . . . . . . 685
+Performing Data Pump Exports and Imports . . . . . . . . . . . . . . . . . . . . . . 686
+Data Pump Export Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 687
+Data Pump Export Modes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 688
+Data Pump Export Parameters  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 689
+Data Pump Export Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 704
+Data Pump Import Types and Modes . . . . . . . . . . . . . . . . . . . . . . . . 705
+Data Pump Import Parameters  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 705
+Monitoring a Data Pump Job . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 713
+Viewing Data Pump Jobs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 713
+Viewing Data Pump Sessions  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 714
+Viewing Data Pump Job Progress . . . . . . . . . . . . . . . . . . . . . . . . . . . 714
+Using the Data Pump API . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 715
+Transportable Tablespaces  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 716
+Uses for Transportable Tablespaces  . . . . . . . . . . . . . . . . . . . . . . . . 716
+Transporting a Tablespace  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 716
+¡öC ON TE N TS xxv
+Transporting Tablespaces Across Platforms with
+Different Endian Formats  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 720
+¡öCHAPTER 15 Backing Up Databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 725
+Backing Up Oracle Databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 725
+Important Backup Terms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 726
+Backup Guidelines  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 728
+Testing Your Backups. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 730
+Maintaining a Redundancy Set . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 730
+Backup Strategies. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 731
+The Flash Recovery Area . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 734
+Benefits of the Flash Recovery Area . . . . . . . . . . . . . . . . . . . . . . . . . 734
+Setting the Size of the Flash Recovery Area  . . . . . . . . . . . . . . . . . . 736
+Ways to Create a Flash Recovery Area. . . . . . . . . . . . . . . . . . . . . . . 736
+Backing Up the Flash Recovery Area . . . . . . . . . . . . . . . . . . . . . . . . 739
+Working with the Flash Recovery Area. . . . . . . . . . . . . . . . . . . . . . . 740
+Recovery Manager  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 741
+Benefits of RMAN  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 742
+RMAN Architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 743
+Connecting to RMAN  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 745
+Scripting with RMAN  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 747
+Important RMAN Terms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 752
+Specifying Backup Tags and Backup Formats  . . . . . . . . . . . . . . . . 753
+Making Copies of RMAN Backups. . . . . . . . . . . . . . . . . . . . . . . . . . . 754
+RMAN Backup Locations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 755
+RMAN Commands. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 755
+RMAN Configuration Parameters  . . . . . . . . . . . . . . . . . . . . . . . . . . . 761
+Working with the Recovery Catalog  . . . . . . . . . . . . . . . . . . . . . . . . . 766
+Maintaining the Recovery Catalog  . . . . . . . . . . . . . . . . . . . . . . . . . . 769
+Virtual Private Catalogs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 772
+Examples of RMAN Backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 774
+Restarting an RMAN Backup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 777
+Specifying Limits for Backup Duration . . . . . . . . . . . . . . . . . . . . . . . 777
+Incrementally Updated Backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . 778
+Fast Incremental Backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 779
+RMAN Compressed Backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 780
+Archival Backups  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 780
+Monitoring and Verifying RMAN Jobs . . . . . . . . . . . . . . . . . . . . . . . . 782
+Backing Up the Control File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 784
+xxvi ¡öCO N T E N T S
+Oracle Secure Backup  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 785
+Benefits of Oracle Secure Backup  . . . . . . . . . . . . . . . . . . . . . . . . . . 786
+Oracle Secure Backup Administrative Domain  . . . . . . . . . . . . . . . . 786
+Installing Oracle Secure Backup . . . . . . . . . . . . . . . . . . . . . . . . . . . . 786
+Using the Oracle Backup Web Interface Tool  . . . . . . . . . . . . . . . . . 788
+Configuring Oracle Secure Backup . . . . . . . . . . . . . . . . . . . . . . . . . . 788
+Performing Backups with Oracle Secure Backup . . . . . . . . . . . . . . 789
+User-Managed Backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 790
+Making Whole Database Backups  . . . . . . . . . . . . . . . . . . . . . . . . . . 790
+Making Partial Database Backups  . . . . . . . . . . . . . . . . . . . . . . . . . . 794
+Monitoring User-Managed Online Backups . . . . . . . . . . . . . . . . . . . 794
+Database Corruption Detection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 795
+Detecting Media Corruption . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 795
+Detecting Data Block Corruption . . . . . . . . . . . . . . . . . . . . . . . . . . . . 795
+Enhanced Data Protection for Disaster Recovery  . . . . . . . . . . . . . . . . . . 798
+High-Availability Systems  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 798
+Oracle Data Guard and Standby Databases . . . . . . . . . . . . . . . . . . . 799
+¡öCHAPTER 16 Database Recovery  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 801
+Types of Database Failures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 801
+System Failures  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 802
+Data Center Disasters  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 802
+Human Error  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 802
+Media Failures. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 802
+Failures and Data Repair . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 803
+The Oracle Recovery Process  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 804
+Crash and Instance Recovery  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 804
+Faster Instance Startup  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 805
+Media Recovery  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 806
+Media Recovery vs. Nonmedia Recoveries  . . . . . . . . . . . . . . . . . . . 808
+Performing Recovery with RMAN  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 809
+RMAN¡¯s Advantages for Recovery  . . . . . . . . . . . . . . . . . . . . . . . . . . 810
+Using VALIDATE BACKUP to Validate RMAN Backups  . . . . . . . . . . 810
+Using the RESTORE . . . VALIDATE Command . . . . . . . . . . . . . . . . . 811
+Using the RESTORE . . . PREVIEW Command  . . . . . . . . . . . . . . . . . 811
+Identifying Necessary Files for Recovery . . . . . . . . . . . . . . . . . . . . . 812
+RMAN Recovery Procedures  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 812
+Recovering with Incrementally Updated Backups . . . . . . . . . . . . . . 812
+¡öC ON TE N TS xxvii
+Monitoring RMAN Jobs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 813
+User-Managed Recovery Procedures . . . . . . . . . . . . . . . . . . . . . . . . 813
+Typical Media Recovery Scenarios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 814
+Complete Recovery of a Whole Database  . . . . . . . . . . . . . . . . . . . . 814
+Recovering a Tablespace . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 817
+Recovering a Datafile . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 818
+Incomplete Recovery  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 820
+Recovering from the Loss of Control Files . . . . . . . . . . . . . . . . . . . . 824
+Recovering a Datafile Without a Backup  . . . . . . . . . . . . . . . . . . . . . 828
+The Data Recovery Advisor  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 829
+Working with the Data Recovery Advisor . . . . . . . . . . . . . . . . . . . . . 830
+Cloning a Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 833
+Using RMAN to Clone a Database . . . . . . . . . . . . . . . . . . . . . . . . . . . 834
+Using Database Control to Clone a Database  . . . . . . . . . . . . . . . . . 838
+Manually Cloning a Database  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 839
+Techniques for Granular Recovery  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 840
+Tablespace Point-in-Time Recovery. . . . . . . . . . . . . . . . . . . . . . . . . 840
+Using LogMiner for Precision Recovery . . . . . . . . . . . . . . . . . . . . . . 841
+Flashback Techniques and Recovery . . . . . . . . . . . . . . . . . . . . . . . . . . . . 847
+Flashback Levels  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 848
+Flashback vs. Traditional Recovery Techniques . . . . . . . . . . . . . . . 848
+Flashback Drop . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 849
+Flashback Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 853
+Using Restore Points  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 861
+Guaranteed Restore Points  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 862
+Viewing Restore Points. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 863
+Repairing Data Corruption and Trial Recovery . . . . . . . . . . . . . . . . . . . . . 864
+Block Media Recovery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 864
+Trial Recovery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 865
+Troubleshooting Recovery Errors  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 866
+The ORA-01194 Error. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 866
+The ORA-01152 Error. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 867
+The ORA-00376 Error. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 868
+The Transaction Backout Feature . . . . . . . . . . . . . . . . . . . . . . . . . . . 868
+Flashback Data Archive  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 870
+Managing the Flashback Data Archive . . . . . . . . . . . . . . . . . . . . . . . 870
+Enabling the Flashback Data Archive . . . . . . . . . . . . . . . . . . . . . . . . 872
+Using Flashback Data Archives: Examples  . . . . . . . . . . . . . . . . . . . 873
+xxviii ¡öCO N T E N T S
+PART 6 ¡ö ¡ö ¡ö Managing the Database
+¡öCHAPTER 17 Automatic Management and Online Capabilities  . . . . . . . 877
+The Automatic Database Diagnostic Monitor  . . . . . . . . . . . . . . . . . . . . . 877
+The Purpose of the ADDM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 878
+Problems That the ADDM Diagnoses . . . . . . . . . . . . . . . . . . . . . . . . 878
+ADDM Findings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 880
+ADDM Recommendations  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 880
+Managing the ADDM  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 881
+Automatic Memory Management  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 894
+Different Types of Memory Management  . . . . . . . . . . . . . . . . . . . . 894
+Enabling Automatic Memory Management . . . . . . . . . . . . . . . . . . . 895
+Tuning Automatic Memory Management. . . . . . . . . . . . . . . . . . . . . 896
+Automatic Memory Parameter Dependency  . . . . . . . . . . . . . . . . . . 897
+Automatic Optimizer Statistics Collection  . . . . . . . . . . . . . . . . . . . . . . . . 897
+Automatically Collecting Optimizer Statistics  . . . . . . . . . . . . . . . . . 898
+Manually Collecting Optimizer Statistics  . . . . . . . . . . . . . . . . . . . . . 900
+Automatic Storage Management  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 900
+Benefits of ASM  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 901
+Examining the ASM Architecture  . . . . . . . . . . . . . . . . . . . . . . . . . . . 901
+Installing ASM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 902
+ASM and Cluster Synchronization Service . . . . . . . . . . . . . . . . . . . . 902
+Creating an ASM Instance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 904
+The ASM Fast Mirror Resync Feature . . . . . . . . . . . . . . . . . . . . . . . . 908
+ASM Preferred Mirror Read . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 909
+Changing ASM Disk Group Attributes . . . . . . . . . . . . . . . . . . . . . . . . 909
+The asmcmd Command-Line Tool . . . . . . . . . . . . . . . . . . . . . . . . . . 911
+Managing ASM Disk Groups  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 913
+Adding Performance and Redundancy with Disk Groups. . . . . . . . 913
+Creating a Disk Group  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 914
+Adding Disks to a Disk Group  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 915
+Dropping Disks and Disk Groups  . . . . . . . . . . . . . . . . . . . . . . . . . . . 916
+Rebalancing Disk Groups. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 916
+Managing ASM Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 916
+Types of ASM Filenames . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 917
+Working with ASM Filenames . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 918
+ASM File Templates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 918
+Creating an ASM-Based Database . . . . . . . . . . . . . . . . . . . . . . . . . . 919
+Migrating Your Database to ASM  . . . . . . . . . . . . . . . . . . . . . . . . . . . 919
+¡öC ON TE N TS xxix
+Automatic Space Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 921
+Automatic Undo Management. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 921
+Easy File Management with OMF . . . . . . . . . . . . . . . . . . . . . . . . . . . 922
+Online Segment Shrinking and the Segment Advisor. . . . . . . . . . . 927
+Manual Segment Shrinking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 928
+Using the Segment Advisor to Shrink Segments. . . . . . . . . . . . . . . 930
+Automatic Segment Advisor Job . . . . . . . . . . . . . . . . . . . . . . . . . . . . 931
+Automatic Checkpoint Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 932
+Online Capabilities of Oracle Database 11 g . . . . . . . . . . . . . . . . . . . . . . . 933
+Online Data Reorganization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 933
+Online Data Redefinition  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 935
+Dynamic Resource Management  . . . . . . . . . . . . . . . . . . . . . . . . . . . 941
+Online Database Block-Size Changes  . . . . . . . . . . . . . . . . . . . . . . . 943
+Using Database Quiescing for Online Maintenance  . . . . . . . . . . . . 944
+Suspending the Database  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 945
+¡öCHAPTER 18 Managing and Monitoring the Operational Database . . . 947
+Types of Oracle Performance Statistics . . . . . . . . . . . . . . . . . . . . . . . . . . 948
+Cumulative Statistics  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 948
+Sample Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 948
+Baseline Data  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 948
+Database Metrics  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 950
+Server-Generated Alerts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 952
+Default Server-Generated Alerts . . . . . . . . . . . . . . . . . . . . . . . . . . . . 952
+Baseline Metrics and Adaptive Thresholds  . . . . . . . . . . . . . . . . . . . . . . . 953
+Managing Alerts  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 954
+Proactive Tablespace Alerts  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 956
+Using the Alert Logs and Trace Files for Monitoring . . . . . . . . . . . . 958
+Data Dictionary Views Related to Metrics and Alerts . . . . . . . . . . . 958
+The Automatic Workload Repository . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 959
+Types of Data Collected by the AWR  . . . . . . . . . . . . . . . . . . . . . . . . 960
+AWR Data Handling  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 960
+Managing the AWR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 961
+Moving Window Baselines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 965
+AWR Baseline Templates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 965
+Active Session History  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 971
+Current Active Session Data  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 972
+Older Active Session History Data. . . . . . . . . . . . . . . . . . . . . . . . . . . 972
+Producing an ASH Report. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 972
+xxx ¡öCO N T E N T S
+The Management Advisory Framework  . . . . . . . . . . . . . . . . . . . . . . . . . . 975
+The Management Advisors  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 976
+Managing the Advisory Framework  . . . . . . . . . . . . . . . . . . . . . . . . . 977
+Working with the Undo and the MTTR Advisors  . . . . . . . . . . . . . . . . . . . 980
+Using the Undo Advisor  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 980
+Using the MTTR Advisor. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 981
+Managing Online Redo Logs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 981
+Hardware Mirroring vs. Oracle Multiplexing  . . . . . . . . . . . . . . . . . . 982
+Online Redo Log Groups  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 982
+Creating Online Redo Log Groups . . . . . . . . . . . . . . . . . . . . . . . . . . . 982
+Adding Redo Log Groups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 983
+Renaming Redo Log Files  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 983
+Dropping Online Redo Logs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 984
+Online Redo Log Corruption . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 984
+Monitoring the Redo Logs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 984
+Managing Database Links . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 985
+Creating a Private Database Link . . . . . . . . . . . . . . . . . . . . . . . . . . . 985
+Creating a Public Database Link . . . . . . . . . . . . . . . . . . . . . . . . . . . . 986
+Using the Database Control to Create Database Links . . . . . . . . . . 987
+Comparing and Converging Database Objects  . . . . . . . . . . . . . . . . . . . . 987
+Comparing Data  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 987
+Converging Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 990
+Copying Files with the Database Server . . . . . . . . . . . . . . . . . . . . . . . . . . 991
+Requirements for the File Copy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 991
+Copying Files on a Local System  . . . . . . . . . . . . . . . . . . . . . . . . . . . 991
+Transferring a File to a Different Database  . . . . . . . . . . . . . . . . . . . 992
+Mapping Oracle Files to Physical Devices  . . . . . . . . . . . . . . . . . . . . . . . . 993
+Architecture of File Mapping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 993
+Setting Up File Mapping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 993
+Using the Oracle Scheduler . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 994
+Basic Scheduler Components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 994
+Types of Scheduler Jobs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 995
+Advanced Scheduler Components  . . . . . . . . . . . . . . . . . . . . . . . . . . 996
+Scheduler Architecture. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 997
+Scheduler Privileges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 997
+Managing the Basic Scheduler Components . . . . . . . . . . . . . . . . . . 998
+Managing Lightweight Jobs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1000
+Managing External Jobs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1002
+Managing Advanced Scheduler Components  . . . . . . . . . . . . . . . . 1011
+Managing Scheduler Attributes . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1017
+¡öC ON TE N TS xxxi
+Purging Job Logs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1019
+Default Scheduler Jobs  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1019
+Automated Maintenance Tasks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1019
+Predefined Maintenance Windows . . . . . . . . . . . . . . . . . . . . . . . . . 1020
+Managing Automated Maintenance Tasks. . . . . . . . . . . . . . . . . . . 1020
+Monitoring Automated Maintenance Tasks . . . . . . . . . . . . . . . . . . 1020
+Fault Diagnosability  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1022
+Automatic Diagnostic Repository  . . . . . . . . . . . . . . . . . . . . . . . . . . 1023
+ADRCI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1024
+Incident Packaging Service . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1026
+The Support Workbench  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1028
+The Health Monitor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1032
+Repairing SQL Statements with the SQL Repair Advisor . . . . . . . 1035
+The SQL Test Case Builder  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1038
+PART 7 ¡ö ¡ö ¡ö Performance Tuning
+¡öCHAPTER 19 Improving Database Performance:
+SQL Query Optimization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1041
+An Approach to Oracle Performance Tuning  . . . . . . . . . . . . . . . . . . . . . 1041
+A Systematic Approach to Performance Tuning  . . . . . . . . . . . . . . 1042
+Reactive Performance Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1042
+Optimizing Oracle Query Processing  . . . . . . . . . . . . . . . . . . . . . . . . . . . 1043
+Parsing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1043
+Optimization  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1043
+Query Execution  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1046
+Query Optimization and the Oracle CBO  . . . . . . . . . . . . . . . . . . . . . . . . 1047
+Choosing Your Optimization Mode  . . . . . . . . . . . . . . . . . . . . . . . . . 1047
+Providing Statistics to the Optimizer. . . . . . . . . . . . . . . . . . . . . . . . 1047
+Setting the Optimizer Mode . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1049
+Setting the Optimizer Level . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1050
+What Does the Optimizer Do? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1051
+Drawbacks of the CBO . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1053
+Providing Statistics to the CBO . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1053
+Deferred Statistics Publishing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1056
+Extended Statistics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1058
+The Cost Model of the Oracle Optimizer  . . . . . . . . . . . . . . . . . . . . 1060
+Collecting System Statistics  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1060
+xxxii ¡öCO N T E N T S
+Collecting Statistics on Dictionary Objects  . . . . . . . . . . . . . . . . . . 1062
+Frequency of Statistics Collection . . . . . . . . . . . . . . . . . . . . . . . . . . 1063
+What Happens When You Don¡¯t Have Statistics  . . . . . . . . . . . . . . 1063
+Using the OEM to Collect Optimizer Statistics . . . . . . . . . . . . . . . . 1064
+Writing Efficient SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1065
+Efficient WHERE Clauses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1065
+Using Hints to Influence the Execution Plan  . . . . . . . . . . . . . . . . . 1067
+Selecting the Best Join Method  . . . . . . . . . . . . . . . . . . . . . . . . . . . 1068
+Using Bitmap Join Indexes  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1069
+Selecting the Best Join Order . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1070
+Indexing Strategy  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1070
+Monitoring Index Usage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1073
+Removing Unnecessary Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . 1073
+Using Similar SQL Statements  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1074
+Reducing SQL Overhead Via Inline Functions  . . . . . . . . . . . . . . . . 1074
+Using Bind Variables. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1075
+Avoiding Improper Use of Views . . . . . . . . . . . . . . . . . . . . . . . . . . . 1075
+Avoiding Unnecessary Full Table Scans . . . . . . . . . . . . . . . . . . . . . 1075
+How the DBA Can Help Improve SQL Processing  . . . . . . . . . . . . . . . . . 1075
+Using Partitioned Tables  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1076
+Using Compression Techniques  . . . . . . . . . . . . . . . . . . . . . . . . . . . 1076
+Using Materialized Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1077
+Using Stored Outlines to Stabilize the CBO  . . . . . . . . . . . . . . . . . . 1077
+SQL Plan Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1080
+SQL Plan Baselines. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1080
+Capturing SQL Plan Baselines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1081
+The SQL Management Base  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1085
+Using Parallel Execution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1085
+Other DBA Tasks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1086
+Adaptive Cursor Sharing  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1087
+How Adaptive Cursor Sharing Works . . . . . . . . . . . . . . . . . . . . . . . 1088
+Monitoring Adaptive Cursor Sharing . . . . . . . . . . . . . . . . . . . . . . . . 1089
+SQL Performance Tuning Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1090
+Using EXPLAIN PLAN  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1090
+Using Autotrace. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1095
+Using SQL Trace and TKPROF . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1099
+End-to-End Tracing  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1105
+Using the DBMS_MONITOR Package . . . . . . . . . . . . . . . . . . . . . . . 1106
+Using the V$SQL View to Find Inefficient SQL . . . . . . . . . . . . . . . . 1108
+¡öC ON TE N TS xxxiii
+The SQL Tuning Advisor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1111
+Using the SQL Tuning Advisor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1111
+How the SQL Tuning Advisor Works . . . . . . . . . . . . . . . . . . . . . . . . 1111
+The SQL Tuning Advisor in Practice . . . . . . . . . . . . . . . . . . . . . . . . 1113
+The Automatic SQL Tuning Advisor  . . . . . . . . . . . . . . . . . . . . . . . . 1115
+Interpreting Automatic SQL Tuning Reports  . . . . . . . . . . . . . . . . . 1119
+Using Other GUI Tools. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1120
+Using the Result Cache  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1120
+Managing the Result Cache . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1120
+Setting the RESULT_CACHE_MODE Parameter. . . . . . . . . . . . . . . 1121
+Managing the Result Cache . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1123
+The PL/SQL Function Result Cache  . . . . . . . . . . . . . . . . . . . . . . . . 1124
+The Client Query Result Cache  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1125
+A Simple Approach to Tuning SQL Statements . . . . . . . . . . . . . . . . . . . 1126
+Identify Problem Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1127
+Locate the Source of the Inefficiency . . . . . . . . . . . . . . . . . . . . . . . 1127
+Tune the Statement  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1127
+Compare Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1127
+¡öCHAPTER 20 Performance Tuning: Tuning the Instance . . . . . . . . . . . . . 1129
+An Introduction to Instance Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1129
+Automatic Performance Tuning vs. Dynamic Performance Views  . . . 1131
+Tuning Oracle Memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1132
+Tuning the Shared Pool  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1133
+Hard Parsing and Soft Parsing  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1135
+Tuning the Buffer Cache  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1144
+Tuning the Large Pool, Streams Pool, and Java Pool . . . . . . . . . . 1148
+Tuning PGA Memory. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1148
+Evaluating System Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1152
+CPU Performance  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1153
+Memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1158
+Disk I/O  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1158
+Measuring I/O Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1159
+Is the I/O Optimally Distributed? . . . . . . . . . . . . . . . . . . . . . . . . . . . 1159
+Reducing Disk Contention . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1160
+The Oracle SAME Guidelines for Optimal Disk Usage. . . . . . . . . . 1160
+Network Performance  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1160
+xxxiv ¡öCO N T E N T S
+Measuring Instance Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1161
+Database Hit Ratios  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1161
+Database Wait Statistics  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1162
+Wait Events and Wait Classes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1163
+Analyzing Instance Performance. . . . . . . . . . . . . . . . . . . . . . . . . . . 1164
+Examining System Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . 1181
+Know Your Application . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1182
+Using the ADDM to Analyze Performance Problems. . . . . . . . . . . 1183
+Using AWR Reports for Individual SQL Statements . . . . . . . . . . . . 1184
+Operating System Memory Management  . . . . . . . . . . . . . . . . . . . 1186
+Analyzing Recent Session Activity with an ASH Report  . . . . . . . . 1186
+When a Database Hangs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1186
+Handling a Stuck Archiver Process . . . . . . . . . . . . . . . . . . . . . . . . . 1187
+System Usage Problems  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1188
+Excessive Contention for Resources. . . . . . . . . . . . . . . . . . . . . . . . 1188
+Locking Issues  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1189
+Abnormal Increase in Process Size. . . . . . . . . . . . . . . . . . . . . . . . . 1190
+Delays Due to Shared Pool Problems . . . . . . . . . . . . . . . . . . . . . . . 1191
+Problems Due to Bad Statistics . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1191
+Collecting Information During a Database Hang . . . . . . . . . . . . . . 1191
+Using the Database Control¡¯s Hang Analysis Page . . . . . . . . . . . . 1192
+A Simple Approach to Instance Tuning  . . . . . . . . . . . . . . . . . . . . . . . . . 1194
+What¡¯s Happening in the Database?  . . . . . . . . . . . . . . . . . . . . . . . 1194
+Using the OEM Database Control to Examine
+Database Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1195
+Are There Any Long-Running Transactions? . . . . . . . . . . . . . . . . . 1202
+Is Oracle the Problem? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1203
+Is the Network Okay? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1203
+Is the System CPU Bound?  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1203
+Is the System I/O Bound?. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1204
+Is the Database Load Too High? . . . . . . . . . . . . . . . . . . . . . . . . . . . 1205
+Checking Memory-Related Issues  . . . . . . . . . . . . . . . . . . . . . . . . . 1205
+Are the Redo Logs Sized Correctly? . . . . . . . . . . . . . . . . . . . . . . . . 1205
+Is the System Wait Bound? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1206
+The Compare Periods Report. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1206
+Eliminating the Contention. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1208
+Real Application Testing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1209
+Database Replay . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1209
+SQL Performance Analyzer  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1216
+¡öC ON TE N TS xxxv
+¡öAPPENDIX Oracle Database 11 g SQL and PL/SQL:
+A Brief Primer  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1221
+¡öINDEX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1255

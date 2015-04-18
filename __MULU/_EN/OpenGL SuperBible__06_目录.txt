@@ -1,0 +1,271 @@
+
+Figures xv
+Tables xxiii
+Listings xxv
+Foreword xxxiii
+Preface xxxv
+About This Book . . . . . . . . . . . . . . . . . . . . . . . . . . xxxv
+The Architecture of the Book . . . . . . . . . . . . . . . . . . . xxxvi
+What¡¯s New in This Edition . . . . . . . . . . . . . . . . . . . . xxxviii
+How to Build the Samples . . . . . . . . . . . . . . . . . . . . . xxxix
+Errata . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xl
+Acknowledgments xli
+About the Authors xlv
+I Foundations 1
+1 Introduction 3
+OpenGL and the Graphics Pipeline . . . . . . . . . . . . . . . . . . 4
+The Origins and Evolution of OpenGL . . . . . . . . . . . . . . . . 6
+Core Profile OpenGL . . . . . . . . . . . . . . . . . . . . . . . . 8
+Primitives, Pipelines, and Pixels . . . . . . . . . . . . . . . . . . . . 10
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+vii
+2 Our First OpenGL Program 13
+Creating a Simple Application . . . . . . . . . . . . . . . . . . . . . 14
+Using Shaders . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Drawing Our First Triangle . . . . . . . . . . . . . . . . . . . . . . . 24
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+3 Following the Pipeline 27
+Passing Data to the Vertex Shader . . . . . . . . . . . . . . . . . . . 28
+Vertex Attributes . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+Passing Data from Stage to Stage . . . . . . . . . . . . . . . . . . . . 29
+Interface Blocks . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+Tessellation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+Tessellation Control Shaders . . . . . . . . . . . . . . . . . . . 33
+The Tessellation Engine . . . . . . . . . . . . . . . . . . . . . . 34
+Tessellation Evaluation Shaders . . . . . . . . . . . . . . . . . . 34
+Geometry Shaders . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+Primitive Assembly, Clipping, and Rasterization . . . . . . . . . . . 38
+Clipping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+Viewport Transformation . . . . . . . . . . . . . . . . . . . . . 39
+Culling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+Rasterization . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+Fragment Shaders . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+Framebuffer Operations . . . . . . . . . . . . . . . . . . . . . . . . . 45
+Pixel Operations . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+Compute Shaders . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+4 Math for 3D Graphics 49
+Is This the Dreaded Math Chapter? . . . . . . . . . . . . . . . . . . 50
+A Crash Course in 3D Graphics Math . . . . . . . . . . . . . . . . . 51
+Vectors, or Which Way Is Which? . . . . . . . . . . . . . . . . 51
+Common Vector Operators . . . . . . . . . . . . . . . . . . . . 54
+Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+Matrix Construction and Operators . . . . . . . . . . . . . . . 60
+Understanding Transformations . . . . . . . . . . . . . . . . . . . . 63
+Coordinate Spaces in OpenGL . . . . . . . . . . . . . . . . . . 63
+Coordinate Transformations . . . . . . . . . . . . . . . . . . . 66
+Concatenating Transformations . . . . . . . . . . . . . . . . . 73
+Quaternions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+The Model-View Transform . . . . . . . . . . . . . . . . . . . . 76
+Projection Transformations . . . . . . . . . . . . . . . . . . . . 79
+viii Contents
+Interpolation, Lines, Curves, and Splines . . . . . . . . . . . . . . . 82
+Curves . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+Splines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90
+5 Data 91
+Buffers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
+Allocating Memory using Buffers . . . . . . . . . . . . . . . . . 92
+Filling and Copying Data in Buffers . . . . . . . . . . . . . . . 95
+Feeding Vertex Shaders from Buffers . . . . . . . . . . . . . . . 97
+Uniforms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+Default Block Uniforms . . . . . . . . . . . . . . . . . . . . . . 103
+Uniform Blocks . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+Using Uniforms to Transform Geometry . . . . . . . . . . . . 121
+Shader Storage Blocks . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+Synchronizing Access to Memory . . . . . . . . . . . . . . . . 129
+Atomic Counters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+Synchronizing Access to Atomic Counters . . . . . . . . . . . 137
+Textures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
+Creating and Initializing Textures . . . . . . . . . . . . . . . . 138
+Texture Targets and Types . . . . . . . . . . . . . . . . . . . . . 139
+Reading from Textures in Shaders . . . . . . . . . . . . . . . . 141
+Loading Textures from Files . . . . . . . . . . . . . . . . . . . . 144
+Controlling How Texture Data Is Read . . . . . . . . . . . . . . 148
+Array Textures . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160
+Writing to Textures in Shaders . . . . . . . . . . . . . . . . . . 165
+Synchronizing Access to Images . . . . . . . . . . . . . . . . . 176
+Texture Compression . . . . . . . . . . . . . . . . . . . . . . . 177
+Texture Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . 181
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 185
+6 Shaders and Programs 187
+Language Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+Data Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+Built-In Functions . . . . . . . . . . . . . . . . . . . . . . . . . 194
+Compiling, Linking, and Examining Programs . . . . . . . . . . . . 201
+Getting Information from the Compiler . . . . . . . . . . . . 201
+Getting Information from the Linker . . . . . . . . . . . . . . 204
+Separate Programs . . . . . . . . . . . . . . . . . . . . . . . . . 206
+Shader Subroutines . . . . . . . . . . . . . . . . . . . . . . . . . 213
+Program Binaries . . . . . . . . . . . . . . . . . . . . . . . . . . 216
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 219
+Contents ix
+II In Depth 221
+7 Vertex Processing and Drawing Commands 223
+Vertex Processing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+Vertex Shader Inputs . . . . . . . . . . . . . . . . . . . . . . . . 224
+Vertex Shader Outputs . . . . . . . . . . . . . . . . . . . . . . . 229
+Drawing Commands . . . . . . . . . . . . . . . . . . . . . . . . . . . 231
+Indexed Drawing Commands . . . . . . . . . . . . . . . . . . . 231
+Instancing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 237
+Indirect Draws . . . . . . . . . . . . . . . . . . . . . . . . . . . 250
+Storing Transformed Vertices . . . . . . . . . . . . . . . . . . . . . . 259
+Using Transform Feedback . . . . . . . . . . . . . . . . . . . . 260
+Starting, Pausing, and Stopping Transform Feedback . . . . . 264
+Ending the Pipeline with Transform Feedback . . . . . . . . . 266
+Transform Feedback Example ¡ª Physical Simulation . . . . . 266
+Clipping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 276
+User-Defined Clipping . . . . . . . . . . . . . . . . . . . . . . . 279
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 282
+8 Primitive Processing 283
+Tessellation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 284
+Tessellation Primitive Modes . . . . . . . . . . . . . . . . . . . 285
+Tessellation Subdivision Modes . . . . . . . . . . . . . . . . . . 294
+Passing Data between Tessellation Shaders . . . . . . . . . . . 296
+Communication between Shader Invocations . . . . . . . . . 299
+Tessellation Example ¡ª Terrain Rendering . . . . . . . . . . . 300
+Tessellation Example ¡ª Cubic B¨¦zier Patches . . . . . . . . . . 304
+Geometry Shaders . . . . . . . . . . . . . . . . . . . . . . . . . . . . 310
+The Pass-Through Geometry Shader . . . . . . . . . . . . . . . 311
+Using Geometry Shaders in an Application . . . . . . . . . . . 313
+Discarding Geometry in the Geometry Shader . . . . . . . . . 317
+Modifying Geometry in the Geometry Shader . . . . . . . . . 320
+Generating Geometry in the Geometry Shader . . . . . . . . . 322
+Changing the Primitive Type in the Geometry
+Shader . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+Multiple Streams of Storage . . . . . . . . . . . . . . . . . . . . 328
+New Primitive Types Introduced by the Geometry
+Shader . . . . . . . . . . . . . . . . . . . . . . . . . . . . 329
+Multiple Viewport Transformations . . . . . . . . . . . . . . . 336
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 340
+x Contents
+9 Fragment Processing and the Framebuffer 341
+Fragment Shaders . . . . . . . . . . . . . . . . . . . . . . . . . . . . 342
+Interpolation and Storage Qualifiers . . . . . . . . . . . . . . . 342
+Per-Fragment Tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+Scissor Testing . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+Stencil Testing . . . . . . . . . . . . . . . . . . . . . . . . . . . 348
+Depth Testing . . . . . . . . . . . . . . . . . . . . . . . . . . . . 351
+Early Testing . . . . . . . . . . . . . . . . . . . . . . . . . . . . 355
+Color Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 357
+Blending . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 357
+Logical Operations . . . . . . . . . . . . . . . . . . . . . . . . . 362
+Color Masking . . . . . . . . . . . . . . . . . . . . . . . . . . . 363
+Off-Screen Rendering . . . . . . . . . . . . . . . . . . . . . . . . . . 364
+Multiple Framebuffer Attachments . . . . . . . . . . . . . . . . 368
+Layered Rendering . . . . . . . . . . . . . . . . . . . . . . . . . 370
+Framebuffer Completeness . . . . . . . . . . . . . . . . . . . . 376
+Rendering in Stereo . . . . . . . . . . . . . . . . . . . . . . . . 379
+Antialiasing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 384
+Antialiasing by Filtering . . . . . . . . . . . . . . . . . . . . . . 385
+Multi-sample Antialiasing . . . . . . . . . . . . . . . . . . . . . 387
+Multi-sample Textures . . . . . . . . . . . . . . . . . . . . . . . 389
+Sample Rate Shading . . . . . . . . . . . . . . . . . . . . . . . . 393
+Centroid Sampling . . . . . . . . . . . . . . . . . . . . . . . . . 395
+Advanced Framebuffer Formats . . . . . . . . . . . . . . . . . . . . . 399
+Rendering with No Attachments . . . . . . . . . . . . . . . . . 399
+Floating-Point Framebuffers . . . . . . . . . . . . . . . . . . . . 401
+Integer Framebuffers . . . . . . . . . . . . . . . . . . . . . . . . 415
+The sRGB Color Space . . . . . . . . . . . . . . . . . . . . . . . 416
+Point Sprites . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 419
+Texturing Points . . . . . . . . . . . . . . . . . . . . . . . . . . 420
+Rendering a Star Field . . . . . . . . . . . . . . . . . . . . . . . 420
+Point Parameters . . . . . . . . . . . . . . . . . . . . . . . . . . 423
+Shaped Points . . . . . . . . . . . . . . . . . . . . . . . . . . . . 424
+Rotating Points . . . . . . . . . . . . . . . . . . . . . . . . . . . 426
+Getting at Your Image . . . . . . . . . . . . . . . . . . . . . . . . . . 428
+Reading from a Framebuffer . . . . . . . . . . . . . . . . . . . . 429
+Copying Data between Framebuffers . . . . . . . . . . . . . . 431
+Reading Back Texture Data . . . . . . . . . . . . . . . . . . . . 434
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 435
+10 Compute Shaders 437
+Using Compute Shaders . . . . . . . . . . . . . . . . . . . . . . . . . 438
+Contents xi
+Executing Compute Shaders . . . . . . . . . . . . . . . . . . . 439
+Compute Shader Communication . . . . . . . . . . . . . . . . 444
+Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 449
+Compute Shader Parallel Prefix Sum . . . . . . . . . . . . . . . 450
+Compute Shader Flocking . . . . . . . . . . . . . . . . . . . . . 462
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 471
+11 Controlling and Monitoring the Pipeline 473
+Queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 474
+Occlusion Queries . . . . . . . . . . . . . . . . . . . . . . . . . 475
+Timer Queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . 484
+Transform Feedback Queries . . . . . . . . . . . . . . . . . . . 487
+Synchronization in OpenGL . . . . . . . . . . . . . . . . . . . . . . 493
+Draining the Pipeline . . . . . . . . . . . . . . . . . . . . . . . 493
+Synchronization and Fences . . . . . . . . . . . . . . . . . . . 494
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 498
+III In Practice 501
+12 Rendering Techniques 503
+Lighting Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 504
+The Phong Lighting Model . . . . . . . . . . . . . . . . . . . . 504
+Blinn-Phong Lighting . . . . . . . . . . . . . . . . . . . . . . . 513
+Rim Lighting . . . . . . . . . . . . . . . . . . . . . . . . . . . . 515
+Normal Mapping . . . . . . . . . . . . . . . . . . . . . . . . . . 518
+Environment Mapping . . . . . . . . . . . . . . . . . . . . . . 522
+Material Properties . . . . . . . . . . . . . . . . . . . . . . . . . 532
+Casting Shadows . . . . . . . . . . . . . . . . . . . . . . . . . . 534
+Atmospheric Effects . . . . . . . . . . . . . . . . . . . . . . . . 540
+Non-Photo-Realistic Rendering . . . . . . . . . . . . . . . . . . . . . 544
+Cell Shading ¡ª Texels as Light . . . . . . . . . . . . . . . . . . 545
+Alternative Rendering Methods . . . . . . . . . . . . . . . . . . . . 548
+Deferred Shading . . . . . . . . . . . . . . . . . . . . . . . . . . 548
+Screen-Space Techniques . . . . . . . . . . . . . . . . . . . . . 558
+Rendering without Triangles . . . . . . . . . . . . . . . . . . . 565
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 580
+13 Debugging and Performance Optimization 581
+Debugging Your Applications . . . . . . . . . . . . . . . . . . . . . . 582
+Debug Contexts . . . . . . . . . . . . . . . . . . . . . . . . . . 582
+xii Contents
+Performance Optimization . . . . . . . . . . . . . . . . . . . . . . . 589
+Performance Analysis Tools . . . . . . . . . . . . . . . . . . . . 589
+Tuning Your Application for Speed . . . . . . . . . . . . . . . . 597
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 616
+14 Platform Specifics 617
+Using Extensions in OpenGL . . . . . . . . . . . . . . . . . . . . . . 618
+Enhancing OpenGL with Extensions . . . . . . . . . . . . . . 619
+OpenGL on Windows . . . . . . . . . . . . . . . . . . . . . . . . . . 623
+OpenGL Implementations on Windows . . . . . . . . . . . . . 623
+Basic Window Setup . . . . . . . . . . . . . . . . . . . . . . . . 627
+The OpenGL Rendering Context . . . . . . . . . . . . . . . . . 632
+Full-Screen Rendering . . . . . . . . . . . . . . . . . . . . . . . 644
+Cleaning Up . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 646
+OpenGL on Mac OS X . . . . . . . . . . . . . . . . . . . . . . . . . . 647
+The Faces of OpenGL on the Mac . . . . . . . . . . . . . . . . 648
+OpenGL with Cocoa . . . . . . . . . . . . . . . . . . . . . . . . 649
+Introducing GLKit . . . . . . . . . . . . . . . . . . . . . . . . . 662
+Retina Displays . . . . . . . . . . . . . . . . . . . . . . . . . . . 673
+Core OpenGL . . . . . . . . . . . . . . . . . . . . . . . . . . . . 674
+Full-Screen Rendering . . . . . . . . . . . . . . . . . . . . . . . 675
+Sync Frame Rate . . . . . . . . . . . . . . . . . . . . . . . . . . 677
+Multi-threaded OpenGL . . . . . . . . . . . . . . . . . . . . . . 679
+GLUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 680
+OpenGL on Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . 682
+The Basics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 682
+Brief History . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 682
+What Is X? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 683
+Getting Started . . . . . . . . . . . . . . . . . . . . . . . . . . . 683
+Building OpenGL Apps . . . . . . . . . . . . . . . . . . . . . . 687
+Windows and Render Surfaces . . . . . . . . . . . . . . . . . . 693
+GLX Strings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 695
+Context Management . . . . . . . . . . . . . . . . . . . . . . . 695
+Using Contexts . . . . . . . . . . . . . . . . . . . . . . . . . . . 699
+Putting It All Together . . . . . . . . . . . . . . . . . . . . . . . 701
+Going Full Screen on X . . . . . . . . . . . . . . . . . . . . . . 704
+OpenGL on Mobile Platforms . . . . . . . . . . . . . . . . . . . . . 705
+OpenGL on a Diet . . . . . . . . . . . . . . . . . . . . . . . . . 705
+OpenGL ES 3.0 . . . . . . . . . . . . . . . . . . . . . . . . . . . 709
+The OpenGL ES Environment . . . . . . . . . . . . . . . . . . 713
+EGL: A New Windowing Environment . . . . . . . . . . . . . 718
+More EGL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 727
+Contents xiii
+Negotiating Embedded Environments . . . . . . . . . . . . . . 728
+Android Development Environments . . . . . . . . . . . . . . 729
+iOpenGL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 734
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 744
+A Further Reading 747
+B The SBM File Format 751
+C The SuperBible Tools 759
+Glossary 765
+Index 773

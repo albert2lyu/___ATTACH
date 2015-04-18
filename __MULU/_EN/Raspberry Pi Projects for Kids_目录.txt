@@ -1,0 +1,83 @@
+
+Preface 1
+Chapter 1: Getting Started with the Raspberry Pi 5
+Materials needed 6
+Power supply 6
+Storage 6
+Input 7
+Video 7
+Network 8
+Preparing the SD card 8
+Starting up the Raspberry Pi 10
+Using your Raspberry Pi 13
+The command line 13
+Updating and installing new software 14
+Other uses for Raspberry Pi 15
+Troubleshooting 16
+Summary 17
+Chapter 2: Making Your Own Angry Birds Game 19
+Scratch 20
+Hello world! 21
+Code tour 22
+Creating a character 23
+Creating a level 25
+Moving the character 26
+Initialization 26
+Moving with the keyboard 27
+Launch! 28
+Flight 30
+Adding physics 30
+Gravity 31
+Bouncing 31
+Ending the game 32
+Scoring 33
+Extensions 35
+Summary 35
+Chapter 3: Testing Your Speed 37
+Materials needed 37
+Creating the game controller 38
+The controller base 39
+Adding buttons 39
+Connecting to the Raspberry Pi 42
+Python 43
+Coding the game 45
+Random behavior 45
+Using the controller 46
+Adding a time limit 48
+Bringing it all together 49
+Complete code listing 50
+The keyboard version 52
+What's next? 53
+Summary 53
+Chapter 4: Making an Interactive Map of Your City 55
+Hello world! 56
+Tkinter 56
+Writing the program 56
+Getting a map 58
+No Internet? No problem! 58
+Google Maps 59
+Generating the address 60
+Downloading the image 61
+Using the image 62
+Adding markers 63
+Detecting mouse clicks 64
+Reacting to mouse clicks 64
+Adding labels 66
+Basic labels 66
+Pop-up windows 66
+Code listing 69
+Extensions 71
+Layout 72
+Additional widgets 72
+Checkbutton 72
+Frame and LabelFrame 73
+Listbox 73
+Menu 73
+Menubutton 74
+Message 74
+OptionMenu 74
+Radiobutton 75
+Scale 75
+Spinbox 75
+Summary 76
+Index 77

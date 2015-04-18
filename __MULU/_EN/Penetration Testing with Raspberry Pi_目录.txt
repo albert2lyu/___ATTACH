@@ -1,0 +1,97 @@
+
+Preface 1
+Chapter 1: Raspberry Pi and Kali Linux Basics 5
+Purchasing a Raspberry Pi 6
+Assembling a Raspberry Pi 10
+Preparing a microSD card 11
+Installing Kali Linux 14
+Combining Kali Linux and Raspberry Pi 19
+Pros and cons of the Raspberry Pi 21
+Raspberry Pi penetration testing use cases 23
+Cloning the Raspberry Pi SD card 24
+Avoiding common problems 26
+Summary 29
+Chapter 2: Preparing the Raspberry Pi 31
+Raspberry Pi use cases 32
+The Command and Control server 33
+Preparing for a penetration test 33
+Overclocking 34
+Setting up wireless cards 37
+Setting up a 3G USB modem with Kali Linux 39
+Setting up the SSH service 40
+SSH default keys and management 42
+Reverse shell through SSH 42
+Stunnel 46
+Installing a Stunnel client 47
+Wrapping it up with an example 49
+Summary 50
+Chapter 3: Penetration Testing 51
+Network scanning 52
+Nmap 52
+Wireless security 54
+Cracking WPA/WPA2 55
+Creating wordlists 60
+Capturing traffic on the network 60
+Tcpdump 61
+Man-in-the-middle attacks 62
+Getting data to the Pi 62
+ARP spoofing 65
+Ettercap 67
+Ettercap command line 72
+Driftnet 74
+Tuning your network capture 75
+Scripting tcpdump for future access 77
+Wireshark 78
+Capturing a WordPress password example 81
+TShark 83
+Beating HTTPS with SSLstrip 84
+Launching an SSLstrip attack 85
+Summary 88
+Chapter 4: Raspberry Pi Attacks 89
+Exploiting a target 90
+Metasploit 90
+Creating your own payloads with Metasploit 95
+Wrapping payloads 97
+Social engineering 98
+The Social-Engineer Toolkit 99
+Phishing with BeEF 104
+Rogue access honeypots 110
+Easy-creds 111
+Summary 117
+Chapter 5: Ending the Penetration Test 119
+Covering your tracks 120
+Wiping logs 121
+Masking your network footprint 125
+Proxychains 126
+Resetting the Raspberry Pi to factory settings 127
+Remotely corrupting Kali Linux 128
+Developing reports 128
+Creating screenshots 129
+ImageMagick 129
+Shutter 130
+Compressing files 131
+Zip/Unzip 132
+File Roller 132
+Split 133
+Summary 134
+Chapter 6: Other Raspberry Pi Projects 135
+PwnPi 136
+Raspberry Pwn 139
+PwnBerry Pi 141
+Defending your network 143
+Intrusion detection and prevention 144
+Snort 145
+Content filter 149
+KidSafe 149
+Remote access with OpenVPN 155
+Tor relays and routers 165
+Raspberry Tor 166
+Tor router 170
+Running Raspberry Pi on your PC with QEMU emulator 175
+Other Raspberry Pi uses 179
+Flight tracking using PiAware 179
+PiPlay 181
+PrivateEyePi 184
+More uses 186
+Summary 186
+Index 187

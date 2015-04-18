@@ -1,0 +1,66 @@
+
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . vii
+1. What Is the Kinect? . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+How Does It Work? Where Did It Come From?. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Kinect Artists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+2. Working with the Depth Image . . . . . . . . . . . . 43
+Images and Pixels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+Project 1: Installing the SimpleOpenNI Processing Library. . . . . . . . . . . . . . . . . . 45
+Project 2: Your First Kinect Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+Project 3: Looking at a Pixel . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+Converting to Real-World Distances . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+Project 4: A Wireless Tape Measure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+Project 5: Tracking the Nearest Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+Projects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+Project 6: Invisible Pencil . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+Project 7: Minority Report Photos. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 96
+Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+3. Working with Point Clouds . . . . . . . . . . . . . . . . 109
+What You¡¯ll Learn in This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
+Welcome to the Third Dimension. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+Drawing Our First Point Cloud . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+Making the Point Cloud Move . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 119
+Viewing the Point Cloud in Color . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+Making the Point Cloud Interactive . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+Projects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+Project 8: Air Drum Kit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+Project 9: Virtual Kinect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182
+Contents
+vi Contents
+4. Working with the Skeleton Data . . . . . . . . . 185
+A Note About Calibration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 192
+Stages in the Calibration Process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+User Detection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+Accessing Joint Positions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 202
+Skeleton Anatomy Lesson . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+Measuring the Distance Between Two Joints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 219
+Transferring Orientation in 3D . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 228
+Background Removal, User Pixels, and the Scene Map . . . . . . . . . . . . . . . . . . . 246
+Tracking Without Calibration: Hand Tracking and Center of Mass . . . . . . . . 254
+Projects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 263
+Project 10: Exercise Measurement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265
+Project 11: ¡°Stayin¡¯ Alive¡±: Dance Move Triggers MP3 . . . . . . . . . . . . . . . . . . . . . . 279
+Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 299
+5. Scanning for Fabrication . . . . . . . . . . . . . . . . . . 301
+Intro to Modelbuilder . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 306
+Intro to MeshLab. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313
+Making a Mesh from the Kinect Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 316
+Looking at Our First Scan . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 322
+Cleaning Up the Mesh . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 324
+Looking at Our Corrected Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 331
+Prepping for Printing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+Reduce Polygons in MeshLab . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+Printing Our Model on a MakerBot . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 336
+Sending Our Model to Shapeways . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 340
+Conclusion: Comparing Prints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 342
+6. Using the Kinect for Robotics . . . . . . . . . . . 345
+Forward Kinematics. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 347
+Inverse Kinematics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 367
+Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 378
+7. Conclusion: What¡¯s Next? . . . . . . . . . . . . . . . . . 379
+Beyond Processing: Other Frameworks and Languages . . . . . . . . . . . . . . . . . . 380
+Topics in 3D Programming to Explore . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 384
+Ideas for Projects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 388
+A. Appendix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 393
+Index. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 411

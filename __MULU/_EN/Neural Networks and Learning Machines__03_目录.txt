@@ -1,0 +1,268 @@
+
+Preface x
+Introduction 1
+1. What is a Neural Network? 1
+2. The Human Brain 6
+3. Models of a Neuron 10
+4. Neural Networks Viewed As Directed Graphs 15
+5. Feedback 18
+6. Network Architectures 21
+7. Knowledge Representation 24
+8. Learning Processes 34
+9. Learning Tasks 38
+10. Concluding Remarks 45
+Notes and References 46
+Chapter 1 Rosenblatt＊s Perceptron 47
+1.1 Introduction 47
+1.2. Perceptron 48
+1.3. The Perceptron Convergence Theorem 50
+1.4. Relation Between the Perceptron and Bayes Classifier for a Gaussian Environment 55
+1.5. Computer Experiment: Pattern Classification 60
+1.6. The Batch Perceptron Algorithm 62
+1.7. Summary and Discussion 65
+Notes and References 66
+Problems 66
+Chapter 2 Model Building through Regression 68
+2.1 Introduction 68
+2.2 Linear Regression Model: Preliminary Considerations 69
+2.3 Maximum a Posteriori Estimation of the Parameter Vector 71
+2.4 Relationship Between Regularized Least-Squares Estimation
+and MAP Estimation 76
+2.5 Computer Experiment: Pattern Classification 77
+2.6 The Minimum-Description-Length Principle 79
+2.7 Finite Sample-Size Considerations 82
+2.8 The Instrumental-Variables Method 86
+2.9 Summary and Discussion 88
+Notes and References 89
+Problems 89
+Contents
+vi Contents
+Chapter 3 The Least-Mean-Square Algorithm 91
+3.1 Introduction 91
+3.2 Filtering Structure of the LMS Algorithm 92
+3.3 Unconstrained Optimization: a Review 94
+3.4 The Wiener Filter 100
+3.5 The Least-Mean-Square Algorithm 102
+3.6 Markov Model Portraying the Deviation of the LMS Algorithm
+from the Wiener Filter 104
+3.7 The Langevin Equation: Characterization of Brownian Motion 106
+3.8 Kushner＊s Direct-Averaging Method 107
+3.9 Statistical LMS Learning Theory for Small Learning-Rate Parameter 108
+3.10 Computer Experiment I: Linear Prediction 110
+3.11 Computer Experiment II: Pattern Classification 112
+3.12 Virtues and Limitations of the LMS Algorithm 113
+3.13 Learning-Rate Annealing Schedules 115
+3.14 Summary and Discussion 117
+Notes and References 118
+Problems 119
+Chapter 4 Multilayer Perceptrons 122
+4.1 Introduction 123
+4.2 Some Preliminaries 124
+4.3 Batch Learning and On-Line Learning 126
+4.4 The Back-Propagation Algorithm 129
+4.5 XOR Problem 141
+4.6 Heuristics for Making the Back-Propagation Algorithm Perform Better 144
+4.7 Computer Experiment: Pattern Classification 150
+4.8 Back Propagation and Differentiation 153
+4.9 The Hessian and Its Role in On-Line Learning 155
+4.10 Optimal Annealing and Adaptive Control of the Learning Rate 157
+4.11 Generalization 164
+4.12 Approximations of Functions 166
+4.13 Cross-Validation 171
+4.14 Complexity Regularization and Network Pruning 175
+4.15 Virtues and Limitations of Back-Propagation Learning 180
+4.16 Supervised Learning Viewed as an Optimization Problem 186
+4.17 Convolutional Networks 201
+4.18 Nonlinear Filtering 203
+4.19 Small-Scale Versus Large-Scale Learning Problems 209
+4.20 Summary and Discussion 217
+Notes and References 219
+Problems 221
+Chapter 5 Kernel Methods and Radial-Basis Function Networks 230
+5.1 Introduction 230
+5.2 Cover＊s Theorem on the Separability of Patterns 231
+5.3 The Interpolation Problem 236
+5.4 Radial-Basis-Function Networks 239
+5.5 K-Means Clustering 242
+5.6 Recursive Least-Squares Estimation of the Weight Vector 245
+5.7 Hybrid Learning Procedure for RBF Networks 249
+5.8 Computer Experiment: Pattern Classification 250
+5.9 Interpretations of the Gaussian Hidden Units 252
+5.10 Kernel Regression and Its Relation to RBF Networks 255
+5.11 Summary and Discussion 259
+Notes and References 261
+Problems 263
+Chapter 6 Support Vector Machines 268
+6.1 Introduction 268
+6.2 Optimal Hyperplane for Linearly Separable Patterns 269
+6.3 Optimal Hyperplane for Nonseparable Patterns 276
+6.4 The Support Vector Machine Viewed as a Kernel Machine 281
+6.5 Design of Support Vector Machines 284
+6.6 XOR Problem 286
+6.7 Computer Experiment: Pattern Classification 289
+6.8 Regression: Robustness Considerations 289
+6.9 Optimal Solution of the Linear Regression Problem 293
+6.10 The Representer Theorem and Related Issues 296
+6.11 Summary and Discussion 302
+Notes and References 304
+Problems 307
+Chapter 7 Regularization Theory 313
+7.1 Introduction 313
+7.2 Hadamard＊s Conditions for Well-Posedness 314
+7.3 Tikhonov＊s Regularization Theory 315
+7.4 Regularization Networks 326
+7.5 Generalized Radial-Basis-Function Networks 327
+7.6 The Regularized Least-Squares Estimator: Revisited 331
+7.7 Additional Notes of Interest on Regularization 335
+7.8 Estimation of the Regularization Parameter 336
+7.9 Semisupervised Learning 342
+7.10 Manifold Regularization: Preliminary Considerations 343
+7.11 Differentiable Manifolds 345
+7.12 Generalized Regularization Theory 348
+7.13 Spectral Graph Theory 350
+7.14 Generalized Representer Theorem 352
+7.15 Laplacian Regularized Least-Squares Algorithm 354
+7.16 Experiments on Pattern Classification Using Semisupervised Learning 356
+7.17 Summary and Discussion 359
+Notes and References 361
+Problems 363
+Chapter 8 Principal-Components Analysis 367
+8.1 Introduction 367
+8.2 Principles of Self-Organization 368
+8.3 Self-Organized Feature Analysis 372
+8.4 Principal-Components Analysis: Perturbation Theory 373
+8.5 Hebbian-Based Maximum Eigenfilter 383
+8.6 Hebbian-Based Principal-Components Analysis 392
+8.7 Case Study: Image Coding 398
+8.8 Kernel Principal-Components Analysis 401
+8.9 Basic Issues Involved in the Coding of Natural Images 406
+8.10 Kernel Hebbian Algorithm 407
+8.11 Summary and Discussion 412
+Notes and References 415
+Problems 418
+Contents vii
+viii Contents
+Chapter 9 Self-Organizing Maps 425
+9.1 Introduction 425
+9.2 Two Basic Feature-Mapping Models 426
+9.3 Self-Organizing Map 428
+9.4 Properties of the Feature Map 437
+9.5 Computer Experiments I: Disentangling Lattice Dynamics Using SOM 445
+9.6 Contextual Maps 447
+9.7 Hierarchical Vector Quantization 450
+9.8 Kernel Self-Organizing Map 454
+9.9 Computer Experiment II: Disentangling Lattice Dynamics Using
+Kernel SOM 462
+9.10 Relationship Between Kernel SOM and Kullback每Leibler Divergence 464
+9.11 Summary and Discussion 466
+Notes and References 468
+Problems 470
+Chapter 10 Information-Theoretic Learning Models 475
+10.1 Introduction 476
+10.2 Entropy 477
+10.3 Maximum-Entropy Principle 481
+10.4 Mutual Information 484
+10.5 Kullback每Leibler Divergence 486
+10.6 Copulas 489
+10.7 Mutual Information as an Objective Function to be Optimized 493
+10.8 Maximum Mutual Information Principle 494
+10.9 Infomax and Redundancy Reduction 499
+10.10 Spatially Coherent Features 501
+10.11 Spatially Incoherent Features 504
+10.12 Independent-Components Analysis 508
+10.13 Sparse Coding of Natural Images and Comparison with ICA Coding 514
+10.14 Natural-Gradient Learning for Independent-Components Analysis 516
+10.15 Maximum-Likelihood Estimation for Independent-Components Analysis 526
+10.16 Maximum-Entropy Learning for Blind Source Separation 529
+10.17 Maximization of Negentropy for Independent-Components Analysis 534
+10.18 Coherent Independent-Components Analysis 541
+10.19 Rate Distortion Theory and Information Bottleneck 549
+10.20 Optimal Manifold Representation of Data 553
+10.21 Computer Experiment: Pattern Classification 560
+10.22 Summary and Discussion 561
+Notes and References 564
+Problems 572
+Chapter 11 Stochastic Methods Rooted in Statistical Mechanics 579
+11.1 Introduction 580
+11.2 Statistical Mechanics 580
+11.3 Markov Chains 582
+11.4 Metropolis Algorithm 591
+11.5 Simulated Annealing 594
+11.6 Gibbs Sampling 596
+11.7 Boltzmann Machine 598
+11.8 Logistic Belief Nets 604
+11.9 Deep Belief Nets 606
+11.10 Deterministic Annealing 610
+11.11 Analogy of Deterministic Annealing with Expectation-Maximization
+Algorithm 616
+11.12 Summary and Discussion 617
+Notes and References 619
+Problems 621
+Chapter 12 Dynamic Programming 627
+12.1 Introduction 627
+12.2 Markov Decision Process 629
+12.3 Bellman＊s Optimality Criterion 631
+12.4 Policy Iteration 635
+12.5 Value Iteration 637
+12.6 Approximate Dynamic Programming: Direct Methods 642
+12.7 Temporal-Difference Learning 643
+12.8 Q-Learning 648
+12.9 Approximate Dynamic Programming: Indirect Methods 652
+12.10 Least-Squares Policy Evaluation 655
+12.11 Approximate Policy Iteration 660
+12.12 Summary and Discussion 663
+Notes and References 665
+Problems 668
+Chapter 13 Neurodynamics 672
+13.1 Introduction 672
+13.2 Dynamic Systems 674
+13.3 Stability of Equilibrium States 678
+13.4 Attractors 684
+13.5 Neurodynamic Models 686
+13.6 Manipulation of Attractors as a Recurrent
+Network Paradigm 689
+13.7 Hopfield Model 690
+13.8 The Cohen每Grossberg Theorem 703
+13.9 Brain-State-In-A-Box Model 705
+13.10 Strange Attractors and Chaos 711
+13.11 Dynamic Reconstruction of a Chaotic Process 716
+13.12 Summary and Discussion 722
+Notes and References 724
+Problems 727
+Chapter 14 Bayseian Filtering for State Estimation of Dynamic Systems 731
+14.1 Introduction 731
+14.2 State-Space Models 732
+14.3 Kalman Filters 736
+14.4 The Divergence-Phenomenon and Square-Root Filtering 744
+14.5 The Extended Kalman Filter 750
+14.6 The Bayesian Filter 755
+14.7 Cubature Kalman Filter: Building on the Kalman Filter 759
+14.8 Particle Filters 765
+14.9 Computer Experiment: Comparative Evaluation of Extended Kalman and Particle
+Filters 775
+14.10 Kalman Filtering in Modeling of Brain Functions 777
+14.11 Summary and Discussion 780
+Notes and References 782
+Problems 784
+Contents ix
+x Contents
+Chapter 15 Dynamically Driven Recurrent Networks 790
+15.1 Introduction 790
+15.2 Recurrent Network Architectures 791
+15.3 Universal Approximation Theorem 797
+15.4 Controllability and Observability 799
+15.5 Computational Power of Recurrent Networks 804
+15.6 Learning Algorithms 806
+15.7 Back Propagation Through Time 808
+15.8 Real-Time Recurrent Learning 812
+15.9 Vanishing Gradients in Recurrent Networks 818
+15.10 Supervised Training Framework for Recurrent Networks Using Nonlinear Sequential
+State Estimators 822
+15.11 Computer Experiment: Dynamic Reconstruction of Mackay每Glass Attractor 829
+15.12 Adaptivity Considerations 831
+15.13 Case Study: Model Reference Applied to Neurocontrol 833
+15.14 Summary and Discussion 835
+Notes and References 839
+Problems 842
+Bibliography 845
+Index 889

@@ -1,0 +1,275 @@
+
+About the Author xv
+About the Technical Reviewer xvi
+Acknowledgments xvii
+Preface xviii
+? Chapter 1: Introduction 1
+Wearables 1
+World, Say Hello to Arduino 3
+Sharing is Caring 4
+Talking the Talk 5
+Wearables 5
+Wearable Computing 5
+Inflatables 5
+Moveables 5
+Haptics 6
+Embedded Technology 6
+E-textile 6
+Conductive Materials 6
+Hacking 6
+Prototyping 7
+Techno Fashion 7
+Interactivity 7
+v
+? CONTENTS
+DIY 8
+High and Low Tech 8
+Critical Design 8
+Physical Computing 9
+Work Process 10
+The Idea 10
+Researching 11
+Design 11
+Building and Testing 11
+Where to Buy Stuff 11
+SparkFun Electronics 11
+Adafruit Industries 11
+RS Components 12
+Farnell 12
+Robot Italy 12
+PlugHouse 12
+Seeed Studio 12
+Squarebit 12
+electro:kit 12
+Arduino Store 12
+LessEMF 12
+Further Reading 13
+? Chapter 2: Software 15
+Installing the IDE 15
+Installing the IDE on Windows 16
+Installing the IDE on Mac as x 18
+Installing the FTDI Driver on as X 18
+Running the IDE 19
+vi
+- CONTENTS
+Examining the File Menu 20
+Examining the Edit Menu 20
+Examining the Tools Menu 21
+Examiningthe IDE Buttons 21
+What Is Software? 24
+How We Write Code 25
+Variables 25
+The Basic Structure of a Program 26
+Basic Commands 28
+Setting pinMode 28
+Writing a Pin's State 29
+Adding a Delay 29
+Summary 30
+? Chapter 3: Hardware 31
+The Arduino Hardware 31
+A Closer Look 31
+On the Inside 33
+Board Layout. 35
+USB Connector 38
+Digital Pins 40
+Analog Pins 41
+Power Pins 42
+External Power 43
+Electricity 45
+Voltage, Current, and Resistance 46
+Batteries 47
+Battery Connectors 48
+vii
+? CONTENTS
+Testing the Hardware 50
+Summary 52
+? Chapter 4: Smart Materials and Tools 53
+Materials 53
+Thermochromic Ink 54
+Kanthal Wire 55
+Conductive Foam 56
+Conductive Thread 57
+Conductive Textile 58
+ConductiveVelcro 59
+Conductive Paint 61
+Smart Wire 62
+Nitinol Wire 62
+Tools 63
+Alligator Clips 63
+Breadboard 64
+Multimeter 66
+Camera 66
+Helping Hands 67
+Needle-nose Pliers 68
+Soldering Iron 69
+Wire Cutters 70
+Summary 71
+? Chapter 5: LED Bracelets 73
+Materials and Tools Needed 73
+Soft Bracelet 73
+Hard Bracelet. 74
+viii
+- CONTENTS
+Using Multimeters 74
+Conductivity 74
+Measuring Resistance 76
+Measuring Voltage 77
+Using LEOs 78
+Serial vs. Parallel 79
+Basic Schematic for Parallel LED Bracelet Circuit.. 82
+Soft Bracelet 82
+Step 1 83
+Step 2 84
+Step 3 84
+Step 4 85
+Step 5 87
+Hard Bracelet 87
+Step 1 88
+Step 2 90
+Step 3 92
+Finishing Up 92
+? Chapter 6: Solar-Powered Glow-in-the-Dark Bag 95
+Materials and Tools Needed 95
+Solar Panels 96
+Power Diode 96
+Resistors 96
+Making a Battery Charger 98
+Making the Bag 101
+LOR Sensor Switch 103
+Adding theSolar Panel 106
+ix
+? CONTENTS
+Adding the EL Panels 107
+Putting Everything Together 109
+The Final Bag 112
+Wrapping Up 113
+? Chapter 7: Piano Tie 115
+Tools and Materials Needed 115
+Making Sounds with Piezos 115
+Cutting the Tie 116
+Adding the Buttons 116
+Stitching the Schematic 119
+Checking the Layout 120
+Writing the Code 122
+Testing the Buttons 123
+Making Sound 124
+Piecing the Code Together 127
+Piano Code 128
+Synthesizing 129
+Tone and noTone 133
+Piano Tie Code Using tone and noTone 133
+Finishing the Tie 135
+Wrapping Up 135
+Notes and Frequencies 136
+? Chapter 8: Bag Alarm 141
+Tool and Materials Needed 141
+Cutting the Shape 141
+Analog Sensors 142
+x
+CONTENTS
+Making an Analog Zipper Sensor 143
+Theory Behind the Zipper 145
+Testing theZipper 146
+Serial Communication 147
+Test Code 148
+Making the Circuit 150
+Stitch ing the Bag 152
+Making the Button Hole 152
+Sounding the Alarm 154
+Bag Alarm Code 154
+Using && 156
+Breaking intothe Bag 156
+Bag of Fun 159
+Using Arrays 159
+Storing the Notes and Making Melodies 160
+Wrapping Up 163
+? Chapter 9: Beatbox Hoodie 165
+Tools and Materials Needed 165
+Making a Hoodie 166
+Stitching Things 168
+Skin Buttons 170
+Button Arm and Hoodie Lining 173
+Completing the Circuit 174
+Connecting theSpeakers 176
+The Microphone 178
+Battery Pack 179
+Arm Buttons 179
+xi
+? CONTENTS
+Coding the Sequencer 180
+The Code 180
+Time Isthe Key 183
+milllst) 183
+Stereo vs. Mono 183
+Final Stitching 184
+Wrapping Up 186
+? Chapter 10: Sunshine Umbrella 187
+Materials and Tools Needed 187
+Getting Started 188
+MUltiplexing 188
+Sensing Water 194
+Constructing the Umbrella 195
+Stitching the Water Sensor 196
+Soldering the Matrix 197
+Hooking Everything Up 202
+Writing the Code 204
+LED Test Code 204
+Random Rain 204
+Pin Point Control 206
+Wrapping Up 210
+? Chapter 11: Beat Dress 211
+Tool and Materials Needed 211
+Getting Started 211
+The Little Dress Design 212
+Cutting the Dress 212
+Reenter the Matrix 213
+xii
+- CONTENTS
+Dress Stitching and LED Poking 218
+Hooking Up theArduino and Microphone 224
+Writing the Code 226
+Lightning Beat 227
+Dress Texting 229
+Wrapping Up 231
+? Chapter 12: Shape Memory Flower 233
+Materials and Tools Needed 233
+Shape Memory Alloy 234
+Generating Heat 234
+Testing the Wire 234
+Creating the Flower 236
+Connecting the Flower to a LilyPad 242
+Programming the Flower 245
+Using Booleans 245
+Adding the Light Sensor 246
+Reprogramming the Wire 248
+Wrapping Up 249
+? Chapter 13: EL Wire Dress 251
+Materials and Tools Needed 251
+EL Wire 252
+The Dress Design 252
+Making the Electronic Belt 256
+EL Components 260
+Adding Power to the Sequencer 263
+Programming the Dress 268
+Test Sketch 269
+xiii
+? CONTENTS
+Random Blinking 271
+Adding Randomness tothe Blinking 271
+Fading theWires with PWM 272
+Finalizing the Dress 274
+Wrapping Up 277
+? Chapter 14: Making Things Tiny 279
+Materials and Tools Needed 279
+The ATtiny 280
+Libraries and Programming the ATtiny 282
+Adding a Library 283
+Tiny Speed 284
+Programming theATtiny 285
+The Tiny Chip That Could 289
+Three Tiny Projects 290
+Skin Sound Bracelet 290
+The Angry Rabbit 296
+TinyBoards 303
+Wrapping Up 306
+? Index 309

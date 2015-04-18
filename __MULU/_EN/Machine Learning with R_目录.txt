@@ -1,0 +1,277 @@
+
+Preface 1
+Chapter 1: Introducing Machine Learning 5
+The origins of machine learning 6
+Uses and abuses of machine learning 8
+Ethical considerations 9
+How do machines learn? 10
+Abstraction and knowledge representation 11
+Generalization 14
+Assessing the success of learning 16
+Steps to apply machine learning to your data 17
+Choosing a machine learning algorithm 18
+Thinking about the input data 18
+Thinking about types of machine learning algorithms 20
+Matching your data to an appropriate algorithm 22
+Using R for machine learning 23
+Installing and loading R packages 24
+Installing an R package 24
+Installing a package using the point-and-click interface 25
+Loading an R package 27
+Summary 27
+Chapter 2: Managing and Understanding Data 29
+R data structures 30
+Vectors 30
+Factors 31
+Lists 32
+Data frames 35
+Matrixes and arrays 37
+Table of Contents
+[ ii ]
+Managing data with R 39
+Saving and loading R data structures 39
+Importing and saving data from CSV files 40
+Importing data from SQL databases 41
+Exploring and understanding data 42
+Exploring the structure of data 43
+Exploring numeric variables 44
+Measuring the central tendency 每 mean and median 45
+Measuring spread 每 quartiles and the five-number summary 47
+Visualizing numeric variables 每 boxplots 49
+Visualizing numeric variables 每 histograms 51
+Understanding numeric data 每 uniform and normal distributions 53
+Measuring spread 每 variance and standard deviation 54
+Exploring categorical variables 56
+Measuring the central tendency 每 the mode 57
+Exploring relationships between variables 58
+Visualizing relationships 每 scatterplots 59
+Examining relationships 每 two-way cross-tabulations 61
+Summary 63
+Chapter 3: Lazy Learning 每 Classification Using Nearest Neighbors 65
+Understanding classification using nearest neighbors 66
+The kNN algorithm 67
+Calculating distance 70
+Choosing an appropriate k 71
+Preparing data for use with kNN 72
+Why is the kNN algorithm lazy? 74
+Diagnosing breast cancer with the kNN algorithm 75
+Step 1 每 collecting data 76
+Step 2 每 exploring and preparing the data 77
+Transformation 每 normalizing numeric data 79
+Data preparation 每 creating training and test datasets 80
+Step 3 每 training a model on the data 81
+Step 4 每 evaluating model performance 83
+Step 5 每 improving model performance 84
+Transformation 每 z-score standardization 84
+Testing alternative values of k 86
+Summary 87
+Chapter 4: Probabilistic Learning 每 Classification Using
+Naive Bayes 89
+Understanding naive Bayes 90
+Basic concepts of Bayesian methods 91
+Probability 91
+Joint probability 92
+Table of Contents
+[ iii ]
+Conditional probability with Bayes' theorem 93
+The naive Bayes algorithm 95
+The naive Bayes classification 96
+The Laplace estimator 98
+Using numeric features with naive Bayes 100
+Example 每 filtering mobile phone spam with the naive Bayes algorithm 101
+Step 1 每 collecting data 102
+Step 2 每 exploring and preparing the data 103
+Data preparation 每 processing text data for analysis 104
+Data preparation 每 creating training and test datasets 108
+Visualizing text data 每 word clouds 108
+Data preparation 每 creating indicator features for frequent words 112
+Step 3 每 training a model on the data 113
+Step 4 每 evaluating model performance 115
+Step 5 每 improving model performance 116
+Summary 117
+Chapter 5: Divide and Conquer 每 Classification Using
+Decision Trees and Rules 119
+Understanding decision trees 120
+Divide and conquer 121
+The C5.0 decision tree algorithm 124
+Choosing the best split 125
+Pruning the decision tree 127
+Example 每 identifying risky bank loans using C5.0 decision trees 128
+Step 1 每 collecting data 129
+Step 2 每 exploring and preparing the data 130
+Data preparation 每 creating random training and test datasets 131
+Step 3 每 training a model on the data 133
+Step 4 每 evaluating model performance 137
+Step 5 每 improving model performance 138
+Boosting the accuracy of decision trees 138
+Making some mistakes more costly than others 140
+Understanding classification rules 142
+Separate and conquer 142
+The One Rule algorithm 145
+The RIPPER algorithm 147
+Rules from decision trees 149
+Example 每 identifying poisonous mushrooms with rule learners 150
+Step 1 每 collecting data 150
+Step 2 每 exploring and preparing the data 151
+Step 3 每 training a model on the data 152
+Step 4 每 evaluating model performance 154
+Table of Contents
+[ iv ]
+Step 5 每 improving model performance 155
+Summary 158
+Chapter 6: Forecasting Numeric Data 每 Regression Methods 159
+Understanding regression 160
+Simple linear regression 162
+Ordinary least squares estimation 164
+Correlations 167
+Multiple linear regression 168
+Example 每 predicting medical expenses using linear regression 172
+Step 1 每 collecting data 173
+Step 2 每 exploring and preparing the data 174
+Exploring relationships among features 每 the correlation matrix 176
+Visualizing relationships among features 每 the scatterplot matrix 176
+Step 3 每 training a model on the data 179
+Step 4 每 evaluating model performance 182
+Step 5 每 improving model performance 183
+Model specification 每 adding non-linear relationships 184
+Transformation 每 converting a numeric variable to a binary indicator 184
+Model specification 每 adding interaction effects 185
+Putting it all together 每 an improved regression model 186
+Understanding regression trees and model trees 187
+Adding regression to trees 188
+Example 每 estimating the quality of wines with regression trees
+and model trees 190
+Step 1 每 collecting data 191
+Step 2 每 exploring and preparing the data 192
+Step 3 每 training a model on the data 194
+Visualizing decision trees 196
+Step 4 每 evaluating model performance 197
+Measuring performance with mean absolute error 198
+Step 5 每 improving model performance 199
+Summary 203
+Chapter 7: Black Box Methods 每 Neural Networks and
+Support Vector Machines 205
+Understanding neural networks 206
+From biological to artificial neurons 207
+Activation functions 209
+Network topology 211
+The number of layers 212
+The direction of information travel 213
+The number of nodes in each layer 214
+Training neural networks with backpropagation 215
+Table of Contents
+[ v ]
+Modeling the strength of concrete with ANNs 217
+Step 1 每 collecting data 217
+Step 2 每 exploring and preparing the data 218
+Step 3 每 training a model on the data 220
+Step 4 每 evaluating model performance 222
+Step 5 每 improving model performance 224
+Understanding Support Vector Machines 225
+Classification with hyperplanes 226
+Finding the maximum margin 227
+The case of linearly separable data 228
+The case of non-linearly separable data 230
+Using kernels for non-linear spaces 231
+Performing OCR with SVMs 233
+Step 1 每 collecting data 234
+Step 2 每 exploring and preparing the data 235
+Step 3 每 training a model on the data 237
+Step 4 每 evaluating model performance 239
+Step 5 每 improving model performance 241
+Summary 242
+Chapter 8: Finding Patterns 每 Market Basket Analysis Using
+Association Rules 243
+Understanding association rules 244
+The Apriori algorithm for association rule learning 245
+Measuring rule interest 每 support and confidence 247
+Building a set of rules with the Apriori principle 248
+Example 每 identifying frequently purchased groceries with
+association rules 249
+Step 1 每 collecting data 250
+Step 2 每 exploring and preparing the data 251
+Data preparation 每 creating a sparse matrix for transaction data 252
+Visualizing item support 每 item frequency plots 255
+Visualizing transaction data 每 plotting the sparse matrix 256
+Step 3 每 training a model on the data 258
+Step 4 每 evaluating model performance 260
+Step 5 每 improving model performance 263
+Sorting the set of association rules 263
+Taking subsets of association rules 264
+Saving association rules to a file or data frame 265
+Summary 266
+Chapter 9: Finding Groups of Data 每 Clustering with k-means 267
+Understanding clustering 268
+Clustering as a machine learning task 269
+Table of Contents
+[ vi ]
+The k-means algorithm for clustering 271
+Using distance to assign and update clusters 272
+Choosing the appropriate number of clusters 276
+Finding teen market segments using k-means clustering 278
+Step 1 每 collecting data 279
+Step 2 每 exploring and preparing the data 279
+Data preparation 每 dummy coding missing values 281
+Data preparation 每 imputing missing values 283
+Step 3 每 training a model on the data 284
+Step 4 每 evaluating model performance 287
+Step 5 每 improving model performance 289
+Summary 291
+Chapter 10: Evaluating Model Performance 293
+Measuring performance for classification 294
+Working with classification prediction data in R 294
+A closer look at confusion matrices 298
+Using confusion matrices to measure performance 299
+Beyond accuracy 每 other measures of performance 302
+The kappa statistic 303
+Sensitivity and specificity 307
+Precision and recall 309
+The F-measure 310
+Visualizing performance tradeoffs 311
+ROC curves 312
+Estimating future performance 315
+The holdout method 316
+Cross-validation 319
+Bootstrap sampling 322
+Summary 324
+Chapter 11: Improving Model Performance 325
+Tuning stock models for better performance 326
+Using caret for automated parameter tuning 327
+Creating a simple tuned model 330
+Customizing the tuning process 333
+Improving model performance with meta-learning 337
+Understanding ensembles 337
+Bagging 339
+Boosting 343
+Random forests 344
+Training random forests 346
+Evaluating random forest performance 348
+Summary 350
+Table of Contents
+[ vii ]
+Chapter 12: Specialized Machine Learning Topics 351
+Working with specialized data 352
+Getting data from the Web with the RCurl package 352
+Reading and writing XML with the XML package 353
+Reading and writing JSON with the rjson package 353
+Reading and writing Microsoft Excel spreadsheets using xlsx 354
+Working with bioinformatics data 354
+Working with social network data and graph data 355
+Improving the performance of R 355
+Managing very large datasets 356
+Making data frames faster with data.table 356
+Creating disk-based data frames with ff 357
+Using massive matrices with bigmemory 357
+Learning faster with parallel computing 358
+Measuring execution time 359
+Working in parallel with foreach 359
+Using a multitasking operating system with multicore 360
+Networking multiple workstations with snow and snowfall 360
+Parallel cloud computing with MapReduce and Hadoop 361
+GPU computing 362
+Deploying optimized learning algorithms 363
+Building bigger regression models with biglm 363
+Growing bigger and faster random forests with bigrf 363
+Training and evaluating models in parallel with caret 364
+Summary 364
+Index 365

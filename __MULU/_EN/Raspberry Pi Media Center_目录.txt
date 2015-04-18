@@ -1,0 +1,106 @@
+
+Raspberry Pi Media Center
+Credits
+About the Author
+About the Reviewers
+www.PacktPub.com
+Support files, eBooks, discount offers and more
+Why Subscribe?
+Free Access for Packt account holders
+Preface
+What this book covers
+What you need for this book
+Who this book is for
+Conventions
+Reader feedback
+Customer support
+Errata
+Piracy
+Questions
+1. Getting Started
+Why use a Raspberry Pi?
+Equipment needed
+What is Raspbmc?
+What can Raspbmc do?
+Installing Raspbmc
+Windows
+Mac OS X / Linux
+Advanced Installation
+Booting up the Raspberry Pi
+Summary
+2. Using Raspbmc
+Controlling Raspbmc
+Control via Consumer Electronic Control (CEC)
+Control via iOS and Android or any web browser
+Controlling via keyboard and mouse
+Alternative remotes
+Navigating Raspbmc
+Changing settings
+Changing XBMC Settings
+Changing Raspbmc Settings
+Adding additional codecs to Raspbmc
+Installing add-ons
+Installing add-ons via XBMC's standard repositories
+Installing add-ons manually
+Summary
+3. Managing Content
+Supported backends
+Overview
+USB drives
+Sources
+Adding sources in XBMC
+Managing sources via the context menu
+Deleting a source
+Pin locking a source
+Playing/viewing a file
+Summary
+4. Streaming from a Computer
+Remote streaming
+Remote streaming versus local playback
+Requirements for remote streaming
+Configuring network shares
+Configuring network shares on Windows
+Configuring on Linux
+Installing NFS
+Installation of NFS on Ubuntu/Debian/Linux Mint
+Installation on CentOS/Fedora/Redhat
+Installation on Arch Linux
+Distribution independent configuration
+Configuring on Mac OS X
+Adding these shares in Raspbmc
+Summary
+5. Setting up the Library Mode
+Installing MySQL
+Installing on Linux
+Installing on Mac OS X
+Installing on Windows
+Configuring MySQL
+Adding our SQL database to XBMC
+Setting up the Library mode
+Setting up the Library mode on a second system
+Summary
+6. Using PVR with Raspbmc
+What is PVR?
+Raspbmc's role in PVR
+Standalone backend versus built-in backend
+Setting up PVR
+An external backend
+Setting up TVHeadend in Raspbmc
+Connecting to our backend in XBMC
+Summary
+7. Converting Media
+Reasons for converting
+Codec breakdown
+Converting media using Handbrake
+Ripping DVDs and Blu-ray Discs
+Summary
+A. Useful Raspbmc Commands
+Unix/Linux command cheat sheet
+B. Useful MySQL Commands
+C. Supported Peripherals
+Supported remote controls
+Supported Wi-Fi adapters
+Supported TV tuners
+Supported SD cards
+Supported power supplies
+Index

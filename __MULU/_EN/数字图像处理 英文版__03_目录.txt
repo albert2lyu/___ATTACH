@@ -1,0 +1,368 @@
+
+Preface 15
+Acknowledgments 19
+The Book Web Site 20
+About the Authors 21
+
+Chapter 1 Introduction 23
+1.1 What Is Digital Image Processing? 23
+1.2 The Origins of Digital Image Processing 25
+1.3 Examples of Fields that Use Digital Image Processing 29
+1.3.1 Gamma-Ray Imaging 30
+1.3.2 X-Ray Imaging 31
+1.3.3 Imaging in the Ultraviolet Band 33
+1.3.4 Imaging in the Visible and Infrared Bands 34
+1.3.5 Imaging in the Microwave Band 40
+1.3.6 Imaging in the Radio Band 42
+1.3.7 Examples in which Other Imaging Modalities Are Used 42
+1.4 Fundamental Steps in Digital Image Processing 47
+1.5 Components of an Image Processing System 50
+Summary 53
+References and Further Reading 53
+
+Chapter 2 Digital Image Fundamentals 57
+2.1 Elements of Visual Perception 58
+2.1.1 Structure of the Human Eye 58
+2.1.2 Image Formation in the Eye 60
+2.1.3 Brightness Adaptation and Discrimination 61
+2.2 Light and the Electromagnetic Spectrum 65
+2.3 Image Sensing and Acquisition 68
+2.3.1 Image Acquisition Using a Single Sensor 70
+2.3.2 Image Acquisition Using Sensor Strips 70
+2.3.3 Image Acquisition Using Sensor Arrays 72
+2.3.4 A Simple Image Formation Model 72
+2.4 Image Sampling and Quantization 74
+2.4.1 Basic Concepts in Sampling and Quantization 74
+2.4.2 Representing Digital Images 77
+2.4.3 Spatial and Intensity Resolution 81
+2.4.4 Image Interpolation 87
+2.5 Some Basic Relationships between Pixels 90
+2.5.1 Neighbors of a Pixel 90
+2.5.2 Adjacency, Connectivity, Regions, and Boundaries 90
+2.5.3 Distance Measures 93
+2.6 An Introduction to the Mathematical Tools Used in Digital Image Processing 94
+2.6.1 Array versus Matrix Operations 94
+2.6.2 Linear versus Nonlinear Operations 95
+2.6.3 Arithmetic Operations 96
+2.6.4 Set and Logical Operations 102
+2.6.5 Spatial Operations 107
+2.6.6 Vector and Matrix Operations 114
+2.6.7 Image Transforms 115
+2.6.8 Probabilistic Methods 118
+Summary 120
+References and Further Reading 120
+Problems 121
+
+Chapter 3 Intensity Transformations and Spatial Filtering 126
+3.1 Background 127
+3.1.1 The Basics of Intensity Transformations and Spatial Filtering 127
+3.1.2 About the Examples in This Chapter 129
+3.2 Some Basic Intensity Transformation Functions 129
+3.2.1 Image Negatives 130
+3.2.2 Log Transformations 131
+3.2.3 Power-Law (Gamma) Transformations 132
+3.2.4 Piecewise-Linear Transformation Functions 137
+3.3 Histogram Processing 142
+3.3.1 Histogram Equalization 144
+3.3.2 Histogram Matching (Specification) 150
+3.3.3 Local Histogram Processing 161
+3.3.4 Using Histogram Statistics for Image Enhancement 161
+3.4 Fundamentals of Spatial Filtering 166
+3.4.1 The Mechanics of Spatial Filtering 167
+3.4.2 Spatial Correlation and Convolution 168
+3.4.3 Vector Representation of Linear Filtering 172
+3.4.4 Generating Spatial Filter Masks 173
+3.5 Smoothing Spatial Filters 174
+3.5.1 Smoothing Linear Filters 174
+3.5.2 Order-Statistic (Nonlinear) Filters 178
+3.6 Sharpening Spatial Filters 179
+3.6.1 Foundation 180
+3.6.2 Using the Second Derivative for Image Sharpening-The Laplacian 182
+3.6.3 Unsharp Masking and Highboost Filtering 184
+3.6.4 Using First-Order Derivatives for (Nonlinear) Image Sharpening¡ªThe Gradient 187
+3.7 Combining Spatial Enhancement Methods 191
+3.8 Using Fuzzy Techniques for Intensity Transformations and Spatial Filtering 195
+3.8.1 Introduction 195
+3.8.2 Principles of Fuzzy Set Theory 196
+3.8.3 Using Fuzzy Sets 200
+3.8.4 Using Fuzzy Sets for Intensity Transformations 208
+3.8.5 Using Fuzzy Sets for Spatial Filtering 211
+Summary 214
+References and Further Reading 214
+Problems 215
+
+Chapter 4 Filtering in the Frequency Domain 221
+4.1 Background 222
+4.1.1 A Brief History of the Fourier Series and Transform 222
+4.1.2 About the Examples in this Chapter 223
+4.2 Preliminary Concepts 224
+4.2.1 Complex Numbers 224
+4.2.2 Fourier Series 225
+4.2.3 Impulses and Their Sifting Property 225
+4.2.4 The Fourier Transform of Functions of One Continuous Variable 227
+4.2.5 Convolution 231
+4.3 Sampling and the Fourier Transform of Sampled Functions 233
+4.3.1 Sampling 233
+4.3.2 The Fourier Transform of Sampled Functions 234
+4.3.3 The Sampling Theorem 235
+4.3.4 Aliasing 239
+4.3.5 Function Reconstruction (Recovery) from Sampled Data 241
+4.4 The Discrete Fourier Transform (DFT) of One Variable 242
+4.4.1 Obtaining the DFT from the Continuous Transform of a Sampled Function 243
+4.4.2 Relationship Between the Sampling and Frequency Intervals 245
+4.5 Extension to Functions of Two Variables 247
+4.5.1 The 2-D Impulse and Its Sifting Property 247
+4.5.2 The 2-D Continuous Fourier Transform Pair 248
+4.5.3 Two-Dimensional Sampling and the 2-D Sampling Theorem 249
+4.5.4 Aliasing in Images 250
+4.5.5 The 2-D Discrete Fourier Transform and Its Inverse 257
+4.6 Some Properties of the 2-D Discrete Fourier Transform 258
+4.6.1 Relationships Between Spatial and Frequency Intervals 258
+4.6.2 Translation and Rotation 258
+4.6.3 Periodicity 259
+4.6.4 Symmetry Properties 261
+4.6.5 Fourier Spectrum and Phase Angle 267
+4.6.6 The 2-D Convolution Theorem 271
+4.6.7 Summary of 2-D Discrete Fourier Transform Properties 275
+4.7 The Basics of Filtering in the Frequency Domain 277
+4.7.1 Additional Characteristics of the Frequency Domain 277
+4.7.2 Frequency Domain Filtering Fundamentals 279
+4.7.3 Summary of Steps for Filtering in the Frequency Domain 285
+4.7.4 Correspondence Between Filtering in the Spatial and Frequency Domains 285
+4.8 Image Smoothing Using Frequency Domain Filters 291
+4.8.1 Ideal Lowpass Filters 291
+4.8.2 Butterworth Lowpass Filters 295
+4.8.3 Gaussian Lowpass Filters 298
+4.8.4 Additional Examples of Lowpass Filtering 299
+4.9 Image Sharpening Using Frequency Domain Filters 302
+4.9.1 Ideal Highpass Filters 303
+4.9.2 Butterworth Highpass Filters 306
+4.9.3 Gaussian Highpass Filters 307
+4.9.4 The Laplacian in the Frequency Domain 308
+4.9.5 Unsharp Masking, Highboost Filtering, and High-Frequency-Emphasis Filtering 310
+4.9.6 Homomorphic Filtering 311
+4.10 Selective Filtering 316
+4.10.1 Bandreject and Bandpass Filters 316
+4.10.2 Notch Filters 316
+4.11 Implementation 320
+4.11.1 Separability of the 2-D DFT 320
+4.11.2 Computing the IDFT Using a DFT Algorithm 321
+4.11.3 The Fast Fourier Transform (FFT) 321
+4.11.4 Some Comments on Filter Design 325
+Summary 325
+References and Further Reading 326
+Problems 326
+
+Chapter 5 Image Restoration and Reconstruction 333
+5.1 A Model of the Image Degradation/Restoration Process 334
+5.2 Noise Models 335
+5.2.1 Spatial and Frequency Properties of Noise 335
+5.2.2 Some Important Noise Probability Density Functions 336
+5.2.3 Periodic Noise 340
+5.2.4 Estimation of Noise Parameters 341
+5.3 Restoration in the Presence of Noise Only¡ªSpatial Filtering 344
+5.3.1 Mean Filters 344
+5.3.2 Order-Statistic Filters 347
+5.3.3 Adaptive Filters 352
+5.4 Periodic Noise Reduction by Frequency Domain Filtering 357
+5.4.1 Bandreject Filters 357
+5.4.2 Bandpass Filters 358
+5.4.3 Notch Filters 359
+5.4.4 Optimum Notch Filtering 360
+5.5 Linear, Position-Invariant Degradations 365
+5.6 Estimating the Degradation Function 368
+5.6.1 Estimation by Image Observation 368
+5.6.2 Estimation by Experimentation 369
+5.6.3 Estimation by Modeling 369
+5.7 Inverse Filtering 373
+5.8 Minimum Mean Square Error (Wiener) Filtering 374
+5.9 Constrained Least Squares Filtering 379
+5.10 Geometric Mean Filter 383
+5.11 Image Reconstruction from Projections 384
+5.11.1 Introduction 384
+5.11.2 Principles of Computed Tomography (CT) 387
+5.11.3 Projections and the Radon Transform 390
+5.11.4 The Fourier-Slice Theorem 396
+5.11.5 Reconstruction Using Parallel-Beam Filtered Backprojections 397
+5.11.6 Reconstruction Using Fan-Beam Filtered Backprojections 403
+Summary 409
+References and Further Reading 410
+Problems 411
+
+Chapter 6 Color Image Processing 416
+6.1 Color Fundamentals 417
+6.2 Color Models 423
+6.2.1 The RGB Color Model 424
+6.2.2 The CMY and CMYK Color Models 428
+6.2.3 The HSI Color Model 429
+6.3 Pseudocolor Image Processing 436
+6.3.1 Intensity Slicing 437
+6.3.2 Intensity to Color Transformations 440
+6.4 Basics of Full-Color Image Processing 446
+6.5 Color Transformations 448
+6.5.1 Formulation 448
+6.5.2 Color Complements 452
+6.5.3 Color Slicing 453
+6.5.4 Tone and Color Corrections 455
+6.5.5 Histogram Processing 460
+6.6 Smoothing and Sharpening 461
+6.6.1 Color Image Smoothing 461
+6.6.2 Color Image Sharpening 464
+6.7 Image Segmentation Based on Color 465
+6.7.1 Segmentation in HSI Color Space 465
+6.7.2 Segmentation in RGB Vector Space 467
+6.7.3 Color Edge Detection 469
+6.8 Noise in Color Images 473
+6.9 Color Image Compression 476
+Summary 477
+References and Further Reading 478
+Problems 478
+
+Chapter 7 Wavelets and Multiresolution Processing 483
+7.1 Background 484
+7.1.1 Image Pyramids 485
+7.1.2 Subband Coding 488
+7.1.3 The Haar Transform 496
+7.2 Multiresolution Expansions 499
+7.2.1 Series Expansions 499
+7.2.2 Scaling Functions 501
+7.2.3 Wavelet Functions 505
+7.3 Wavelet Transforms in One Dimension 508
+7.3.1 The Wavelet Series Expansions 508
+7.3.2 The Discrete Wavelet Transform 510
+7.3.3 The Continuous Wavelet Transform 513
+7.4 The Fast Wavelet Transform 515
+7.5 Wavelet Transforms in Two Dimensions 523
+7.6 Wavelet Packets 532
+Summary 542
+References and Further Reading 542
+Problems 543
+
+Chapter 8 Image Compression 547
+8.1 Fundamentals 548
+8.1.1 Coding Redundancy 550
+8.1.2 Spatial and Temporal Redundancy 551
+8.1.3 Irrelevant Information 552
+8.1.4 Measuring Image Information 553
+8.1.5 Fidelity Criteria 556
+8.1.6 Image Compression Models 558
+8.1.7 Image Formats, Containers, and Compression Standards 560
+8.2 Some Basic Compression Methods 564
+8.2.1 Huffman Coding 564
+8.2.2 Golomb Coding 566
+8.2.3 Arithmetic Coding 570
+8.2.4 LZW Coding 573
+8.2.5 Run-Length Coding 575
+8.2.6 Symbol-Based Coding 581
+8.2.7 Bit-Plane Coding 584
+8.2.8 Block Transform Coding 588
+8.2.9 Predictive Coding 606
+8.2.10 Wavelet Coding 626
+8.3 Digital Image Watermarking 636
+Summary 643
+References and Further Reading 644
+Problems 645
+
+Chapter 9 Morphological Image Processing 649
+9.1 Preliminaries 650
+9.2 Erosion and Dilation 652
+9.2.1 Erosion 653
+9.2.2 Dilation 655
+9.2.3 Duality 657
+9.3 Opening and Closing 657
+9.4 The Hit-or-Miss Transformation 662
+9.5 Some Basic Morphological Algorithms 664
+9.5.1 Boundary Extraction 664
+9.5.2 Hole Filling 665
+9.5.3 Extraction of Connected Components 667
+9.5.4 Convex Hull 669
+9.5.5 Thinning 671
+9.5.6 Thickening 672
+9.5.7 Skeletons 673
+9.5.8 Pruning 676
+9.5.9 Morphological Reconstruction 678
+9.5.10 Summary of Morphological Operations on Binary Images 684
+9.6 Gray-Scale Morphology 687
+9.6.1 Erosion and Dilation 688
+9.6.2 Opening and Closing 690
+9.6.3 Some Basic Gray-Scale Morphological Algorithms 692
+9.6.4 Gray-Scale Morphological Reconstruction 698
+Summary 701
+References and Further Reading 701
+Problems 702
+
+Chapter 10 Image Segmentation 711
+10.1 Fundamentals 712
+10.2 Point, Line, and Edge Detection 714
+10.2.1 Background 714
+10.2.2 Detection of Isolated Points 718
+10.2.3 Line Detection 719
+10.2.4 Edge Models 722
+10.2.5 Basic Edge Detection 728
+10.2.6 More Advanced Techniques for Edge Detection 736
+10.2.7 Edge Linking and Boundary Detection 747
+10.3 Thresholding 760
+10.3.1 Foundation 760
+10.3.2 Basic Global Thresholding 763
+10.3.3 Optimum Global Thresholding Using Otsu¡¯s Method 764
+10.3.4 Using Image Smoothing to Improve Global Thresholding 769
+10.3.5 Using Edges to Improve Global Thresholding 771
+10.3.6 Multiple Thresholds 774
+10.3.7 Variable Thresholding 778
+10.3.8 Multivariable Thresholding 783
+10.4 Region-Based Segmentation 785
+10.4.1 Region Growing 785
+10.4.2 Region Splitting and Merging 788
+10.5 Segmentation Using Morphological Watersheds 791
+10.5.1 Background 791
+10.5.2 Dam Construction 794
+10.5.3 Watershed Segmentation Algorithm 796
+10.5.4 The Use of Markers 798
+10.6 The Use of Motion in Segmentation 800
+10.6.1 Spatial Techniques 800
+10.6.2 Frequency Domain Techniques 804
+Summary 807
+References and Further Reading 807
+Problems 809
+
+Chapter 11 Representation and Description 817
+11.1 Representation 818
+11.1.1 Boundary (Border) Following 818
+11.1.2 Chain Codes 820
+11.1.3 Polygonal Approximations Using Minimum-Perimeter Polygons 823
+11.1.4 Other Polygonal Approximation Approaches 829
+11.1.5 Signatures 830
+11.1.6 Boundary Segments 832
+11.1.7 Skeletons 834
+11.2 Boundary Descriptors 837
+11.2.1 Some Simple Descriptors 837
+11.2.2 Shape Numbers 838
+11.2.3 Fourier Descriptors 840
+11.2.4 Statistical Moments 843
+11.3 Regional Descriptors 844
+11.3.1 Some Simple Descriptors 844
+11.3.2 Topological Descriptors 845
+11.3.3 Texture 849
+11.3.4 Moment Invariants 861
+11.4 Use of Principal Components for Description 864
+11.5 Relational Descriptors 874
+Summary 878
+References and Further Reading 878
+Problems 879
+
+Chapter 12 Object Recognition 883
+12.1 Patterns and Pattern Classes 883
+12.2 Recognition Based on Decision-Theoretic Methods 888
+12.2.1 Matching 888
+12.2.2 Optimum Statistical Classifiers 894
+12.2.3 Neural Networks 904
+12.3 Structural Methods 925
+12.3.1 Matching Shape Numbers 925
+12.3.2 String Matching 926
+Summary 928
+References and Further Reading 928
+Problems 929
+
+Appendix A 932
+Bibliography 937
+Index 965

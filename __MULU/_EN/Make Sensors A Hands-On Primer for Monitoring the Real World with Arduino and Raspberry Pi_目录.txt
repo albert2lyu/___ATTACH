@@ -1,0 +1,267 @@
+
+Preface
+It¡¯s About Your Ideas
+How to Read This Book
+Input, Processing, Output
+Protocols
+Building Things Your Way
+Buying Components
+Conventions Used in This Book
+Using Code Examples
+Safari? Books Online
+How to Contact Us
+Acknowledgments
+1. Raspberry Pi
+Raspberry Pi from Zero to First Boot
+Extract NOOBS*.zip
+Connect Cables
+Boot and Install Raspbian
+Troubleshooting Your Raspberry Pi Installation
+Feeling at Home in Linux
+Command-Line Interface is Everywhere, Forever
+Looking Around
+Text Files for Configuration
+sudo Make Me a Sandwich
+Connecting Electronics to Raspberry Pi Pins
+Hello GPIO, Blink an LED
+Building the Circuit
+Two Numbering Systems: Purpose and Location
+Controlling GPIO Pins from the CLI
+Writing to Files Without an Editor
+Light Up the LED
+Troubleshooting
+GPIO Without Root
+Troubleshooting GPIO
+GPIO in Python
+Hello Python
+Python GPIO
+Troubleshooting
+What¡¯s Next?
+2. Arduino
+Basic Arduino Setup
+Ubuntu Linux
+Windows 7 and Windows 8
+OS X
+Hello World
+Anatomy of an Arduino Program
+Shields Make It Easy and Robust
+3. Distance
+Experiment: Measure Distance with Ultrasonic Sound (PING)
+Ping Code and Connections for Arduino
+Ping Code and Connections for Raspberry Pi
+HC-SR04 Ultrasonic Sensor
+HC-SR04 Code and Connection for Arduino
+HC-SR04 Code and Connections for Raspberry Pi
+Echo Calculations Explained
+Environment Experiment: Invisible Objects
+Experiment: Detect Obstacles With Infrared (IR Distance Sensor)
+IR Switch Code and Connections for Arduino
+IR Switch Code and Connections for Raspberry Pi
+Environment Experiment: How to See Infrared
+Experiment: Follow Movement with Infrared (IR Compound Eye)
+Compound Eye Code and Connection for Arduino
+Compound Eye Code and Connections for Raspberry Pi
+Installing SpiDev
+Alternative Circuits for Raspberry Pi
+Test Project: Posture Alarm (Arduino)
+What You¡¯ll Learn
+Piezo Beeper
+Alarm, Alarm!
+Combining Piezo and IR Sensor
+Putting Everything in a Neat Package
+4. Smoke and Gas
+Experiment: Detect Smoke (Analog Gas Sensor)
+MQ-2 Code and Connection for Arduino
+MQ-2 Code and Connection for Raspberry Pi
+Environment Experiment: Smoke Goes Up
+Experiment: Breathalyzer (Alcohol Sensor MQ-303A)
+Environment Experiment: Try It Without Drinking
+Test Project: Emailing Smoke Alarm
+What You¡¯ll Learn
+Python for Email and Social Media
+Building It
+How Does Email Work?
+Could Arduino Send Email? Not Easily
+Code for Raspberry Pi
+Packaging
+5. Touch
+Experiment: Button
+Pull-Up Resistor
+Code and Connection for Arduino
+Code and Connection for Raspberry Pi
+Experiment: Microswitch
+Microswitch Code and Connection for Arduino
+Microswitch Code and Connection for Raspberry Pi
+Experiment: Potentiometer (Variable Resistor, Pot)
+Potentiometer Code and Connection for Arduino
+Potentiometer Code and Connection for Raspberry Pi
+Experiment: Sense Touch Without Touch (Capacitive Touch Sensor QT113)
+QT113 Code and Connection for Arduino
+QT113 Code and Connection for Raspberry Pi
+Environment Experiment: Sensing Touch Through Wood
+Experiment: Feel the Pressure (FlexiForce)
+FlexiForce Code and Connection for Arduino
+FlexiForce Code and Connection for Raspberry Pi
+Experiment: Build Your Own Touch Sensor
+Capsense Code and Connection for Raspberry Pi
+Test Project: Haunted Ringing Bell
+What You¡¯ll Learn
+Servo Motors
+Finding Servo Range
+Haunted Bell Code and Connection for Arduino
+Attaching Servo to Ringing Bell
+6. Movement
+Experiment: Which Way Is Up? (Tilt Ball Switch)
+Tilt Sensor Code and Connection for Arduino
+Tilt Sensor Code and Connection for Raspberry Pi
+Experiment: Good Vibes with Interrupt (Digital Vibration Sensor)
+Vibration Code and Connection for Arduino
+Vibration Code and Connection for Raspberry Pi
+Experiment: Turn the Knob
+Rotary Encoder Code and Connection for Arduino
+Rotary Encoder Code and Connection for Raspberry Pi
+Experiment: Thumb Joystick (Analog Two-Axis Thumb Joystick)
+Joystick Code and Connection for Arduino
+Joystick Code and Connection for Raspberry Pi
+Environment Experiment: Salvage Parts from an Xbox Controller
+Experiment: Burglar Alarm! (Passive Infrared Sensor)
+Burglar Alarm Code and Connection for Arduino
+Burglar Alarm Code and Connection for Raspberry Pi
+Environment Experiment: Cheating an Alarm
+Test Project: Pong
+What You¡¯ll Learn
+Pong Packaging Tips
+Automatically Start Your Game When Raspberry Pi Boots
+Run Game on Login
+Automatic Login
+7. Light
+Experiment: Detecting Flame (Flame Sensor)
+Flame Sensor Code and Connection for Arduino
+Flame Sensor Code and Connection for Raspberry Pi
+Environment Experiment: Flame Precision
+Experiment: See the Light (Photoresistor, LDR)
+LDR Code and Connection for Arduino
+LDR Code and Connection for Raspberry Pi
+Environment Experiment: One Direction
+Experiment: Follow the Line
+Line Sensor Code and Connection for Arduino
+Line Sensor Code and Connection for Raspberry Pi
+Environment Experiment: Black is White
+Experiment: All the Colors of the ¡¯Bow
+Color Sensor Code and Connection for Arduino
+Color Sensor Code and Connection for Raspberry Pi
+Test Project: Chameleon Dome
+What You¡¯ll Learn
+RGB LED
+Finding the Leads of an RGB LED
+RGB Code and Connection for Arduino
+Moving Average
+RGB LED Shows Any Color
+Easing Input to Output
+Combining Codes
+Dome Building Tips
+8. Acceleration
+Acceleration vs. Angular Velocity
+Experiment: Accelerate with MX2125
+Decoding MX2125 Pulse Length
+Accelerometer Code and Connection for Arduino
+Accelerometer Code and Connection for Raspberry Pi
+Experiment: Accelerometer and Gyro Together
+MPU 6050 Code and Connection for Arduino
+MPU 6050 Code and Connection for Raspberry Pi
+SMBus and I2C Without Root
+Hexadecimal, Binary, and Other Numbering Systems
+Bitwise Operations
+Bit Masking with Bitwise AND &
+Bitwise OR |
+Bit Shifting <<
+Endianness ¡ª Typically on the Small Side
+Experiment: Hacking Wii Nunchuk (with I2C)
+Nunchuk Code and Connection for Arduino
+Nunchuk Code and Connection for Raspberry Pi
+Test Project: Robot Hand Controlled by Wii Nunchuk
+What You¡¯ll Learn
+Adding Hand Mechanics
+9. Identity
+Keypad
+Keypad Code and Connection for Arduino
+Keypad Code and Connection for Raspberry Pi
+Environment Experiment: Revealing Fingerprints
+Fingerprint Scanner GT-511C3
+Fingerprint Sensor Code and Connection for Arduino Mega
+Fingerprint Sensor Code and Connection for Raspberry Pi
+RFID with ELB149C5M Electronic Brick
+RFID Code and Connection for Arduino Mega
+RFID Code and Connection for Raspberry Pi
+Test Project: Ancient Chest from the Future
+What You¡¯ll Learn
+Operating the Chest
+The Box
+Ancient Chest Code and Connection for Arduino
+Who or What Is It?
+10. Electricity and Magnetism
+Experiment: Voltage and Current
+AttoPilot Code and Connection for Arduino
+AttoPilot Code and Connection for Raspberry Pi
+Experiment: Is It Magnetic?
+Hall Effect Sensor Code and Connection for Arduino
+Hall Effect Sensor Code and Connection for Raspberry Pi
+Experiment: Magnetic North with LSM303 Compass-Accelerometer
+Calibrate Your Module
+LSM303 Code and Connection for Arduino
+LSM303 Code and Connection for Raspberry Pi
+LSM303 Protocol
+Compass Heading Calculation
+Experiment: Hall Switch
+Hall Switch Code and Connection for Arduino
+Hall Switch Code and Connection for Raspberry Pi
+Test Project: Solar Cell Web Monitor
+What You¡¯ll Learn
+Connecting Solar Cells
+Turn Raspberry Pi into Web Server
+Finding Your IP Address
+Making Your Home Page on Raspberry Pi
+Solar Panel Monitor Code and Connection for Raspberry Pi
+Timed Tasks with Cron
+What¡¯s Next?
+11. Sound
+Experiment: Hearing Voices/Volume Level
+Microphone Breakout Code and Connection for Arduino
+Microphone Breakout Code and Connection for Raspberry Pi
+Environment Experiment: Can You Hear a Pin Drop?
+Test Project: Visualize Sound over HDMI
+What You¡¯ll Learn
+Enabling the Serial Port in Raspberry Pi
+Visualizer Code and Connection for Raspberry Pi
+Fast Fourier Transformation
+What Next?
+12. Weather and Climate
+Experiment: Is It Hot in Here?
+LM35 Code and Connection for Arduino
+LM35 Code and Connection for Raspberry Pi
+Environment Experiment: Changing Temperature
+Experiment: Is It Humid in Here?
+How Humid Is Your Breath?
+DHT11 Code and Connection for Arduino
+DHT11 Code and Connection for Raspberry Pi
+Talking to Arduino from Raspberry Pi
+Atmospheric Pressure GY65
+GY65 Code and Connection for Arduino
+Using Arduino Libraries
+GY65 Arduino Library Explained
+GY65 Code and Connection for Raspberry Pi
+Experiment: Does Your Plant Need Watering? (Build a Soil Humidity Sensor)
+Soil Sensor Code and Connection for Arduino
+Soil Sensor Code and Connection for Raspberry Pi
+Test Project: E-paper Weather Forecast
+What You¡¯ll Learn
+Weather Forecast Code and Connection for Arduino
+Environment Experiment: Look Ma, No Power Supply
+Storing Images in Header Files
+BMP to C Conversion Program
+Enclosure Tips
+A. Raspberry Pi Linux Quick Reference
+Index
+About the Authors
+Colophon
+Copyright

@@ -1,0 +1,234 @@
+
+Preface. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xi
+1. Setup and Management. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.1. Selecting a Model of Raspberry Pi 1
+1.2. Enclosing a Raspberry Pi 3
+1.3. Selecting a Power Supply 4
+1.4. Selecting an Operating System Distribution 5
+1.5. Writing an SD Card with NOOBS 6
+1.6. Writing an SD Card Manually (Mac) 9
+1.7. Writing an SD Card Manually (Windows) 10
+1.8. Writing an SD Card Manually (Linux) 11
+1.9. Connecting the System 13
+1.10. Connecting a DVI or VGA Monitor 14
+1.11. Using a Composite Video Monitor/TV 14
+1.12. Using All the Storage on the SD Card 16
+1.13. Adjusting the Picture Size on your Monitor 17
+1.14. Maximizing Performance 19
+1.15. Changing Your Password 21
+1.16. Setting the Pi to Boot Straight into a Windowing System 22
+1.17. Shutting Down Your Raspberry Pi 23
+1.18. Installing the Raspberry Pi Camera Module 25
+2. Networking. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+2.1. Connecting to a Wired Network 31
+2.2. Finding Out Your IP Address 33
+2.3. Setting a Static IP Address 35
+2.4. Setting the Network Name of a Raspberry Pi 36
+2.5. Setting Up a Wireless Connection 37
+2.6. Connecting with a Console Lead 38
+2.7. Controlling the Pi Remotely with SSH 40
+2.8. Controlling the Pi Remotely with VNC 42
+2.9. File Sharing on a Mac Network 44
+2.10. Sharing the Pi Screen on a Mac 45
+2.11. Using a Raspberry Pi for Network Attached Storage 47
+2.12. Network Printing 49
+3. Operating System. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+3.1. Moving Files Around Graphically 53
+3.2. Starting a Terminal Session 55
+3.3. Navigating the Filesystem Using a Terminal 56
+3.4. Copying a File or Folder 60
+3.5. Renaming a File or Folder 61
+3.6. Editing a File 61
+3.7. Viewing the Contents of a File 64
+3.8. Creating a File Without Using an Editor 64
+3.9. Creating a Directory 65
+3.10. Deleting a File or Directory 66
+3.11. Performing Tasks with Superuser Privileges 67
+3.12. Understanding File Permissions 68
+3.13. Changing File Permissions 69
+3.14. Changing File Ownership 70
+3.15. Making a Screen Capture 71
+3.16. Installing Software with apt-get 72
+3.17. Removing Software Installed with apt-get 73
+3.18. Fetching Files from the Command Line 74
+3.19. Fetching Source Code with git 75
+3.20. Running a Program or Script Automatically on Startup 76
+3.21. Running a Program or Script Automatically at Regular Intervals 78
+3.22. Finding Things 79
+3.23. Using the Command-Line History 80
+3.24. Monitoring Processor Activity 81
+3.25. Working with File Archives 83
+3.26. Listing Connected USB Devices 84
+3.27. Redirecting Output from the Command Line to a File 84
+3.28. Concatenating Files 85
+3.29. Using Pipes 86
+3.30. Hiding Output to the Terminal 86
+3.31. Running Programs in the Background 87
+3.32. Creating Command Aliases 88
+3.33. Setting the Date and Time 88
+3.34. Finding Out How Much Room You Have on the SD Card 89
+4. Software. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+4.1. Making a Media Center 91
+4.2. Installing Office Software 94
+4.3. Installing other Browsers 95
+4.4. Using the Pi Store 97
+4.5. Making a Webcam Server 99
+4.6. Running a Vintage Game Console Emulator 101
+4.7. Running Minecraft 103
+4.8. Running Open Arena 104
+4.9. Raspberry Pi Radio Transmitter 105
+4.10. Running GIMP 107
+4.11. Internet Radio 108
+5. Python Basics. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+5.1. Deciding Between Python 2 and Python 3 111
+5.2. Editing Python Programs with IDLE 112
+5.3. Using the Python Console 114
+5.4. Running Python Programs from the Terminal 115
+5.5. Variables 116
+5.6. Displaying Output 116
+5.7. Reading User Input 117
+5.8. Arithmetic 118
+5.9. Creating Strings 118
+5.10. Concatenating (Joining) Strings 119
+5.11. Converting Numbers to Strings 120
+5.12. Converting Strings to Numbers 121
+5.13. Find the Length of a String 122
+5.14. Find the Position of One String Inside Another 122
+5.15. Extracting Part of a String 123
+5.16. Replacing One String of Characters with Another Inside a String 124
+5.17. Converting a String to Upper- or Lowercase 125
+5.18. Running Commands Conditionally 126
+5.19. Comparing Values 127
+5.20. Logical Operators 128
+5.21. Repeating Instructions an Exact Number of Times 129
+5.22. Repeating Instructions Until Some Condition Changes 130
+5.23. Breaking Out of a Loop 130
+5.24. Defining a Function in Python 131
+6. Python Lists and Dictionaries. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+6.1. Creating a List 135
+6.2. Accessing Elements of a List 136
+6.3. Find the Length of a List 137
+6.4. Adding Elements to a List 137
+6.5. Removing Elements from a List 138
+6.6. Creating a List by Parsing a String 139
+6.7. Iterating over a List 139
+6.8. Enumerating a List 140
+6.9. Sorting a List 141
+6.10. Cutting Up a List 142
+6.11. Applying a Function to a List 143
+6.12. Creating a Dictionary 144
+6.13. Accessing a Dictionary 145
+6.14. Removing Things from a Dictionary 146
+6.15. Iterating over Dictionaries 147
+7. Advanced Python. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+7.1. Formatting Numbers 149
+7.2. Formatting Dates 150
+7.3. Returning More Than One Value 151
+7.4. Defining a Class 151
+7.5. Defining a Method 153
+7.6. Inheritance 154
+7.7. Writing to a File 155
+7.8. Reading from a File 156
+7.9. Pickling 157
+7.10. Handling Exceptions 158
+7.11. Using Modules 159
+7.12. Random Numbers 160
+7.13. Making Web Requests from Python 161
+7.14. Command-Line Arguments in Python 162
+7.15. Sending Email from Python 163
+7.16. Writing a Simple Web Server in Python 164
+8. GPIO Basics. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 167
+8.1. Finding Your Way Around the GPIO Connector 167
+8.2. Keeping Your Raspberry Pi Safe when Using the GPIO Connector 169
+8.3. Installing RPi.GPIO 169
+8.4. Setting Up I2C 170
+8.5. Using I2C Tools 172
+8.6. Setting Up SPI 173
+8.7. Freeing the Serial Port 174
+8.8. Installing PySerial for Access to the Serial Port from Python 175
+8.9. Installing Minicom to Test the Serial Port 176
+8.10. Using a Breadboard with Jumper Leads 178
+8.11. Using a Breadboard with a Pi Cobbler 179
+8.12. Converting 5V Signals to 3.3V with Two Resistors 179
+8.13. Converting 5V Signals to 3.3V with a Level Converter Module 181
+8.14. Powering a Raspberry Pi with Batteries 183
+8.15. Powering a Raspberry Pi with a LiPo Battery 184
+8.16. Getting Started with a PiFace Digital Interface Board 185
+8.17. Getting Started with a Gertboard 189
+8.18. Getting Started with a RaspiRobot Board 191
+8.19. Using a Humble Pi Prototyping Board 194
+8.20. Using a Pi Plate Prototyping Board 195
+8.21. Using a Paddle Terminal Breakout Board 197
+9. Controlling Hardware. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 203
+9.1. Connecting an LED 203
+9.2. Controlling the Brightness of an LED 206
+9.3. Make a Buzzing Sound 208
+9.4. Switching a High-Power DC Device Using a Transistor 210
+9.5. Switching a High-Power Device Using a Relay 212
+9.6. Controlling High-Voltage AC Devices 215
+9.7. Making a User Interface to Turn Things On and Off 215
+9.8. Making a User Interface to Control PWM Power for LEDs and Motors 218
+9.9. Changing the Color of an RGB LED 219
+9.10. Using Lots of LEDs (Charlieplexing) 223
+9.11. Using an Analog Meter as a Display 226
+9.12. Programming with Interrupts 227
+9.13. Controlling GPIO Outputs Using a Web Interface 231
+10. Motors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 237
+10.1. Controlling Servo Motors 237
+10.2. Controlling a Large Number of Servo Motors 241
+10.3. Controlling the Speed of a DC Motor 244
+10.4. Controlling the Direction of a DC Motor 246
+10.5. Using a Unipolar Stepper Motor 251
+10.6. Using a Bipolar Stepper Motor 256
+10.7. Using a RaspiRobot Board to Drive a Bipolar Stepper Motor 257
+10.8. Building a Simple Robot Rover 260
+11. Digital Inputs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265
+11.1. Connecting a Push Switch 265
+11.2. Toggling with a Push Switch 268
+11.3. Using a Two-Position Toggle or Slide Switch 270
+11.4. Using a Center-Off Toggle or Slide Switch 271
+11.5. Debouncing a Button Press 273
+11.6. Using an External Pull-up Resistor 276
+11.7. Using a Rotary (Quadrature) Encoder 277
+11.8. Using a Keypad 281
+11.9. Detecting Movement 284
+11.10. Adding GPS to the Raspberry Pi 286
+11.11. Intercepting Keypresses 288
+11.12. Intercepting Mouse Movements 291
+11.13. Using a Real-Time Clock Module 292
+12. Sensors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+12.1. Using Resistive Sensors 297
+12.2. Measuring Light 301
+12.3. Detecting Methane 303
+12.4. Measuring a Voltage 306
+12.5. Reducing Voltages for Measurement 308
+12.6. Using Resistive Sensors with an ADC 311
+12.7. Measuring Temperature with an ADC 312
+12.8. Measuring Acceleration 315
+12.9. Measuring Temperature Using a Digital Sensor 318
+12.10. Measuring Distance 320
+12.11. Displaying Sensor Values 323
+12.12. Logging to a USB Flash Drive 325
+13. Displays. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 329
+13.1. Using a Four-Digit LED Display 329
+13.2. Displaying Messages on an I2C LED matrix 332
+13.3. Using Pi-Lite 334
+13.4. Displaying Messages on an Alphanumeric LCD 337
+14. Arduino and Raspberry Pi. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 341
+14.1. Programming an Arduino from Raspberry Pi 342
+14.2. Communicating with the Arduino by Using the Serial Monitor 345
+14.3. Setting Up PyFirmata to Control an Arduino from a Raspberry Pi 347
+14.4. Writing Digital Outputs on an Arduino from a Raspberry Pi 349
+14.5. Using PyFirmata with TTL Serial 351
+14.6. Reading Arduino Digital Inputs Using PyFirmata 353
+14.7. Reading Arduino Analog Inputs Using PyFirmata 356
+14.8. Analog Outputs (PWM) with PyFirmata 358
+14.9. Controlling a Servo Using PyFirmata 360
+14.10. Custom Communication with an Arduino over TTL Serial 362
+14.11. Custom Communication with an Arduino over I2C 366
+14.12. Using Small Arduinos with a Raspberry Pi 370
+14.13. Getting Started with an aLaMode Board and a Raspberry Pi 371
+14.14. Using an Arduino Shield with an aLaMode Board and a Raspberry Pi 374
+14.15. Using Gertboard as an Arduino Interface 377
+A. Parts and Suppliers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 379
+Index. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 385

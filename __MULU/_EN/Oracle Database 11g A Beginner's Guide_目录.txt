@@ -1,0 +1,343 @@
+
+ACKNOWLEDGMENTS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiii
+INTRODUCTION . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xv
+1 Database Fundamentals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Critical Skill 1.1 Define a Database . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+Critical Skill 1.2 Learn the Oracle Database 11 g Architecture . . . . . . . 4
+The Control Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+The Online Redo Logs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+The System Tablespace . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+The Sysaux Tablespace . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Default Temporary Tablespace . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Undo Tablespace . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+The Server Parameter File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Background Processes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+Project 1-1 Review the Oracle Database 11 g Architecture . . . . . . . . . 9
+The Database Administrator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Critical Skill 1.3 Learn the Basic Oracle Database 11 g Data Types . . . 11
+varchar2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+number . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+date . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+timestamp . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+clob . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+blob . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Critical Skill 1.4 Work with Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Tables Related to part_master . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Critical Skill 1.5 Work with Stored Programmed Objects . . . . . . . . . . . 16
+Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Triggers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+Procedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+Packages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+v
+Critical Skill 1.6 Become Familiar with Other Important Items
+in Oracle Database 11g . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+Users . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+Tablespace Quotas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+Synonyms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+Roles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+Default User Environments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+Critical Skill 1.7 Work with Object and System Privileges . . . . . . . . . . 25
+Select . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+Insert . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+Update . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+Delete . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+System Privileges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+Critical Skill 1.8 Introduce Yourself to the Grid . . . . . . . . . . . . . . . . . . 27
+Critical Skill 1.9 Tie It All Together . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+Chapter 1 Mastery Check. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+2 Installing Oracle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+Critical Skill 2.1 Research and Plan the Installation . . . . . . . . . . . . . . . 36
+Define System Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+Linux Installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+Critical Skill 2.2 Set Up the Operating System . . . . . . . . . . . . . . . . . . . 42
+Project 2-1 Configure Kernel Parameters . . . . . . . . . . . . . . . . . . . . . . 44
+Critical Skill 2.3 Get Familiar with Linux . . . . . . . . . . . . . . . . . . . . . . . 47
+Critical Skill 2.4 Choose Components to Install . . . . . . . . . . . . . . . . . . 48
+Critical Skill 2.5 Install the Oracle Software . . . . . . . . . . . . . . . . . . . . . 49
+Database Configuration Assistant . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Verify the Installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+Chapter 2 Mastery Check. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+3 Connecting to Oracle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+Critical Skill 3.1 Use Oracle Net Services . . . . . . . . . . . . . . . . . . . . . . 66
+Network Protocols . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+Optimize Network Bandwidth . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+Connections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+Maintain Connections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+Define a Location . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
+Critical Skill 3.2 Learn the Difference Between Dedicated
+and Shared Server Architectures . . . . . . . . . . . . . . . . . . . . . . . . . . . 71
+Dedicated Server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 71
+Shared Server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+Set Dispatchers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+Views to Monitor the Shared Server . . . . . . . . . . . . . . . . . . . . . . . . 76
+Critical Skill 3.3 Define Connections . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+vi Oracle Database 11 g: A Beginner¡¯s Guide
+A Connect Descriptor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+Define a Connect Descriptor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+The Oracle Connection Manager . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+Session Multiplexing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+Firewall Access Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+Critical Skill 3.4 Use the Oracle Net Listener . . . . . . . . . . . . . . . . . . . . 80
+Password Authentication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+Multiple Listeners . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+Connection Pooling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+Critical Skill 3.5 Learn Naming Methods . . . . . . . . . . . . . . . . . . . . . . . 83
+Directory Naming Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+Directory Information Trees . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+Distinguished Names . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+How to Find the Directory Naming Information . . . . . . . . . . . . . . 85
+Net Service Alias Entries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+The Local Naming Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+The Easy Naming Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+The External Naming Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+Which Naming Method to Use . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+Critical Skill 3.6 Use Oracle Configuration Files . . . . . . . . . . . . . . . . . 87
+Critical Skill 3.7 Use Administration Tools . . . . . . . . . . . . . . . . . . . . . . 89
+The Oracle Enterprise Manager/Grid Control . . . . . . . . . . . . . . . . . 89
+The Oracle Net Manager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90
+The OEM Console . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+The OEM Components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+The Oracle Net Configuration Assistant . . . . . . . . . . . . . . . . . . . . . 91
+The Oracle Internet Directory Configuration Assistant . . . . . . . . . . 92
+Command-Line Utilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
+The Oracle Advanced Security Option . . . . . . . . . . . . . . . . . . . . . 94
+Dispatchers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+Project 3-1 Test a Connection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+Critical Skill 3.8 Use Profiles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+Critical Skill 3.9 Network in a Multi-tiered Environment . . . . . . . . . . . 98
+Critical Skill 3.10 Install the Oracle 11 g Client Software . . . . . . . . . . . 99
+Chapter 3 Mastery Check. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+4 SQL: Structured Query Language . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+Critical Skill 4.1 Learn the SQL Statement Components . . . . . . . . . . . . 106
+DDL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+DML . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+Critical Skill 4.2 Use Basic Insert and Select Statements . . . . . . . . . . . . 108
+Insert . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+Select . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
+Critical Skill 4.3 Use Simple Where Clauses . . . . . . . . . . . . . . . . . . . . 111
+A Where Clause with and/or . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+Contents vii
+The Where Clause with NOT . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
+The Where Clause with a Range Search . . . . . . . . . . . . . . . . . . . . 115
+The Where Clause with a Search List . . . . . . . . . . . . . . . . . . . . . . . 116
+The Where Clause with a Pattern Search . . . . . . . . . . . . . . . . . . . . 116
+The Where Clause: Common Operators . . . . . . . . . . . . . . . . . . . . 117
+Critical Skill 4.4 Use Basic Update and Delete Statements . . . . . . . . . . 118
+Update . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 119
+Delete . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
+Critical Skill 4.5 Order Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+Critical Skill 4.6 Employ Functions: String, Numeric, Aggregate
+(No Grouping) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+String Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+Numeric Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+Aggregate Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+Critical Skill 4.7 Use Dates and Data Functions (Formatting and
+Chronological) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+Date Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+Special Formats with the Date Data Type . . . . . . . . . . . . . . . . . . . 127
+Nested Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+Critical Skill 4.8 Employ Joins (ANSI vs. Oracle): Inner, Outer, Self . . . 129
+Inner Joins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+Outer Joins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+Project 4-1 Join Data Using Inner and Outer Joins . . . . . . . . . . . . . . . 134
+Project 4-2 Join Data Using ANSI SQL Joins . . . . . . . . . . . . . . . . . . . 137
+Self-Joins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+Critical Skill 4.9 Learn the Group By and Having Clauses . . . . . . . . . . 140
+Group By . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+Having . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 141
+Project 4-3 Group Data in Your Select Statements . . . . . . . . . . . . . . . 141
+Critical Skill 4.10 Learn Subqueries: Simple and Correlated
+Comparison with Joins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+Simple Subquery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+Correlated Subqueries with Joins . . . . . . . . . . . . . . . . . . . . . . . . . . 146
+Critical Skill 4.11 Use Set Operators: Union, Intersect, Minus . . . . . . . 147
+Union . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+Union All . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+Intersect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+Minus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+Project 4-4 Use the Union Function in Your SQL . . . . . . . . . . . . . . . . 149
+Critical Skill 4.12 Use Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+Critical Skill 4.13 Learn Sequences: Just Simple Stuff . . . . . . . . . . . . . . 152
+Critical Skill 4.14 Employ Constraints: Linkage to Entity Models, Types,
+Deferred, Enforced, Gathering Exceptions . . . . . . . . . . . . . . . . . . . . 153
+Linkage to Entity Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+viii Oracle Database 11 g: A Beginner¡¯s Guide
+Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+Deferred . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 156
+Critical Skill 4.15 Format Your Output with SQL*Plus . . . . . . . . . . . . . 156
+Page and Line Size . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Page Titles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Page Footers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Formatting Columns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Project 4-5 Format Your SQL Output . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Writing SQL*Plus Output to a File . . . . . . . . . . . . . . . . . . . . . . . . . 160
+Chapter 4 Mastery Check. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160
+5 PL/SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 163
+Critical Skill 5.1 Define PL/SQL and Learn Why We Use It . . . . . . . . . 164
+Critical Skill 5.2 Describe the Basic PL/SQL Program Structure . . . . . . 166
+Critical Skill 5.3 Define PL/SQL Data Types . . . . . . . . . . . . . . . . . . . . . 168
+Valid Characters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 168
+Arithmetic Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 168
+The varchar2 Data Type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171
+The Number Data Type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171
+The Date Data Type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 172
+The Boolean Data Type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 173
+Critical Skill 5.4 Write PL/SQL Programs in SQL*Plus . . . . . . . . . . . . . 174
+Project 5-1 Create a PL/SQL Program . . . . . . . . . . . . . . . . . . . . . . . . . 176
+SQL in Your PL/SQL Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177
+PL/SQL Cursors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177
+The Cursor FOR Loop . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 179
+Critical Skill 5.5 Handle Error Conditions in PL/SQL . . . . . . . . . . . . . . 181
+Error Handling Using Oracle-Supplied Variables . . . . . . . . . . . . . . 185
+Critical Skill 5.6 Include Conditions in Your Programs . . . . . . . . . . . . . 187
+Program Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 187
+Project 5-2 Use Conditions and Loops in PL/SQL . . . . . . . . . . . . . . . . 195
+Critical Skill 5.7 Create Stored Procedures¡ªHow and Why . . . . . . . . . 196
+Critical Skill 5.8 Create and Use Functions . . . . . . . . . . . . . . . . . . . . . 201
+Project 5-3 Create and Use a Function . . . . . . . . . . . . . . . . . . . . . . . . 201
+Critical Skill 5.9 Call PL/SQL Programs . . . . . . . . . . . . . . . . . . . . . . . . 203
+Chapter 5 Mastery Check. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 204
+6 The Database Administrator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+Critical Skill 6.1 Learn What a DBA Does . . . . . . . . . . . . . . . . . . . . . . 208
+Critical Skill 6.2 Perform Day-to-Day Operations . . . . . . . . . . . . . . . . . 209
+Architecture and Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+Capacity Planning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+Backup and Recovery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 210
+Security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 210
+Performance and Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 210
+Contents ix
+Managing Database Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 210
+Storage Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 211
+Change Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 211
+Schedule Jobs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 211
+Network Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 211
+Troubleshooting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 211
+Critical Skill 6.3 Understand the Oracle Database 11 g Infrastructure . . 212
+Schemas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 212
+Storage Structures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 215
+Critical Skill 6.4 Operate Modes of an Oracle Database 11 g . . . . . . . . 216
+Modes of Operation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 216
+Database and Instance Shutdown . . . . . . . . . . . . . . . . . . . . . . . . . 217
+Critical Skill 6.5 Get Started with Oracle Enterprise Manager . . . . . . . . 219
+Instance Configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 219
+User Sessions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 220
+Resource Consumer Groups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 220
+Schema, Security, and Storage Management . . . . . . . . . . . . . . . . . 221
+Distributed Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 222
+Warehouse Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 222
+Other Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 222
+Critical Skill 6.6 Manage Database Objects . . . . . . . . . . . . . . . . . . . . . 223
+Control Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 223
+Redo Logs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 223
+Undo Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+Schema Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225
+Critical Skill 6.7 Manage Space . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 226
+Archive Logs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 227
+Tablespaces and Data Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 227
+Critical Skill 6.8 Manage Users . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 229
+Create a User . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 229
+Edit Users . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 230
+Critical Skill 6.9 Manage Privileges for Database Users . . . . . . . . . . . . 231
+Grant Authority . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 232
+Roles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 233
+Profiles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 234
+Project 6-1 Create Essential Objects . . . . . . . . . . . . . . . . . . . . . . . . . . 235
+Chapter 6 Mastery Check. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 237
+7 Backup and Recovery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 239
+Critical Skill 7.1 Understand Oracle Backup and Recovery
+Fundamentals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 240
+Where Do I Start? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 240
+Backup Architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 241
+Oracle Binaries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+Parameter Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+x Oracle Database 11 g: A Beginner¡¯s Guide
+Control Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+Redo Logs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 243
+Undo Segments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 243
+Checkpoints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 244
+Archive Logs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 244
+Data Files, Tablespaces, Segments, Extents, and Blocks. . . . . . . . . . 245
+Dump Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 247
+Critical Skill 7.2 Learn about Oracle User-Managed Backup
+and Recovery. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 248
+Types of User-Managed Backups. . . . . . . . . . . . . . . . . . . . . . . . . . . 248
+Cold Backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 248
+Hot Backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 249
+Recovery from a Cold Backup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 251
+Recovery from a Hot Backup. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 252
+Seven Steps to Recovery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 252
+Recovery Using Backup Control Files . . . . . . . . . . . . . . . . . . . . . . . 253
+Critical Skill 7.3 Write a Database Backup. . . . . . . . . . . . . . . . . . . . . . . 254
+Critical Skill 7.4 Back Up Archived Redo Logs. . . . . . . . . . . . . . . . . . . . 256
+Critical Skill 7.5 Get Started with Oracle Data Pump . . . . . . . . . . . . . . . 257
+Critical Skill 7.6 Use Oracle Data Pump Export . . . . . . . . . . . . . . . . . . . 258
+Critical Skill 7.7 Work with Oracle Data Pump Import. . . . . . . . . . . . . . 264
+Critical Skill 7.8 Use Traditional Export and Import . . . . . . . . . . . . . . . . 269
+Critical Skill 7.9 Get Started with Recovery Manager . . . . . . . . . . . . . . . 270
+RMAN Architecture. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 271
+Set Up a Recovery Catalog and Target Database . . . . . . . . . . . . . . . 274
+Key RMAN Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 274
+Backups. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 277
+RMAN Using Enterprise Manager . . . . . . . . . . . . . . . . . . . . . . . . . . 278
+Performing Backups. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281
+Restore and Recovery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 282
+Project 7-1 RMAN End to End . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 283
+Chapter 7 Mastery Check. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 285
+8 High Availability: RAC, ASM, and Data Guard . . . . . . . . . . . . . . . . . 287
+Critical Skill 8.1 Define High Availability . . . . . . . . . . . . . . . . . . . . . . . 288
+Critical Skill 8.2 Understand Real Application Clusters . . . . . . . . . . . . 289
+Critical Skill 8.3 Install RAC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+Critical Skill 8.4 Test RAC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295
+Workload Manager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 296
+ASM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+Critical Skill 8.5 Set Up the ASM Instance . . . . . . . . . . . . . . . . . . . . . . 297
+Project 8-1 Install ASMLib . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+Critical Skill 8.6 Create ASM Disk Groups . . . . . . . . . . . . . . . . . . . . . . 302
+Project 8-2 Create Disk Groups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+Critical Skill 8.7 Use ASMCMD and ASMLIB . . . . . . . . . . . . . . . . . . . . 304
+Contents xi
+Critical Skill 8.8 Convert an Existing Database to ASM . . . . . . . . . . . . . 306
+Critical Skill 8.9 Understand Data Guard . . . . . . . . . . . . . . . . . . . . . . . 308
+Critical Skill 8.10 Explain Data Guard Protection Modes . . . . . . . . . . . 309
+Critical Skill 8.11 Create a Physical Standby Server . . . . . . . . . . . . . . . 312
+Project 8-3 Create a Physical Standby Server . . . . . . . . . . . . . . . . . . . 313
+Chapter 8 Mastery Check. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 315
+9 Large Database Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 317
+Critical Skill 9.1 Learn to Identify a Very Large Database . . . . . . . . . . . 318
+Critical Skill 9.2 Why and How to Use Data Partitioning . . . . . . . . . . . 319
+Why Use Data Partitioning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 319
+Implement Data Partitioning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 323
+Project 9-1 Create a Range-Partitioned Table and
+a Local-Partitioned Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 340
+Critical Skill 9.3 Compress Your Data . . . . . . . . . . . . . . . . . . . . . . . . . 344
+Data Compression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 344
+Index Key Compression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 346
+Critical Skill 9.4 Use Parallel Processing to Improve Performance . . . . 347
+Parallel Processing Database Components . . . . . . . . . . . . . . . . . . . 347
+Parallel Processing Configuration . . . . . . . . . . . . . . . . . . . . . . . . . 348
+Invoke Parallel Execution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350
+Critical Skill 9.5 Use Materialized Views . . . . . . . . . . . . . . . . . . . . . . . 351
+Uses for Materialized Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 352
+Query Rewrite . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 353
+When to Create Materialized Views . . . . . . . . . . . . . . . . . . . . . . . 354
+Create Materialized Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 355
+Critical Skill 9.6 Use SQL Aggregate and Analysis Functions . . . . . . . . 356
+Aggregation Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 356
+Analysis Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 359
+Other Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 367
+Critical Skill 9.7 Create SQL Models . . . . . . . . . . . . . . . . . . . . . . . . . . 367
+Project 9-2 Use Analytic SQL Functions and Models . . . . . . . . . . . . . 370
+Chapter 9 Mastery Check. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 372
+A Mastery Check Answers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 375
+Chapter 1: Database Fundamentals . . . . . . . . . . . . . . . . . . . . . . . . . . . 376
+Chapter 2: Installing Oracle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 379
+Chapter 3: Connecting to Oracle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 380
+Chapter 4: SQL: Structured Query Language . . . . . . . . . . . . . . . . . . . . 381
+Chapter 5: PL/SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 384
+Chapter 6: The Database Administrator . . . . . . . . . . . . . . . . . . . . . . . . 385
+Chapter 7: Backup and Recovery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 387
+Chapter 8: High Availability: RAC, ASM, and Data Guard . . . . . . . . . . 390
+Chapter 9: Large Database Features . . . . . . . . . . . . . . . . . . . . . . . . . . . 391
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 395

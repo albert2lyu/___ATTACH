@@ -1,0 +1,592 @@
+
+Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxiii
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxv
+ 1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+What Is a Relational Database?. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+Introducing the Structured Query Language (SQL) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+Using SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Starting SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Starting SQL*Plus from the Command Line. . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Performing a SELECT Statement Using SQL*Plus. . . . . . . . . . . . . . . . . . . . . . . . 6
+SQL Developer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+Creating the Store Schema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Running the SQL*Plus Script to Create the Store Schema . . . . . . . . . . . . . . . . . 10
+Data Definition Language (DDL) Statements Used to Create the Store Schema . 11
+Adding, Modifying, and Removing Rows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+Adding a Row to a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+Modifying an Existing Row in a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+Removing a Row from a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+The BINARY_FLOAT and BINARY_DOUBLE Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+Benefits of BINARY_FLOAT and BINARY_DOUBLE . . . . . . . . . . . . . . . . . . . . . 23
+Using BINARY_FLOAT and BINARY_DOUBLE in a Table . . . . . . . . . . . . . . . . . 24
+Special Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+Quitting SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+Introducing Oracle PL/SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+ 2 Retrieving Information from Database Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+Performing Single Table SELECT Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+Retrieving All Columns from a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+Specifying Rows to Retrieve Using the WHERE Clause . . . . . . . . . . . . . . . . . . . . . . . . . 29
+Row Identifiers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+Row Numbers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+ix
+x  Oracle Database 11 g SQL
+Performing Arithmetic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+Performing Date Arithmetic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+Using Columns in Arithmetic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+Using Column Aliases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+Combining Column Output Using Concatenation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+Null Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+Displaying Distinct Rows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+Comparing Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+Using the SQL Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+Using the LIKE Operator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+Using the IN Operator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+Using the BETWEEN Operator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+Using the Logical Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+Operator Precedence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+Sorting Rows Using the ORDER BY Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+Performing SELECT Statements That Use Two Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+Using Table Aliases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+Cartesian Products . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+Performing SELECT Statements That Use More than Two Tables . . . . . . . . . . . . . . . . . . . 49
+Join Conditions and Join Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+Non-equijoins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+Outer Joins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+Self Joins. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+Performing Joins Using the SQL/92 Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+Performing Inner Joins on Two Tables Using SQL/92 . . . . . . . . . . . . . . . . . . . . . 56
+Simplifying Joins with the USING Keyword . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Performing Inner Joins on More than Two Tables Using SQL/92 . . . . . . . . . . . . 58
+Performing Inner Joins on Multiple Columns Using SQL/92 . . . . . . . . . . . . . . . 58
+Performing Outer Joins Using SQL/92 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+Performing Self Joins Using SQL/92 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+Performing Cross Joins Using SQL/92 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+ 3 Using SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+Viewing the Structure of a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64
+Editing SQL Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+Saving, Retrieving, and Running Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 66
+Formatting Columns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
+Setting the Page Size . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+Setting the Line Size . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+Clearing Column Formatting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+Using Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+Temporary Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+Defined Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+Creating Simple Reports . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+Using Temporary Variables in a Script . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+Using Defined Variables in a Script . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+Passing a Value to a Variable in a Script . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+Adding a Header and Footer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+Computing Subtotals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+Contents xi
+Getting Help from SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+Automatically Generating SQL Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+Disconnecting from the Database and Exiting SQL*Plus . . . . . . . . . . . . . . . . . . . . . . . . 86
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+ 4 Using Simple Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+Using Single-Row Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90
+Character Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90
+Numeric Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 98
+Conversion Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102
+Regular Expression Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
+Using Aggregate Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 117
+AVG() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 118
+COUNT() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 118
+MAX() and MIN() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 119
+STDDEV() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
+SUM() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
+VARIANCE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
+Grouping Rows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
+Using the GROUP BY Clause to Group Rows . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+Incorrect Usage of Aggregate Function Calls . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+Using the HAVING Clause to Filter Groups of Rows . . . . . . . . . . . . . . . . . . . . . 125
+Using the WHERE and GROUP BY Clauses Together . . . . . . . . . . . . . . . . . . . . 126
+Using the WHERE, GROUP BY, and HAVING Clauses Together . . . . . . . . . . . . 126
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+ 5 Storing and Processing Dates and Times. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+Simple Examples of Storing and Retrieving Dates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
+Converting Datetimes Using TO_CHAR() and TO_DATE() . . . . . . . . . . . . . . . . . . . . . . . 131
+Using TO_CHAR() to Convert a Datetime to a String . . . . . . . . . . . . . . . . . . . . . 132
+Using TO_DATE() to Convert a String to a Datetime . . . . . . . . . . . . . . . . . . . . . 136
+Setting the Default Date Format . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+How Oracle Interprets Two-Digit Years . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+Using the YY Format . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+Using the RR Format . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+Using Datetime Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+ADD_MONTHS() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+LAST_DAY() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 144
+MONTHS_BETWEEN() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 144
+NEXT_DAY() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 144
+ROUND() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+SYSDATE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+TRUNC() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 146
+Using Time Zones . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 146
+Time Zone Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+The Database Time Zone and Session Time Zone . . . . . . . . . . . . . . . . . . . . . . . 147
+Obtaining Time Zone Offsets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+Obtaining Time Zone Names . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+Converting a Datetime from One Time Zone to Another . . . . . . . . . . . . . . . . . . 150
+xii  Oracle Database 11 g SQL
+Using Timestamps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+Using the Timestamp Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+Timestamp Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+Using Time Intervals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 159
+Using the INTERVAL YEAR TO MONTH Type . . . . . . . . . . . . . . . . . . . . . . . . . . 160
+Using the INTERVAL DAY TO SECOND Type . . . . . . . . . . . . . . . . . . . . . . . . . . 162
+Time Interval Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 164
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 166
+ 6 Subqueries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 167
+Types of Subqueries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 168
+Writing Single-Row Subqueries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 168
+Subqueries in a WHERE Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 168
+Using Other Single-Row Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169
+Subqueries in a HAVING Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 170
+Subqueries in a FROM Clause (Inline Views) . . . . . . . . . . . . . . . . . . . . . . . . . . 171
+Errors You Might Encounter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 172
+Writing Multiple-Row Subqueries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 173
+Using IN with a Multiple-Row Subquery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 173
+Using ANY with a Multiple-Row Subquery . . . . . . . . . . . . . . . . . . . . . . . . . . . . 174
+Using ALL with a Multiple-Row Subquery . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175
+Writing Multiple-Column Subqueries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175
+Writing Correlated Subqueries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175
+A Correlated Subquery Example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 176
+Using EXISTS and NOT EXISTS with a Correlated Subquery . . . . . . . . . . . . . . . 176
+Writing Nested Subqueries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 179
+Writing UPDATE and DELETE Statements Containing Subqueries . . . . . . . . . . . . . . . . . 180
+Writing an UPDATE Statement Containing a Subquery . . . . . . . . . . . . . . . . . . . 180
+Writing a DELETE Statement Containing a Subquery. . . . . . . . . . . . . . . . . . . . . 181
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 181
+ 7 Advanced Queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 183
+Using the Set Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 184
+The Example Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 185
+Using the UNION ALL Operator. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 186
+Using the UNION Operator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 187
+Using the INTERSECT Operator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+Using the MINUS Operator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+Combining Set Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+Using the TRANSLATE() Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 190
+Using the DECODE() Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 191
+Using the CASE Expression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+Using Simple CASE Expressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+Using Searched CASE Expressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+Hierarchical Queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 196
+The Example Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 196
+Using the CONNECT BY and START WITH Clauses . . . . . . . . . . . . . . . . . . . . . 198
+Using the LEVEL Pseudo Column . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 198
+Formatting the Results from a Hierarchical Query . . . . . . . . . . . . . . . . . . . . . . . 199
+Starting at a Node Other than the Root . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200
+Using a Subquery in a START WITH Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . 200
+Contents xiii
+Traversing Upward Through the Tree . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201
+Eliminating Nodes and Branches from a Hierarchical Query . . . . . . . . . . . . . . 201
+Including Other Conditions in a Hierarchical Query. . . . . . . . . . . . . . . . . . . . . 202
+Using the Extended GROUP BY Clauses. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 203
+The Example Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 203
+Using the ROLLUP Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+Using the CUBE Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+Using the GROUPING() Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+Using the GROUPING SETS Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 211
+Using the GROUPING_ID() Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 212
+Using a Column Multiple Times in a GROUP BY Clause . . . . . . . . . . . . . . . . . 214
+Using the GROUP_ID() Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 215
+Using the Analytic Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 216
+The Example Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 216
+Using the Ranking Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 217
+Using the Inverse Percentile Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+Using the Window Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225
+Using the Reporting Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 230
+Using the LAG() and LEAD() Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 232
+Using the FIRST and LAST Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 233
+Using the Linear Regression Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 233
+Using the Hypothetical Rank and Distribution Functions . . . . . . . . . . . . . . . . . 235
+Using the MODEL Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 236
+An Example of the MODEL Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 236
+Using Positional and Symbolic Notation to Access Cells . . . . . . . . . . . . . . . . . . 237
+Accessing a Range of Cells Using BETWEEN and AND . . . . . . . . . . . . . . . . . . . 238
+Accessing All Cells Using ANY and IS ANY . . . . . . . . . . . . . . . . . . . . . . . . . . . 238
+Getting the Current Value of a Dimension Using CURRENTV() . . . . . . . . . . . . . 239
+Accessing Cells Using a FOR Loop . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 240
+Handling Null and Missing Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 241
+Updating Existing Cells . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 243
+Using the PIVOT and UNPIVOT Clauses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 244
+A Simple Example of the PIVOT Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 244
+Pivoting on Multiple Columns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 246
+Using Multiple Aggregate Functions in a Pivot . . . . . . . . . . . . . . . . . . . . . . . . . 247
+Using the UNPIVOT Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 248
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 249
+ 8 Changing Table Contents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 251
+Adding Rows Using the INSERT Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 252
+Omitting the Column List . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 253
+Specifying a Null Value for a Column . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 253
+Including Single and Double Quotes in a Column Value . . . . . . . . . . . . . . . . . 254
+Copying Rows from One Table to Another . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254
+Modifying Rows Using the UPDATE Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254
+The RETURNING Clause . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 255
+Removing Rows Using the DELETE Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 256
+Database Integrity. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 256
+Enforcement of Primary Key Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 257
+Enforcement of Foreign Key Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 257
+xiv  Oracle Database 11 g SQL
+Using Default Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 258
+Merging Rows Using MERGE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 259
+Database Transactions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 262
+Committing and Rolling Back a Transaction . . . . . . . . . . . . . . . . . . . . . . . . . . . 262
+Starting and Ending a Transaction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 263
+Savepoints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+ACID Transaction Properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265
+Concurrent Transactions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 266
+Transaction Locking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 266
+Transaction Isolation Levels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 267
+A SERIALIZABLE Transaction Example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 269
+Query Flashbacks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 270
+Granting the Privilege for Using Flashbacks . . . . . . . . . . . . . . . . . . . . . . . . . . . 270
+Time Query Flashbacks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 270
+System Change Number Query Flashbacks . . . . . . . . . . . . . . . . . . . . . . . . . . . . 272
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 273
+ 9 Users, Privileges, and Roles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 275
+Users . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 276
+Creating a User. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 276
+Changing a User¡¯s Password . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 277
+Deleting a User . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 278
+System Privileges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 278
+Granting System Privileges to a User . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 278
+Checking System Privileges Granted to a User . . . . . . . . . . . . . . . . . . . . . . . . . 280
+Making Use of System Privileges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281
+Revoking System Privileges from a User . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281
+Object Privileges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281
+Granting Object Privileges to a User . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 282
+Checking Object Privileges Made . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 283
+Checking Object Privileges Received . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 284
+Making Use of Object Privileges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 286
+Synonyms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 287
+Public Synonyms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 287
+Revoking Object Privileges . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 288
+Roles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 289
+Creating Roles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 289
+Granting Privileges to Roles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+Granting Roles to a User. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+Checking Roles Granted to a User . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+Checking System Privileges Granted to a Role . . . . . . . . . . . . . . . . . . . . . . . . . 291
+Checking Object Privileges Granted to a Role . . . . . . . . . . . . . . . . . . . . . . . . . 292
+Making Use of Privileges Granted to a Role . . . . . . . . . . . . . . . . . . . . . . . . . . . 293
+Default Roles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 294
+Revoking a Role . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 294
+Revoking Privileges from a Role . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 294
+Dropping a Role . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295
+Auditing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295
+Privileges Required to Perform Auditing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295
+Auditing Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295
+Contents xv
+Audit Trail Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+ 10 Creating Tables, Sequences, Indexes, and Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 299
+Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300
+Creating a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300
+Getting Information on Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 302
+Getting Information on Columns in Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+Altering a Table. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+Renaming a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313
+Adding a Comment to a Table. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313
+Truncating a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314
+Dropping a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314
+Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314
+Creating a Sequence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314
+Retrieving Information on Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 316
+Using a Sequence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 317
+Populating a Primary Key Using a Sequence . . . . . . . . . . . . . . . . . . . . . . . . . . . 319
+Modifying a Sequence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 320
+Dropping a Sequence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 320
+Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 320
+Creating a B-tree Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 321
+Creating a Function-Based Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 322
+Retrieving Information on Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 323
+Retrieving Information on the Indexes on a Column . . . . . . . . . . . . . . . . . . . . . 323
+Modifying an Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 324
+Dropping an Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 324
+Creating a Bitmap Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 324
+Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+Creating and Using a View . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326
+Modifying a View . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+Dropping a View . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+Flashback Data Archives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 337
+ 11 Introducing PL/SQL Programming . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 339
+Block Structure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 340
+Variables and Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 342
+Conditional Logic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 342
+Loops . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 343
+Simple Loops . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 343
+WHILE Loops . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 344
+FOR Loops . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 344
+Cursors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+Step 1: Declare the Variables to Store the Column Values . . . . . . . . . . . . . . . . . 346
+Step 2: Declare the Cursor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 346
+Step 3: Open the Cursor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 346
+Step 4: Fetch the Rows from the Cursor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 347
+Step 5: Close the Cursor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 347
+Complete Example: product_cursor.sql . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 348
+xvi  Oracle Database 11 g SQL
+Cursors and FOR Loops . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349
+OPEN-FOR Statement. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350
+Unconstrained Cursors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 352
+Exceptions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 353
+ZERO_DIVIDE Exception . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 355
+DUP_VAL_ON_INDEX Exception. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 356
+INVALID_NUMBER Exception . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 356
+OTHERS Exception . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 357
+Procedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 358
+Creating a Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 358
+Calling a Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 360
+Getting Information on Procedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 361
+Dropping a Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 362
+Viewing Errors in a Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 362
+Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 363
+Creating a Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 363
+Calling a Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 364
+Getting Information on Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 365
+Dropping a Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 365
+Packages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 365
+Creating a Package Specification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 365
+Creating a Package Body . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 366
+Calling Functions and Procedures in a Package . . . . . . . . . . . . . . . . . . . . . . . . 367
+Getting Information on Functions and Procedures in a Package . . . . . . . . . . . . 368
+Dropping a Package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 368
+Triggers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 369
+When a Trigger Fires . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 369
+Set Up for the Example Trigger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 369
+Creating a Trigger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 369
+Firing a Trigger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 371
+Getting Information on Triggers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 372
+Disabling and Enabling a Trigger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 374
+Dropping a Trigger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 374
+New Oracle Database 11 g PL/SQL Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 374
+SIMPLE_INTEGER Type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 375
+Sequences in PL/SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 375
+PL/SQL Native Machine Code Generation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 377
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 377
+ 12 Database Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 379
+Introducing Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 380
+Creating Object Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 381
+Using DESCRIBE to Get Information on Object Types . . . . . . . . . . . . . . . . . . . . . . . . . . 382
+Using Object Types in Database Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 383
+Column Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 383
+Object Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 386
+Object Identifiers and Object References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 390
+Comparing Object Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 392
+Using Objects in PL/SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 394
+The get_products() Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 395
+The display_product() Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 396
+Contents xvii
+The insert_product() Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 397
+The update_product_price() Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 398
+The get_product() Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 398
+The update_product() Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399
+The get_product_ref() Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400
+The delete_product() Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400
+The product_lifecycle() Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 401
+The product_lifecycle2() Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 402
+Type Inheritance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 403
+Using a Subtype Object in Place of a Supertype Object . . . . . . . . . . . . . . . . . . . . . . . . 405
+SQL Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 405
+PL/SQL Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 406
+NOT SUBSTITUTABLE Objects. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 407
+Other Useful Object Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 408
+IS OF() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 408
+TREAT() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 412
+SYS_TYPEID() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 416
+NOT INSTANTIABLE Object Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 416
+User-Defined Constructors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 418
+Overriding Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 422
+Generalized Invocation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 423
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425
+ 13 Collections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 427
+Introducing Collections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 428
+Creating Collection Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 429
+Creating a Varray Type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 429
+Creating a Nested Table Type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 429
+Using a Collection Type to Define a Column in a Table . . . . . . . . . . . . . . . . . . . . . . . . 430
+Using a Varray Type to Define a Column in a Table . . . . . . . . . . . . . . . . . . . . . . 430
+Using a Nested Table Type to Define a Column in a Table. . . . . . . . . . . . . . . . . 430
+Getting Information on Collections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 431
+Getting Information on a Varray . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 431
+Getting Information on a Nested Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 432
+Populating a Collection with Elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 434
+Populating a Varray with Elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 434
+Populating a Nested Table with Elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 434
+Retrieving Elements from Collections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 435
+Retrieving Elements from a Varray . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 435
+Retrieving Elements from a Nested Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 436
+Using TABLE() to Treat a Collection as a Series of Rows . . . . . . . . . . . . . . . . . . . . . . . . 436
+Using TABLE() with a Varray . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 437
+Using TABLE() with a Nested Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 438
+Modifying Elements of Collections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 438
+Modifying Elements of a Varray . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 438
+Modifying Elements of a Nested Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 439
+Using a Map Method to Compare the Contents of Nested Tables . . . . . . . . . . . . . . . . . 440
+Using CAST() to Convert Collections from One Type to Another . . . . . . . . . . . . . . . . . . 443
+Using CAST() to Convert a Varray to a Nested Table . . . . . . . . . . . . . . . . . . . . . 443
+Using CAST() to Convert a Nested Table to a Varray . . . . . . . . . . . . . . . . . . . . . 443
+xviii  Oracle Database 11 g SQL
+Using Collections in PL/SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 444
+Manipulating a Varray . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 444
+Manipulating a Nested Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 446
+PL/SQL Collection Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 448
+Multilevel Collections. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 458
+Oracle Database 10g Enhancements to Collections . . . . . . . . . . . . . . . . . . . . . . . . . . . 461
+Associative Arrays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 462
+Changing the Size of an Element Type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 463
+Increasing the Number of Elements in a Varray . . . . . . . . . . . . . . . . . . . . . . . . . 463
+Using Varrays in Temporary Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 463
+Using a Different Tablespace for a Nested Table¡¯s Storage Table . . . . . . . . . . . . 463
+ANSI Support for Nested Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 464
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473
+ 14 Large Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 475
+Introducing Large Objects (LOBs) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 476
+The Example Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 476
+Large Object Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 477
+Creating Tables Containing Large Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 478
+Using Large Objects in SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 478
+Using CLOBs and BLOBs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 478
+Using BFILEs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 481
+Using Large Objects in PL/SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 482
+APPEND() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 485
+CLOSE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 485
+COMPARE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 486
+COPY() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 487
+CREATETEMPORARY() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 488
+ERASE(). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 488
+FILECLOSE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 489
+FILECLOSEALL() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 489
+FILEEXISTS() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 490
+FILEGETNAME() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 490
+FILEISOPEN() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 490
+FILEOPEN(). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 491
+FREETEMPORARY() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 492
+GETCHUNKSIZE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 492
+GET_STORAGE_LIMIT() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 492
+GETLENGTH() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 493
+INSTR() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 493
+ISOPEN() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 494
+ISTEMPORARY() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 495
+LOADFROMFILE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 496
+LOADBLOBFROMFILE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 497
+LOADCLOBFROMFILE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 497
+OPEN() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 498
+READ() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 499
+SUBSTR() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 500
+TRIM() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 501
+Contents xix
+WRITE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 502
+WRITEAPPEND() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 503
+Example PL/SQL Procedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 503
+LONG and LONG RAW Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 521
+The Example Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 521
+Adding Data to LONG and LONG RAW Columns . . . . . . . . . . . . . . . . . . . . . . 521
+Converting LONG and LONG RAW Columns to LOBs . . . . . . . . . . . . . . . . . . . 522
+Oracle Database 10g Enhancements to Large Objects . . . . . . . . . . . . . . . . . . . . . . . . . 523
+Implicit Conversion Between CLOB and NCLOB Objects . . . . . . . . . . . . . . . . 523
+Use of the :new Attribute When Using LOBs in a Trigger . . . . . . . . . . . . . . . . . 524
+Oracle Database 11 g Enhancements to Large Objects . . . . . . . . . . . . . . . . . . . . . . . . . 525
+Encrypting LOB Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 525
+Compressing LOB Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 529
+Removing Duplicate LOB Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 529
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 529
+ 15 Running SQL Using Java. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 531
+Getting Started . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 532
+Configuring Your Computer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 533
+Setting the ORACLE_HOME Environment Variable . . . . . . . . . . . . . . . . . . . . . . 533
+Setting the JAVA_HOME Environment Variable . . . . . . . . . . . . . . . . . . . . . . . . . 534
+Setting the PATH Environment Variable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 534
+Setting the CLASSPATH Environment Variable . . . . . . . . . . . . . . . . . . . . . . . . . 534
+Setting the LD_LIBRARY_PATH Environment Variable. . . . . . . . . . . . . . . . . . . . 535
+The Oracle JDBC Drivers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 535
+The Thin Driver . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 535
+The OCI Driver . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 536
+The Server-Side Internal Driver . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 536
+The Server-Side Thin Driver . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 536
+Importing the JDBC Packages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 536
+Registering the Oracle JDBC Drivers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 537
+Opening a Database Connection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 537
+Connecting to the Database Using getConnection() . . . . . . . . . . . . . . . . . . . . . 537
+The Database URL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 538
+Connecting to the Database Using an Oracle Data Source . . . . . . . . . . . . . . . . 539
+Creating a JDBC Statement Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 542
+Retrieving Rows from the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 543
+Step 1: Create and Populate a ResultSet Object . . . . . . . . . . . . . . . . . . . . . . . . 543
+Step 2: Read the Column Values from the ResultSet Object . . . . . . . . . . . . . . . . 544
+Step 3: Close the ResultSet Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 546
+Adding Rows to the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 547
+Modifying Rows in the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 548
+Deleting Rows from the Database. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 548
+Handling Numbers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 549
+Handling Database Null Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 550
+Controlling Database Transactions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 552
+Performing Data Definition Language Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 553
+Handling Exceptions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 553
+Closing Your JDBC Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 554
+xx  Oracle Database 11 g SQL
+Example Program: BasicExample1.java . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 556
+Compile BasicExample1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 560
+Run BasicExample1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 561
+Prepared SQL Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 562
+Example Program: BasicExample2.java . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 565
+The Oracle JDBC Extensions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 567
+The oracle.sql Package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 568
+The oracle.jdbc Package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 571
+Example Program: BasicExample3.java . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 575
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 578
+ 16 SQL Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 579
+Introducing SQL Tuning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 580
+Use a WHERE Clause to Filter Rows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 580
+Use Table Joins Rather than Multiple Queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 581
+Use Fully Qualified Column References When Performing Joins . . . . . . . . . . . . . . . . . . 582
+Use CASE Expressions Rather than Multiple Queries. . . . . . . . . . . . . . . . . . . . . . . . . . . 583
+Add Indexes to Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 584
+Use WHERE Rather than HAVING . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 584
+Use UNION ALL Rather than UNION . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 585
+Use EXISTS Rather than IN . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 586
+Use EXISTS Rather than DISTINCT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 587
+Use GROUPING SETS Rather than CUBE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 588
+Use Bind Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 588
+Non-Identical SQL Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 588
+Identical SQL Statements That Use Bind Variables. . . . . . . . . . . . . . . . . . . . . . . 588
+Listing and Printing Bind Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 590
+Using a Bind Variable to Store a Value Returned by a PL/SQL Function . . . . . . . 590
+Using a Bind Variable to Store Rows from a REFCURSOR . . . . . . . . . . . . . . . . . 590
+Comparing the Cost of Performing Queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 591
+Examining Execution Plans . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 591
+Comparing Execution Plans . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 597
+Passing Hints to the Optimizer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 598
+Additional Tuning Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 600
+Oracle Enterprise Manager Diagnostics Pack . . . . . . . . . . . . . . . . . . . . . . . . . . 600
+Automatic Database Diagnostic Monitor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 600
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 601
+ 17 XML and the Oracle Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 603
+Introducing XML. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 604
+Generating XML from Relational Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 604
+XMLELEMENT() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 605
+XMLATTRIBUTES() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 608
+XMLFOREST() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 608
+XMLAGG() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 609
+XMLCOLATTVAL() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 612
+XMLCONCAT() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 613
+XMLPARSE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 613
+XMLPI() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 614
+XMLCOMMENT() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 614
+Contents xxi
+XMLSEQUENCE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 615
+XMLSERIALIZE() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 616
+A PL/SQL Example That Writes XML Data to a File . . . . . . . . . . . . . . . . . . . . . . 616
+XMLQUERY() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 618
+Saving XML in the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 622
+The Example XML File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 623
+Creating the Example XML Schema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 623
+Retrieving Information from the Example XML Schema . . . . . . . . . . . . . . . . . . 625
+Updating Information in the Example XML Schema . . . . . . . . . . . . . . . . . . . . . 630
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 633
+ A Oracle Data Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 635
+Oracle SQL Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 636
+Oracle PL/SQL Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 638
+ Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 639

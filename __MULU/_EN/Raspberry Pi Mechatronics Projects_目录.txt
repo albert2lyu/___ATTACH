@@ -1,0 +1,417 @@
+
+Raspberry Pi Mechatronics Projects HOTSHOT
+Credits
+About the Authors
+About the Reviewers
+www.PacktPub.com
+Support files, eBooks, discount offers, and more
+Why subscribe?
+Free access for Packt account holders
+Preface
+What this book covers
+What you need for this book
+Who this book is for
+Conventions
+Mission briefing
+Why is it awesome?
+Your Hotshot objectives
+Mission checklist
+Task 1
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Classified intel
+Reader feedback
+Customer support
+Downloading the example code
+Downloading the color images of this book
+Errata
+Piracy
+Questions
+1. Hello World
+A quick introduction to the Raspberry Pi
+Features of a Raspberry Pi
+Where can I buy a Raspberry Pi?
+Requirements to get started with the Raspberry Pi
+Operating systems on the Raspberry Pi
+Getting started with Raspbian
+Downloading Raspbian
+Flashing image on to the SD card
+Windows
+Linux
+A command-line interface-based approach
+Identifying the SD card mount point
+Unmount the SD card
+Flash the SD card
+GUI-based approach
+Setting up the Raspberry Pi
+Mission briefing
+Why is it awesome?
+Your Hotshot objectives
+Mission checklist
+Hunting and gathering
+Engage thrusters
+Objective complete 每 mini debriefing
+Setting up the GPIO
+Engage thrusters
+Installing GPIO libraries
+Objective complete 每 mini debriefing
+GPIO programming using Python
+Engage thrusters
+An alternative to quick2wire 每 RPi.GPIO
+Objective complete 每 mini debriefing
+Electrical output of our program
+Engage thrusters
+Objective complete 每 mini debriefing
+Introduction to the Pi Crust 每 a prototyping platform for the Raspberry Pi
+Mission accomplished
+Hotshot challenge
+2. A Raspberry WebIDE Example
+Mission briefing
+Why is it awesome?
+Your Hotshot objectives
+Mission checklist
+Installation, features, and usage of the Occidentalis operating system from Adafruit
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Setup of a remote login into the Raspberry Pi
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Installation of the Raspberry Pi WebIDE
+Engage thrusters
+Objective complete 每 mini debriefing
+Python development on the WebIDE
+Prepare for lift off
+Quick introduction to the I2C interface
+Configuring the I2C interface on the Raspberry Pi
+Engage thrusters
+Objective complete 每 mini debriefing
+Test and debugging examples using the WebIDE
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Mission accomplished
+Hotshot challenge
+3. The Arduino Raspberry Pi Interface
+Mission briefing
+Why is it awesome?
+Where can you buy an Arduino?
+Your Hotshot objectives
+Mission checklist
+Installing the Arduino IDE
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Programming the Arduino using the Raspberry Pi
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Raspberry Pi AlaMode
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+The Weasley weather clock
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Controlling the stepper using the Arduino
+Prepare for lift off
+Engage thrusters
+Counterclockwise rotation of the stepper motor
+Objective complete 每 mini debriefing
+Controlling the RGB LED Strip using the Arduino
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+I2C Communication using the Arduino (optional)
+Prepare for lift off
+Engage thrusters
+The 7-Segment display
+8x8 LED matrix
+BlinkM
+Proximity sensor
+Objective complete 每 mini debriefing
+Serial port communication with the Raspberry Pi
+Engage thrusters
+Python program for the Weasley clock
+Arduino acknowledgement to control signal
+Control flow for the weather clock
+Temperature data
+Control of the RGB LED strip
+Control of stepper via serial port
+Programming the weather forecast position
+8x8 matrix control
+BlinkM control
+Objective complete 每 mini debriefing
+Mission accomplished
+Hotshot challenge
+4. Christmas Light Sequencer
+Mission briefing
+Why is it awesome?
+Your objectives
+Mission checklist
+Interface the devices to the Raspberry Pi
+Prepare for lift off
+Engage thrusters
+Connecting multiple appliances to the Raspberry Pi
+Objective complete 每 mini debriefing
+Setting up the digitally addressable RGB matrix
+Prepare for lift off
+Where can I buy them?
+Engage thrusters
+How does it work?
+Lighting up the RGB LED strip
+An Arduino-based control
+Objective complete 每 mini debriefing
+Interface of an audio device
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Installing the web server
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mission debriefing
+Interfacing the web server
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Mission accomplished
+References
+5. Internet of Things Example 每 An E-mail Alert Water Fountain
+Mission briefing
+Why is it awesome?
+Your objectives
+Mission checklist
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Installation of the Flask framework
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Controlling RGB LEDs from a web page
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Setup of the e-mail alerts in the fountain
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Mission accomplished
+Hotshot challenge
+6. Raspberry Pi as a Personal Assistant
+Mission briefing
+Why is it awesome?
+Your objectives
+Mission checklist
+Setting up the e-mail feed parser
+Prepare for lift off
+Engage thrusters
+Setting up the parser for reminders and events
+Prepare for lift off
+Engage thrusters
+Designing an enclosure design for the personal assistant
+Prepare for lift off
+Engage thrusters
+Setting up the assembly for the dish monitor
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Setting up sensors for the key alert system
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Mission accomplished
+Hotshot challenges
+References
+7. Raspberry Pi-based Line Following Robot
+Mission briefing
+Why is it awesome?
+Your Hotshot objectives
+Mission checklist
+Assembly of the Pi Plate for the line following robot
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Sensor selection, interface, and data interpretation
+Engage thrusters
+Light Dependent Resistors
+Infrared emitter/detector
+Machine-vision-based line following robot
+Sensor selection
+Objective complete 每 mission debriefing
+Implementation of line following logic based on sensor data
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Testing the motor driver circuit
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Preparation of the line following course
+Prepare for lift off
+Engage thrusters
+Use electrical tape and build a track
+Designing the chassis for the line following robot
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+A step-by-step assembly of the robot
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Mission accomplished
+Hotshot challenge
+References
+8. Connect Four Desktop Game using Raspberry Pi
+Mission briefing
+Why is it awesome?
+Your objectives
+Mission checklist
+Hello world example with the pygame
+Prepare for lift off
+Engage thrusters
+Playing sounds using the pygame module
+Building menus using the pygame module
+Objective complete 每 mini debriefing
+Getting started with the Connect Four game (UI and sound effects)
+Prepare for lift off
+Engage Thrusters
+Adding a menu for the game
+Adding sounds to the game
+Objective complete 每 mission debriefing
+Interfacing game inputs using the PiFace module
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+A brief description of the Connect Four Game AI
+Prepare for lift off
+Engage thrusters
+Main game loop
+Objective complete 每 mini debriefing
+Marquee design and control (optional)
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Setup of the switches using a cardboard box
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Mission accomplished
+Hotshot challenge
+References
+9. The Raspberry Pi-enabled Pet/Wildlife Monitor
+Mission briefing
+Why is it awesome?
+Your objectives
+Mission checklist
+Installing and testing the python-twisted framework
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Setting up and testing Spark Core to interact with appliances
+Prepare for lift off
+Engage Thrusters
+Objective complete 每 mini debriefing
+Installing and testing the Google Coder project on the Raspberry Pi
+Prepare for lift off
+Engage thrusters
+Objective complete 每 objective complete
+A brief overview of a bird feeder that triggers a camera
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Alternatives and project ideas to consider
+Mission accomplished
+Hotshot challenge
+10. Raspberry Pi Personal Health Monitor
+Mission briefing
+Why is it awesome?
+Your Hotshot objectives
+Mission checklist
+Setting up a web server to record health parameters
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+A simple exercise tool using the Raspberry Pi
+Prepare for lift off
+Engage thrusters
+A mini project idea
+Objective complete 每 mini debriefing
+Setting up an e-mail feed parser to refill a prescription as well as remind the user about
+an upcoming doctor＊s appointment
+Engage thrusters
+Setting up a reminder for doctor＊s appointments
+Objective complete 每 mini debriefing
+A simple tool that reminds a person to take his/her pills
+Prepare for lift off
+Engage thrusters
+Other project ideas
+Objective complete 每 mini debriefing
+Mission accomplished
+Hotshot challenge
+11. Home Automation using Raspberry Pi
+Mission briefing
+Why is it awesome?
+Your objectives
+Mission checklist
+A simple example that controls limited indoor and outdoor lighting in the evening
+Prepare for lift off
+Software prerequisites
+Engage thrusters
+Objective complete 每 mini debriefing
+Alternative solutions and some project ideas to consider
+A customary web server example
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Turning on a lawn sprinkler only when there is no rain forecast!
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Gaining remote access to your Raspberry Pi to control appliances
+Some project ideas to consider
+Mission accomplished
+12. Using a Raspberry Pi for Science and Education
+Mission briefing
+Why is it awesome?
+Your Hotshot objectives
+Improving your vocabulary using the Raspberry Pi
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Raspberry Pi and Khan Academy
+Some ideas to consider
+Building a science fair exhibit using the Raspberry Pi
+Prepare for lift off
+Engage thrusters
+Objective complete 每 mini debriefing
+Some simple educational experiments using the Raspberry Pi
+Hotshot challenge
+13. Tips and Tricks
+Mission briefing
+Why is it awesome?
+Your objectives
+Mission checklist
+Setting up Raspberry Pi as a development platform
+#1 每 Simple trick for Python development via remote login
+#2 Web development using Google Coder
+#3 Adafruit Occidentalis
+#4 Java Development using the Raspberry Pi
+#5 The Thingbox project
+Remotely logging in the Raspberry Pi from anywhere on the Internet
+Problems that might be encountered while using Raspberry Pi
+SD card corruption
+Power issues
+Devices powered by USB
+Cool add-on hardware sources developed for the Raspberry Pi platform
+The Raspberry Pi model B versus B+, model A versus A+
+Project ideas that can be implemented over a weekend
+Useful resources for the Raspberry Pi
+Raspberry Pi Foundation＊s forums:
+Raspberry Pi Stack Exchange:
+Element 14＊s Raspberry Pi community:
+Mission accomplished
+Index

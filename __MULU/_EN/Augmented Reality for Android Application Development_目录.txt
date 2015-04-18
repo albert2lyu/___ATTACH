@@ -1,0 +1,80 @@
+
+Preface 1
+Chapter 1: Augmented Reality Concepts and Tools 5
+A quick overview of AR concepts 6
+Sensory augmentation 7
+Displays 7
+Registration in 3D 8
+Interaction with the environment 9
+Choose your style 每 sensor-based and computer vision-based AR 10
+Sensor-based AR 10
+Computer vision-based AR 11
+AR architecture concepts 11
+AR software components 11
+AR control flow 12
+System requirements for development and deployment 14
+Installing the Android Developer Tools Bundle and the Android NDK 15
+Installing JMonkeyEngine 16
+Installing VuforiaTM 17
+Which Android devices should you use? 17
+Summary 18
+Chapter 2: Viewing the World 19
+Understanding the camera 20
+Camera characteristics 20
+Camera versus screen characteristics 23
+Accessing the camera in Android 24
+Creating an Eclipse project 24
+Permissions in the Android manifest 25
+Creating an activity that displays the camera 25
+Setting camera parameters 26
+Creating SurfaceView 27
+Live camera view in JME 29
+Creating the JME activity 30
+Creating the JME application 33
+Summary 35
+Chapter 3: Superimposing the World 37
+The building blocks of 3D rendering 38
+Real camera and virtual camera 39
+Camera parameters (intrinsic orientation) 40
+Using the scenegraph to overlay a 3D model onto the camera view 41
+Improving the overlay 45
+Summary 49
+Chapter 4: Locating in the World 51
+Knowing where you are 每 handling GPS 51
+GPS and GNSS 52
+JME and GPS 每 tracking the location of
+your device 54
+Knowing where you look 每 handling inertial sensors 58
+Understanding sensors 59
+Sensors in JME 60
+Improving orientation tracking 每 handling sensor fusion 65
+Sensor fusion in a nutshell 65
+Sensor fusion in JME 66
+Getting content for your AR browser 每 the Google Places API 68
+Querying for POIs around your current location 68
+Parsing the Google Places APIs results 70
+Summary 72
+Chapter 5: Same as Hollywood 每 Virtual on Physical Objects 73
+Introduction to computer vision-based tracking and VuforiaTM 74
+Choosing physical objects 74
+Understanding frame markers 75
+Understanding natural feature tracking targets 76
+VuforiaTM architecture 78
+Configuring VuforiaTM to recognize objects 79
+Putting it together 每 VuforiaTM with JME 83
+The C++ integration 83
+The Java integration 90
+Summary 93
+Chapter 6: Make It Interactive 每 Create the User Experience 95
+Pick the stick 每 3D selection using ray picking 96
+Proximity-based interaction 100
+Simple gesture recognition using accelerometers 103
+Summary 105
+Chapter 7: Further Reading and Tips 107
+Managing your content 107
+Multi-targets 107
+Cloud recognition 109
+Improving recognition and tracking 109
+Advanced interaction techniques 112
+Summary 114
+Index 115

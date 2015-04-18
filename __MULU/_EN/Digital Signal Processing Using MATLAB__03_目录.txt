@@ -1,0 +1,106 @@
+
+PREFACE xi
+1 INTRODUCTION 1
+1.1 Overview of Digital Signal Processing 2
+1.2 A Brief Introduction to MATLAB 5
+1.3 Applications of Digital Signal Processing 17
+1.4 Brief Overview of the Book 20
+2 DISCRETE-TIME SIGNALS AND SYSTEMS 22
+2.1 Discrete-time Signals 22
+2.2 Discrete Systems 36
+2.3 Convolution 40
+2.4 Difference Equations 47
+2.5 Problems 53
+ Copyright 2010 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+vi CONTENTS
+3 THE DISCRETE-TIME FOURIER ANALYSIS 59
+3.1 The Discrete-time Fourier Transform (DTFT) 59
+3.2 The Properties of the DTFT 67
+3.3 The Frequency Domain Representation of LTI
+Systems 74
+3.4 Sampling and Reconstruction of Analog Signals 80
+3.5 Problems 97
+4 THE z-TRANSFORM 103
+4.1 The Bilateral z-Transform 103
+4.2 Important Properties of the z-Transform 107
+4.3 Inversion of the z-Transform 112
+4.4 System Representation in the z-Domain 118
+4.5 Solutions of the Difference Equations 128
+4.6 Problems 134
+5 THE DISCRETE FOURIER TRANSFORM 141
+5.1 The Discrete Fourier Series 142
+5.2 Sampling and Reconstruction in the z-Domain 149
+5.3 The Discrete Fourier Transform 154
+5.4 Properties of the Discrete Fourier Transform 166
+5.5 Linear Convolution Using the DFT 180
+5.6 The Fast Fourier Transform 187
+5.7 Problems 200
+ Copyright 2010 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+CONTENTS vii
+6 IMPLEMENTATION OF DISCRETE-TIME
+FILTERS 213
+6.1 Basic Elements 214
+6.2 IIR Filter Structures 215
+6.3 FIR Filter Structures 229
+6.4 Lattice Filter Structures 240
+6.5 Overview of Finite-Precision Numerical Effects 251
+6.6 Representation of Numbers 252
+6.7 The Process of Quantization and Error
+Characterizations 268
+6.8 Quantization of Filter Coefficients 275
+6.9 Problems 290
+7 FIR FILTER DESIGN 305
+7.1 Preliminaries 306
+7.2 Properties of Linear-phase FIR Filters 309
+7.3 Window Design Techniques 324
+7.4 Frequency Sampling Design Techniques 346
+7.5 Optimal Equiripple Design Technique 360
+7.6 Problems 377
+8 IIR FILTER DESIGN 388
+8.1 Some Preliminaries 389
+8.2 Some Special Filter Types 392
+ Copyright 2010 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+viii CONTENTS
+8.3 Characteristics of Prototype Analog Filters 402
+8.4 Analog-to-Digital Filter Transformations 425
+8.5 Lowpass Filter Design Using MATLAB 445
+8.6 Frequency-band Transformations 450
+8.7 Problems 463
+9 SAMPLING RATE CONVERSION 476
+9.1 Introduction 477
+9.2 Decimation by a Factor D 479
+9.3 Interpolation by a Factor I 488
+9.4 Sampling Rate Conversion by a Rational
+Factor I /D 495
+9.5 FIR Filter Designs for Sampling Rate Conversion 500
+9.6 FIR Filter Structures for Sampling Rate Conversion 522
+9.7 Problems 532
+10 ROUND-OFF EFFECTS IN DIGITAL FILTERS 540
+10.1 Analysis of A/D Quantization Noise 540
+10.2 Round-off Effects in IIR Digital Filters 552
+10.3 Round-off Effects in FIR Digital Filters 580
+10.4 Problems 592
+11 APPLICATIONS IN ADAPTIVE FILTERING 596
+11.1 LMS Algorithm for Coefficient Adjustment 598
+11.2 System Identification or System Modeling 601
+ Copyright 2010 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+CONTENTS ix
+11.3 Suppression of Narrowband Interference
+in a Wideband Signal 602
+11.4 Adaptive Line Enhancement 605
+11.5 Adaptive Channel Equalization 605
+12 APPLICATIONS IN COMMUNICATIONS 609
+12.1 Pulse-Code Modulation 609
+12.2 Differential PCM (DPCM) 613
+12.3 Adaptive PCM and DPCM (ADPCM) 616
+12.4 Delta Modulation (DM) 620
+12.5 Linear Predictive Coding (LPC) of Speech 624
+12.6 Dual-tone Multifrequency (DTMF) Signals 628
+12.7 Binary Digital Communications 632
+12.8 Spread-Spectrum Communications 634
+BIBLIOGRAPHY 635
+INDEX 637

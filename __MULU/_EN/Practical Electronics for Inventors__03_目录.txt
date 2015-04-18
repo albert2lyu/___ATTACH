@@ -1,0 +1,580 @@
+
+Preface xxiii
+Acknowledgments xxv
+CHAPTER 1 Introduction to Electronics 1
+CHAPTER 2 Theory 5
+2.1 Theory of Electronics 5
+2.2 Electric Current 6
+2.2.1 Currents in Perspective 9
+2.3 Voltage 9
+2.3.1 The Mechanisms of Voltage 11
+2.3.2 Definition of Volt and Generalized Power Law 14
+2.3.3 Combining Batteries 15
+2.3.4 Other Voltage Sources 16
+2.3.5 Water Analogies 17
+2.4 A Microscopic View of Conduction (For Those Who
+Are Interested) 18
+2.4.1 Applying a Voltage 21
+2.5 Resistance, Resistivity, Conductivity 23
+2.5.1 How the Shape of a Conductor Affects Resistance 24
+2.5.2 Resistivity and Conductivity 25
+2.6 Insulators, Conductors, and Semiconductors 28
+2.7 Heat and Power 31
+2.8 Thermal Heat Conduction and Thermal Resistance 34
+2.8.1 Importance of Heat Production 37
+2.9 Wire Gauges 39
+2.10 Grounds 40
+2.10.1 Earth Ground 42
+2.10.2 Different Types of Ground Symbols 45
+2.10.3 Loose Ends on Grounding 47
+2.11 Electric Circuits 49
+2.12 Ohm¡¯s Law and Resistors 50
+2.12.1 Resistor Power Ratings 51
+2.12.2 Resistors in Parallel 52
+2.12.3 Resistors in Series 55
+2.12.4 Reducing a Complex Resistor Network 58
+2.12.5 Multiple Voltage Dividers 61
+2.13 Voltage and Current Sources 62
+2.14 Measuring Voltage, Current, and Resistance 65
+2.15 Combining Batteries 67
+2.16 Open and Short Circuits 68
+2.17 Kirchhoff¡¯s Laws 69
+2.18 Superposition Theorem 74
+2.19 Thevenin¡¯s and Norton¡¯s Theorems 76
+2.19.1 Thevenin¡¯s Theorem 76
+2.19.2 Norton¡¯s Theorem 77
+2.20 AC Circuits 80
+2.20.1 Generating AC 81
+2.20.2 Water Analogy of AC 82
+2.20.3 Pulsating DC 82
+2.20.4 Combining Sinusoidal Sources 83
+2.20.5 AC Waveforms 84
+2.20.6 Describing an AC Waveform 84
+2.20.7 Frequency and Period 85
+2.20.8 Phase 86
+2.21 AC and Resistors, RMS Voltage, and Current 87
+2.22 Mains Power 92
+2.23 Capacitors 94
+2.23.1 Determining Capacitance 97
+2.23.2 Commercial Capacitors 99
+2.23.3 Voltage Rating and Dielectric Breakdown 99
+2.23.4 Maxwell¡¯s Displacement Current 100
+2.23.5 Charge-Based Model of Current Through a Capacitor 102
+2.23.6 Capacitor Water Analogy 104
+2.23.7 Energy in a Capacitor 105
+2.23.8 RC Time Constant 105
+2.23.9 Stray Capacitance 108
+2.23.10 Capacitors in Parallel 108
+2.23.11 Capacitors in Series 109
+2.23.12 Alternating Current in a Capacitor 110
+2.23.13 Capacitive Reactance 111
+2.23.14 Capacitive Divider 113
+2.23.15 Quality Factor 113
+2.24 Inductors 113
+2.24.1 Electromagnetism 114
+2.24.2 Magnetic Fields and Their Influence 117
+2.24.3 Self-Inductance 120
+2.24.4 Inductors 121
+2.24.5 Inductor Water Analogy 127
+2.24.6 Inductor Equations 128
+2.24.7 Energy Within an Inductor 133
+2.24.8 Inductor Cores 133
+2.24.9 Understanding the Inductor Equations 138
+2.24.10 Energizing LR Circuit 142
+2.24.11 Deenergizing LR Circuit 144
+2.24.12 Voltage Spikes Due to Switching 147
+2.24.13 Straight-Wire Inductance 147
+2.24.14 Mutual Inductance and Magnetic Coupling 148
+2.24.15 Unwanted Coupling: Spikes, Lightning, and
+Other Pulses 149
+2.24.16 Inductors in Series and Parallel 149
+2.24.17 Alternating Current and Inductors 150
+2.24.18 Inductive Reactance 151
+2.24.19 Nonideal Inductor Model 153
+2.24.20 Quality Factor 154
+2.24.21 Inductor Applications 155
+2.25 Modeling Complex Circuits 155
+2.26 Complex Numbers 159
+2.27 Circuit with Sinusoidal Sources 164
+2.27.1 Analyzing Sinusoidal Circuits with Complex
+Impedances 165
+2.27.2 Sinusoidal Voltage Source in Complex Notation 167
+2.27.3 Odd Phenomena in Reactive Circuits 175
+2.28 Power in AC Circuits (Apparent Power, Real Power,
+Reactive Power) 176
+2.28.1 Power Factor 178
+2.29 Thevenin¡¯s Theorem in AC Form 186
+2.30 Resonant Circuits 188
+2.30.1 Resonance in RLC Circuits 191
+2.30.2 Q (Quality Factor) and Bandwidth 193
+2.30.3 Bandwidth 194
+2.30.4 Voltage Drop Across Components in RLC
+Resonant Circuit 195
+2.30.5 Capacitor Losses 195
+2.30.6 Parallel-Resonant Circuits 196
+2.30.7 The Q of Loaded Circuits 202
+2.31 Lecture on Decibels 204
+2.31.1 Alternative Decibel Representations 207
+2.32 Input and Output Impedance 207
+2.32.1 Input Impedance 207
+2.32.2 Output Impedance 208
+2.33 Two-Port Networks and Filters 210
+2.33.1 Filters 210
+2.33.2 Attenuators 221
+2.34 Transient Circuits 223
+2.34.1 Series RLC Circuit 231
+2.35 Circuits with Periodic Nonsinusoidal Sources 235
+2.35.1 Fourier Series 236
+2.36 Nonperiodic Sources 243
+2.37 SPICE 245
+2.37.1 How SPICE Works 246
+2.37.2 Limitations of SPICE and Other Simulators 249
+2.37.3 A Simple Simulation Example 249
+CHAPTER 3 Basic Electronic Circuit Components 253
+3.1 Wires, Cables, and Connectors 253
+3.1.1 Wires 253
+3.1.2 Cables 256
+3.1.3 Connectors 256
+3.1.4 Wiring and Connector Symbols 261
+3.1.5 High-Frequency Effects Within Wires and Cables 262
+3.2 Batteries 271
+3.2.1 How a Cell Works 272
+3.2.2 Primary Batteries 274
+3.2.3 Comparing Primary Batteries 275
+3.2.4 Secondary Batteries 279
+3.2.5 Battery Capacity 287
+3.2.6 Note on Internal Voltage Drop of a Battery 289
+3.3 Switches 290
+3.3.1 How a Switch Works 291
+3.3.2 Describing a Switch 292
+3.3.3 Kinds of Switches 292
+3.3.4 Simple Switch Applications 294
+3.4 Relays 295
+3.4.1 Specific Kinds of Relays 297
+3.4.2 A Few Notes about Relays 298
+3.4.3 Some Simple Relay Circuits 299
+3.5 Resistors 299
+3.5.1 Resistance and Ohm¡¯s Law 301
+3.5.2 Resistors in Series and Parallel 302
+3.5.3 Reading Resistor Labels 304
+3.5.4 Real Resistor Characteristics 306
+3.5.5 Types of Resistors 314
+3.5.6 Variable Resistors (Rheostats, Potentiometers,
+Trimmers) 320
+3.5.7 Potentiometer Characteristics 322
+3.6 Capacitors 324
+3.6.1 Capacitance 326
+3.6.2 Capacitors in Parallel 326
+3.6.3 Capacitors in Series 327
+3.6.4 RC Time Constant 327
+3.6.5 Capacitive Reactance 328
+3.6.6 Real Capacitors 329
+3.6.7 Capacitor Specifications 329
+3.6.8 Types of Capacitors 333
+3.6.9 Capacitor Applications 341
+3.6.10 Timing and Sample and Hold 347
+3.6.11 RC Ripple Filter 348
+3.6.12 Arc Suppression 350
+3.6.13 Supercapacitor Applications 352
+3.6.14 Problems 352
+3.7 Inductors 355
+3.7.1 Inductance 357
+3.7.2 Constructing Inductors 357
+3.7.3 Inductors in Series and Parallel 357
+3.7.4 RL Time Constant 359
+3.7.5 Inductive Reactance 360
+3.7.6 Real Inductors 361
+3.7.7 Inductor Specifications 361
+3.7.8 Types of Inductors 363
+3.7.9 Reading Inductor Labels 367
+3.7.10 Inductor Applications 369
+3.7.11 EMI/EMC Design Tips 373
+3.8 Transformers 374
+3.8.1 Basic Operations 374
+3.8.2 Transformer Construction 385
+3.8.3 Autotransformers and Variable Transformers 387
+3.8.4 Circuit Isolation and the Isolation Transformer 389
+3.8.5 Various Standard and Specialized Transformers 390
+3.8.6 Transformer Applications 391
+3.9 Fuses and Circuit Breakers 397
+3.9.1 Types of Fuses and Circuit Breakers 398
+CHAPTER 4 Semiconductors 401
+4.1 Semiconductor Technology 401
+4.1.1 What Is a Semiconductor? 401
+4.1.2 Applications of Silicon 406
+4.2 Diodes 407
+4.2.1 How p-n Junction Diodes Work 407
+4.2.2 Diode Water Analogy 409
+4.2.3 Kinds of Rectifiers/Diodes 409
+4.2.4 Practical Considerations 411
+4.2.5 Diode/Rectifier Applications 412
+4.2.6 Zener Diodes 420
+4.2.7 Zener Diode Applications 423
+4.2.8 Varactor Diodes (Variable Capacitance Diodes) 424
+4.2.9 PIN Diodes 426
+4.2.10 Microwave Diodes (IMPATT, Gunn, Tunnel, etc.) 426
+4.2.11 Problems 427
+4.3 Transistors 429
+4.3.1 Introduction to Transistors 429
+4.3.2 Bipolar Transistors 430
+4.3.3 Junction Field-Effect Transistors 449
+4.3.4 Metal Oxide Semiconductor Field-Effect Transistors 459
+4.3.5 Unijunction Transistors 468
+4.4 Thyristors 472
+4.4.1 Introduction 472
+4.4.2 Silicon-Controlled Rectifiers 473
+4.4.3 Silicon-Controlled Switches 476
+4.4.4 Triacs 477
+4.4.5 Four-Layer Diodes and Diacs 480
+4.5 Transient Voltage Suppressors 481
+4.5.1 Lecture on Transients 482
+4.5.2 Devices Used to Suppress Transients 483
+4.6 Integrated Circuits 491
+4.6.1 IC Packages 492
+CHAPTER 5 Optoelectronics 495
+5.1 A Little Lecture on Photons 495
+5.2 Lamps 497
+5.3 Light-Emitting Diodes 499
+5.3.1 How an LED Works 500
+5.3.2 Kinds of LEDs 501
+5.3.3 More on LEDs 502
+5.3.4 LED Applications 505
+5.3.5 Laser Diodes 506
+5.4 Photoresistors 512
+5.4.1 How a Photoresistor Works 512
+5.4.2 Technical Stuff 513
+5.4.3 Applications 513
+5.5 Photodiodes 514
+5.5.1 How a Photodiode Works 514
+5.5.2 Basic Operations 515
+5.5.3 Kinds of Photodiodes 515
+5.6 Solar Cells 516
+5.6.1 Basic Operations 517
+5.7 Phototransistors 517
+5.7.1 How a Phototransistor Works 518
+5.7.2 Basic Configurations 518
+5.7.3 Kinds of Phototransistors 519
+5.7.4 Technical Stuff 519
+5.7.5 Applications 520
+5.8 Photothyristors 521
+5.8.1 How LASCRs Work 521
+5.8.2 Basic Operation 522
+5.9 Optoisolators 522
+5.9.1 Integrated Optoisolators 523
+5.9.2 Applications 523
+5.10 Optical Fiber 524
+CHAPTER 6 Sensors 525
+6.1 General Principals 525
+6.1.1 Precision, Accuracy, and Resolution 525
+6.1.2 The Observer Effect 526
+6.1.3 Calibration 526
+6.2 Temperature 528
+6.2.1 Thermistors 529
+6.2.2 Thermocouples 531
+6.2.3 Resistive Temperature Detectors 532
+6.2.4 Analog Output Thermometer ICs 532
+6.2.5 Digital Thermometer ICs 533
+6.2.6 Infrared Thermometers/Pyrometers 534
+6.2.7 Summary 534
+6.3 Proximity and Touch 535
+6.3.1 Touch Screens 535
+6.3.2 Ultrasonic Distance 536
+6.3.3 Optical Distance 537
+6.3.4 Capacitive Sensors 539
+6.3.5 Summary 539
+6.4 Movement, Force, and Pressure 540
+6.4.1 Passive Infrared 540
+6.4.2 Acceleration 541
+6.4.3 Rotation 542
+6.4.4 Flow 543
+6.4.5 Force 544
+6.4.6 Tilt 545
+6.4.7 Vibration and Mechanical Shock 545
+6.4.8 Pressure 545
+6.5 Chemical 546
+6.5.1 Smoke 546
+6.5.2 Gas 546
+6.5.3 Humidity 547
+6.6 Light, Radiation, Magnetism, and Sound 547
+6.6.1 Light 547
+6.6.2 Ionizing Radiation 547
+6.6.3 Magnetic Fields 548
+6.6.4 Sound 549
+6.7 GPS 549
+CHAPTER 7 Hands-on Electronics 551
+7.1 Safety 551
+7.1.1 Lecture on Safety 551
+7.1.2 Damaging Components with Electrostatic Discharge 555
+7.1.3 Component Handling Precautions 555
+7.2 Constructing Circuits 556
+7.2.1 Drawing a Circuit Schematic 556
+7.2.2 A Note on Circuit Simulator Programs 558
+7.2.3 Making a Prototype of Your Circuit 558
+7.2.4 The Final Circuit 559
+7.2.5 Making a PCB 562
+7.2.6 Special Pieces of Hardware Used in Circuit
+Construction 567
+7.2.7 Soldering 568
+7.2.8 Desoldering 569
+7.2.9 Enclosing the Circuit 569
+7.2.10 Useful Items to Keep Handy 570
+7.2.11 Troubleshooting the Circuits You Build 570
+7.3 Multimeters 571
+7.3.1 Basic Operation 572
+7.3.2 How Analog VOMs Work 573
+7.3.3 How Digital Multimeters Work 574
+7.3.4 A Note on Measurement Errors 574
+7.4 Oscilloscopes 575
+7.4.1 How Scopes Work 576
+7.4.2 Interior Circuitry of a Scope 578
+7.4.3 Aiming the Beam 579
+7.4.4 Scope Usage 580
+7.4.5 What All the Little Knobs and Switches Do 581
+7.4.6 Measuring Things with Scopes 586
+7.4.7 Scope Applications 590
+7.4.8 Measuring Impedances 592
+7.5 The Electronics Laboratory 594
+7.5.1 Work Area 594
+7.5.2 Test Equipment 595
+7.5.3 Multimeters 596
+7.5.4 DC Power Supplies 597
+7.5.5 Oscilloscope 598
+7.5.6 Oscilloscope Probes 600
+7.5.7 General-Purpose Function Generator 607
+7.5.8 Frequency Counter 608
+7.5.9 Computer 608
+7.5.10 Miscellaneous Test Equipment 609
+7.5.11 Multifunction PC Instruments 610
+7.5.12 Isolation Transformers 611
+7.5.13 Variable Transformers, or Variacs 613
+7.5.14 Substitution Boxes 614
+7.5.15 Test Cables, Connectors, and Adapters 616
+7.5.16 Soldering Equipment 618
+7.5.17 Prototyping Boards 621
+7.5.18 Hand Tools 622
+7.5.19 Wires, Cables, Hardware, and Chemicals 624
+7.5.20 Electronics Catalogs 626
+7.5.21 Recommended Electronics Parts 627
+7.5.22 Electronic CAD Programs 620
+7.5.23 Building Your Own Workbench 631
+CHAPTER 8 Operational Amplifiers 635
+8.1 Operational Amplifier Water Analogy 636
+8.2 How Op Amps Work (The ¡°Cop-Out¡± Explanation) 637
+8.3 Theory 638
+8.4 Negative Feedback 639
+8.5 Positive Feedback 644
+8.6 Real Kinds of Op Amps 645
+8.7 Op Amp Specifications 647
+8.8 Powering Op Amps 649
+8.9 Some Practical Notes 650
+8.10 Voltage and Current Offset Compensation 651
+8.11 Frequency Compensation 652
+8.12 Comparators 652
+8.13 Comparators with Hysteresis 654
+8.13.1 Inverting Comparator with Hysteresis 654
+8.13.2 Noninverting Comparator with Hysteresis 655
+8.14 Using Single-Supply Comparators 656
+8.15 Window Comparator 656
+8.16 Voltage-Level Indicator 657
+8.17 Applications 657
+CHAPTER 9 Filters 663
+9.1 Things to Know Before You Start Designing Filters 664
+9.2 Basic Filters 665
+9.3 Passive Low-Pass Filter Design 666
+9.4 A Note on Filter Types 670
+9.5 Passive High-Pass Filter Design 670
+9.6 Passive Bandpass Filter Design 672
+9.7 Passive Notch Filter Design 674
+9.8 Active Filter Design 675
+9.8.1 Active Low-Pass Filter Example 676
+9.8.2 Active High-Pass Filter Example 677
+9.8.3 Active Bandpass Filters 678
+9.8.4 Active Notch Filters 680
+9.9 Integrated Filter Circuits 681
+CHAPTER 10 Oscillators and Timers 684
+10.1 RC Relaxation Oscillators 684
+10.2 The 555 Timer IC 686
+10.2.1 How a 555 Works (Astable Operation) 687
+10.2.2 Basic Astable Operation 688
+10.2.3 How a 555 Works (Monostable Operation) 689
+10.2.4 Basic Monostable Operation 690
+10.2.5 Some Important Notes About 555 Timers 690
+10.2.6 Simple 555 Applications 691
+10.3 Voltage-Controlled Oscillators 692
+10.4 Wien-Bridge and Twin-T Oscillators 693
+10.5 LC Oscillators (Sinusoidal Oscillators) 693
+10.6 Crystal Oscillators 696
+10.7 Microcontroller Oscillators 698
+CHAPTER 11 Voltage Regulators and Power Supplies 699
+11.1 Voltage-Regulator ICs 701
+11.1.1 Fixed Regulator ICs 701
+11.1.2 Adjustable Regulator ICs 702
+11.1.3 Regulator Specifications 702
+11.2 A Quick Look at a Few Regulator Applications 702
+11.3 The Transformer 703
+11.4 Rectifier Packages 703
+11.5 A Few Simple Power Supplies 704
+11.6 Technical Points About Ripple Reduction 707
+11.7 Loose Ends 709
+11.8 Switching Regulator Supplies (Switchers) 710
+11.9 Switch-Mode Power Supplies 713
+11.10 Kinds of Commercial Power Supply Packages 714
+11.11 Power Supply Construction 715
+CHAPTER 12 Digital Electronics 717
+12.1 The Basics of Digital Electronics 717
+12.1.1 Digital Logic States 717
+12.1.2 Number Codes Used in Digital Electronics 718
+12.1.3 Clock Timing and Parallel Versus Serial Transmission 725
+12.2 Logic Gates 726
+12.2.1 Multiple-Input Logic Gates 727
+12.2.2 Digital Logic Gate ICs 727
+12.2.3 Applications for a Single Logic Gate 728
+12.2.4 Combinational Logic 730
+12.2.5 Keeping Circuits Simple (Karnaugh Maps) 737
+12.3 Combinational Devices 740
+12.3.1 Multiplexers (Data Selectors) and Bilateral Switches 741
+12.3.2 Demultiplexers (Data Distributors) and Decoders 743
+12.3.3 Encoders and Code Converters 745
+12.3.4 Binary Adders 748
+12.3.5 Binary Adder/Subtractor 750
+12.3.6 Arithmetic Logic Units 751
+12.3.7 Comparators and Magnitude Comparator ICs 752
+12.3.8 Parity Generator/Checker 753
+12.3.9 A Note on Obsolescence and the Trend Toward
+Microcontroller Control 754
+12.4 Logic Families 755
+12.4.1 TTL Family of ICs 756
+12.4.2 CMOS Family of ICs 757
+12.4.3 I/O Voltages and Noise Margins 758
+12.4.4 Current Ratings, Fanout, and Propagation Delays 759
+12.4.5 A Detailed Look at the TTL and CMOS Subfamilies 760
+12.4.6 A Look at a Few Other Logic Series 760
+12.4.7 Logic Gates with Open-Collector Outputs 763
+12.4.8 Schmitt-Triggered Gates 764
+12.4.9 Interfacing Logic Families 765
+12.5 Powering and Testing Logic ICs 767
+12.5.1 Power Supply Decoupling 767
+12.5.2 Unused Inputs 767
+12.5.3 Logic Probes and Logic Pulsers 768
+12.6 Sequential Logic 769
+12.6.1 SR Flip-Flops 770
+12.6.2 SR Flip-Flop ICs 774
+12.6.3 D-Type Flip-Flops 775
+12.6.4 Quad and Octal D Flip-Flops 778
+12.6.5 JK Flip-Flops 780
+12.6.6 Practical Timing Considerations with Flip-Flops 784
+12.6.7 Digital Clock Generators and Single-Pulse Generators 784
+12.6.8 Automatic Power-Up Clear (Reset) Circuits 789
+12.6.9 More on Switch Debouncers 789
+12.6.10 Pullup and Pulldown Resistors 790
+12.7 Counter ICs 791
+12.7.1 Asynchronous Counter (Ripple Counter) ICs 792
+12.7.2 Synchronous Counter ICs 794
+12.7.3 A Note on Counters with Displays 797
+12.8 Shift Registers 802
+12.8.1 Serial-In/Serial-Out Shift Registers 802
+12.8.2 Serial-In/Parallel-Out Shift Registers 803
+12.8.3 Parallel-In/Serial-Out Shift Registers 803
+12.8.4 Ring Counter (Shift Register Sequencer) 804
+12.8.5 Johnson Shift Counter 805
+12.8.6 Shift Register ICs 805
+12.8.7 Simple Shift Register Applications 809
+12.9 Three-State Buffers, Latches, and Transceivers 812
+12.9.1 Three-State Octal Buffers 812
+12.9.2 Three-State Octal Latches and Flip-Flops 814
+12.9.3 Transceivers 814
+12.10 Analog/Digital Interfacing 816
+12.10.1 Triggering Simple Logic Responses
+from Analog Signals 816
+12.10.2 Using Logic to Drive External Loads 817
+12.10.3 Analog Switches 818
+12.10.4 Analog Multiplexer/Demultiplexer 819
+12.10.5 Analog-to-Digital and Digital-to-Analog Conversion 820
+12.10.6 Analog-to-Digital Converters 827
+12.11 Displays 829
+12.11.1 LED Displays 829
+12.11.2 Liquid-Crystal Displays 833
+12.12 Memory Devices 845
+12.12.1 Read-Only Memory 846
+12.12.2 Simple ROM Made Using Diodes 846
+12.12.3 Memory Size and Organization 846
+12.12.4 Simple Programmable ROM 847
+12.12.5 ROM Devices 849
+12.12.6 RAM 852
+CHAPTER 13 Microcontrollers 859
+13.1 Basic Structure of a Microcontroller 860
+13.2 Example Microcontrollers 860
+13.2.1 The ATtiny85 Microcontroller 861
+13.2.2 The PIC16Cx Microcontrollers 865
+13.2.3 32-Bit Microcontrollers 878
+13.2.4 Digital Signal Processing 878
+13.3 Evaluation/Development Boards 879
+13.4 Arduino 880
+13.4.1 A Tour of Arduino 880
+13.4.2 The Arduino IDE 881
+13.4.3 Arduino Board Models 881
+13.4.4 Shields 882
+13.4.5 The Arduino C Library 884
+13.4.6 Arduino Example Project 884
+13.4.7 Taking the Arduino Offboard 888
+13.5 Interfacing with Microcontrollers 890
+13.5.1 Switches 890
+13.5.2 Analog Inputs 894
+13.5.3 High-Power Digital Outputs 895
+13.5.4 Sound Interfaces 899
+13.5.5 Serial Interfaces 900
+13.5.6 Level Conversion 908
+13.5.7 LED Display Interfaces 908
+CHAPTER 14 Motors 913
+14.1 DC Continuous Motors 913
+14.2 Speed Control of DC Motors 914
+14.3 Directional Control of DC Motors 915
+14.4 RC Servos 916
+14.5 Stepper Motors 918
+14.6 Kinds of Stepper Motors 919
+14.7 Driving Stepper Motors 921
+14.8 Controlling the Driver with a Translator 923
+14.9 A Final Word on Identifying Stepper Motors 925
+CHAPTER 15 Audio Electronics 927
+15.1 A Little Lecture on Sound 927
+15.2 Microphones 929
+15.3 Microphone Specifications 930
+15.4 Audio Amplifiers 931
+15.4.1 Inverting Amplifier 931
+15.4.2 Noninverting Amplifier 932
+15.4.3 Digital Amplifiers 932
+15.4.4 Reducing Hum in Audio Amplifiers 934
+15.5 Preamplifiers 934
+15.6 Mixer Circuits 935
+15.7 A Note on Impedance Matching 935
+15.8 Speakers 936
+15.9 Crossover Networks 937
+15.10 Simple ICs Used to Drive Speakers 939
+15.11 Audible-Signal Devices 940
+15.12 Miscellaneous Audio Circuits 940
+CHAPTER 16 Modular Electronics 943
+16.1 There¡¯s an IC for It 943
+16.2 Breakout Boards and Modules 943
+16.2.1 Radio Frequency Modules 944
+16.2.2 Audio Modules 947
+16.3 Plug-and-Play Prototyping 948
+16.4 Open Source Hardware 950
+APPENDIX A Power Distribution and Home Wiring 953
+A.1 Power Distribution 953
+A.2 A Closer Look at Three-Phase Electricity 954
+A.3 Home Wiring 956
+A.4 Electricity in Other Countries 957
+APPENDIX B Error Analysis 959
+B.1 Absolute Error, Relative Error, and Percent Error 959
+B.2 Uncertainty Estimates 960
+APPENDIX C Useful Facts and Formulas 963
+C.1 Greek Alphabet 963
+C.2 Powers of 10 Unit Prefixes 963
+C.3 Linear Functions (y = mx + b) 963
+C.4 Quadratic Equation (y = ax2 + bx + c) 964
+C.5 Exponents and Logarithms 964
+C.6 Trigonometry 964
+C.7 Complex Numbers 965
+C.8 Differential Calculus 965
+C.9 Integral Calculus 966
+Index 967

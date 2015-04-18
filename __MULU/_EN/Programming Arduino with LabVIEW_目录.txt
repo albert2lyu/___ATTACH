@@ -1,0 +1,51 @@
+
+Preface 1
+Chapter 1: Welcome to LabVIEW and Arduino 5
+What makes Arduino ideal for LabVIEW 6
+Significance of using LabVIEW 6
+Skills required to use LabVIEW and Arduino 6
+Downloading LabVIEW 7
+Downloading the Arduino IDE 8
+Summary 10
+Chapter 2: Getting Started with the LabVIEW Interface
+for Arduino 11
+Hardware and software requirements 11
+Setting up LabVIEW and LINX 14
+Testing the installation 17
+Summary 22
+Chapter 3: Controlling a Motor from LabVIEW 23
+Hardware and software requirements 23
+Hardware configuration 24
+Writing the LabVIEW program 25
+Upgrading the interface 31
+Summary 33
+Chapter 4: A Simple Weather Station with Arduino and LabVIEW 35
+Hardware and software requirements 35
+Hardware configuration 36
+Writing the LabVIEW program 38
+Upgrading the interface 41
+Summary 44
+Table of Contents
+[ ii ]
+Chapter 5: Making an XBee Smart Power Switch 45
+Hardware and software requirements 46
+Configuring the hardware 48
+Controlling the relay 50
+Measuring the current 53
+Controlling the project via XBee 58
+Summary 59
+Chapter 6: A Wireless Alarm System with LabVIEW 61
+Hardware and software requirements 61
+Hardware configuration 63
+Interfacing one motion sensor 64
+Connecting more motion sensors 67
+Making the project wireless with XBee 68
+Summary 71
+Chapter 7: A Remotely Controlled Mobile Robot 73
+Hardware and software requirements 73
+Hardware configuration 74
+Moving the robot around 77
+Measuring the front distance 81
+Controlling the robot wirelessly 83
+Summary 85
+Index 87

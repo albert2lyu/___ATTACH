@@ -1,0 +1,58 @@
+
+preface 
+i optimization models 
+1 one variable optimization 
+1.1 the five-step method 
+1.2 sensitivity analysis 
+1.3 sensitivity and robustness 
+1.4 exercises 
+2 multivariable optimization 
+2.1 unconstrained optimization 
+2.2 lagrange multipliers 
+2.3 sensitivity analysis and shadow prices 
+2.4 exercises 
+3 computational methods for optimization 
+3.1 one variable optimization 
+3.2 multivariable optimization 
+3.3 linear programming 
+3.4 discrete optimization 
+3.5 exercises 
+ii dynamic models 
+4 introduction to dynamic models 
+4.1 steady state analysis 
+4.2 dynamical systems 
+4.3 discrete time dynamical systems 
+4.4 exercises 
+5 analysis of dynamic models 
+5.1 eigenvalue methods 
+5.2 eigenvalue methods for discrete systems 
+5.3 phase portraits 
+5.4 exercises 
+6 simulation of dynamic models 
+6.1 introduction to simulation 
+6.2 continuous-time models 
+6.3 the euler method 
+6.4 chaos and fractals 
+6.5 exercises 
+iii probability' models. 
+7 introduction to probabiuty models 
+7.1 discrete probability models 
+7.2 continuous probability models 
+7.3 introduction to statistics 
+7.4 diffusion 
+7.5 exercises 
+8 stochastic models 
+8.1 markov chains 
+8.2 markov processes 
+8.3 linear regression 
+8.4 time series 
+8.5 exercises 
+9 simulation of probability models 
+9.1 monte carlo simulation 
+9.2 the markov property 
+9.3 analytic simulation 
+9.4 particle tracking 
+9.5 fractional diffusion 
+9.6 exercises 
+afterword 
+index

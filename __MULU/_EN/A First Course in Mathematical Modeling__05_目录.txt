@@ -1,0 +1,286 @@
+
+1 Modeling Change 1
+Introduction 1
+ Testing for Proportionality 2
+1.1 Modeling Change with Difference Equations 4
+ A Savings Certificate 5
+ Mortgaging a Home 6
+1.2 Approximating Change with Difference Equations 10
+ Growth of a Yeast Culture 10
+ Growth of a Yeast Culture Revisited 11
+ Spread of a Contagious Disease 13
+ Decay of Digoxin in the Bloodstream 14
+ Heating of a Cooled Object 15
+1.3 Solutions to Dynamical Systems 18
+ A Savings Certificate Revisited 19
+ Sewage Treatment 21
+ Prescription for Digoxin 26
+ An Investment Annuity 27
+ A Checking Account 28
+ An Investment Annuity Revisited 30
+1.4 Systems of Difference Equations 37
+ A Car Rental Company 37
+ The Battle of Trafalgar 40
+ Competitive Hunter Model¡ªSpotted Owls and Hawks 43
+ Travelers¡¯ Tendencies at a Regional Airport 47
+ Discrete Epidemic Models 50
+iii
+Copyright 201 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+Giordano-5166 50904_00_frontmatter January 25, 2013 12:57 iv
+iv Contents
+2 The Modeling Process, Proportionality,
+and Geometric Similarity 58
+Introduction 58
+2.1 Mathematical Models 60
+ Vehicular Stopping Distance 65
+2.2 Modeling Using Proportionality 70
+ Kepler¡¯s Third Law 72
+2.3 Modeling Using Geometric Similarity 80
+ Raindrops from a Motionless Cloud 82
+ Modeling a Bass Fishing Derby 83
+ Modeling the Size of the ¡®¡®Terror Bird¡¯¡¯ 88
+2.4 Automobile Gasoline Mileage 96
+2.5 Body Weight and Height, Strength and Agility 99
+3 Model Fitting 105
+Introduction 105
+3.1 Fitting Models to Data Graphically 108
+3.2 Analytic Methods of Model Fitting 115
+3.3 Applying the Least-Squares Criterion 121
+3.4 Choosing a Best Model 128
+ Vehicular Stopping Distance 130
+ Comparing the Criterion 132
+4 Experimental Modeling 137
+Introduction 137
+4.1 Harvesting in the Chesapeake Bay and Other
+One-Term Models 138
+ Harvesting Bluefish 140
+ Harvesting Blue Crabs 142
+Copyright 201 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+Giordano-5166 50904_00_frontmatter January 25, 2013 12:57 v
+Contents v
+4.2 High-Order Polynomial Models 148
+ Elapsed Time of a Tape Recorder 150
+4.3 Smoothing: Low-Order Polynomial Models 157
+ Elapsed Time of a Tape Recorder Revisited 158
+ Elapsed Time of a Tape Recorder Revisited Again 162
+ Vehicular Stopping Distance 163
+ Growth of a Yeast Culture 165
+4.4 Cubic Spline Models 169
+ Vehicular Stopping Distance Revisited 177
+5 Simulation Modeling 185
+Introduction 185
+5.1 Simulating Deterministic Behavior: Area Under a Curve 187
+5.2 Generating Random Numbers 191
+5.3 Simulating Probabilistic Behavior 195
+5.4 Inventory Model: Gasoline and Consumer Demand 203
+5.5 Queuing Models 213
+ A Harbor System 213
+ Morning Rush Hour 219
+6 Discrete Probabilistic Modeling 224
+Introduction 224
+6.1 Probabilistic Modeling with Discrete Systems 224
+ Rental Car Company Revisited 224
+ Voting Tendencies 226
+6.2 Modeling Component and System Reliability 230
+ Series Systems 230
+ Parallel Systems 231
+ Series and Parallel Combinations 231
+6.3 Linear Regression 233
+ Ponderosa Pines 235
+ The Bass Fishing Derby Revisited 239
+Copyright 201 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+Giordano-5166 50904_00_frontmatter January 25, 2013 12:57 vi
+vi Contents
+7 Optimization of Discrete Models 242
+Introduction 242
+7.1 An Overview of Optimization Modeling 243
+ Determining a Production Schedule 243
+ Space Shuttle Cargo 246
+ Approximation by a Piecewise Linear Function 247
+7.2 Linear Programming I: Geometric Solutions 255
+ The Carpenter¡¯s Problem 256
+ A Data-Fitting Problem 257
+7.3 Linear Programming II: Algebraic Solutions 265
+ Solving the Carpenter¡¯s Problem Algebraically 266
+7.4 Linear Programming III: The Simplex Method 269
+ The Carpenter¡¯s Problem Revisited 273
+ Using the Tableau Format 276
+7.5 Linear Programming IV: Sensitivity Analysis 279
+7.6 Numerical Search Methods 285
+ Using the Dichotomous Search Method 289
+ Using the Golden Section Search Method 291
+ Model-Fitting Criterion Revisited 293
+ Optimizing Industrial Flow 294
+8 Modeling Using Graph Theory 298
+Introduction 298
+8.1 Graphs as Models 299
+ The Seven Bridges of K?nigsberg 299
+ Graph Coloring 300
+8.2 Describing Graphs 306
+8.3 Graph Models 308
+ Bacon Numbers 308
+ Fitting a Piecewise Linear Function to Data 308
+Copyright 201 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+Giordano-5166 50904_00_frontmatter January 25, 2013 12:57 vii
+Contents vii
+ The Softball Example Revisited 316
+ A 0¨C1 Matrix Problem 317
+ Policing a City 318
+8.4 Using Graph Models to Solve Problems 323
+ Solving Shortest-Path Problems 323
+ Solving Maximum-Flow Problems 325
+8.5 Connections to Mathematical Programming 332
+ Vertex Cover 333
+ Maximum Flows 336
+9 Modeling with Decision Theory 339
+Introduction 339
+9.1 Probability and Expected Value 341
+ Rolling the Dice 343
+ Life Insurance 344
+ Roulette 344
+ Remodeling Existing Golf Courses or Constructing New
+Golf Courses 345
+ Remodeling Existing Golf Courses or Constructing New
+Golf Courses Revisited 346
+9.2 Decision Trees 348
+ Constructing New Golf Courses or Remodeling Existing
+Golf Courses 349
+ Hardware & Lumber Company Decision (Revisited) 352
+ A Local TV Station 353
+9.3 Sequential Decisions and Conditional Probabilities 357
+ Las Vegas Casino Spinning Wheel 357
+ Las Vegas Casino Spinning Wheel Revisited 359
+ Hardware & Lumber Company Decision with Sequential
+Decisions (Revisited) 360
+9.4 Decisions Using Alternative Criteria 367
+ Investment versus Nature 368
+ Investment Strategy 371
+Copyright 201 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+Giordano-5166 50904_00_frontmatter January 25, 2013 12:57 viii
+viii Contents
+10 Game Theory 378
+Introduction 378
+10.1 Game Theory: Total Conflict 378
+ A Total Conflict Game with Pure Strategies 378
+ A Total Conflict Game with Mixed Strategies 381
+ A Partial Conflict Game: The Prisoner¡¯s Dilemma 382
+10.2 Total Conflict as a Linear Program Model: Pure and
+Mixed Strategies 388
+ Batter-Pitcher Duel 388
+ Home Depot and Ace Hardware Store Location (Revisited) 402
+10.3 Decision Theory Revisited: Games against Nature 407
+ Manufacturing Firm and the Economy 407
+ Investment Strategy (Revisited) 411
+10.4 Alternative Methods for Determining Pure Strategy Solutions 415
+10.5 Alternative Shortcut Solution Methods for the 2  2 Total
+Conflict Game 422
+ Equating Expected Values for the Batter-Pitcher Duel 423
+ Method of Oddments for the Batter-Pitcher 426
+10.6 Partial Conflict Games: The Classical Two-Person Game 430
+ Prisoner¡¯s Dilemma without Communication 432
+ A Combination Threat and Promise 436
+10.7 Illustrative Modeling Examples 441
+ The Battle of the Bismarck Sea 441
+ Penalty Kicks in Soccer 444
+ Batter-Pitcher Duel (Revisited) 445
+ Cuban Missile Crisis 448
+ Writer¡¯s Guild Strike 2007¨C2008 451
+11 Modeling with a Differential Equation 458
+Introduction 458
+11.1 Population Growth 461
+11.2 Prescribing Drug Dosage 471
+Copyright 201 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+Giordano-5166 50904_00_frontmatter January 25, 2013 12:57 ix
+Contents ix
+11.3 Braking Distance Revisited 479
+11.4 Graphical Solutions of Autonomous Differential
+Equations 483
+ Drawing a Phase Line and Sketching Solution Curves 485
+ Cooling Soup 487
+ Logistic Growth Revisited 488
+11.5 Numerical Approximation Methods 491
+ Using Euler¡¯s Method 494
+ A Savings Certificate Revisited 495
+11.6 Separation of Variables 500
+ Newton¡¯s Law of Cooling Revisited 507
+ Population Growth with Limited Resources Revisited 508
+11.7 Linear Equations 512
+ Water Pollution 519
+12 Modeling with Systems
+of Differential Equations 524
+Introduction 524
+12.1 Graphical Solutions of Autonomous Systems of First-Order
+Differential Equations 525
+ A Linear Autonomous System 526
+ A Nonlinear Autonomous System 527
+12.2 A Competitive Hunter Model 530
+12.3 A Predator--Prey Model 539
+12.4 Two Military Examples 548
+ Lanchester Combat Models 548
+ Economic Aspects of an Arms Race 554
+12.5 Euler¡¯s Method for Systems of Differential Equations 559
+ Using Euler¡¯s Method for Systems 560
+ A Trajectory and Solution Curves 561
+ Continuous Models of Epidemics 564
+Copyright 201 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+Giordano-5166 50904_00_frontmatter January 25, 2013 12:57 x
+x Contents
+13 Optimization of Continuous Models 569
+Introduction 569
+13.1 An Inventory Problem: Minimizing the Cost
+of Delivery and Storage 570
+13.2 Methods to Optimize Function of Several Variables 578
+ Maximizing Profit in Producing Competing Products 579
+ Nonlinear Least Squares 583
+13.3 Constrained Continuous Optimization 587
+ An Oil Transfer Company 587
+ Space Shuttle Water Container 589
+13.4 Managing Renewable Resources: The Fishing Industry 592
+A A P P E N D I X
+Problems from the Mathematics
+Contest in Modeling, 1985--2012 601
+Answers to Selected Problems 643
+Index 670
+Chapters on Website:
+14 Dimensional Analysis and Similitude 1
+Introduction 1
+ Introductory Example: A Simple Pendulum 2
+14.1 Dimensions as Products 4
+Copyright 201 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+Giordano-5166 50904_00_frontmatter January 25, 2013 12:57 xi
+Contents xi
+ A Simple Pendulum Revisited 6
+ Wind Force on a Van 9
+14.2 The Process of Dimensional Analysis 12
+ Terminal Velocity of a Raindrop 17
+ Automobile Gas Mileage Revisited 19
+14.3 A Damped Pendulum 21
+14.4 Examples Illustrating Dimensional Analysis 27
+ Explosion Analysis 27
+ How Long Should You Roast a Turkey? 31
+14.5 Similitude 37
+ Drag Force on a Submarine 38
+15 Graphs of Functions as Models 1
+15.1 An Arms Race 1
+ Civil Defense 9
+ Mobile Launching Pads 10
+ Multiple Warheads 11
+ MIRVs Revisited: Counting Warheads 12
+15.2 Modeling an Arms Race in Stages 14
+15.3 Managing Nonrenewable Resources: The Energy Crisis 18
+15.4 Effects of Taxation on the Energy Crisis 22
+15.5 A Gasoline Shortage and Taxation 26
+B A P P E N D I X
+An Elevator Simulation Algorithm 1
+C A P P E N D I X
+The Revised Simplex Method 9
+D A P P E N D I X
+Brief Review of Integration Techniques 12

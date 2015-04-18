@@ -1,0 +1,95 @@
+
+Raspberry Pi Robotic Projects
+Credits
+About the Author
+About the Reviewers
+www.PacktPub.com
+Support files, eBooks, discount offers and more
+Why Subscribe?
+Free Access for Packt account holders
+Preface
+What this book covers
+What you need for this book
+Who this book is for
+Conventions
+Reader feedback
+Customer support
+Downloading the example code
+Errata
+Piracy
+Questions
+1. Getting Started with Raspberry Pi
+Getting started
+The unveiling
+Hooking up a keyboard, mouse, and display
+Installing the operating system
+Accessing the board remotely
+Summary
+2. Programming Raspberry Pi
+Basic Linux commands on Raspberry Pi
+Creating, editing, and saving files on Raspberry Pi
+Creating and running Python programs on Raspberry Pi
+Basic programming constructs on Raspberry Pi
+The if statement
+The while statement
+Working with functions
+Libraries/modules in Python
+The object-oriented code
+Introduction to the C/C++ programming language
+Summary
+3. Providing Speech Input and Output
+Hooking up the hardware to make and input sound
+Using Espeak to allow our projects to respond in a robot voice
+Using PocketSphinx to accept your voice commands
+Interpreting commands and initiating actions
+Summary
+4. Adding Vision to Raspberry Pi
+Connecting the USB camera to Raspberry Pi and viewing the images
+Downloading and installing OpenCV ¨C a fully featured vision library
+Using the vision library to detect colored objects
+Summary
+5. Creating Mobile Robots on Wheels
+Gathering the required hardware
+Using a motor controller to control the speed of your platform
+Controlling your mobile platform programmatically using Raspberry Pi
+Making your mobile platform truly mobile by issuing voice commands
+Summary
+6. Making the Unit Very Mobile ¨C Controlling the Movement of a Robot with Legs
+Gathering the hardware
+Connecting Raspberry Pi to the mobile platform using a servo controller
+Connecting the hardware
+Configuring the software
+Creating a program in Linux to control the mobile platform
+Making your mobile platform truly mobile by issuing voice commands
+Summary
+7. Avoiding Obstacles Using Sensors
+Gathering the hardware
+Connecting Raspberry Pi to an infrared sensor
+Connecting Raspberry Pi to a USB sonar sensor
+Connecting the hardware
+Using a servo to move a single sensor
+Summary
+8. Going Truly Mobile ¨C The Remote Control of Your Robot
+Gathering the hardware
+Connecting Raspberry Pi to a wireless USB keyboard
+Using the keyboard to control your project
+Working remotely with your Raspberry Pi through a wireless LAN
+Working remotely with your Raspberry Pi through ZigBee
+Summary
+9. Using a GPS Receiver to Locate Your Robot
+Connecting Raspberry Pi to a GPS device
+Accessing the GPS programmatically
+Summary
+10. System Dynamics
+Getting started
+Creating a general control structure
+Using the structure of the Robot Operating System to enable complex
+functionalities
+Summary
+11. By Land, Sea, and Air
+Using Raspberry Pi to sail
+Getting started
+Using Raspberry Pi to fly robots
+Using Raspberry Pi to make the robot swim underwater
+Summary
+Index

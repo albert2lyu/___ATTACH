@@ -1,0 +1,76 @@
+
+Foreword . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ix
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xi
+1. Configuration Hacks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Hack 01. Choose and Format the Right SD Card 1
+Hack 02. Mount the SD Card 3
+Hack 03. Decode the LEDs 7
+Hack 04. Update the Firmware 8
+Hack 05. Monitor the Raspberry Pi Hardware 13
+Hack 06. Overclock Your Pi 17
+Hack 07. Overvolt for Higher Performance 20
+Hack 08. Get More USB Ports 22
+Hack 09. Troubleshoot Power Problems 24
+Hack 10. Unbreak Your Raspberry Pi 29
+Hack 11. Go Headless 31
+Hack 12. Connect with SSH 32
+Hack 13. Give Your Pi a Static IP Address 34
+Hack 14. Learn to Speak GPIO 36
+Hack 15. Connect GPIO Pins to a Breadboard 39
+Hack 16. Add a USB Serial Console 47
+Hack 17. Add a Reset Button 54
+Hack 18. Get Power to the Pi on the Move 56
+Hack 19. Test Your Might (in Volts) 57
+Hack 20. Add Additional Memory with Swap 61
+2. Hacking Linux for the Raspberry Pi . . . . . . . . . . . . . . . . . . . . . . . 63
+Hack 21. Build a Cross-Compiler Toolchain 63
+Hack 22. Build a Custom Kernel 76
+Hack 23. Update to the Latest Prebuilt Kernel 87
+Hack 24. Split Memory Between the GPU and Linux Userspace 91
+Hack 25. Update the Firmware and Prebuilt Binary Kernel the Easy Way 96
+Hack 26. Emulate the Pi 97
+Hack 27. Try Occidentalis: The Raspberry Pi Distro for (Advanced)
+Education 99
+Hack 28. Monitor the Pi¡¯s IP Address 102
+Hack 29. Run Android on the Raspberry Pi 107
+3. Raspberry Pi Around the House . . . . . . . . . . . . . . . . . . . . . . . . 111
+Hack 30. Share Files with Samba 111
+Hack 31. Use Your Raspberry Pi as a Remote Print Server 117
+Hack 32. Make Calls with a Raspberry Pi Asterisk Telephone System 121
+Hack 33. Build Your Own Web Server 127
+Hack 34. Control a LEGO Robot 134
+Hack 35. (Appear to) Survive a Gaping Chest Wound 150
+Hack 36. Look for Aliens 157
+4. Hacking the Outdoors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 165
+Hack 37. Tell the Temperature Outside (Without Going Out There) 165
+Hack 38. Check on Your Plants 172
+Hack 39. Make Your Pi Water-Resistant (with a Case) 176
+Hack 40. Make Your Pi Water-Resistant (Without a Case) 178
+Hack 41. Find Geocaches from Your Car 182
+Hack 42. See the Light 188
+Hack 43. Listen to Aircraft Transponders 198
+Hack 44. Control Aerial Photography 204
+Hack 45. Have the Best Holiday Lights Display 219
+5. Multimedia Hacks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 227
+Hack 46. Play Video Files 227
+Hack 47. Enable Additional Video Codecs 231
+Hack 48. Build a Pi MusicBox 232
+Hack 49. Turn Your Pi into a Radio 244
+Hack 50. Control the Pi via Touchscreen 247
+Hack 51. Emulate Classic Video Game Consoles 255
+Hack 52. Connect a DSLR 258
+Hack 53. Set Up a Photobooth 262
+Hack 54. Turn Your Pi into a Tiny Media Center 269
+Hack 55. Watch Movies in the Backseat of Your Car 277
+6. Extend Your Pi . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 287
+Hack 56. Control GPIO from a Web Browser 287
+Hack 57. Add a Tiny Screen 290
+Hack 58. Connect Arduino Shields to Your Raspberry Pi 292
+Hack 59. Control a 3D Printer 312
+Hack 60. Add a Numeric Keypad 316
+Hack 61. Add a Heat Sink 322
+Hack 62. Enable the Raspberry Pi Camera on Pidora 324
+Hack 63. Build a Solar-Powered Lab 326
+Hack 64. Build a MIDI Controller (on the Cheap!) 329
+Hack 65. Build a Raspberry Pi Supercomputer 337
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345

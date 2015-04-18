@@ -1,0 +1,143 @@
+
+Acknowledgments
+Introduction
+1 Introduction
+What Is the Raspberry Pi?
+What Can You Do with a Raspberry Pi?
+A Tour of the Raspberry Pi
+Setting Up Your Raspberry Pi
+Buying What You Need
+Connecting Everything Together
+Booting Up
+Summary
+2 Getting Started
+Linux
+The Desktop
+The Internet
+The Command Line
+Navigating with the Terminal
+sudo
+Applications
+Internet Resources
+Summary
+3 Python Basics
+IDLE
+Python Versions
+Python Shell
+Editor
+Numbers
+Variables
+For Loops
+Simulating Dice
+If
+Comparisons
+Being Logical
+Else
+While
+Summary
+4 Strings, Lists, and Dictionaries
+String Theory
+Lists
+Functions
+Hangman
+Dictionaries
+Tuples
+Multiple Assignment
+Multiple Return Values
+Exceptions
+Summary of Functions
+Numbers
+Strings
+Lists
+Dictionaries
+Type Conversions
+Summary
+5 Modules, Classes, and Methods
+Modules
+Using Modules
+Useful Python Libraries
+Installing New Modules
+Object Orientation
+Defining Classes
+Inheritance
+Summary
+6 Files and the Internet
+Files
+Reading Files
+Reading Big Files
+Writing Files
+The File System
+Pickling
+Internet
+Summary
+7 Graphical User Interfaces
+Tkinter
+Hello World
+Temperature Converter
+Other GUI Widgets
+Checkbutton
+Listbox
+Spinbox
+Layouts
+Scrollbar
+Dialogs
+Color Chooser
+File Chooser
+Menus
+The Canvas
+Summary
+8 Games Programming
+What Is Pygame?
+Hello Pygame
+A Raspberry Game
+Following the Mouse
+One Raspberry
+Catch Detection and Scoring
+Timing
+Lots of Raspberries
+Summary
+9 Interfacing Hardware
+GPIO Pin Connections
+Direct Connection to GPIO Pins
+Expansion Boards
+Pi Face
+Slice of PI/O
+RaspiRobotBoard
+Gertboard
+Prototyping Boards
+Pi Cobbler
+Pi Plate
+Humble Pi
+Arduino and the Pi
+Arduino and Pi Talk
+Summary
+10 Prototyping Project (Clock)
+What You Need
+Hardware Assembly
+Software
+Phase Two
+Summary
+11 The RaspiRobot
+What You Need
+Phase 1: A Basic Rover
+Hardware Assembly
+About the Software
+Phase 2: Adding a Range Finder and Screen
+Step 1: Assemble the Range Finder Serial Adapter
+Step 2: Attach the Screen
+Step 3: Update the Software
+Step 4: Run It
+Revised Software
+Summary
+12 What Next
+Linux Resources
+Python Resources
+Raspberry Pi Resources
+Other Programming Languages
+Scratch
+C
+Applications and Projects
+Media Center (Rasbmc)
+Home Automation
+Summary
+Index

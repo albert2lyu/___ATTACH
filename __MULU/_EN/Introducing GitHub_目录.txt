@@ -1,0 +1,78 @@
+
+Preface. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . vii
+1. Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+What Is Git? 1
+What Is GitHub? 1
+Why Use Git? 1
+Why Use GitHub? 2
+Key Concepts 3
+2. Viewing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+Introducing the Project Page 7
+Viewing the README.md File 8
+Viewing the Commit History 9
+Viewing Pull Requests 11
+Viewing Issues 13
+Viewing the Pulse 15
+Viewing GitHub Graphs 16
+The Contributors Graph 17
+The Commits Graph 18
+The Code Frequency Graph 19
+The Punch Card Graph 20
+The Network Graph 21
+The Members List 22
+The Traffic Graph 23
+3. Editing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+Contributing via a Fork 25
+Adding a File 26
+Creating a Pull Request 28
+Editing a File 36
+Renaming or Moving a File 39
+Working with Folders 41
+Creating a Folder 41
+Renaming a Folder 41
+The Limits of Editing on GitHub 42
+4. Collaboration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+Committing to a Branch 43
+Creating a Pull Request from a Branch 46
+Collaborating on Pull Requests 48
+Involving People with Pull Requests 49
+Reviewing Pull Requests 49
+Commenting on Pull Requests 49
+Adding Color to Comments 50
+Contributing to Pull Requests 51
+Testing a Pull Request 53
+Merging a Pull Request 54
+Who Should Merge a Pull Request? 55
+Pull Request Notifications 55
+Best Practices for Pull Requests 56
+Issues 56
+Creating a New Issue 57
+Managing Milestones for Issues 58
+Managing Labels for Issues 60
+Commenting on Issues 61
+Referencing Issues in a Commit 61
+Best Practices for Issues 62
+Wikis 62
+Getting Started with a Wiki 62
+Adding and Linking to a Page on Your Wiki 65
+GitHub Pages 66
+Creating a Website for Your Project 66
+Creating a Website for Yourself or Your Organization 69
+5. Creating andCon?guring. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 71
+Creating a Repository 71
+Adding Collaborators 76
+Configuring a Repository 77
+Integrating with Other Systems 79
+Personal Versus Organizational 85
+Creating an Organization 86
+Managing Teams 87
+6. Downloading. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+Why Clone a Repository? 93
+GitHub for Mac 94
+Making a Commit Using GitHub for Mac 103
+Viewing Changes in GitHub for Mac 106
+GitHub for Windows 109
+Making a Commit Using GitHub for Windows 116
+Configuring Command-Line Tools in GitHub for Windows 118
+7. Next Steps. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+Index. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123

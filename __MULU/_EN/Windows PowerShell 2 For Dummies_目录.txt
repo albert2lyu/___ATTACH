@@ -1,0 +1,357 @@
+
+Introduction ................................................................. 1
+About This Book ..............................................................................................1
+Conventions Used in This Book .....................................................................2
+What You¡¯re Not to Read ................................................................................3
+Foolish Assumptions .......................................................................................3
+How This Book Is Organized ..........................................................................4
+Part I: Getting a Bird¡¯s Eye View of PowerShell 2...............................4
+Part II: PowerShell¡¯s Basic Structure and Syntax ...............................4
+Part III: Complex Data Description and Sharing .................................5
+Part IV: Controlling Where and How You Operate PowerShell ........5
+Part V: Real-World Windows Administration Using PowerShell ......6
+Part VI: Conf guring and Reporting Via PowerShell...........................6
+Part VII: The Part of Tens ......................................................................6
+Icons Used in This Book .................................................................................7
+What¡¯s on the Web Site ...................................................................................7
+Where to Go from Here ...................................................................................7
+Part I: Get ting a Bird¡¯s-Eye View of PowerShell 2 ........... 9
+Chapter 1: The Windows PowerShell Rap Sheet. . . . . . . . . . . . . . . . . .11
+Addressing the Need for a Powerful, Windows-Focused
+Scripting Language ....................................................................................12
+Watching Monad morph into PowerShell .........................................12
+A little bit on Windows PowerShell 1.0 .............................................13
+Windows PowerShell 2, the Next Evolution ...............................................14
+Installing Windows PowerShell 2 .................................................................15
+Firing up the Windows PowerShell Command Shell .................................16
+Going GUI: The Windows PowerShell Integrated Shell
+Environment (ISE) ......................................................................................18
+Chapter 2: Customizing and Shortcutting the Environment . . . . . . . . .21
+Personalizing the Look and Feel of the Command Shell ...........................22
+Adding color to your world ................................................................22
+Getting size-specif c with your windows ..........................................22
+A window by any other name . . . .......................................................24
+Changing Your PowerShell Prof le...............................................................24
+Making the Windows PowerShell ISE Work for You ..................................27
+Customizing the ISE .............................................................................28
+Adding your own functions to the ISE menu ....................................28
+Creating Aliases .............................................................................................30
+x Windows PowerShell 2 For Dummies
+Deleting Aliases ..............................................................................................31
+Accessing the Alias Drive .............................................................................32
+Creating Persistent Aliases ...........................................................................33
+Getting to Know Tab Expansion ..................................................................34
+Chapter 3: A Pinch of Shell, a Pound of Power. . . . . . . . . . . . . . . . . . . .37
+Getting a Taste of Windows PowerShell .....................................................38
+Creating Your First Script .............................................................................39
+Breaking Down Your First Script .................................................................41
+Sneaking a Peek at Complex Scripts ............................................................43
+Examining the Nuts and Bolts of the Complist Script ...............................45
+Part II: PowerShell¡¯s Basic Structure and Syntax .......... 47
+Chapter 4: Shelling Out Commands and Scripts. . . . . . . . . . . . . . . . . . .49
+Cmdlets: The Little Commands That Could! ..............................................49
+Putting Cmdlets under a microscope ................................................50
+Checking out existing Cmdlets ...........................................................51
+Making Cmdlets understand you .......................................................53
+One Shell to Rule Them All ...........................................................................55
+Windows Shell scripts .........................................................................55
+Windows Scripting Host ......................................................................59
+Chapter 5: When Dollars Turn into Variables . . . . . . . . . . . . . . . . . . . . .61
+Discovering Variables: They Vary Very Much ...........................................62
+Getting to Know Data Types ........................................................................62
+Dealing with data types .......................................................................64
+Explicitly def ning the data type ........................................................65
+Casting values ......................................................................................67
+Constant and Read-Only Variables ..............................................................70
+Understanding Automatic Variables ...........................................................71
+Working with Objects through Variables ...................................................74
+Chapter 6: A Bit of Logic to Save the Day . . . . . . . . . . . . . . . . . . . . . . . .77
+A Logic Primer ...............................................................................................77
+Branching Using If/Else .................................................................................80
+Using the Switch Statement ..........................................................................83
+Doing It Over and Over and Over Again with Loops .................................83
+Looping with For ..................................................................................84
+Using Foreach to loop through collections ......................................85
+Looping for a While .............................................................................86
+Running a loop at least once with Do While .....................................86
+Taking a look at Do Until .....................................................................87
+Avoiding loop pitfalls ..........................................................................88
+ Table of Contents xi
+Chapter 7: Working on a Pipeline . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .89
+Using Pipelines to Streamline Your Commands ........................................90
+Stringing Commands Together ....................................................................91
+Getting the Right Output ..............................................................................94
+Part III: Complex Data Description and Sharing ............ 97
+Chapter 8: Working with Windows Management
+Instrumentation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .99
+Getting Familiar with Windows Management Instrumentation .............100
+Examining the WMI architecture .....................................................100
+Poking around in WMI namespaces ................................................101
+Securing WMI ......................................................................................103
+Making Windows PowerShell Interact with WMI .....................................103
+Using SQL Syntax in WMI to Get WQL .......................................................106
+Harnessing the Power of WMI ....................................................................108
+Querying service status ....................................................................108
+Looking for event log entries ............................................................109
+Changing WMI Authentication Levels .......................................................109
+Pretending to Be Someone Else Using Impersonation ............................111
+Using the New WMI Cmdlets ......................................................................112
+Making things happen with Invoke-WMIMethod ...........................113
+Deleting objects using Remove-WmiObject ...................................114
+Setting WMI properties using Set-WmiInstance .............................114
+Chapter 9: Bringing Strings into the Limelight . . . . . . . . . . . . . . . . . . .117
+Taking Your First Look at Strings ..............................................................117
+Differentiating between empty and null strings .............................118
+Creating literal strings .......................................................................118
+Simplifying using Here-Strings .........................................................119
+Performing String Surgery ..........................................................................120
+Combining strings ..............................................................................120
+Combining strings with nonstrings .................................................121
+Splitting strings ..................................................................................122
+Snipping off a piece of a string .........................................................123
+Performing string substitutions .......................................................125
+Working with String Positions ...................................................................125
+Changing the Case of Strings ......................................................................127
+Using Regular Expressions .........................................................................127
+Creating the simplest RegEx using literal characters ...................128
+Performing more dynamic searches using character sets ...........130
+Using modif ers to def ne optional or repeating sequences .........132
+Using anchors to maintain position ................................................134
+Coming up with alternatives ............................................................135
+Making use of RegEx in Windows PowerShell ................................136
+xii Windows PowerShell 2 For Dummies
+Chapter 10: I¡¯ll Take Numbers for $100, Please . . . . . . . . . . . . . . . . . .137
+Putting Numeric Data Types under a Microscope ..................................137
+Having a look at integral data types ................................................138
+Getting precise using nonintegral data types ................................139
+Doing Some Calculations ............................................................................139
+Adding things up ................................................................................140
+Reducing values with subtraction ...................................................142
+Expanding through multiplication ...................................................143
+Reducing through division ...............................................................143
+Rounding Off Values ....................................................................................144
+Creating Random Numbers ........................................................................145
+Converting Numbers ...................................................................................145
+Watching Out for Overf ow.........................................................................146
+Chapter 11: Grouping Data Using Arrays and Hash Tables . . . . . . . .147
+Taking an In-Depth Look at Arrays ............................................................148
+Creating and Using Arrays ..........................................................................148
+Accessing array elements .................................................................149
+Looping through arrays ....................................................................150
+Growing Arrays Dynamically .....................................................................151
+Creating Multidimensional Arrays ............................................................152
+Finding Other Uses for Arrays ...................................................................153
+Working with Hash Tables: The Array¡¯s Useful Cousin ..........................155
+Creating and using hash tables ........................................................155
+Modifying hash tables .......................................................................157
+Looping through hash tables ...........................................................158
+Chapter 12: Readin¡¯ and Writin¡¯ Files . . . . . . . . . . . . . . . . . . . . . . . . . . .159
+Having Some Fun with the File System .....................................................159
+Moving around the f le system .........................................................160
+Managing directories .........................................................................160
+Manipulating f les in the f le system ................................................162
+Reading Text Files .......................................................................................163
+Writing Files .................................................................................................164
+Working with XML .......................................................................................166
+Reading and writing XML f les ..........................................................168
+Saving objects in XML f les ...............................................................169
+Working with HTML ....................................................................................171
+Chapter 13: Going On a Date with PowerShell. . . . . . . . . . . . . . . . . . .175
+Going On Your First Date ............................................................................175
+Getting the date and time in a specif c format ...............................176
+Creating your own dates ...................................................................178
+Using Date Math (It¡¯s Not Just for Nerds) ................................................179
+Calculating time differences .............................................................179
+Looking into the future......................................................................180
+Checking whether it¡¯s daylight saving time....................................181
+ Table of Contents xiii
+Dealing with Time Zones ............................................................................182
+Standardizing with Coordinated Universal Time ...........................182
+Using the TimeZone class .................................................................183
+Part IV: Controlling Where and How You Operate
+PowerShell ............................................................... 185
+Chapter 14: Using Functions to Divide and Conquer . . . . . . . . . . . . . .187
+Reusing Code Using Functions ...................................................................187
+Creating your f rst function ..............................................................188
+Def ning parameters ..........................................................................189
+Returning values ................................................................................191
+Using Scope ..................................................................................................193
+Understanding scope rules ...............................................................193
+Watching out for name overlap .......................................................195
+Def ning functions in Global scope ..................................................197
+Creating Your Own Cmdlets ¡ª Advanced Functions! ............................197
+Understanding the structure of Advanced Functions ...................198
+Def ning attributes .............................................................................199
+Def ning parameters ..........................................................................200
+Using methods....................................................................................204
+Running Advanced Functions...........................................................204
+Finding uses for Advanced Functions .............................................207
+Chapter 15: PowerShell Ninjas: Running Jobs Remotely or
+in the Background . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .209
+Using Background Jobs ...............................................................................210
+Enabling WinRM .................................................................................210
+Starting a new job ..............................................................................210
+Getting results ....................................................................................211
+Waiting for a job .................................................................................213
+Terminating a job ...............................................................................214
+Bringing a job to a grinding halt ......................................................214
+Running Commands Remotely ...................................................................215
+Using Windows PowerShell everywhere .........................................215
+Getting what you need for remote commands...............................216
+Speaking PowerShell with a different computer ............................216
+Invoking commands remotely ..........................................................217
+Creating a persistent connection .....................................................218
+Running remote background jobs ...................................................219
+Understanding policies, prof les, and precedence ........................221
+xiv Windows PowerShell 2 For Dummies
+Chapter 16: Making Your Script Speak Different Languages . . . . . .223
+Seeing the Importance of Internationalizing Scripts ...............................224
+Giving Your Scripts Different Tongues .....................................................224
+Using new internationalization features .........................................225
+Understanding cultures ....................................................................226
+Putting it all together.........................................................................226
+Sharing Scripts with Others .......................................................................229
+Chapter 17: Smashing Those Bugs . . . . . . . . . . . . . . . . . . . . . . . . . . . . .231
+Finding Out Where the Bugs Come From .................................................231
+Guarding against unexpected input ................................................232
+Watching out for incorrect logic ......................................................232
+Expecting the unexpected: System errors ......................................233
+Understanding the Debugging Process .....................................................233
+Working On Your Defense ..........................................................................235
+Working with Debugging Tools ..................................................................237
+Working with breakpoints ................................................................238
+Setting fancier breakpoints...............................................................240
+Issuing debugger commands ............................................................240
+Listing all breakpoints .......................................................................241
+Disabling and enabling breakpoints ................................................242
+Removing breakpoints ......................................................................243
+Part V: Real-World Windows Administration
+Using PowerShell ..................................................... 245
+Chapter 18: Mission Control: All Systems Go . . . . . . . . . . . . . . . . . . . .247
+Monitoring Drive Space ..............................................................................247
+Converting to Windows Management Infrastructure
+from System.IO.DriveInfo ........................................................................251
+Managing Windows Services ......................................................................253
+Controlling services ...........................................................................254
+Conf guring services ..........................................................................256
+Checking Your Event Logs ..........................................................................257
+Querying EventLogs Using WMI ................................................................258
+Chapter 19: Taming the Windows Registry . . . . . . . . . . . . . . . . . . . . . .261
+Following the Registry Tree .......................................................................262
+Connecting to the Windows Registry ........................................................263
+Navigating the registry by using the PowerShell drives ...............264
+Using Microsoft.Win32.RegistryKey to access the registry..........265
+Reading Keys and Values ............................................................................267
+Writing Keys and Values .............................................................................268
+Writing keys and values using the PSDrive ....................................268
+Writing registry values using Microsoft.Win32.RegistryKey ........269
+ Table of Contents xv
+Renaming and Deleting Registry Keys and Values ..................................270
+Renaming and deleting registry keys and Values
+using PSDrive ..................................................................................271
+Using Microsoft.Win32.RegistryKey to delete registry
+keys and values ..............................................................................271
+Chapter 20: Reaching Out to Active Directory . . . . . . . . . . . . . . . . . . .273
+A Really Brief Active Directory Primer .....................................................274
+Connecting to Active Directory .................................................................274
+Querying for Objects and Attributes .........................................................275
+Creating your LDAP f lter ..................................................................277
+Dynamically obtaining a user¡¯s distinguishedName .....................282
+Modifying Object Attributes .......................................................................283
+Updating Group Membership ....................................................................284
+Getting to the Raw ADSI Object Using psbase .........................................285
+Chapter 21: PowerShell Lockdown. . . . . . . . . . . . . . . . . . . . . . . . . . . . .287
+PowerShell Security Features ....................................................................288
+Getting rid of the current directory loophole ................................288
+Stopping the double-click blues .......................................................288
+Protecting through ExecutionPolicy ...............................................288
+Generating a Code-Signing Certif cate.......................................................290
+Creating a self-signed certif cate ......................................................290
+Requesting a certif cate from your Enterprise CA .........................293
+Browsing the Certif cate Store ...................................................................294
+Signing Your Scripts ....................................................................................295
+Managing the Windows Firewall ................................................................297
+Def ning globally open ports ............................................................298
+Listing f rewall services .....................................................................299
+Allowing applications to get through ..............................................299
+Chapter 22: Converting Your Old Scripts: Out with the Old,
+In with the New . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .301
+Converting a Windows Shell Script to Windows PowerShell .................302
+Echoing to the screen ........................................................................302
+Using conditional statements ...........................................................303
+Migrating that FOR command ..........................................................304
+Converting a Windows Scripting Host Script to Windows
+PowerShell ................................................................................................306
+Comparing the basics ........................................................................307
+Working with COM objects ...............................................................307
+Understanding the difference between CreateObject and
+GetObject ........................................................................................309
+Handling I/O ........................................................................................311
+Working with ActiveX Data Objects (ADO) ....................................312
+Leveraging ADO.NET to your advantage ........................................313
+xvi Windows PowerShell 2 For Dummies
+Part VI: Configuring and Reporting Via PowerShell ..... 317
+Chapter 23: Controlling Your Network Confi guration . . . . . . . . . . . . .319
+Managing Your Network Settings ..............................................................320
+Familiarizing yourself with
+Win32_NetworkAdapterConf guration ........................................320
+Retrieving your TCP/IP settings .......................................................322
+Manipulating your TCP/IP settings ..................................................323
+Managing Your Windows Firewall .............................................................325
+Getting to know the Windows Firewall COMmander ....................326
+Enabling and disabling the Windows Firewall ...............................327
+Making yourself visible .....................................................................328
+Getting a list of all authorized applications....................................328
+Getting a list of all globally open ports ...........................................329
+Using the big reset button ................................................................329
+Chapter 24: Managing Your Hardware. . . . . . . . . . . . . . . . . . . . . . . . . .331
+Polling Your Hardware ................................................................................332
+Finding out what hardware you have ..............................................332
+Checking hardware state ..................................................................340
+Controlling Your Printers ...........................................................................341
+Connecting to a shared network printer.........................................341
+Disconnecting a shared network printer ........................................342
+Setting the default printer.................................................................342
+Checking up on printer state ............................................................342
+Keeping an eye on the printer queue ..............................................343
+Chapter 25: Making Reporting Easy . . . . . . . . . . . . . . . . . . . . . . . . . . . .345
+Using Built-In Reporting Cmdlets ..............................................................346
+Generating Reports .....................................................................................346
+Customizing tabular output with Format-Table.............................347
+Setting column width in Format-Table ............................................348
+Using an interactive data table ........................................................348
+Preparing data for other reporting tools ........................................349
+Making your data table ready ..........................................................350
+Making Reports Pretty ................................................................................352
+Formatting Using Cascading Style Sheets ................................................353
+Using Third-Party Reporting Tools ...........................................................355
+ Table of Contents xvii
+Part VII: The Par t of Tens.......................................... 357
+Chapter 26: The Ten Most Important Cmdlets . . . . . . . . . . . . . . . . . . . .359
+Getting Help with Get-Help .........................................................................359
+Getting to Know Your Objects with Get-Member ....................................360
+Navigating with Set-Location .....................................................................360
+Reading Text Files with Get-Content .........................................................361
+Writing to a File with Out-File ....................................................................361
+Leveraging WMI with Get-WMIObject .......................................................362
+Creating New Objects with New-Object ....................................................362
+Getting Picky with Select-Object ...............................................................362
+Going Through Collections with Foreach-Object ....................................363
+Controlling the Pipeline with Where-Object ............................................364
+Chapter 27: Ten Common PowerShell Mistakes . . . . . . . . . . . . . . . . .365
+Forgetting to Change the Execution Policy ..............................................365
+Using Commas to Separate Parameters When Calling a Function ........366
+Def ning Functions After You Use Them ...................................................367
+Treating Pipeline Data as Strings ...............................................................368
+Forgetting to Cast Variables as a String ....................................................369
+Using Incorrect Comparison Operators ...................................................370
+Trying to Do Too Much in One Pipeline ...................................................372
+Forgetting About Variable Scope ...............................................................372
+Not Using the Debugger ..............................................................................373
+Not Using .NET Classes When Available ...................................................374
+Bonus Chapter 1: Handling Exceptions . . . . . . . . . . . . . . . . . . . . . . . . . . .1
+Handling Errors the Old-Fashioned Way ......................................................1
+Understanding Exceptions .............................................................................2
+Trapping Exceptions .......................................................................................3
+Throwing Exceptions ......................................................................................6
+Index ....................................................................... 375

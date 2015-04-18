@@ -1,0 +1,157 @@
+
+Mastering Leap Motion
+Credits
+Foreword
+About the Author
+Acknowledgments
+About the Reviewers
+www.PacktPub.com
+Support files, eBooks, discount offers, and more
+Why subscribe?
+Free access for Packt account holders
+Preface
+What this book covers
+What you need for this book
+Who this book is for
+Conventions
+Reader feedback
+Customer support
+Errata
+Piracy
+Questions
+1. Introduction to the World of Leap Motion
+Setting up the Leap Motion device
+Installing the Leap Motion Developers' SDK
+Installing the Java JDK
+Setting up your IDE
+Structure of the Leap Motion Application Programming Interface (API)
+The Vector class
+The Finger class
+The Hand class
+The Frame class
+The Controller class
+The Listener class
+Creating a simple framework program within the Eclipse IDE
+Setting up the project
+Let's write some code!
+Trying it out
+Looking forward 每 the Skeletal Tracking API
+Different fingers? Not a problem
+Handedness is no longer an issue
+Having confidence in tracking data
+Pinching and grabbing are now much easier
+A new API class 每 Bones
+That's it!
+Summary
+2. What the Leap Sees 每 Dealing with Fingers, Hands, Tools, and Gestures
+Handling hands and fingers
+The Leap's field of view
+The InteractionBox class
+How the interaction box works
+Why would you ever want to use something like the interaction
+box?
+Detecting gestures and tools
+Detecting and using tools
+Gestures
+Detecting gestures
+Some (albeit minor) limitations to keep in mind
+Upside-down hands can be a problem!
+Needing too many hands is a bad thing
+Differentiating fingers can be fun!
+Lack of support for custom gestures
+Summary
+3. What the User Sees 每 User Experience, Ergonomics, and Fatigue
+When to use the Leap (and more importantly, when not to)
+The Leap Motion user experience guidelines
+Ergonomics and user fatigue
+Ergonomics
+User fatigue
+A case study 每 the Artemis Quadrotor Simulator
+Play testing and why you should do it
+Providing as much visual feedback as possible
+That's it 每 for now!
+Summary
+4. Creating a 2D Painting Application
+Laying out the framework for Leapaint
+LeapButton.java
+LeapaintListener.java
+Leapaint.java
+Creating the graphical frontend
+Making a responsive button 每 the LeapButton class
+Getting our bounds
+Visually responding to the user
+Making a graphical user interface
+Constructing a constructor
+Saving images
+Interpreting Leap data to render on the graphical frontend
+Testing it out
+Improving the application
+Summary
+5. Creating a 3D Application 每 a Crash Course in Unity 3D
+A brief introduction to Unity
+Installing and setting up Unity 3D
+Common jargon found in Unity
+Scenes
+GameObjects
+Scripts
+Creating a project
+Setting the scene
+Summary
+6. Creating a 3D Application 每 Integrating the Leap Motion Device with a 3D
+Toolkit
+Setting up the scene to receive Leap Motion input
+A quick summary 每 the fundamentals of Unity scripts
+Attaching a script to a GameObject
+Laying out a framework of scripts
+Rendering hands
+LeapListener.cs
+HandRenderer.cs
+Preparing the scene for hand rendering
+Testing out the Hand Renderer
+Rendering buttons and detecting button presses
+BaseSingleton 每 a custom singleton pattern
+Colorscheme 每 a utility class to keep track of colors
+Core 每 the main class, if Unity had main classes
+TouchPointer 每 let's draw some cursors on the screen
+TouchableButton 每 surely, the name is self-explanatory
+TitleMenu 每 a simple main menu
+Putting it all together
+Summary
+7. Creating a 3D Application 每 Controlling a Flying Entity
+Creating the flying entity
+Adding the PlayerArrow and Rigidbody components
+Retrieving user input with the HandController class
+Interpreting user input with the Player class
+Putting everything together and testing it
+Improving the application
+Summary
+8. Troubleshooting, Debugging, and Optimization
+Making sure your Leap is connected
+The Diagnostic Visualizer
+Keeping the Leap Motion SDK updated
+Cutting back on Leap Motion API calls
+Handling the NoSuchMethod and NoClassDefFound errors in Java
+Custom calibration of the Leap Motion Controller
+Summary
+9. Going beyond the Leap Motion Controller
+What you've learned so far
+The Leap Motion Controller standing next to other emerging technologies
+Microsoft's Kinect
+Oculus VR's Oculus Rift
+Reliability and safety concerns with the Leap in industrial settings
+Going beyond 每 ideas to control hardware and robots with the Leap Motion
+Controller
+Arduino
+A few things you'll need
+Setting up the environment
+Setting up the project
+Writing the Java side of things
+Writing the Arduino side of things
+Deploying and testing the application
+Ideas for Leap-driven applications 每 simulators and robots
+FIRST Robotics Competition Robots
+The FIRST Robotics Competition
+Controlling an FRC robot with the Leap Motion Controller
+Making a robot of your own!
+Summary
+Index

@@ -1,0 +1,102 @@
+
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ix
+1. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Definitions 2
+Real Life and Embedded Linux Systems 5
+Design and Implementation Methodology 27
+2. Basic Concepts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+Types of Hosts 33
+Types of Host/Target Development Setups 39
+Types of Host/Target Debug Setups 41
+Generic Architecture of an Embedded Linux System 43
+System Startup 47
+Types of Boot Configurations 48
+System Memory Layout 51
+3. Hardware Support . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+Processor Architectures 56
+Buses and Interfaces 64
+I/O 72
+Storage 79
+General-Purpose Networking 81
+Industrial-Grade Networking 83
+System Monitoring 85
+4. Development Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+A Practical Project Workspace 89
+GNU Cross-Platform Development Toolchain 91
+C Library Alternatives 115
+Java 129
+Perl 131
+Python 134
+v
+Other Programming Languages 135
+Eclipse: An Integrated Development Environment 135
+Terminal Emulators 147
+5. Kernel Considerations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 155
+Selecting a Kernel 156
+Configuring the Kernel 161
+Compiling the Kernel 165
+Installing the Kernel 167
+In the Field 169
+6. Root Filesystem Content . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 173
+Basic Root Filesystem Structure 173
+Libraries 177
+Kernel Modules 183
+Kernel Images 183
+Device Files 184
+Main System Applications 193
+Custom Applications 201
+System Initialization 201
+7. Storage Device Manipulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+MTD-Supported Devices 209
+Disk Devices 231
+To Swap or Not To Swap 234
+8. Root Filesystem Setup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 235
+Filesystem Types for Embedded Devices 235
+Writing a Filesystem Image to Flash Using an NFS-Mounted Root Filesystem
+254
+Placing a Disk Filesystem on a RAM Disk 254
+Rootfs and Initramfs 255
+Choosing a Filesystem¡¯s Type and Layout 258
+Handling Software Upgrades 261
+9. Setting Up the Bootloader . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 273
+Embedded Bootloaders 274
+Server Setup for Network Boot 278
+Using the U-Boot Bootloader 285
+10. Setting Up Networking Services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+Network Settings 302
+vi | Table of Contents
+Busybox 303
+Dynamic Configuration Through DHCP 303
+The Internet Super-Server 305
+Remote Administration with SNMP 309
+Network Login Through Telnet 312
+Secure Communication with SSH 314
+Serving Web Content Through HTTP 317
+Provisioning 321
+11. Debugging Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+Eclipse 326
+Debugging Applications with gdb 328
+Tracing 333
+Performance Analysis 336
+Memory Debugging 344
+A Word on Hardware Tools 348
+12. Introduction to Real-Time Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 351
+What Is Real-Time Processing? 351
+Should Your Linux Be Real-Time? 352
+Common Real-Time Kernel Requirements 356
+Some Typical Users of Real-Time Computing Technology 358
+The Linux Paths to Real-Time 360
+13. The Xenomai Real-Time System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 365
+Porting Traditional RTOS Applications to Linux 366
+The Xenomai Architecture 368
+How Xenomai Works 375
+The Real-Time Driver Model 379
+Xenomai, Chameleon by Design 385
+14. The RT Patch . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 387
+Interrupts As Threads 388
+Priority Inheritance 398
+Configuring the Kernel with the RT Patch 401
+High-Resolution Timers 407
+The Latency Tracer 410
+Conclusion 417
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 419

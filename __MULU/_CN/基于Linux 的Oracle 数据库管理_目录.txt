@@ -1,0 +1,78 @@
+
+第1章 Oracle与Linux
+1.1 Oracle支持Linux的历史
+1.2 Oracle对Linux的贡献
+1.3 Oracle的Linux发行版
+1.4 Oracle Database 10g支持的Linux发行版
+1.4.1 Red Hat Enterprise Linux
+1.4.2 SUSE Linux Enterprise Server
+1.4.3 Asianux
+1.4.4 UnitedLinux
+第2章 搭建实验环境
+2.1 实验环境所需软件介绍
+2.2 存储空间规划
+2.3 软件配置
+2.3.1 安装VMware、PuTTY、VNC、Xming
+2.3.2 配置VMware准备安装RHEL
+2.3.3 安装所需的RHEL软件包
+2.4 安装VMware Tools
+2.4.1 使用rpm软件包安装
+2.4.2 使用tar压缩软件包安装
+2.4.3 使用iso文件加载VMware Tools安装文件
+2.4.4 卸载VMware Tools
+2.5 虚拟机与宿主机的网络设置
+2.5.1 未连接外部网络的情况——Host-only方式
+2.5.2 连接外部网络的情况——Bridged方式
+2.6 使用PUTTY及VNC进行系统管理
+2.6.1 使用PuTTY连接Red Hat
+2.6.2 配置Xming运行X Server
+2.6.3 使用VNC Viewer连接Red Hat
+2.7 常见问题及解决方法
+第3章 Linux基础
+3.1 Linux启动过程分析
+3.1.1 grub.conf文件
+3.1.2 inittab文件
+3.2 ext2文件系统结构
+3.2.1 super block
+3.2.2 group descriptor
+3.3 inode
+3.4 Linux目录结构
+3.5 软链接与硬链接
+3.5.1 软链接
+3.5.2 硬链接
+3.6 文件的时间属性
+3.6.1 文件的3种时间属性
+3.6.2 目录的3种时间属性
+3.7 目录权限
+3.8 和用户环境相关的几个配置文件
+第4章 Linux常用命令
+4.1 字符串模式匹配
+4.1.1 文件名称中使用通配符
+4.1.2　正则表达式
+　4.2　ls命令
+　　4.2.1　列出文件的大小
+　　4.2.2　按时间排序
+　　4.2.3　列出目录信息
+　　4.2.4　列出文件类型标识符
+　4.3　sort命令
+　4.4　tail及head命令
+　　4.4.1　tail-n及head-n：选取文件的开始或末尾
+　　4.4.2　tail+n：选取指定行
+　　4.4.3　tail-f：实时更新显示结果
+　4.5　find命令
+　　4.5.1　按照文件名称查找
+　　4.5.2　按时间查找
+……
+第5章 准备安装Oracle-Linux配置及验证
+第6章 安装Oracle Database 10g for Linux
+第7章 创建Oracle数据库
+第8章 Oracle数据库服务器常用存储器模式
+第9章 配置网络连接
+第10章 常用数据库维护命令
+第11章 编写shell脚本程序
+第12章 shell脚本程序中调用SQL*Plus
+第13章 数据库的自动启动与关闭
+第14章 数据库管理shell程序
+第15章 数据库备份shell程序
+参考文献
+参考网址 

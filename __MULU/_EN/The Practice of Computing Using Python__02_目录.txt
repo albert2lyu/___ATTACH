@@ -1,0 +1,533 @@
+
+P R E F A C E x x i i i
+P A R T 1 T H I N K I N G A B O U T C O M P U T I N G 1
+Chapter 0 The Study of Computer Science 3
+0.1 Why Computer Science? 3
+0.1.1 Importance of Computer Science 3
+0.1.2 Computer Science Around You 4
+0.1.3 Computer ¡°Science¡± 4
+0.1.4 Computer Science Through Computer Programming 6
+0.2 The Difficulty and Promise of Programming 6
+0.2.1 Difficulty 1: Two Things at Once 6
+0.2.2 Difficulty 2: What Is a Good Program? 9
+0.2.3 The Promise of a Computer Program 10
+0.3 Choosing a Computer Language 11
+0.3.1 Different Computer Languages 11
+0.3.2 Why Python? 11
+0.3.3 Is Python the Best Language? 13
+0.4 What Is Computation? 13
+0.5 What Is a Computer? 13
+0.5.1 Computation in Nature 14
+0.5.2 The Human Computer 17
+0.6 The Modern, Electronic Computer 18
+0.6.1 It¡¯s the Switch! 18
+0.6.2 The Transistor 19
+0.7 A High-Level Look at a Modern Computer 24
+0.8 Representing Data 26
+0.8.1 Binary Data 26
+0.8.2 Working with Binary 27
+0.8.3 Limits 28
+0.8.4 Representing Letters 29
+0.8.5 Representing Other Data 30
+0.8.6 What Does a Number Represent? 31
+0.8.7 How to Talk About Quantities of Data 32
+0.8.8 Quantities of Data 32
+0.9 Overview of Coming Chapters 34
+P A R T 2 S T A R T I N G T O P R O G R A M 3 5
+Chapter 1 Beginnings 37
+1.1 Practice, Practice, Practice 37
+1.2 QuickStart, the Circumference Program 38
+1.2.1 Examining the Code 40
+1.3 An Interactive Session 42
+1.4 Parts of a Program 43
+1.4.1 Modules 43
+1.4.2 Statements and Expressions 43
+1.4.3 Whitespace 45
+1.4.4 Comments 46
+1.4.5 Special Python Elements: Tokens 46
+1.4.6 Naming Objects 48
+1.4.7 Recommendations on Naming 49
+1.5 Variables 49
+1.5.1 Variable Creation and Assignment 50
+1.6 Objects and Types 53
+1.6.1 Numbers 55
+1.6.2 Other Built-in Types 57
+1.6.3 Object Types: Not Variable Types 58
+1.6.4 Constructing New Values 59
+1.7 Operators 61
+1.7.1 Integer Operators 61
+1.7.2 Floating-Point Operators 63
+1.7.3 Mixed Operations 63
+1.7.4 Order of Operations and Parentheses 64
+1.7.5 Augmented Assignment Operators: A Shortcut! 65
+1.8 Your First Module, Math 67
+1.9 Developing an Algorithm 68
+1.9.1 New Rule, Testing 72
+1.10 Visual Vignette: Turtle Graphics 73
+Chapter 2 Control 81
+2.1 The Selection Statement for Decisions: if 81
+2.1.1 Booleans for Decisions 83
+2.1.2 The if Statement 83
+2.1.3 Example: What Lead Is Safe in Basketball? 86
+2.1.4 Repetition 90
+2.1.5 Example: Finding Perfect Numbers 94
+2.1.6 Example: Classifying Numbers 99
+2.2 In-Depth Control 103
+2.2.1 True and False: Booleans 103
+2.2.2 Boolean Variables 104
+2.2.3 Relational Operators 104
+2.2.4 Boolean Operators 109
+2.2.5 Precedence 110
+2.2.6 Boolean Operators Example 111
+2.2.7 Another Word on Assignments 114
+2.2.8 The Selection Statement for Decisions 116
+2.2.9 More on Python Decision Statements 116
+2.2.10 Repetition: The while Statement 120
+2.2.11 Sentinel Loop 130
+2.2.12 Summary of Repetition 130
+2.2.13 More on the for Statement 131
+2.2.14 Nesting 134
+2.2.15 Hailstone Sequence Example 136
+2.3 Visual Vignette: Plotting Data with Pylab 137
+2.3.1 First Plot and Using a List 138
+2.3.2 More Interesting Plot: A Sine Wave 140
+2.4 Computer Science Perspectives 142
+2.4.1 Minimal Universal Computing 142
+Chapter 3 Algorithms and Program Development 153
+3.1 What Is an Algorithm? 153
+3.1.1 Example Algorithms 154
+3.2 Algorithm Features 155
+3.2.1 Algorithm Versus Program 155
+3.2.2 Qualities of an Algorithm 157
+3.2.3 Can We Really Do All That? 159
+3.3 What Is a Program? 159
+3.3.1 Readability 159
+3.3.2 Robustness 163
+3.3.3 Correctness 164
+3.4 Strategies for Program Design 165
+3.4.1 Engage and Commit 165
+3.4.2 Understand, then Visualize 166
+3.4.3 Think Before You Program 167
+3.4.4 Experiment 167
+3.4.5 Simplify 167
+3.4.6 Stop and Think 169
+3.4.7 Relax: Give Yourself a Break 169
+3.5 A Simple Example 169
+3.5.1 Build the Skeleton 170
+3.5.2 Output 170
+3.5.3 Input 171
+3.5.4 Doing the Calculation 173
+Chapter 4 Working with Strings 179
+4.1 The String Type 180
+4.1.1 The Triple-Quote String 180
+4.1.2 Non-Printing Characters 181
+4.1.3 String Representation 181
+4.1.4 Strings as a Sequence 182
+4.1.5 More Indexing and Slicing 183
+4.1.6 Strings Are Iterable 187
+4.2 String Operations 189
+4.2.1 Concatenation (+) and Repetition (*) 189
+4.2.2 Determining when + Indicates Addition or
+Concatenation 190
+4.2.3 Comparison Operators 191
+4.2.4 The in Operator 192
+4.2.5 String Collections Are Immutable 193
+4.3 A Preview of Functions and Methods 194
+4.3.1 First Cut: What Is a Function? 194
+4.3.2 A String Method 195
+4.3.3 Determining Method Names and Method
+Arguments 198
+4.3.4 String Methods 200
+4.3.5 String Functions 201
+4.4 Formatted Output for Strings 201
+4.4.1 Descriptor Codes 202
+4.4.2 Width and Alignment Descriptors 203
+4.4.3 Floating-Point Precision Descriptor 204
+4.5 Control and Strings 205
+4.6 Working with Strings 208
+4.6.1 Example: Reordering a Person¡¯s Name 208
+4.6.2 Palindromes 210
+4.7 More String Formatting 213
+4.8 Computer Science Perspectives: Unicode 216
+Chapter 5 Files and Exceptions I 227
+5.1 What Is a File? 227
+5.2 Accessing Files: Reading Text Files 227
+5.2.1 What¡¯s Really Happening? 228
+5.3 Accessing Files: Writing Text Files 229
+5.4 Reading and Writing Text Files in a Program 230
+5.5 File Creation and Overwriting 231
+5.6 First Cut, Handling Errors 232
+5.6.1 Error Names 233
+5.6.2 The try-except Construct 233
+5.6.3 try-except Flow of Control 234
+5.6.4 Exception Example 235
+5.7 Example: Counting Poker Hands 238
+5.7.1 Program to Count Poker Hands 241
+P A R T 3 F U N C T I O N S A N D D A T A S T R U C T U R E S 2 5 5
+Chapter 6 Functions¡ªQuickStart 257
+6.1 What Is a Function? 257
+6.1.1 Why Have Functions? 258
+6.2 Python Functions 259
+6.3 Flow of Control with Functions 262
+6.3.1 Function Flow in Detail 263
+6.3.2 Parameter Passing 263
+6.3.3 Another Function Example 265
+6.3.4 Function Example: Word Puzzle 267
+6.3.5 Functions Calling Functions 273
+6.3.6 When to Use a Function 273
+6.3.7 What if There Is No Return Statement? 274
+6.3.8 What if There Are Multiple Return Statements? 275
+6.4 Visual Vignette: Turtle Flag 276
+Chapter 7 Lists and Tuples 283
+7.1 What Is a List? 283
+7.2 What You Already Know How to Do with Lists 285
+7.2.1 Iteration 286
+7.2.2 Indexing and Slicing 286
+7.2.3 Operators 287
+7.2.4 Functions 289
+7.2.5 List Iteration 290
+7.3 Lists Are Different than Strings 290
+7.3.1 Lists Are Mutable 290
+7.3.2 List Methods 292
+7.4 Old and New Friends: Split and Other Functions and Methods 295
+7.4.1 Split and Multiple Assignment 295
+7.4.2 List to String and Back Again, Using join 296
+7.4.3 The sorted Function 297
+7.5 Working with Some Examples 299
+7.5.1 Anagrams 299
+7.5.2 Example: File Analysis 305
+7.6 Mutable Objects and References 310
+7.6.1 Shallow vs. Deep Copy 316
+7.6.2 Mutable vs. Immutable 320
+7.7 Tuples 321
+7.7.1 Tuples from Lists 323
+7.7.2 Why Tuples? 324
+7.8 Lists: The Data Structure 324
+7.8.1 Example Data Structure 325
+7.8.2 Other Example Data Structures 326
+7.9 Algorithm Example: U.S. EPA Automobile
+Mileage Data 327
+7.10 Python Diversion: List Comprehension 337
+7.10.1 Comprehensions, Expressions, and the
+Ternary Operator 339
+7.11 Visual Vignette: More Plotting 340
+7.11.1 NumPy Arrays 340
+7.11.2 Plotting Trigonometric Functions 342
+Chapter 8 More on Functions 357
+8.1 Scope: A First Cut 357
+8.1.1 Arguments, Parameters, and Namespaces 359
+8.1.2 Passing Mutable Objects 361
+8.1.3 Returning a Complex Object 363
+8.1.4 Refactoring evens 365
+8.2 Default Values and Parameters 365
+8.2.1 Example: Default Values and Parameter Keywords 366
+8.3 Functions as Objects 369
+8.3.1 Function Annotations 370
+8.3.2 Docstrings 371
+8.4 Example: Determining a Final Grade 371
+8.4.1 The Data 372
+8.4.2 The Design 372
+8.4.3 Function: weighted grade 372
+8.4.4 Function: parse line 373
+8.4.5 Function: main 374
+8.4.6 Example Use 374
+8.5 Esoterica: ¡°by value" or ¡°by reference" 375
+Chapter 9 Dictionaries and Sets 383
+9.1 Dictionaries 383
+9.1.1 Dictionary Example 384
+9.1.2 Python Dictionaries 385
+9.1.3 Dictionary Indexing and Assignment 385
+9.1.4 Operators 386
+9.2 Word Count Example 391
+9.2.1 Count Words in a String 392
+9.2.2 Word Frequency for the Gettysburg Address 393
+9.2.3 Output and Comments 396
+9.3 Periodic Table Example 398
+9.3.1 Working with CSV Files 398
+9.3.2 Algorithm Overview 400
+9.3.3 Functions for Divide and Conquer 401
+9.4 Sets 404
+9.4.1 History 405
+9.4.2 What¡¯s in a Set? 405
+9.4.3 Python Sets 405
+9.4.4 Methods, Operators, and Functions for Python Sets 406
+9.4.5 Set Methods 407
+9.5 Set Applications 411
+9.5.1 Relationship Between Words of Different Documents 412
+9.5.2 Output and Comments 415
+9.6 Scope: The Full Story 416
+9.6.1 Namespaces and Scope 416
+9.6.2 Search Rule for Scope 416
+9.6.3 Local 417
+9.6.4 Global 418
+9.6.5 Built-ins 422
+9.6.6 Enclosed 422
+9.7 Python Pointer: Using zip to Create Dictionaries 424
+9.8 Python Diversion: Dictionary and Set Comprehension 424
+9.9 Visual Vignette: Bar Graph of Word Frequency 425
+9.9.1 Getting the Data Right 426
+9.9.2 Labels and the xticks Command 426
+9.9.3 Plotting 427
+Chapter 10 More Program Development 437
+10.1 Introduction 437
+10.2 Divide and Conquer 437
+10.2.1 Top-Down Refinement 438
+10.3 The Breast Cancer Classifier 438
+10.3.1 The Problem 438
+10.3.2 The Approach: Classification 439
+10.3.3 Training and Testing the Classifier 439
+10.3.4 Building the Classifier 439
+10.4 Designing the Classifier Algorithm 441
+10.4.1 Divided, Now Conquer 444
+10.4.2 Data Structures 445
+10.4.3 File Format 445
+10.4.4 The make training set Function 446
+10.4.5 The make test set Function 450
+10.4.6 The train classifier Function 451
+10.4.7 train classifier, Round 2 453
+10.4.8 Testing the Classifier on New Data 456
+10.4.9 The report results Function 460
+10.5 Running the Classifier on Full Data 462
+10.5.1 Training Versus Testing 462
+10.6 Other Interesting Problems 466
+10.6.1 Tag Clouds 466
+10.6.2 S&P 500 Predictions 467
+10.6.3 Predicting Religion with Flags 470
+P A R T 4 C L A S S E S , M A K I N G Y O U R O W N D A T A S T R U C T U R E S
+A N D A L G O R I T H M S 4 7 5
+Chapter 11 Introduction to Classes 477
+11.0.5 Simple Student Class 477
+11.1 Object-Oriented Programming 478
+11.1.1 Python Is Object Oriented! 478
+11.1.2 Characteristics of OOP 479
+11.2 Working with Object-Oriented Programming 479
+11.2.1 Class and Instance 479
+11.3 Working with Classes and Instances 481
+11.3.1 Built-in Class and Instance 481
+11.3.2 Our First Class 482
+11.3.3 Changing Attributes 484
+11.3.4 The Special Relationship Between an Instance and Class:
+instance-of 485
+11.4 Object Methods 488
+11.4.1 Using Object Methods 488
+11.4.2 Writing Methods 489
+11.4.3 The Special Argument self 491
+11.4.4 Methods Are the Interface to a Class Instance 492
+11.5 Fitting into the Python Class Model 493
+11.5.1 Making Programmer-Defined Classes 493
+11.5.2 A Student Class 493
+11.5.3 Python Standard Methods 494
+11.5.4 Now There Are Three: Class Designer, Programmer,
+and User 498
+11.6 Example: Point Class 499
+11.6.1 Construction 500
+11.6.2 Distance 501
+11.6.3 Summing Two Points 501
+11.6.4 Improving the Point Class 502
+11.7 Python and OOP 506
+11.7.1 Encapsulation 506
+11.7.2 Inheritance 506
+11.7.3 Polymorphism 507
+11.8 An Aside: Python and Other OOP Languages 507
+11.8.1 Public Versus Private 507
+11.8.2 Indicating Privacy Using Double
+Underscores ( ) 508
+11.8.3 Python¡¯s Philosophy 509
+11.8.4 Modifying an Instance 509
+Chapter 12 More on Classes 517
+12.1 More About Class Properties 517
+12.1.1 Rational Number (Fraction) Class Example 518
+12.2 How Does Python Know? 520
+12.2.1 Classes, Types, and Introspection 520
+12.2.2 Remember Operator Overloading 523
+12.3 Creating Your Own Operator Overloading 523
+12.3.1 Mapping Operators to Special Methods 524
+12.4 Building the Rational Number Class 526
+12.4.1 Making the Class 527
+12.4.2 Review Fraction Addition 529
+12.4.3 Back to Adding Fractions 532
+12.4.4 Equality and Reducing Rationals 536
+12.4.5 Divide and Conquer at Work 539
+12.5 What Doesn¡¯t Work (Yet) 539
+12.5.1 Introspection 540
+12.5.2 Repairing int + Rational Errors 542
+12.6 Inheritance 544
+12.6.1 The ¡°Find the Attribute¡± Game 544
+12.6.2 Using Inheritance 548
+12.6.3 Example: The Standard Model 549
+Chapter 13 Program Development with Classes 561
+13.1 Predator-Prey Problem 561
+13.1.1 The Rules 562
+13.1.2 Simulation Using Object-Oriented Programming 563
+13.2 Classes 563
+13.2.1 Island Class 563
+13.2.2 Predator and Prey, Kinds of Animals 565
+13.2.3 Predator and Prey Classes 568
+13.2.4 Object Diagram 569
+13.2.5 Filling the Island 569
+13.3 Adding Behavior 572
+13.3.1 Refinement: Add Movement 572
+13.3.2 Refinement: Time Simulation Loop 575
+13.4 Refinement: Eating, Breeding, and Keeping Time 576
+13.4.1 Improved Time Loop 577
+13.4.2 Breeding 580
+13.4.3 Eating 582
+13.4.4 The Tick of the Clock 583
+13.5 Refinements 584
+13.5.1 Refinement: How Many Times to Move? 584
+13.5.2 Refinement: Graphing Population Size 585
+P A R T 5 B E I N G A B E T T E R P R O G R A M M E R 5 8 9
+Chapter 14 Files and Exceptions II 591
+14.1 More Details on Files 591
+14.1.1 Other File Access Methods, Reading 593
+14.1.2 Other File Access Methods, Writing 595
+14.1.3 Universal New Line Format 596
+14.1.4 Moving Around in a File 597
+14.1.5 Closing a File 599
+14.1.6 The with Statement 599
+14.2 CSV Files 601
+14.2.1 csv Module 601
+14.2.2 CSV Reader 602
+14.2.3 CSV Writer 603
+14.2.4 Example: Update Some Grades 603
+14.3 Module: os 606
+14.3.1 Directory (Folder) Structure 606
+14.3.2 os Module Functions 608
+14.3.3 os Module Example 609
+14.4 More on Exceptions 612
+14.4.1 Basic Exception Handling 612
+14.4.2 A Simple Example 613
+14.4.3 Events 616
+14.4.4 A Philosophy Concerning Exceptions 616
+14.5 Exception: else and finally 618
+14.5.1 finally and with 618
+14.5.2 Example: Refactoring the Reprompting of a
+File Name 618
+14.6 More on Exceptions 620
+14.6.1 Raise 620
+14.6.2 Create Your Own 621
+14.7 Example: Password Manager 622
+Chapter 15 Testing 631
+15.1 Why Testing? 631
+15.1.1 Kinds of Errors 631
+15.1.2 ¡°Bugs¡± and Debugging 632
+15.2 Kinds of Testing 633
+15.2.1 Testing Is Hard! 634
+15.2.2 Importance of Testing 635
+15.3 Example Problem 636
+15.3.1 NBA Efficiency 636
+15.3.2 Basic Algorithm 636
+15.4 Incorporating Testing 639
+15.4.1 Catching User Errors 639
+15.4.2 Catching Developer Errors 641
+15.5 Automation of Testing 643
+15.5.1 doctest 643
+15.5.2 Other Kinds of Testing 647
+Chapter 16 Recursion: Another Control Mechanism 649
+16.1 What Is Recursion? 649
+16.2 Mathematics and Rabbits 651
+16.3 Let¡¯s Write Our Own: Reversing a String 654
+16.4 How Does Recursion Actually Work? 656
+16.4.1 Stack Data Structure 657
+16.4.2 Stacks and Function Calls 659
+16.5 Recursion in Figures 661
+16.5.1 Recursive Tree 661
+16.5.2 Sierpinski Triangles 663
+16.6 Recursion to Nonrecursion 664
+Chapter 17 Other Fun Stuff with Python 667
+17.1 Function Stuff 667
+17.1.1 Having a Varying Number of Parameters 668
+17.1.2 Iterators and Generators 671
+17.1.3 Other Functional Programming Ideas 676
+17.1.4 Some Functional Tools: map, reduce, filter 677
+17.1.5 Decorators: Functions Calling Functions 678
+17.2 Classes 684
+17.2.1 Properties 684
+17.2.2 Serializing an Instance: pickle 688
+17.2.3 Random Numbers 691
+17.3 Other Things in Python 693
+17.3.1 Data Types 693
+17.3.2 Built-in Modules 693
+17.3.3 Modules on the Internet 694
+Chapter 18 The End, or Perhaps the Beginning 695
+A P P E N D I C E S 6 9 7
+Appendix A Getting and Using Python 697
+A.1 About Python 697
+A.1.1 History 697
+A.1.2 Python 3 697
+A.1.3 Python Is Free and Portable 698
+A.1.4 Starting Python Up 699
+A.1.5 Working with Python 700
+A.1.6 Making a Program 702
+A.2 Some Conventions for This Book 706
+A.2.1 Interactive Code 706
+A.2.2 Program: Written Code 707
+A.2.3 Combined Program and Output 707
+A.3 Summary 707
+Appendix B Simple Drawing with Turtle Graphics 709
+B.1.1 What Is a Turtle? 709
+B.1.2 Motion 711
+B.1.3 Drawing 711
+B.1.4 Color 714
+B.1.5 Drawing with Color 715
+B.1.6 Other Commands 717
+B.2 Tidbits 719
+B.2.1 Keeping the Window Open 719
+B.2.2 Working Nicely with IDLE 720
+Appendix C Plotting and Numeric Tools: A Quick Survey 721
+C.1 Matplotlib 721
+C.1.1 Getting matplotlib 722
+C.2 Working with matplotlib 727
+C.2.1 plot Command 727
+C.2.2 Plot Properties 728
+C.2.3 Tick Labels 729
+C.2.4 Bar Graphs 729
+C.2.5 Histograms 730
+C.2.6 Pie Charts 731
+C.3 Numeric Python (NumPy) 732
+C.3.1 Arrays Are Not Lists 732
+C.3.2 Creating a NumPy Array 732
+C.3.3 Manipulating Arrays 732
+Appendix D Table of UTF-8 One-Byte Encodings 735
+Appendix E Precedence 737
+Appendix F Naming Conventions 739
+F.1 Python-Style Elements 740
+F.2 Naming Conventions 740
+F.2.1 Our Added Naming Conventions 741
+F.3 Other Python Conventions 741
+Appendix G Check Yourself Solutions 743
+Chapter 1 743
+Variables and Assignments 743
+Types and Operators 743
+Chapter 2 744
+Basic Control Check 744
+Loop Control Check 744
+More Control Check 744
+for and range Check 745
+Chapter 4 745
+Slicing Check 745
+String Comparison Check 745
+Chapter 5 745
+File Check 745
+Exception Check 745
+Chapter 6 745
+Simple Functions Check 745
+Function Practice with Strings 746
+Chapter 7 746
+Basic Lists Check 746
+Lists and Strings Check 746
+Chapter 8 746
+Passing Mutables Check 746
+More on Functions Check 747
+Chapter 9 747
+Dictionary Check 747
+Set Check 747
+Chapter 11 747
+Basic Classes Check 747
+Defining Special Methods 747
+Chapter 12 748
+Check Defining Your Own Operators 748
+Chapter 14 748
+Basic File Operations 748
+Basic Exception Control 748
+

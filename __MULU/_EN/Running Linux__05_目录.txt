@@ -1,0 +1,189 @@
+
+Preface  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xi
+Part I. Enjoying and Being Productive on Linux
+1. Introduction to Linux  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+About This Book  5
+Who¡¯s Using Linux?  6
+System Features  8
+About Linux¡¯s Copyright  22
+Open Source and the Philosophy of Linux  25
+Sources of Linux Information  30
+Getting Help  32
+2. Preinstallation and Installation  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+Distributions of Linux  34
+Preparing to Install Linux  37
+Post-Installation Procedures  49
+Running into Trouble  53
+3. Desktop Environments  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+Why Use a Graphical Desktop?  67
+The K Desktop Environment  68
+KDE Applications  79
+The GNOME Desktop Environment  88
+GNOME Applications  94
+www.it-ebooks.info
+vi | Table of Contents
+4. Basic Unix Commands and Concepts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102
+Logging In  103
+Setting a Password  104
+Virtual Consoles  105
+Popular Commands  105
+Shells  110
+Useful Keys and How to Get Them to Work  111
+Typing Shortcuts  112
+Filename Expansion  114
+Saving Your Output  116
+What Is a Command?  119
+Putting a Command in the Background  120
+Remote Logins and Command Execution  121
+Manual Pages  123
+Startup Files  125
+Important Directories  127
+Basic Text Editing  128
+Advanced Shells and Shell Scripting  129
+5. Web Browsers and Instant Messaging  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+The World Wide Web  135
+Instant Messaging  142
+6. Electronic Mail Clients . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+Using KMail  150
+Using Mozilla Mail & News  156
+Getting the Mail to Your Computer with fetchmail  157
+OpenPGP Encryption with GnuPG  159
+7. Games  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 167
+Gaming  167
+Quake III 168
+Return to Castle Wolfenstein 173
+Unreal Tournament 2004 177
+Emulators 182
+Frozen Bubble 188
+Tux Racer 190
+www.it-ebooks.info
+Table of Contents | vii
+8. Office Suites and Personal Productivity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+Using OpenOffice  194
+KOffice  240
+Other Word Processors  248
+Synching PDAs  250
+Groupware  254
+Managing Your Finances  260
+9. Multimedia  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 277
+Multimedia Concepts  278
+Kernel and Driver Issues  283
+Embedded and Other Multimedia Devices  290
+Desktop Environments  290
+Windows Compatibility  292
+Multimedia Applications  292
+Multimedia Toolkits and Development Environments  328
+Solutions to Common Problems  330
+References  332
+Part II. System Administration
+10. System Administration Basics  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 335
+Maintaining the System  336
+Managing Filesystems  340
+Managing Swap Space  359
+The /proc Filesystem  363
+Device Files  366
+Scheduling Recurring Jobs Using cron  369
+Executing Jobs Once  374
+Managing System Logs  375
+Processes  378
+Programs That Serve You  382
+11. Managing Users, Groups, and Permissions  . . . . . . . . . . . . . . . . . . . . . . . . . . . 384
+Managing User Accounts  384
+File Ownership and Permissions  394
+Changing the Owner, Group, and Permissions  397
+www.it-ebooks.info
+viii | Table of Contents
+12. Installing, Updating, and Compiling Programs  . . . . . . . . . . . . . . . . . . . . . . . 401
+Upgrading Software  401
+General Upgrade Procedure  403
+Automated and Bulk Upgrades  413
+Upgrading Software Not Provided in Packages  420
+Archive and Compression Utilities  429
+13. Networking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 440
+Networking with TCP/IP  440
+Dial-Up PPP  460
+PPP over ISDN  468
+ADSL  477
+Cable Modems  478
+Network Diagnostics Tools  479
+14. Printing  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 484
+Printing  484
+Managing Print Services 492
+15. File Sharing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 522
+Sharing Files with Windows Systems (Samba)  523
+NFS and NIS Configuration  562
+16. The X Window System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 571
+A History of X  571
+X Concepts  572
+Hardware Requirements  573
+Installing X.org  575
+Configuring X.org  576
+Running X  584
+Running into Trouble  584
+X and 3D  586
+17. System Start and Shutdown  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 590
+Booting the System  590
+System Startup and Initialization  598
+Single-User Mode  604
+Shutting Down the System  605
+A Graphical Runlevel Editor: KSysV  606
+www.it-ebooks.info
+Table of Contents | ix
+18. Configuring and Building the Kernel  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 608
+Building a New Kernel  609
+Loadable Device Drivers  621
+Loading Modules Automatically  626
+19. Text Editing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 627
+Editing Files Using vi  627
+The (X)Emacs Editor  638
+20. Text Processing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 657
+TeX and LaTeX  658
+XML and DocBook  663
+groff  668
+Texinfo  672
+Part III. Programming
+21. Programming Tools  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 681
+Programming with gcc  682
+Makefiles  693
+Debugging with gdb  704
+Useful Utilities for C Programmers  721
+Using Perl  743
+Java  751
+Python  754
+Other Languages  760
+Introduction to OpenGL Programming  762
+Integrated Development Environments  766
+22. Running a Web Server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 768
+Configuring Your Own Web Server  768
+23. Transporting and Handling Email Messages . . . . . . . . . . . . . . . . . . . . . . . . . . 776
+The Postfix MTA  778
+Procmail  787
+Filtering Spam  794
+www.it-ebooks.info
+x | Table of Contents
+24. Running an FTP Server  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 797
+Introduction  797
+Compiling and Installing  797
+Running ProFTPD  800
+Configuration  800
+Part IV. Network Services
+25. Running Web Applications with MySQL and PHP . . . . . . . . . . . . . . . . . . . . . . 809
+MySQL  811
+PHP 819
+The LAMP Server in Action 824
+26. Running a Secure System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 828
+A Perspective on System Security  828
+Initial Steps in Setting Up a Secure System  830
+TCP Wrapper Configuration  834
+Firewalls: Filtering IP Packets  837
+SELinux  849
+27. Backup and Recovery  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 850
+Making Backups  850
+What to Do in an Emergency  859
+28. Heterogeneous Networking and Running Windows Programs . . . . . . . . . . 865
+Sharing Partitions  867
+Emulation and Virtual Operating Systems  871
+Remote Desktop Access to Windows Programs  887
+FreeNX: Linux as a Remote Desktop Server  902
+Appendix: Sources of Linux Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 907
+Index  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 913

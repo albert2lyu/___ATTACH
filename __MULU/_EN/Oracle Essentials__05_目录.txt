@@ -1,0 +1,359 @@
+
+Preface. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiii
+1. Introducing Oracle. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+The Evolution of the Relational Database 3
+Relational Basics 4
+How Oracle Grew 5
+The Oracle Database Family 7
+Summary of Oracle Database Features 9
+Database Application Development Features 10
+Database Programming 10
+Database Extensibility 13
+Database Connection Features 14
+Oracle Net Services 14
+Oracle Internet Directory 14
+Oracle Connection Manager 14
+The Role of Oracle Fusion Middleware 15
+Oracle¡¯s WebLogic Server 16
+Oracle Tuxedo 18
+Data Integration Tools 18
+Business Intelligence Tools 19
+WebCenter 19
+Identity Management 20
+Distributed Database Features 20
+Distributed Queries and Transactions 21
+Heterogeneous Services 21
+Data Movement Features 22
+Transportable Tablespaces 22
+Advanced Queuing and Oracle Streams 22
+Database Performance Features 23
+iii
+www.it-ebooks.info
+Database Parallelization 23
+Data Warehousing 23
+Managing the Oracle Database 25
+Oracle Enterprise Manager 12c 26
+Real Application Testing Option 27
+Pluggable Databases 27
+Storage Management 28
+High Availability 28
+Database Security Features 32
+Advanced Security Option 32
+Label Security Option 32
+Database Vault Option 33
+Audit Vault and Database Firewall Option 33
+Oracle Database Development Tools 33
+Oracle SQL Developer 34
+Oracle Application Express 34
+Other Oracle Databases 35
+Oracle MySQL 35
+Berkeley DB & Oracle NoSQL Database 36
+Oracle TimesTen 37
+Cloudera Distribution of Hadoop 37
+2. Oracle Architecture. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+Databases and Instances 39
+Oracle Database Structures 40
+Pluggable Databases 44
+Database Initialization 45
+Deploying Physical Components 46
+Control Files 46
+Datafiles 48
+Redo Logfiles 50
+Instance Memory and Processes 56
+Memory Structures for an Instance 58
+Background Processes for an Instance 60
+Configuration, Engineered Systems, and the Cloud 62
+The Data Dictionary 63
+3. Installing and Running Oracle. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+Installing Oracle 65
+Optimal Flexible Architecture 67
+Supporting Multiple Oracle Versions on a Machine 67
+Upgrading an Oracle Database 67
+iv | Table of Contents
+www.it-ebooks.info
+Creating a Database 68
+Planning the Database 68
+The Value of Estimating 70
+Tools for Creating Databases 70
+Oracle Net Services and Oracle Net 72
+Resolving Oracle Net Service Names 73
+Global Data Services 74
+Oracle Net Manager 74
+Oracle Connection Pooling 75
+Auto-Discovery and Agents 75
+Oracle Net Configuration Files 76
+Starting Up the Database 77
+Shutting Down the Database 78
+Accessing a Database 79
+Server Processes and Clients 79
+Application Servers and Web Servers As Clients 80
+Oracle Net and Establishing Network Connections 81
+The Shared Server/Multi-Threaded Server 82
+Database Resident Connection Pooling 86
+Oracle in the Cloud 86
+Oracle at Work 87
+Oracle and Transactions 87
+Flashback 89
+A Transaction, Step by Step 90
+4. Oracle Data Structures. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+Datatypes 93
+Character Datatypes 94
+Numeric Datatype 95
+Date Datatype 96
+Other Datatypes 97
+Type Conversion 99
+Concatenation and Comparisons 100
+NULLs 101
+Basic Data Structures 102
+Tables 102
+Views 103
+Indexes 104
+Partitioning 109
+Additional Data Structures 111
+Sequences 111
+Synonyms 111
+Table of Contents | v
+www.it-ebooks.info
+Clusters 112
+Hash Clusters 113
+Extended Logic for Data 113
+Rules Manager 114
+The Expression Filter 114
+Data Design 115
+Constraints 118
+Triggers 120
+Query Optimization 122
+Rule-Based Optimization 123
+Cost-Based Optimization 124
+Specifying an Optimizer Mode 128
+Saving the Optimization 131
+Comparing Optimizations 131
+Performance and Optimization 132
+SQL Translation 132
+Understanding the Execution Plan 132
+SQL Advisors 134
+Data Dictionary Tables 134
+5. Managing Oracle. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
+Manageability Features 139
+Database Advisors 140
+Automatic Storage Management 142
+Oracle Enterprise Manager 142
+Enterprise Manager Architecture 145
+Oracle Enterprise Manager Consoles 148
+EM Express 151
+Backup and Recovery 151
+Types of Backup and Recovery Options 152
+Oracle Secure Backup 154
+Information Lifecycle Management 154
+ILM in Oracle Database 12c 155
+Working with Oracle Support 155
+Reporting Problems 156
+Automated Patching 157
+6. Oracle Security, Auditing, and Compliance. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 159
+Security 159
+Usernames, Privileges, Groups, and Roles 160
+Identity Management 161
+Security Privileges 161
+vi | Table of Contents
+www.it-ebooks.info
+Special Roles: DBA, SYSDBA, and SYSOPER 162
+Policies 164
+Restricting Data-Specific Access 164
+Label Security Option 166
+Security and Application Roles and Privileges 166
+Distributed Database and Multitier Security 167
+Advanced Security Option 169
+Encryption 170
+Data Redaction 170
+Secure Backup 170
+Auditing 171
+Compliance 172
+Oracle Database Vault Option 173
+Oracle Audit Vault Server 174
+Flashback Data Archive 175
+Transparent Sensitive Data Protection 175
+7. Oracle Performance. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177
+Oracle and Resource Usage 178
+Oracle and Disk I/O Resources 179
+I/O Planning Principles for an Oracle Database 179
+Oracle and Parallelism 184
+Block-Range Parallelism 185
+Parallelism for Tables and Partitions of Tables 186
+What Can Be Parallelized? 187
+Partition-Based Parallelism 190
+Oracle and Memory Resources 191
+How Oracle Uses the System Global Area 191
+How Oracle Uses the Program Global Area 194
+Oracle and CPU Resources 196
+Performance Tuning Basics 198
+Defining Performance and Performance Problems 199
+Monitoring and Tuning the Oracle Database for Performance 199
+Using the Oracle Database Resource Manager 202
+Additional Monitoring and Tuning Available for Oracle Exadata 203
+A Final Note on Performance Tuning 204
+8. Oracle Multiuser Concurrency. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+Basics of Concurrent Access 206
+Transactions 206
+Locks 207
+Concurrency and Contention 208
+Table of Contents | vii
+www.it-ebooks.info
+Integrity Problems 208
+Serialization 209
+Oracle and Concurrent User Access 209
+Oracle¡¯s Isolation Levels 210
+Oracle Concurrency Features 211
+How Oracle Handles Locking 213
+A Simple Write Operation 213
+A Conflicting Write Operation 214
+A Read Operation 215
+Concurrent Access and Performance 217
+Workspaces 218
+Workspace Implementation 218
+Workspace Operations 219
+Workspace Enhancements 219
+9. Oracle and Transaction Processing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 221
+OLTP Basics 221
+What Is a Transaction? 222
+What Does OLTP Mean? 222
+OLTP Versus Business Intelligence 224
+Transactions and High Availability 225
+Oracle¡¯s OLTP Heritage 225
+Architectures for OLTP 227
+Traditional Two-Tier Client/Server 227
+Stored Procedures 228
+Three-Tier Systems 228
+Application Servers and Web Servers 230
+The Grid 231
+OLTP and the Cloud 232
+Oracle Features for OLTP 232
+General Concurrency and Performance 232
+Scalability 234
+Real Application Clusters 237
+Exadata and OLTP 239
+High Availability 240
+10. Oracle Data Warehousing and Business Intelligence. . . . . . . . . . . . . . . . . . . . . . . . . . . . 243
+Data Warehousing Basics 244
+The Evolution of Data Warehousing and Business Intelligence 245
+A Topology for Business Intelligence 246
+Data Marts 247
+The Operational Data Store and Enterprise Warehouse 248
+viii | Table of Contents
+www.it-ebooks.info
+OLTP Systems and Business Intelligence 249
+Big Data and the Data Warehouse 249
+Data Warehouse Design 250
+Query Optimization 252
+Bitmap Indexes and Parallelism 253
+Optimization Provided by the Exadata Storage Server Software 255
+Dimensional Data and Hierarchies in the Database 256
+Summary Tables 256
+Materialized Views 257
+OLAP Option 257
+Analytics and Statistics in the Database 258
+Basic Analytic and Statistical Functions 258
+Other SQL Extensions 259
+Advanced Analytics Option 260
+Other Datatypes and Big Data 262
+Loading Data into the Data Warehouse 263
+Managing the Data Warehouse 265
+Business Intelligence Tools 267
+Oracle Business Intelligence Foundation Suite 267
+Business Intelligence Applications 269
+Data Discovery and Oracle Endeca Information Discovery 270
+Oracle Exalytics 271
+The Metadata Challenge 271
+Putting It All Together 272
+A Complete Analytics Infrastructure 272
+Best Practices 273
+Common Misconceptions 274
+Effective Strategy 275
+11. Oracle and High Availability. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 277
+What Is High Availability? 278
+Measuring High Availability 278
+The System Stack and Availability 280
+Server Hardware, Storage, and Database Instance Failure 281
+What Is Instance Recovery? 282
+Phases of Instance Recovery 283
+Protecting Against System Failure 284
+Component Redundancy 284
+Disk Redundancy 285
+Automatic Storage Management 287
+Site and Computer Server Failover 288
+Oracle Data Guard and Site Failures 289
+Table of Contents | ix
+www.it-ebooks.info
+Oracle Active Data Guard and Zero Data Loss 291
+Oracle GoldenGate and Replication 291
+Real Application Clusters and Instance Failures 293
+Oracle Transparent Application Failover 296
+Oracle Application Continuity 298
+Recovering from Failures and Data Corruption 299
+Developing a Backup-and-Recovery Strategy 299
+Taking Oracle Backups 300
+Using Backups to Recover 300
+Recovery Manager 302
+Read-Only Tablespaces and Backups 304
+Old-Fashioned Data Redundancy 304
+Point-in-Time Recovery 305
+Flashback 305
+Planned Downtime 307
+12. Oracle and Hardware Architecture. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 309
+System Basics 310
+Symmetric Multiprocessing Systems and Nodes 311
+Clustered Solutions, Grid Computing, and the Cloud 313
+Disk and Storage Technology 316
+Oracle¡¯s Engineered Systems 317
+Oracle Exadata Database Machine 317
+Oracle Exalogic 320
+Oracle SuperCluster 321
+Oracle Database Appliance 322
+Other Engineered Systems 322
+Choosing and Defining the Right Platform 323
+Sizing and Planning for Growth 323
+Maximum Availability Architecture Considerations 324
+Justifying an Oracle Engineered System 325
+13. Oracle Distributed Databases and Distributed Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 327
+Accessing Distributed Databases 328
+Distributed Data Across Multiple Oracle Databases 328
+Access to and from Non-Oracle Databases 329
+Two-Phase Commit 330
+Oracle Tuxedo 331
+Replication and Data Transport 333
+Replication Basics 333
+History of Oracle Replication Offerings 334
+Oracle GoldenGate 335
+x | Table of Contents
+www.it-ebooks.info
+Global Data Services 336
+Data Transport Using Database Features 337
+14. Oracle Extended Datatypes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 339
+Object-Oriented Development 340
+Object-Relational Features 340
+Java¡¯s Role and Web Services 343
+JavaBeans 344
+Extensibility Features and Options 345
+Oracle Multimedia 345
+Oracle Text 346
+XML DB 346
+Oracle Spatial and Graph Option 347
+The Extensibility Architecture Framework 350
+15. Oracle and the Cloud. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 351
+Cloud Definitions 351
+Common Characteristics 352
+Cloud Levels 353
+Is the Cloud New? 354
+Use Cases for Cloud Computing 356
+Oracle Database in the Cloud 357
+Oracle as a DBaaS 357
+Oracle as a PaaS 357
+Consumer and Provider 358
+Oracle Database Cloud Service 358
+History of Application Express 360
+Architecture 361
+Development with the Database Cloud Service 364
+SQL Developer and the Database Cloud 369
+Implementing Provider Clouds 369
+A. What¡¯s New in This Book for Oracle Database 12c. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 371
+B. Additional Resources. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 379
+Index. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 389

@@ -1,0 +1,208 @@
+
+Introduction
+Who Should Read This Book
+How This Book Is Organized
+Minimum Requirements
+Where to Go from Here
+Part I: The Linux Command Line
+Chapter 1: Starting with Linux Shells
+What Is Linux?
+Linux Distributions
+Summary
+Chapter 2: Getting to the Shell
+Reaching the Command Line
+Accessing CLI via a Linux Console Terminal
+Accessing CLI via Graphical Terminal Emulation
+Using the GNOME Terminal Emulator
+Using the Konsole Terminal Emulator
+Using the xterm Terminal Emulator
+Summary
+Chapter 3: Basic bash Shell Commands
+Starting the Shell
+Using the Shell Prompt
+Interacting with the bash Manual
+Navigating the Filesystem
+Listing Files and Directories
+Handling Files
+Managing Directories
+Viewing File Contents
+Summary
+Chapter 4: More bash Shell Commands
+Monitoring Programs
+Monitoring Disk Space
+Working with Data Files
+Summary
+Chapter 5: Understanding the Shell
+Exploring Shell Types
+Exploring Parent and Child Shell Relationships
+Understanding Shell Built-In Commands
+Summary
+Chapter 6: Using Linux Environment Variables
+Exploring Environment Variables
+Setting User-Defined Variables
+Removing Environment Variables
+Uncovering Default Shell Environment Variables
+Setting the PATH Environment Variable
+Locating System Environment Variables
+Learning about Variable Arrays
+Summary
+Chapter 7: Understanding Linux File Permissions
+Linux Security
+Using Linux Groups
+Decoding File Permissions
+Changing Security Settings
+Sharing Files
+Summary
+Chapter 8: Managing Filesystems
+Exploring Linux Filesystems
+Working with Filesystems
+Managing Logical Volumes
+Summary
+Chapter 9: Installing Software
+Package Management Primer
+The Debian-Based Systems
+The Red Hat¨CBased Systems
+Installing from Source Code
+Summary
+Chapter 10: Working with Editors
+Visiting the vim Editor
+Navigating the nano Editor
+Exploring the emacs Editor
+Exploring the KDE Family of Editors
+Exploring the GNOME Editor
+Summary
+Part II: Shell Scripting Basics
+Chapter 11: Basic Script Building
+Using Multiple Commands
+Creating a Script File
+Displaying Messages
+Using Variables
+Redirecting Input and Output
+Pipes
+Performing Math
+Exiting the Script
+Summary
+Chapter 12: Using Structured Commands
+Working with the if-then Statement
+Exploring the if-then-else Statement
+Nesting ifs
+Trying the test Command
+Considering Compound Testing
+Working with Advanced if-then Features
+Considering the case Command
+Summary
+Chapter 13: More Structured Commands
+The for Command
+The C-Style for Command
+The while Command
+The until Command
+Nesting Loops
+Looping on File Data
+Controlling the Loop
+Processing the Output of a Loop
+Practical Examples
+Summary
+Chapter 14: Handling User Input
+Passing Parameters
+Using Special Parameter Variables
+Being Shifty
+Working with Options
+Standardizing Options
+Getting User Input
+Summary
+Chapter 15: Presenting Data
+Understanding Input and Output
+Redirecting Output in Scripts
+Redirecting Input in Scripts
+Creating Your Own Redirection
+Listing Open File Descriptors
+Suppressing Command Output
+Using Temporary Files
+Logging Messages
+Practical Example
+Summary
+Chapter 16: Script Control
+Handling Signals
+Running Scripts in Background Mode
+Running Scripts without a Hang-Up
+Controlling the Job
+Being Nice
+Running Like Clockwork
+Summary
+Part III: Advanced Shell Scripting
+Chapter 17: Creating Functions
+Basic Script Functions
+Returning a Value
+Using Variables in Functions
+Array Variables and Functions
+Function Recursion
+Creating a Library
+Using Functions on the Command Line
+Following a Practical Example
+Summary
+Chapter 18: Writing Scripts for Graphical Desktops
+Creating Text Menus
+Doing Windows
+Getting Graphic
+Summary
+Chapter 19: Introducing sed and gawk
+Manipulating Text
+Commanding at the sed Editor Basics
+Summary
+Chapter 20: Regular Expressions
+What Are Regular Expressions?
+Defining BRE Patterns
+Extended Regular Expressions
+Regular Expressions in Action
+Summary
+Chapter 21: Advanced sed
+Looking at Multiline Commands
+Holding Space
+Negating a Command
+Changing the Flow
+Replacing via a Pattern
+Placing sed Commands in Scripts
+Creating sed Utilities
+Summary
+Chapter 22: Advanced gawk
+Using Variables
+Working with Arrays
+Using Patterns
+Structured Commands
+Formatted Printing
+Built-In Functions
+User-Defined Functions
+Working through a Practical Example
+Summary
+Chapter 23: Working with Alternative Shells
+What Is the dash Shell?
+The dash Shell Features
+Scripting in dash
+The zsh Shell
+Parts of the zsh Shell
+Scripting with zsh
+Summary
+Part IV: Creating Practical Scripts
+Chapter 24: Writing Simple Script Utilities
+Performing Archives
+Managing User Accounts
+Monitoring Disk Space
+Summary
+Chapter 25: Producing Scripts for Database, Web, and E-Mail
+Using a MySQL Database
+Using the Web
+Using E-Mail
+Summary
+Chapter 26: Creating Fun Little Shell Scripts
+Sending a Message
+Obtaining a Quote
+Generating an Excuse
+Summary
+Appendix A: Quick Guide to bash Commands
+Reviewing Built-In Commands
+Looking at Common bash Commands
+Assessing Environment Variables
+Appendix B: Quick Guide to sed and gawk
+The sed Editor
+The gawk Program
+End User License Agreement

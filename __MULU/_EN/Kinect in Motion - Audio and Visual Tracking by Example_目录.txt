@@ -1,0 +1,53 @@
+
+Preface 1
+Chapter 1: Kinect for Windows 每 Hardware and SDK Overview 7
+Motion computing and Kinect 7
+Hardware overview 9
+The IR projector 10
+Depth camera 10
+The RGB camera 12
+Tilt motor and three-axis accelerometer 13
+Microphone array 13
+Software architecture 14
+Video stream 16
+Depth stream 17
+Audio stream 18
+Skeleton 20
+Summary 21
+Chapter 2: Starting with Image Streams 23
+Color stream 24
+Editing the colored image 28
+Image tuning 31
+The color image formats 32
+The Infrared color image format 33
+The raw Bayer formats 33
+YUV raw format 35
+Depth stream 36
+DepthRange 每 the default and near mode 38
+Extended range 38
+Mapping from the color frame to the depth frame 39
+Summary 42
+www.it-ebooks.info
+Table of Contents
+[ ii ]
+Chapter 3: Skeletal Tracking 43
+Tracking users 44
+Copying the skeleton data 47
+Default and Seated mode 53
+Detecting simple actions 54
+Joint rotations 60
+Summary 62
+Chapter 4: Speech Recognition 63
+Speech recognition 64
+Grammars 64
+A simple grammar sample 64
+The Microsoft.Speech library 66
+Tracking audio sources 75
+Sound source angle 75
+Beam angle 76
+Summary 82
+Appendix: Kinect Studio and Audio Recording 83
+Kinect Studio 每 capturing Kinect data 84
+Audio stream data 每 recording and injecting 88
+Summary 93
+Index 95

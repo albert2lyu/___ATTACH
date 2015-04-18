@@ -1,0 +1,122 @@
+
+1. P. Preface
+a. Contents of This Book
+i. What Each Chapter Covers
+b. Conventions Used in This Book
+c. Using Code Examples
+d. Safari? Books Online
+e. How to Contact Us
+f. Acknowledgments
+2. 1. Getting Started
+a. Creating a Compute Engine Project
+i. Enabling Billing
+ii. Adding Team Members
+b. Compute Engine Resources
+i. Manage Compute Engine Resources
+c. Summary
+d. Up Next
+3. 2. Instances
+a. Creating an Instance Using the Developers Console
+b. Accessing an Instance Using the Developers Console
+c. Deleting an Instance Using the Developers Console
+d. Creating an Instance Using gcloud
+i. Instance Attributes
+e. Accessing an Instance Using gcloud
+f. Deleting an Instance Using gcloud
+g. Creating an Instance Programmatically
+h. Creating an Instance Using a Service Account
+i. Selecting an Access Mode
+j. Cleaning Up
+k. Summary
+l. Up Next
+4. 3. Storage: Persistent Disk
+a. Compute Engine Storage Options at a Glance
+b. Persistent Disk
+i. Persistent Disk Performance
+ii. Create a Persistent Disk Using Developers Console
+iii. Create a Persistent Disk Using gcloud
+iv. Attaching/Detaching a PD to/from a Running VM
+v. Create a Persistent Disk Programmatically
+vi. Persistent Disk Snapshots
+c. Summary
+d. Up Next
+5. 4. Storage: Cloud Storage
+a. Understanding BLOB Storage
+b. Getting Started
+c. Introducing gsutil
+d. Using Cloud Storage from Your Code
+e. Configuring Access Control
+f. Understanding ACLs
+g. Using Default Object ACLs
+h. Understanding Object Immutability
+i. Understanding Strong Consistency
+j. Summary
+k. Up Next
+6. 5. Storage: Cloud SQL and Cloud Datastore
+a. Cloud SQL
+i. Getting Started
+ii. Creating Databases and Tables
+iii. Running SQL Queries
+b. Cloud Datastore
+i. Getting Started
+ii. Creating and Viewing Entities via the Developers Console
+iii. Creating and Retrieving Entities Programmatically from a VM
+c. Bring Your Own Database
+d. Summary
+e. Up Next
+7. 6. Networking
+a. A Short Networking Primer
+i. Network Addresses and Routing
+ii. Transport Control Protocol (TCP)
+iii. The Domain Name System (DNS)
+iv. Hypertext Transfer Protocol (HTTP)
+v. Load Balancing
+vi. Firewalls
+b. Default Networking
+c. Configuring Firewall Rules
+d. Configuring Load Balancing
+e. Reserving External IP Addresses
+f. Configuring Networks
+g. Understanding Networking Costs
+h. Understanding Routing
+i. Selecting an Access Mode
+j. Summary
+k. Up Next
+8. 7. Advanced Topics
+a. Startup Scripts
+i. gcloud compute
+ii. Literal-Value Approach
+iii. Local-File Approach
+iv. Cloud-Storage Approach
+v. Publicly Available Approach
+vi. API Approach
+b. Custom Images
+i. Creating a Custom Image
+ii. Using a Custom Image
+c. Metadata
+i. Metadata Server
+ii. Metadata Entries
+iii. Project Metadata
+iv. Instance Metadata
+v. Data Formats
+vi. Default Versus Custom
+vii. Project-Level Custom Metadata
+viii. Instance-Level Custom Metadata
+ix. wait_for_change URL parameter
+d. Summary
+e. Up Next
+9. 8. A Complete Application
+a. Application Concept
+i. Requirements
+b. Application Information Flow
+c. Building Our App Step by Step
+i. Step 0: Create Your Development VM and Clone the Sample App
+ii. Step 1: Create a Docker image for your app
+iii. Step 2: Build the UI framework
+iv. Step 3: Build the user interface
+v. Step 4: Implement the master
+vi. Step 5: Implement the slave
+vii. Step 6: Add our visualization
+viii. Step 7: Deploy a cluster into production
+d. Conclusion
+10. Index

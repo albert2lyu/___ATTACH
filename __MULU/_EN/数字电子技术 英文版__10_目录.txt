@@ -1,0 +1,129 @@
+
+CONTENTS
+Chapter 1 Introductory Concepts  1
+1每1 Digital and Analog Quantities  1
+1每2 Binary Digits, Logic Levels, and Digital Waveforms  3
+1每3 Fixed-Function Integrated Circuits  8
+
+Chapter 2 Number Systems, Operations, and Codes  16
+2每1 Decimal Numbers  16
+2每2 Binary Numbers  17
+2每3 Decimal-to-Binary Conversion  20
+2每4 Binary Arithmetic  22
+2每5 1＊s and 2＊s Complements of Binary Numbers  26
+2每6 Signed Numbers  27
+2每7 Arithmetic Operations with Signed Numbers  33
+2每8 Hexadecimal Numbers  39
+2每9 Octal Numbers  45
+2每10 Binary Coded Decimal (BCD)  47
+2每11 Digital Codes  50
+2每12 Error Detection Codes  52
+
+Chapter 3 Logic Gates  66
+3每1 The Inverter  66
+3每2 The AND Gate  68
+3每3 The OR Gate  75
+3每4 The NAND Gate  79
+3每5 The NOR Gate  83
+3每6 The Exclusive-OR and Exclusive-NOR Gates  87
+3每7 Fixed-Function Logic  90
+
+Chapter 4 Boolean Algebra and Logic Simplification  110
+4每1 Boolean Operations and Expressions  110
+4每2 Laws and Rules of Boolean Algebra  111
+4每3 DeMorgan＊s Theorems  116
+4每4 Boolean Analysis of Logic Circuits  119
+4每5 Simplification Using Boolean Algebra  122
+4每6 Standard Forms of Boolean Expressions  125
+4每7 Boolean Expressions and Truth Tables  131
+4每8 The Karnaugh Map  135
+4每9 Karnaugh Map SOP Minimization  137
+4每10 Five-Variable Karnaugh Maps  147
+System Application Activity  149
+
+Chapter 5 Combinational Logic Analysis  163
+5每1 Basic Combinational Logic Circuits  163
+5每2 Implementing Combinational Logic  168
+5每3 The Universal Property of NAND and NOR Gates  173
+5每4 Combinational Logic Using NAND and NOR Gates  175
+5每5 Logic Circuit Operation with Pulse Waveform Inputs  180
+System Application Activity  183
+
+Chapter 6 Functions of Combinational Logic  197
+6每1 Basic Adders  197
+6每2 Parallel Binary Adders  200
+6每3 Ripple Carry Versus took-Ahead Adders  206
+6每4 Comparators  210
+6每5 Decoders  213
+6每6 Encoders  221
+6每7 Code Converters  225
+6每8 Multiplexers (Data Selectors)  228
+6每9 Demultiplexers  236
+6每10 Parity Generators/Checkers  237
+System Application Activity  240
+
+Chapter 7 Latches, Flip-Flops, and Timers  260
+7每1 Latches  260
+7每2 Edge-Triggered Flip-Flops  266
+7每3 Flip-Flops Operating Characteristics  277
+7每4 Flip-Flops Applications  279
+7每5 One-Shots  283
+7每6 The Astable Multivibrator  291
+System Application Activity  294
+
+Chapter 8 Counters  308
+8每1 Asynchronous Counters  308
+8每2 Synchronous Counters  316
+8每3 Up/Down Synchronous Counters  322
+8每4 Design of Synchronous Counters  326
+8每5 Cascaded Counters  335
+8每6 Counter Decoding  338
+8每7 Counter Applications  342
+8每8 Logic Symbols with Dependency Notation  346
+System Application Activity  348
+
+Chapter 9 Shift Registers  363
+9每1 Basic Shift Register Operations  363
+9每2 Serial In/Serial Out Shift Registers  364
+9每3 Serial In/Parallel Out Shift Registers  368
+9每4 Parallel In/Serial Out Shift Registers  370
+9每5 Parallel In/Parallel Out Shift Registers  374
+9每6 Bidirectional Shift Registers  375
+9每7 Shift Register Counters  378
+9每8 Shift Register Applications  381
+9每9 Logic Symbols with Dependency Notation  389
+System Application Activity  390
+
+Chapter 10 Memory and Storage  402
+10每1 Memory Basics  402
+10每2 The Random-Access Memory (RAM)  406
+10每3 The Read-Only Memory (RAM)  419
+10每4 Programmable ROMs  423
+10每5 The Flash Memory  426
+10每6 Memory Expamsion  430
+10每7 Special Types of Memories  436
+10每8 Magnetic and Optical Storage  441
+System Application Activity  447
+
+Chapter 11 Signal Interfacing and Processing  458
+11每1 Converting Analog Signals to Ditital  458
+11每2 Analog-to-Digital Conversion Methods  464
+11每3 Digital-to-Analog Conversion Methods  475
+11每4 Digital Signal Processing Basics  483
+
+Chapter 12 Integrated Circuit Technologies  491
+12每1 Basic Operational Characteristics and Parameters  491
+12每2 CMOS Circuits  498
+12每3 TTL (Bipolar) Circuits  503
+12每4 Practical Considerations in the Use of TTL.  508
+12每5 Comparison of CMOS and TTL Performance  515
+12每6 Emitter-Coupled Logic (ECL) Circuits  516
+12每7 PMOS, NMOS, and E2CMOS  518
+
+Appendix A Karnaugh Map POS Minimization  529
+
+Appendix B The Quine-McCluskey Method  533
+
+Appendix C NI Multisim for Circuit Simulation  536
+
+Answers to Odd-Numbered Problems  541

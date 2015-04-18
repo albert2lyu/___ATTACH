@@ -1,0 +1,386 @@
+
+INTRODUCTION xxvii
+PART I: LOCATION SERVICES
+CHAPTER 1: INTRODUCING THE ANDROID LOCATION SERVICE 3
+Methods Used to Determine Location 3
+GPS Provider 4
+How It Works 4
+GPS Improvements 5
+Limitations 6
+Controlling GPS 7
+Network Provider 8
+Using Wireless Network Access Points 8
+Using Cell IDs 9
+Summary 10
+CHAPTER 2: DETERMINING A DEVICE¡¯S CURRENT LOCATION 11
+Know Your Tools 12
+LocationManager 12
+LocationProvider 13
+Location 13
+Criteria 13
+LocationListener 15
+Setting up the Android Manifest 15
+Determining the Appropriate Location Provider 15
+GPS Location Provider 16
+Network Location Provider 16
+Passive Location Provider 16
+Accuracy versus Battery Life 17
+Receiving Location Updates 18
+Receiving Location Updates with a LocationListener 18
+Receiving Location Updates with a Broadcast Intent 18
+Implementing the Example App 18
+Implementing LocationListener 18
+onLocationChanged() 19
+onProviderDisabled() and onProviderEnabled() 19
+onStatusChanged() 20
+Obtaining a Handle to LocationManager 20
+Requesting Location Updates 23
+Cleaning up After Yourself 25
+Launching the Location Settings Activity 25
+Summary 26
+CHAPTER 3: TRACKING DEVICE MOVEMENT 27
+Collecting Location Data 28
+Receiving Location Updates with a Broadcast Receiver 28
+Extending BroadcastReceiver 29
+Registering the BroadcastReceiver with Android 30
+Requesting Location Updates with a PendingIntent 32
+One Intent, Multiple Receivers 33
+Why Not Use a Service? 34
+Viewing the Tracking Data 35
+Google Map Library Components 36
+MapView 37
+OverlayItem 37
+ItemizedOverlay 38
+MapActivity 40
+Filtering Location Data 40
+Continuous Location Tracking and Battery Life 43
+Reducing Location Update Frequency 43
+Limiting Location Providers 44
+Summary 44
+CHAPTER 4: PROXIMITY ALERTS 45
+App Structure 45
+Geocoding 46
+android.location.Geocoder 46
+Reading the Geocoded Response 48
+Setting a Proximity Alert 50
+Responding to a Proximity Alert 53
+Proximity Alert Limitations 55
+Battery Life 55
+Permissions 56
+More Efficient Proximity Alert 56
+ProximityAlertService 56
+Summary 61
+PART II: INFERRING INFORMATION FROM PHYSICAL SENSORS
+CHAPTER 5: OVERVIEW OF PHYSICAL SENSORS 65
+Definitions 66
+Android Sensor API 68
+SensorManager 68
+Sensor 68
+Sensor Rates 69
+Sensor Range and Resolution 70
+SensorEventListener 71
+SensorEvent 71
+Sensor List 72
+The Manifest File 72
+SensorListActivity 73
+SensorSelectorFragment 74
+SensorDisplayFragment 76
+Sensing the Environment 84
+Sensor.TYPE_LIGHT 84
+Sensor.TYPE_PROXIMITY 85
+Sensor.TYPE_PRESSURE 86
+Absolute Altitude 87
+Relative Altitude 87
+Mean Sea-Level Pressure (MSLP) 87
+Where to Find MSLP 88
+Sensor Units 88
+Sensor Range 88
+Common Use Cases 88
+Sensor.TYPE_RELATIVE_HUMIDITY 89
+Sensor.TYPE_AMBIENT_TEMPERATURE 89
+Sensor.TYPE_TEMPERATURE 89
+Sensing Device Orientation and Movement 90
+Coordinate Systems 90
+Global Coordinate System 91
+Device Coordinate System 91
+Angles 91
+Sensor.TYPE_ACCELEROMETER, .TYPE_GRAVITY, and
+.TYPE_LINEAR_ACCELERATION 92
+Sensor Units and Resolution 93
+Sensor.TYPE_GYROSCOPE 94
+Sensor Units 94
+Sensor Range 94
+Sensor.TYPE_MAGNETIC_FIELD 94
+Sensor Units, Range, and Resolution 95
+Sensor.TYPE_ROTATION_VECTOR 97
+SensorManager.getOrientation() 98
+SensorManager.getInclination() 101
+Sensor Fusion Schemes 101
+Summary 102
+CHAPTER 6: ERRORS AND SENSOR SIGNAL PROCESSING 103
+Definitions 104
+Accuracy and Precision 104
+Types of Errors 105
+Human Error, Systematic Error, and Random Error 105
+Noise 105
+Drift 105
+Zero Offset (or ¡°Offset,¡± or ¡°Bias¡±) 105
+Time Delays and Dropped Data 105
+Integration Error 106
+Techniques to Address Error 107
+Re-zeroing 107
+Filters 107
+Sensor Fusion 107
+Filters 107
+Low-Pass 107
+Weighted Smoothing 108
+Simple Moving Average (SMA) 108
+Choosing the Smoothing Parameter 111
+Averaging: Smoothness vs. Response Time 111
+Simple Moving Median (SMM) 111
+High-Pass 111
+Inverse Low-Pass Filter 112
+Bandpass 113
+Introducing Kalman Filters 114
+A Better Determination of Orientation
+by Using Sensor Fusion 115
+Sensor Fusion: Simple vs. Proprietary 115
+Proprietary Sensor Fusion 116
+Simple Sensor Fusion: The Balance Filter 117
+Summary 119
+CHAPTER 7: DETERMINING DEVICE ORIENTATION 121
+Previewing the Example App 121
+Determining Device Orientation 122
+Gravity Sensor 123
+Accelerometer and Magnetometer 123
+Gravity Sensor and Magnetometer 124
+Rotation Vector 124
+Implementation Details 125
+Processing Gravity Sensor Data 130
+Processing Accelerometer and Magnetic Field Data 130
+Processing Rotation Vector Data 132
+Notifying the User of Orientation Changes 135
+NorthFinder 143
+Summary 146
+CHAPTER 8: DETECTING MOVEMENT 147
+Acceleration Data 148
+Accelerometer Data 148
+Linear Acceleration Sensor Data 150
+Data While Device Is in Motion 150
+Total Acceleration 153
+Implementation 153
+DetermineMovementActivity 153
+AccelerationEventListener 156
+Summary 159
+CHAPTER 9: SENSING THE ENVIRONMENT 161
+Barometer vs. GPS for Altitude Data 162
+Example App Overview 162
+Implementation Details 163
+GPS-Based Altitude 169
+Barometric Pressure¨CBased Altitude 170
+Relative Altitude 177
+Summary 187
+CHAPTER 10: ANDROID OPEN ACCESSORY 189
+A Short History of AOA 189
+USB Host Versus USB Accessory 190
+Electrical Power Requirements 190
+Supported Android Devices 190
+The Android Development Kit (ADK) 191
+Hardware Components 194
+Software Components 195
+AOA Sensors versus Native Device Sensors 196
+AOA Beyond Sensors 196
+AOA Limitations 196
+AOA and Sensing Temperature 197
+Implementation 198
+Requirements 198
+Getting Started with the Arduino Software 198
+Arduino Sketch 199
+Android Code 205
+Communication between Arduino and Android 208
+Taking an Android Accessory to the Consumer Market 215
+Summary 216
+PART III: SENSING THE AUGMENTED, PATTERN-RICH EXTERNAL WORLD
+CHAPTER 11: NEAR FIELD COMMUNICATION (NFC) 219
+What Is RFID? 220
+What Is NFC? 222
+The NDEF Data Format 223
+How and Where to Buy NFC Tags 224
+NDEF-compatible NFC Tags 224
+Storage Size versus Price versus Security Trade-off 224
+Write Protection 226
+Form Factor 226
+Retailers 227
+General Advantages and Disadvantages of NFC 227
+Low Power and Proximity Based 228
+Small, Short Data Bursts 228
+Singular Scanning 229
+Security 229
+Card Emulation 229
+Android-specific Advantage: Intents 229
+Required Hardware 230
+Building an Inventory Tracking System 230
+The Scenario 230
+The NFC Inventory Demonstration App 230
+Enabling NFC in the Settings 231
+Debugging Your Tags with Apps 232
+Android APIs 233
+In Your AndroidManifest.xml File 233
+Permissions and Minimum API Level 233
+Intent Filters 233
+Custom MIME Type Intent Filters 234
+URI-based Intent Filters 235
+In Your Main Activity Class 236
+NfcManager 237
+NfcAdapter 237
+Foreground Dispatching 237
+Foreground NDEF Push 241
+Reacting to an NDEF Tag 241
+NdefMessage and NdefRecord 243
+Parsing and Reading NDEF Tags 245
+Getting Ready to Write to a Tag 246
+Writing to the Tag 248
+Putting it All Together 250
+Future Considerations 251
+NFC N-Mark 251
+Peer-to-Peer NFC Sharing 251
+Peer-to-Peer Android APIs 252
+Go Forth and NFC! 253
+Summary 254
+CHAPTER 12: USING THE CAMERA 255
+Using the Camera Activity 255
+Controlling the Camera with Your Own Activity 256
+Claiming and Releasing a Camera 257
+The Preview View 258
+Controlling the Camera 261
+Orientation 261
+Zoom 263
+Focus 264
+Switching Cameras 264
+Flash 264
+Other Camera Parameters 265
+Creating a Simple Barcode Reader 267
+Understanding Barcodes 267
+Parity and Implied First Digit 269
+The Check Digit 270
+Right Half of the Barcode 271
+Autofocus 272
+Using the Camera Preview Image and Detecting the Barcode 273
+Debugging Image Processing Programs on Android 275
+Detecting the Barcode 276
+Summary 279
+CHAPTER 13: IMAGE-PROCESSING TECHNIQUES 281
+The Structure of Image-Processing Programs 281
+The Image-Processing Pipeline 281
+Common Image-Processing Operations 282
+Image-to-Image Operations 282
+Image-to-Object Operations 284
+Jon¡¯s Java Imaging Library (JJIL) 284
+Image 285
+PipelineStage 285
+Sequence 288
+Ladder 289
+JJIL and Detecting the Android Logo 291
+Choose the Right Image Size 293
+Improving Reliability in Image Processing 296
+Detecting Faces 299
+Image-Processing Resources 300
+Summary 301
+CHAPTER 14: USING THE MICROPHONE 303
+Introducing the Android Clapper 303
+Using MediaRecorder to Analyze Maximum Amplitude 304
+Recording Maximum Amplitude 305
+Asynchronous Audio Recording 310
+Implementing a Clapper 312
+Analyzing Raw Audio 314
+Setting Audio Input Parameters 315
+Preparing AudioRecord 316
+Recording Audio 317
+Using OnRecordPositionUpdateListener 317
+Using Loud Noise Detection 323
+Using Consistent Frequency Detection 324
+Estimating Frequency 325
+Implementing the Singing Clapper 327
+Summary 329
+PART IV: SPEAKING TO ANDROID
+CHAPTER 15: DESIGNING A SPEECH-ENABLED APP 333
+Know Your Tools 334
+User Interface Screen Flow 336
+Voice Action Types 337
+Voice User Interface (VUI) Design 338
+Deciding Appropriate Tasks for Voice Actions 339
+Designing What the App and Users Will Say 340
+Constrain Speech Input to Increase Accuracy 340
+Train Users to Know What They Can Say 340
+Prompt the Users so They Know What to Say 341
+Confi rm Success and Help Users Recover from Errors 342
+Help Users Recover from Accidental Speech Activation 343
+Teach Users Proper Speech Hygiene 344
+Use Menus Cautiously 344
+After the Design 345
+Testing Your Design 346
+Summary 347
+References 347
+CHAPTER 16: USING SPEECH RECOGNITION
+AND TEXT-TO-SPEECH APIS 349
+Text-To-Speech 349
+Initialization 350
+Initialization with Locale 351
+Check TTS Data Action 361
+Speaking 366
+Speaking a Script 369
+Speech Recognition 377
+Initializing 377
+Using the RecognizerIntent 382
+The Speech Recording Process 384
+Confi guring and Processing the Result 385
+RecognizerIntent Use Cases 386
+Implementation 391
+Direct Speech Recognition Using SpeechRecognizer 403
+Summary 405
+CHAPTER 17: MATCHING WHAT WAS SAID 407
+Parts of a Voice Command 407
+Word Spotting 409
+Indexing to Improve Word Spotting 411
+Stemming 412
+Phonetic Indexing 414
+Matching Command Words in Persistent Storage 418
+SQLite Full Text Search 418
+Using the LIKE Operator 419
+Using the FTS MATCH Operator 420
+Implementing FTS 421
+Word Searching with Lucene 426
+Multi-part Commands 431
+Ignoring Potential Collisions 432
+Considering Ordering 434
+Using a Grammar 438
+Summary 438
+CHAPTER 18: EXECUTING VOICE ACTIONS 441
+Food Dialogue VUI Design 442
+Defining and Executing Voice Actions 443
+Executing VoiceActionCommands 448
+Implementing an AlertDialog for VoiceActions 451
+Implementing Multi-Turn Voice Actions 455
+Implementing Multi-Turn AddFood 455
+Implementing Multi-Turn RemoveFood 459
+Making a Best Guess 461
+Relaxing Strictness Between Commands 463
+Making an Educated Guess 464
+Responding When Recognition Fails 466
+Determining Not a Command 468
+Determining Inaccurate Recognition 469
+Not Understanding 469
+Summary 469
+CHAPTER 19: IMPLEMENTING SPEECH ACTIVATION 471
+Implementing Speech Activation 472
+Starting Speech Recognition 473
+Implementing Speech Activation within an Activity 475
+Activating Speech Recognition with Movement Detection 479
+Activating Speech Recognition with the Microphone 481
+Activating Speech Recognition with
+Continuous Speech Recognition 483
+Activating Speech Recognition with NFC 487
+Implementing Persistent Speech Activation 488
+Using a Service for Persistent Speech Activation 489
+Summary 494
+INDEX 495

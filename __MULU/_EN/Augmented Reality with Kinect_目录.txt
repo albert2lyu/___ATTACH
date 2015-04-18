@@ -1,0 +1,86 @@
+
+Preface 1
+Chapter 1: Getting Started with Kinect 5
+Installation of Kinect 6
+Setting up your Kinect software on PCs 7
+Why did I do that? 8
+The idea of the AR-based Fruit Ninja game 9
+Summary 10
+Chapter 2: Creating Your First Program 11
+Preparing the development environment 12
+Building the Visual Studio project 14
+Starting the device 16
+Initializing and using Kinect in C++ 17
+Understanding the code 20
+Additional information 21
+Summary 21
+Chapter 3: Rendering the Player 23
+Choosing image stream types 23
+Obtaining color and depth images 24
+Drawing color and depth as textures 25
+Understanding the code 29
+An incorrect way to combine depth and color 31
+A traditional way for background subtraction 31
+Understanding the code 34
+Aligning color with depth 34
+Generating a color image from depth 35
+Understanding the code 38
+Additional information 38
+Table of Contents
+[ ii ]
+Using a green screen with Kinect 39
+Making a magic photographer 39
+Understanding the code 42
+Additional information 42
+Summary 42
+Chapter 4: Skeletal Motion and Face Tracking 43
+Understanding skeletal mapping 43
+Obtaining joint positions 45
+Drawing the skeleton 45
+Understanding the code 49
+Drawing the linetrails following the hands 50
+Drawing the path for specified joints 50
+Understanding the code 54
+Face tracking in Kinect 54
+Detecting a face from the camera 54
+Detecting and drawing the face rectangle 55
+Understanding the code 60
+Constructing the face model 61
+Drawing the parametric face model 61
+Understanding the code 64
+Summary 66
+Chapter 5: Designing a Touchable User Interface 67
+Multitouch systems 67
+Locating the cursors 68
+Drawing cursors from two hands 68
+Understanding the code 71
+Additional information 72
+Common touching gestures 72
+Recognizing holding and swiping gestures 73
+Drawing cursors using two hands 74
+Understanding the code 76
+Additional information 77
+Sending cursors to external applications 78
+Emulating Windows mouse with cursors 78
+Understanding the code 79
+Summary 80
+Table of Contents
+[ iii ]
+Chapter 6: Implementing the Scene and Gameplay 81
+Integrating the current code 81
+Integrating existing elements in a scene 82
+Understanding the code 85
+Cutting the fruits 86
+Adding and handling fruit objects 87
+Understanding the code 93
+Playing the game 94
+Adding simple game logic 94
+Understanding the code 97
+Additional information 97
+Summary 98
+Appendix: Where to Go from Here 99
+libfreenect ¨C the pioneer of Kinect middleware 99
+OpenNI ¨C a complete and powerful Kinect middleware 100
+Free and open source resources 102
+Commercial products using Kinect 103
+Index 105

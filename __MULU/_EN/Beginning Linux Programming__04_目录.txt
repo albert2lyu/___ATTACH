@@ -1,0 +1,460 @@
+
+Acknowledgements x
+Foreword xxiii
+Introduction xxv
+Chapter 1: Getting Started 1
+An Introduction to UNIX, Linux, and GNU 1
+What Is UNIX? 1
+What Is Linux? 3
+The GNU Project and the Free Software Foundation 3
+Linux Distributions 4
+Programming Linux 4
+Linux Programs 5
+Text Editors 6
+The C Compiler 7
+Development System Roadmap 8
+Getting Help 14
+Summary 16
+Chapter 2: Shell Programming 17
+Why Program with a Shell? 18
+A Bit of Philosophy 18
+What Is a Shell? 19
+Pipes and Redirection 21
+Redirecting Output 21
+Redirecting Input 22
+Pipes 22
+The Shell as a Programming Language 23
+Interactive Programs 23
+Creating a Script 24
+Making a Script Executable 25
+Shell Syntax 27
+Variables 27
+Conditions 31
+Control Structures 34
+Functions 46
+Commands 49
+Command Execution 68
+47627ftoc.qxd:WroxPro 10/1/07 7:11 AM Page xi
+www.it-ebooks.info
+xii
+Contents
+Here Documents 73
+Debugging Scripts 74
+Going Graphical ¡ª The dialog Utility 75
+Putting It All Together 81
+Requirements 82
+Design 82
+Summary 91
+Chapter 3: Working with Files 93
+Linux File Structure 94
+Directories 94
+Files and Devices 95
+System Calls and Device Drivers 96
+Library Functions 97
+Low-Level File Access 98
+write 98
+read 99
+open 100
+Initial Permissions 101
+Other System Calls for Managing Files 106
+The Standard I/O Library 109
+fopen 110
+fread 110
+fwrite 111
+fclose 111
+fflush 111
+fseek 112
+fgetc, getc, and getchar 112
+fputc, putc, and putchar 112
+fgets and gets 113
+Formatted Input and Output 113
+printf, fprintf, and sprintf 113
+scanf, fscanf, and sscanf 115
+Other Stream Functions 117
+Stream Errors 119
+Streams and File Descriptors 119
+File and Directory Maintenance 120
+chmod 120
+chown 120
+unlink, link, and symlink 121
+mkdir and rmdir 121
+chdir and getcwd 122
+47627ftoc.qxd:WroxPro 10/1/07 7:11 AM Page xii
+www.it-ebooks.info
+xiii
+Contents
+Scanning Directories 122
+opendir 123
+readdir 123
+telldir 123
+seekdir 124
+closedir 124
+Errors 127
+strerror 127
+perror 127
+The /proc File System 128
+Advanced Topics: fcntl and mmap 132
+fcntl 132
+mmap 133
+Summary 135
+Chapter 4: The Linux Environment 137
+Program Arguments 137
+getopt 140
+getopt_long 142
+Environment Variables 144
+Use of Environment Variables 146
+The environ Variable 147
+Time and Date 148
+Temporary Files 156
+User Information 158
+Host Information 161
+Logging 163
+Resources and Limits 167
+Summary 173
+Chapter 5: Terminals 175
+Reading from and Writing to the Terminal 175
+Talking to the Terminal 180
+The Terminal Driver and the General Terminal Interface 182
+Overview 183
+Hardware Model 183
+The termios Structure 184
+Input Modes 186
+Output Modes 186
+Control Modes 187
+Local Modes 188
+47627ftoc.qxd:WroxPro 10/1/07 7:11 AM Page xiii
+www.it-ebooks.info
+xiv
+Contents
+Special Control Characters 188
+Terminal Speed 192
+Additional Functions 192
+Terminal Output 196
+Terminal Type 197
+Identify Your Terminal Type 197
+Using terminfo Capabilities 200
+Detecting Keystrokes 205
+Virtual Consoles 207
+Pseudo-Terminals 208
+Summary 209
+Chapter 6: Managing Text-Based Screens with curses 211
+Compiling with curses 212
+Curses Terminology and Concepts 213
+The Screen 216
+Output to the Screen 216
+Reading from the Screen 217
+Clearing the Screen 218
+Moving the Cursor 218
+Character Attributes 218
+The Keyboard 221
+Keyboard Modes 221
+Keyboard Input 222
+Windows 224
+The WINDOW Structure 224
+Generalized Functions 225
+Moving and Updating a Window 225
+Optimizing Screen Refreshes 229
+Subwindows 230
+The Keypad 232
+Using Color 235
+Redefining Colors 238
+Pads 238
+The CD Collection Application 240
+Starting a New CD Collection Application 240
+Looking at main 243
+Building the Menu 243
+Database File Manipulation 245
+Querying the CD Database 250
+Summary 254
+47627ftoc.qxd:WroxPro 10/1/07 7:11 AM Page xiv
+www.it-ebooks.info
+xv
+Contents
+Chapter 7: Data Management 255
+Managing Memory 255
+Simple Memory Allocation 256
+Allocating Lots of Memory 257
+Abusing Memory 260
+The Null Pointer 261
+Freeing Memory 262
+Other Memory Allocation Functions 264
+File Locking 264
+Creating Lock Files 265
+Locking Regions 268
+Use of read and write with Locking 271
+Competing Locks 276
+Other Lock Commands 280
+Deadlocks 280
+Databases 281
+The dbm Database 281
+The dbm Routines 283
+dbm Access Functions 283
+Additional dbm Functions 287
+The CD Application 289
+Updating the Design 289
+The CD Database Application Using dbm 290
+Summary 309
+Chapter 8: MySQL 311
+Installation 312
+MySQL Packages 312
+Post-Install Configuration 314
+Post-Installation Troubleshooting 319
+MySQL Administration 320
+Commands 320
+Creating Users and Giving Them Permissions 325
+Passwords 327
+Creating a Database 328
+Data Types 329
+Creating a Table 330
+Graphical Tools 333
+Accessing MySQL Data from C 335
+Connection Routines 337
+Error Handling 341
+47627ftoc.qxd:WroxPro 10/1/07 7:11 AM Page xv
+www.it-ebooks.info
+xvi
+Contents
+Executing SQL Statements 342
+Miscellaneous Functions 357
+The CD Database Application 358
+Creating the Tables 359
+Adding Some Data 362
+Accessing the Application Data from C 364
+Summary 375
+Chapter 9: Development Tools 377
+Problems of Multiple Source Files 377
+The make Command and Makefiles 378
+The Syntax of Makefiles 378
+Options and Parameters to make 379
+Comments in a Makefile 382
+Macros in a Makefile 382
+Multiple Targets 384
+Built-in Rules 387
+Suffix and Pattern Rules 388
+Managing Libraries with make 389
+Advanced Topic: Makefiles and Subdirectories 391
+GNU make and gcc 391
+Source Code Control 392
+RCS 393
+SCCS 399
+Comparing RCS and SCCS 399
+CVS 400
+CVS Front Ends 404
+Subversion 405
+Writing a Manual Page 406
+Distributing Software 409
+The patch Program 410
+Other Distribution Utilities 411
+RPM Packages 413
+Working with RPM Package Files 414
+Installing RPM Packages 415
+Building RPM Packages 415
+Other Package Formats 424
+Development Environments 424
+KDevelop 425
+Other Environments 425
+Summary 427
+47627ftoc.qxd:WroxPro 10/1/07 7:11 AM Page xvi
+www.it-ebooks.info
+xvii
+Contents
+Chapter 10: Debugging 429
+Types of Errors 429
+General Debugging Techniques 430
+A Program with Bugs 430
+Code Inspection 433
+Instrumentation 434
+Controlled Execution 436
+Debugging with gdb 437
+Starting gdb 437
+Running a Program 438
+Stack Trace 438
+Examining Variables 439
+Listing the Program 440
+Setting Breakpoints 441
+Patching with the Debugger 444
+Learning More about gdb 445
+More Debugging Tools 445
+Lint: Removing the Fluff from Your Programs 446
+Function Call Tools 449
+Execution Profiling with prof/gprof 451
+Assertions 452
+Memory Debugging 453
+ElectricFence 454
+valgrind 455
+Summary 459
+Chapter 11: Processes and Signals 461
+What Is a Process? 461
+Process Structure 462
+The Process Table 463
+Viewing Processes 463
+System Processes 464
+Process Scheduling 467
+Starting New Processes 468
+Waiting for a Process 475
+Zombie Processes 477
+Input and Output Redirection 479
+Threads 480
+47627ftoc.qxd:WroxPro 10/1/07 7:11 AM Page xvii
+www.it-ebooks.info
+xviii
+Contents
+Signals 481
+Sending Signals 484
+Signal Sets 489
+Summary 493
+Chapter 12: POSIX Threads 495
+What Is a Thread? 495
+Advantages and Drawbacks of Threads 496
+A First Threads Program 497
+Simultaneous Execution 501
+Synchronization 503
+Synchronization with Semaphores 503
+Synchronization with Mutexes 508
+Thread Attributes 512
+Canceling a Thread 517
+Threads in Abundance 520
+Summary 524
+Chapter 13: Inter-Process Communication: Pipes 525
+What Is a Pipe? 525
+Process Pipes 526
+Sending Output to popen 528
+Passing More Data 529
+How popen Is Implemented 530
+The Pipe Call 531
+Parent and Child Processes 535
+Reading Closed Pipes 536
+Pipes Used as Standard Input and Output 537
+Named Pipes: FIFOs 540
+Accessing a FIFO 542
+Advanced Topic: Client/Server Using FIFOs 549
+The CD Database Application 553
+Aims 554
+Implementation 555
+Client Interface Functions 558
+The Server Interface, server.c 565
+The Pipe 569
+Application Summary 574
+Summary 575
+47627ftoc.qxd:WroxPro 10/1/07 7:11 AM Page xviii
+www.it-ebooks.info
+xix
+Contents
+Chapter 14: Semaphores, Shared Memory, and Message Queues 577
+Semaphores 577
+Semaphore Definition 579
+A Theoretical Example 579
+Linux Semaphore Facilities 580
+Using Semaphores 582
+Shared Memory 586
+shmget 588
+shmat 588
+shmdt 589
+shmctl 589
+Message Queues 594
+msgget 594
+msgsnd 595
+msgrcv 595
+msgctl 596
+The CD Database Application 599
+Revising the Server Functions 600
+Revising the Client Functions 602
+IPC Status Commands 604
+Displaying Semaphore Status 604
+Displaying Shared Memory Status 604
+Displaying Message Queue Status 605
+Summary 605
+Chapter 15: Sockets 607
+What Is a Socket? 608
+Socket Connections 608
+Socket Attributes 612
+Creating a Socket 614
+Socket Addresses 615
+Naming a Socket 616
+Creating a Socket Queue 617
+Accepting Connections 617
+Requesting Connections 618
+Closing a Socket 619
+Socket Communications 619
+Host and Network Byte Ordering 622
+Network Information 624
+The Internet Daemon (xinetd/inetd) 629
+Socket Options 631
+47627ftoc.qxd:WroxPro 10/1/07 7:11 AM Page xix
+www.it-ebooks.info
+xx
+Contents
+Multiple Clients 632
+select 635
+Multiple Clients 638
+Datagrams 642
+Summary 644
+Chapter 16: Programming GNOME Using GTK+ 645
+Introducing X 645
+X Server 646
+X Client 646
+X Protocol 646
+Xlib 647
+Toolkits 647
+Window Managers 647
+Other Ways to Create a GUI ¡ª Platform-Independent Windowing APIs 648
+Introducing GTK+ 648
+GLib Type System 649
+GTK+ Object System 650
+Introducing GNOME 651
+Installing the GNOME/GTK+ Development Libraries 652
+Events, Signals, and Callbacks 655
+Packing Box Widgets 658
+GTK+ Widgets 661
+GtkWindow 662
+GtkEntry 663
+GtkSpinButton 666
+GtkButton 668
+GtkTreeView 672
+GNOME Widgets 676
+GNOME Menus 677
+Dialogs 682
+GtkDialog 682
+Modal Dialog Box 684
+Nonmodal Dialogs 685
+GtkMessageDialog 686
+CD Database Application 687
+Summary 699
+47627ftoc.qxd:WroxPro 10/1/07 7:11 AM Page xx
+www.it-ebooks.info
+xxi
+Contents
+Chapter 17: Programming KDE Using Qt 701
+Introducing KDE and Qt 701
+Installing Qt 702
+Signals and Slots 705
+Qt Widgets 712
+QLineEdit 712
+Qt Buttons 716
+QComboBox 721
+QListView 724
+Dialogs 727
+QDialog 728
+QMessageBox 730
+QInputDialog 731
+Using qmake to Simplify Writing Makefiles 733
+Menus and Toolbars with KDE 733
+CD Database Application Using KDE/Qt 738
+MainWindow 738
+AddCdDialog 742
+LogonDialog 743
+main.cpp 745
+Summary 746
+Chapter 18: Standards for Linux 747
+The C Programming Language 748
+A Brief History Lesson 748
+The GNU Compiler Collection 749
+gcc Options 749
+Interfaces and the Linux Standards Base 751
+LSB Standard Libraries 752
+LSB Users and Groups 754
+LSB System Initialization 754
+The Filesystem Hierarchy Standard 755
+Further Reading about Standards 758
+Summary 759
+Index 761

@@ -1,0 +1,21 @@
+
+The Bash Shell 1
+Conventions 2
+History 2
+Overview of Features 3
+Invoking the Shell 4
+Syntax 6
+Functions 18
+Variables 20
+Arithmetic Expressions 36
+Command History 37
+Programmable Completion 41
+Job Control 46
+Shell Options 47
+Command Execution 52
+Coprocesses 53
+Restricted Shells 54
+Built-in Commands 55
+Resources 109
+Acknowledgments 110
+Index 111

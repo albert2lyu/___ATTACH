@@ -1,0 +1,297 @@
+
+Preface by Scott Chacon iii
+Preface by Ben Straub v
+Dedications vii
+Contributors ix
+Introduction xiii
+CHAPTER 1: Getting Started 27
+About Version Control 27
+Local Version Control Systems 27
+Centralized Version Control Systems 28
+Distributed Version Control Systems 29
+A Short History of Git 31
+Git Basics 31
+Snapshots, Not Di?erences 32
+Nearly Every Operation Is Local 33
+Git Has Integrity 33
+Git Generally Only Adds Data 34
+The Three States 34
+The Command Line 36
+Installing Git 36
+Installing on Linux 36
+Installing on Mac 37
+Installing on Windows 38
+Installing from Source 38
+First-Time Git Setup 39
+Your Identity 40
+Your Editor 40
+Checking Your Settings 40
+Getting Help 41
+Summary 41
+CHAPTER 2: Git Basics 43
+Getting a Git Repository 43
+Initializing a Repository in an Existing Directory 43
+Cloning an Existing Repository 44
+Recording Changes to the Repository 45
+Checking the Status of Your Files 46
+Tracking New Files 47
+Staging Modified Files 47
+Short Status 49
+Ignoring Files 50
+Viewing Your Staged and Unstaged Changes 51
+Committing Your Changes 54
+Skipping the Staging Area 55
+Removing Files 56
+Moving Files 57
+Viewing the Commit History 58
+Limiting Log Output 63
+Undoing Things 65
+Unstaging a Staged File 66
+Unmodifying a Modified File 67
+Working with Remotes 68
+Showing Your Remotes 69
+Adding Remote Repositories 70
+Fetching and Pulling from Your Remotes 71
+Pushing to Your Remotes 71
+Inspecting a Remote 72
+Removing and Renaming Remotes 73
+Tagging 73
+Listing Your Tags 74
+Creating Tags 74
+Annotated Tags 75
+Lightweight Tags 75
+Tagging Later 76
+Sharing Tags 77
+Checking out Tags 78
+Git Aliases 78
+Summary 80
+CHAPTER 3: Git Branching 81
+Branches in a Nutshell 81
+Creating a New Branch 84
+Switching Branches 85
+Basic Branching and Merging 89
+Basic Branching 89
+Basic Merging 94
+Basic Merge Conflicts 96
+Branch Management 99
+Branching Workflows 100
+Long-Running Branches 100
+Topic Branches 101
+Remote Branches 103
+Pushing 109
+Tracking Branches 111
+Pulling 113
+Deleting Remote Branches 113
+Rebasing 113
+The Basic Rebase 114
+More Interesting Rebases 116
+The Perils of Rebasing 119
+Rebase When You Rebase 122
+Rebase vs. Merge 123
+Summary 124
+CHAPTER 4: Git on the Server 125
+The Protocols 126
+Local Protocol 126
+The HTTP Protocols 127
+The SSH Protocol 130
+The Git Protocol 130
+Getting Git on a Server 131
+Putting the Bare Repository on a Server 132
+Small Setups 133
+Generating Your SSH Public Key 134
+Setting Up the Server 135
+Git Daemon 138
+Smart HTTP 139
+GitWeb 141
+GitLab 144
+Installation 144
+Administration 145
+Basic Usage 148
+Working Together 148
+Third Party Hosted Options 149
+Summary 149
+CHAPTER 5: Distributed Git 151
+Distributed Workflows 151
+Centralized Workflow 151
+Integration-Manager Workflow 152
+Dictator and Lieutenants Workflow 153
+Workflows Summary 154
+Contributing to a Project 155
+Commit Guidelines 155
+Private Small Team 157
+Private Managed Team 164
+Forked Public Project 170
+Public Project over E-Mail 174
+Summary 177
+Maintaining a Project 177
+Working in Topic Branches 178
+Applying Patches from E-mail 178
+Checking Out Remote Branches 182
+Determining What Is Introduced 183
+Integrating Contributed Work 184
+Tagging Your Releases 191
+Generating a Build Number 192
+Preparing a Release 193
+The Shortlog 193
+Summary 194
+CHAPTER 6: GitHub 195
+Account Setup and Configuration 195
+SSH Access 196
+Your Avatar 198
+Your Email Addresses 199
+Two Factor Authentication 200
+Contributing to a Project 201
+Forking Projects 201
+The GitHub Flow 202
+Advanced Pull Requests 210
+Markdown 215
+Maintaining a Project 220
+Creating a New Repository 220
+Adding Collaborators 222
+Managing Pull Requests 224
+Mentions and Notifications 229
+Special Files 233
+README 233
+CONTRIBUTING 234
+Project Administration 234
+Managing an organization 236
+Organization Basics 236
+Teams 237
+Audit Log 239
+Scripting GitHub 240
+Hooks 241
+The GitHub API 245
+Basic Usage 246
+Commenting on an Issue 247
+Changing the Status of a Pull Request 248
+Octokit 250
+Summary 251
+CHAPTER 7: Git Tools 253
+Revision Selection 253
+Single Revisions 253
+Short SHA-1 253
+Branch References 255
+RefLog Shortnames 256
+Ancestry References 257
+Commit Ranges 259
+Interactive Staging 262
+Staging and Unstaging Files 262
+Staging Patches 265
+Stashing and Cleaning 266
+Stashing Your Work 266
+Creative Stashing 269
+Creating a Branch from a Stash 270
+Cleaning your Working Directory 271
+Signing Your Work 272
+GPG Introduction 273
+Signing Tags 273
+Verifying Tags 274
+Signing Commits 275
+Everyone Must Sign 277
+Searching 277
+Git Grep 277
+Git Log Searching 279
+Rewriting History 280
+Changing the Last Commit 281
+Changing Multiple Commit Messages 281
+Reordering Commits 284
+Squashing Commits 284
+Splitting a Commit 286
+The Nuclear Option: filter-branch 287
+Reset Demystified 289
+The Three Trees 289
+The Workflow 291
+The Role of Reset 297
+Reset With a Path 302
+Squashing 305
+Check It Out 308
+Summary 310
+Advanced Merging 311
+Merge Conflicts 311
+Undoing Merges 323
+Other Types of Merges 326
+Rerere 331
+Debugging with Git 337
+File Annotation 337
+Binary Search 339
+Submodules 341
+Starting with Submodules 341
+Cloning a Project with Submodules 343
+Working on a Project with Submodules 345
+Submodule Tips 356
+Issues with Submodules 358
+Bundling 360
+Replace 364
+Credential Storage 373
+Under the Hood 374
+A Custom Credential Cache 377
+Summary 379
+CHAPTER 8: Customizing Git 381
+Git Configuration 381
+Basic Client Configuration 382
+Colors in Git 385
+External Merge and Di? Tools 386
+Formatting and Whitespace 390
+Server Configuration 392
+Git Attributes 393
+Binary Files 393
+Keyword Expansion 396
+Exporting Your Repository 399
+Merge Strategies 400
+Git Hooks 401
+Installing a Hook 401
+Client-Side Hooks 402
+Server-Side Hooks 404
+An Example Git-Enforced Policy 405
+Server-Side Hook 405
+Client-Side Hooks 411
+Summary 415
+CHAPTER 9: Git and Other Systems 417
+Git as a Client 417
+Git and Subversion 417
+Git and Mercurial 429
+Git and Perforce 438
+Git and TFS 454
+Migrating to Git 463
+Subversion 464
+Mercurial 466
+Perforce 468
+TFS 471
+A Custom Importer 472
+Summary 479
+CHAPTER 10: Git Internals 481
+Plumbing and Porcelain 481
+Git Objects 482
+Tree Objects 485
+Commit Objects 488
+Object Storage 491
+Git References 493
+The HEAD 494
+Tags 495
+Remotes 497
+Packfiles 497
+The Refspec 501
+Pushing Refspecs 503
+Deleting References 503
+Transfer Protocols 504
+The Dumb Protocol 504
+The Smart Protocol 506
+Protocols Summary 509
+Maintenance and Data Recovery 510
+Maintenance 510
+Data Recovery 511
+Removing Objects 513
+Environment Variables 517
+Global Behavior 518
+Repository Locations 518
+Pathspecs 519
+Committing 519
+Networking 520
+Di?ing and Merging 520
+Debugging 521
+Miscellaneous 522
+Summary 523
+Git in Other Environments 525
+Embedding Git in your Applications 541
+Git Commands 553
+Index 571

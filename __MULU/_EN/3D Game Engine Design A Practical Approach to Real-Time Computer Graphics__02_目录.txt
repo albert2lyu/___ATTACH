@@ -1,0 +1,458 @@
+
+1 Introduction
+ 2 The Graphics System
+   2.1 The Foundation
+       2.1.1 Coordinate Systems
+       2.1.2 Handedness and Cross Products
+       2.1.3 Points and Vectors
+   2.2 Transformations
+       2.2.1 Linear Transformations
+       2.2.2 Affine Transformations
+       2.2.3 Projective Transformations
+       2.2.4 Properties of Perspective Projection
+       2.2.5 Homogeneous Points and Matrices
+   2.3 Cameras
+       2.3.1 The Perspective Camera Model
+       2.3.2 Model or Object Space
+       2.3.3 World Space
+       2.3.4 View, Camera, or Eye Space
+       2.3.5 Clip, Projection, or Homogeneous Space
+       2.3.6 Window Space
+       2.3.7 Putting Them All Together
+   2.4 Culling and Clipping
+       2.4.1 Object Culling
+       2.4.2 Back-Face Culling
+       2.4.3 Clipping to the View Frustum
+   2.5 Rasterizing
+       2.5.1 Line Segments
+       2.5.2 Circles
+       2.5.3 Ellipses
+       2.5.4 Triangles
+   2.6 Vertex Attributes
+       2.6.1 Colors
+       2.6.2 Lighting and Materials
+       2.6.3 Textures
+       2.6.4 Transparency, Opacity, and Blending
+       2.6.5 Fog
+       2.6.6 Rasterizing Attributes
+   2.7 Issues of Software, Hardware, and APIs
+       2.7.1 A General Discussion
+       2.7.2 Portability versus Performance
+   2.8 API Conventions
+       2.8.1 Matrix Representations and Storage
+       2.8.2 Matrix Composition
+       2.8.3 View Matrices
+       2.8.4 Projection Matrices
+       2.8.5 Window Handedness
+       2.8.6 Rotations
+       2.8.7 Fast Computations using the Graphics API
+ 3 Renderers
+   3.1 Software Rendering
+       3.1.1  Vertex Shaders
+       3.1.2  Back-Face Culling
+       3.1.3  Clipping
+       3.1.4  Rasterizing
+       3.1.5  Edge Buffers
+       3.1.6  Scan Line Processing
+       3.1.7  Pixel Shaders
+       3.1.8  Stencil Buffering
+       3.1.9  Depth Buffering
+       3.1.10 Alpha Blending
+       3.1.11 Color Masking
+       3.1.12 Texture Sampling
+       3.1.13 Frame Buffers
+   3.2 Hardware Rendering
+   3.3 An Abstract Rendering API
+       3.3.1 Construction and Destruction
+       3.3.2 Camera Management
+       3.3.3 Global-State Management
+       3.3.4 Buffer Clearing
+       3.3.5 Object Drawing
+       3.3.6 Text and 2D Drawing
+       3.3.7 Miscellaneous
+       3.3.8 Resource Management
+   3.4 The Heart of the Renderer
+       3.4.1 Drawing a Scene
+       3.4.2 Drawing a Geometric Primitive
+       3.4.3 Applying an Effect
+       3.4.4 Loading and Parsing Shader Programs
+       3.4.5 Validation of Shader Programs
+ 4 Scene Graphs
+   4.1 Scene Graph Design Issues
+       4.1.1 The Core Classes
+       4.1.2 Spatial Hierarchy Design
+       4.1.3 Sharing of Objects
+   4.2 Geometric State
+       4.2.1 Vertex Buffers and Index Buffers
+       4.2.2 Transformations
+       4.2.3 Bounding Volumes
+       4.2.4 Geometric Types
+   4.3 Render State
+       4.3.1 Global State
+       4.3.2 Lights
+       4.3.3 Effects
+   4.4 The Update Pass
+       4.4.1 Geometric-State Updates
+       4.4.2 Render-State Updates
+   4.5 The Culling Pass
+       4.5.1 Hierarchical Culling
+       4.5.2 Sorted Culling
+   4.6 The Drawing Pass
+       4.6.1 Single-Pass Drawing
+       4.6.2 Single-Effect, Multipass Drawing
+       4.6.3 Multiple-Effect Drawing
+   4.7 Scene Graph Compilers
+       4.7.1 A Scene Graph as a Dynamic Expression
+       4.7.2 Semantics of Compilation
+ 5 Controller-Based Animation
+   5.1 Keyframe Animation
+       5.1.1 Interpolation of Position
+       5.1.2 Interpolation of Orientation
+       5.1.3 Interpolation of Scale
+   5.2 Keyframe Compression
+       5.2.1 Fitting Points with a B-spline Curve
+       5.2.2 Evaluation of a B-spline Curve
+       5.2.3 Optimized Evaluation for Degree 3
+   5.3 Inverse Kinematics
+       5.3.1 Numerical Solution by Jacobian Methods
+       5.3.2 Numerical Solution by Nonlinear Optimization
+       5.3.3 Numerical Solution by Cyclic Coordinate Descent
+   5.4 Skinning
+   5.5 Vertex Morphing
+   5.6 Particle Systems
+ 6 Spatial Sorting
+   6.1 Binary Space Partitioning Trees
+       6.1.1 BSP Tree Construction
+       6.1.2 BSP Tree Usage
+   6.2 Node-Based Sorting
+   6.3 Portals
+   6.4 User-Defined Maps
+   6.5 Occlusion Culling
+ 7 Level of Detail
+   7.1 Sprites and Billboards
+   7.2 Discrete Level of Detail
+   7.3 Continuous Level of Detail
+       7.3.1 Simplification using Quadric Error Metrics
+       7.3.2 Reordering of Vertices and Indices
+       7.3.3 Terrain
+   7.4 Infinite Level of Detail
+ 8 Collision Detection
+   8.1 The Method of Separating Axes
+       8.1.1 Extrema of Convex Polygons or Convex Polyhedra
+       8.1.2 Stationary Objects
+       8.1.3 Objects Moving with Constant Linear Velocity
+       8.1.4 Oriented Bounding Boxes
+   8.2 Finding Collisions Between Moving Objects
+       8.2.1 Pseudodistance
+       8.2.2 Contact Between Moving Intervals
+       8.2.3 Computing the First Time of Contact
+       8.2.4 Estimating the First Derivative
+   8.3 A Dynamic Collision Detection System
+       8.3.1 The Abstract Base Class
+       8.3.2 Pseudodistances for Specific Pairs of Object Types
+       8.3.3 Collision Culling with Axis-Aligned Bounding Boxes
+   8.4 Object Picking
+       8.4.1 Constructing a Pick Ray
+       8.4.2 Scene Graph Support
+       8.4.3 Staying on Top of Things
+       8.4.4 Staying Out of Things
+   8.5 Pathfinding to Avoid Collisions
+       8.5.1 Environments, Levels, and Rooms
+       8.5.2 Moving Between Rooms
+       8.5.3 Moving Between Levels
+       8.5.4 Moving Through the Outdoor Environment
+       8.5.5 Blueprints
+       8.5.6 Visibility Graphs
+       8.5.7 Envelope Construction
+       8.5.8 Basic Data Structures
+       8.5.9 Efficient Calculation of the Visibility Graph
+ 9 Physics
+   9.1 Particle Systems
+   9.2 Mass-Spring Systems
+       9.2.1 Curve Masses
+       9.2.2 Surface Masses
+       9.2.3 Volume Masses
+       9.2.4 Arbitrary Configurations
+   9.3 Deformable Bodies
+   9.4 Rigid Bodies
+       9.4.1 The Rigid Body Class
+       9.4.2 Computing the Inertia Tensor
+10 Standard Objects
+   10.1 Linear Components
+   10.2 Planar Components
+   10.3 Boxes
+   10.4 Quadrics
+        10.4.1 Spheres
+        10.4.2 Ellipsoids
+        10.4.3 Cylinders
+        10.4.4 Cones
+   10.5 Sphere-Swept Volumes
+        10.5.1 Capsules
+        10.5.2 Lozenges
+11 Curves
+   11.1 Definitions
+   11.2 Reparameterization by Arc Length
+   11.3 Bezier Curves
+        11.3.1 Definitions
+        11.3.2 Evaluation
+        11.3.3 Degree Elevation
+        11.3.4 Degree Reduction
+   11.4 Natural, Clamped, and Closed Cubic Splines
+        11.4.1 Natural Splines
+        11.4.2 Clamped Splines
+        11.4.3 Closed Splines
+   11.5 B-spline Curves
+        11.5.1 Types of Knot Vectors
+        11.5.2 Evaluation
+        11.5.3 Local Control
+        11.5.4 Closed Curves
+   11.6 NURBS Curves
+   11.7 Tension-Continuity-Bias Splines
+   11.8 Parametric Subdivision
+        11.8.1 Subdivision by Uniform Sampling
+        11.8.2 Subdivision by Arc Length
+        11.8.3 Subdivision by Midpoint Distance
+        11.8.4 Fast Subdivision for Cubic Curves
+   11.9 Orientation of Objects on Curved Paths
+        11.9.1 Orientation Using the Frenent Frame
+        11.9.2 Orientation Using a Fixed Up-Vector
+12 Surfaces
+   12.1 Introduction
+   12.2 Bezier Rectangle Patches
+        12.2.1 Definitions
+        12.2.2 Evaluation
+        12.2.3 Degree Elevation
+        12.2.4 Degree Reduction
+   12.3 Bezier Triangle Patches
+        12.3.1 Definitions
+        12.3.2 Evaluation
+        12.3.3 Degree Elevation
+        12.3.4 Degree Reduction
+   12.4 B-spline Rectange Patches
+   12.5 NURBS Rectangle Patches
+   12.6 Surfaces Built from Curves
+        12.6.1 Cylinder Surfaces
+        12.6.2 Generalized Cylinder Surfaces
+        12.6.3 Revolution Surfaces
+        12.6.4 Tube Surfaces
+   12.7 Parametric Subdivision
+        12.7.1 Subdivision of Rectangle Patches
+        12.7.2 Subdivision of Triangle Patches
+13 Containment Methods
+   13.1 Spheres
+        13.1.1 Point in Sphere
+        13.1.2 Sphere Containing Points
+        13.1.3 Merging Spheres
+   13.2 Boxes
+        13.2.1 Point in Box
+        13.2.2 Box Containing Points
+        13.2.3 Merging Boxes
+   13.3 Capsules
+        13.3.1 Point in Capsule
+        13.3.2 Capsule Containing Points
+        13.3.3 Merging Capsules
+   13.4 Lozenges
+        13.4.1 Point in Lozenge
+        13.4.2 Lozenge Containing Points
+        13.4.3 Merging Lozenges
+   13.5 Cylinders
+        13.5.1 Point in Cylinder
+        13.5.2 Cylinder Containing Points
+        13.5.3 Merging Cylinders
+   13.6 Ellipsoids
+        13.6.1 Point in Ellipsoid
+        13.6.2 Ellipsoid Containing Points
+        13.6.3 Merging Ellipsoids
+14 Distance Methods
+   14.1  Point to Linear Component
+         14.1.1 Point to Line
+         14.1.2 Point to Ray
+         14.1.3 Point to Segment
+   14.2  Linear Component to Linear Component
+         14.2.1 Line to Line
+         14.2.2 Line to Ray
+         14.2.3 Line to Segment
+         14.2.4 Ray to Ray
+         14.2.5 Ray to Segment
+         14.2.6 Segment to Segment
+   14.3  Point to Triangle
+   14.4  Linear Component to Triangle
+         14.4.1 Line to Triangle
+         14.4.2 Ray to Triangle
+         14.4.3 Segment to Triangle
+   14.5  Point to Rectangle
+   14.6  Linear Component to Rectangle
+         14.6.1 Line to Rectangle
+         14.6.2 Ray to Rectangle
+         14.6.3 Segment to Rectangle
+   14.7  Triangle or Rectangle to Triangle or Rectangle
+   14.8  Point to Oriented Box
+   14.9  Linear Component to Oriented Box
+         14.9.1 Line to Oriented Box
+         14.9.1 Ray to Oriented Box
+         14.9.1 Segment to Oriented Box
+   14.10 Triangle to Oriented Box
+   14.11 Rectangle to Oriented Box
+   14.12 Oriented Box to Oriented Box
+   14.13 Miscellaneous
+         14.13.1 Point to Ellipse
+         14.13.2 Point to Ellipsoid
+         14.13.3 Point to Quadratic Curve or Quadric Surface
+         14.13.4 Point to Circle in 3D
+         14.13.5 Circle to Circle in 3D
+15 Intersection Methods
+   15.1 Linear Components and Convex Objects
+   15.2 Linear Components and Planar Component
+   15.3 Linear Component and Oriented Box
+        15.3.1 Test-Intersection Query
+        15.3.2 Find-Intersection Query
+   15.4 Linear Component and Sphere
+        15.4.1 Line and Sphere
+        15.4.2 Ray and Sphere
+        15.4.3 Segment and Sphere
+   15.5 Line and Sphere-Swept Volume
+        15.5.1 Line and Capsule
+        15.5.2 Line and Lozenge
+   15.6 Line and Quadric Surface
+        15.6.1 Line and Ellipsoid
+        15.6.2 Line and Cylinder
+        15.6.3 Line and Cone
+   15.7 Culling Objects by Planes
+        15.7.1 Oriented Boxes
+        15.7.2 Spheres
+        15.7.3 Capsules
+        15.7.4 Lozenges
+        15.7.5 Ellipsoids
+        15.7.6 Cylinders
+        15.7.7 Cones
+        15.7.8 Convex Polygons or Convex Polyhedra
+16 Numerical Methods
+   16.1 Systems of Equations
+        16.1.1 Linear Systems
+        16.1.2 Polynomial Systems
+   16.2 Eigensystems
+        16.2.1 Extrema of Quadratic Forms
+        16.2.2 Extrema of Constrained Quadratic Forms
+   16.3 Least-Squares Fitting
+        16.3.1 Linear Fitting of Points (x,f(x))
+        16.3.2 Linear Fitting of Points Using Orthogonal Regression
+        16.3.3 Planar Fitting of Points (x,y,f(x,y))
+        16.3.4 Planar Fitting of Points Using Orthogonal Regression
+        16.3.5 Fitting a Circle to 2D Points
+        16.3.6 Fitting a Sphere to 3D Points
+        16.3.7 Fitting a Quadratic Curve to 2D Points
+        16.3.8 Fitting a Quadric Surface to 3D Points
+   16.4 Minimization
+        16.4.1 Methods in One Dimension
+        16.4.2 Methods in Many Dimensions
+   16.5 Root Finding
+        16.5.1 Methods in One Dimension
+        16.5.2 Methods in Many Dimensions
+   16.6 Integration
+        16.6.1 Romberg Integration
+        16.6.2 Gaussian Quadrature
+   16.7 Differential Equations
+        16.7.1 Ordinary Differential Equations
+        16.7.2 Partial Differential Equations
+   16.8 Fast Function Evaluation
+        16.8.1 Square Root and Inverse Square Root
+        16.8.2 Sine, Cosine, and Tangent
+        16.8.3 Inverse Tangent
+17 Rotations
+   17.1 Rotation Matrices
+        17.1.1 Axis/Angle to Matrix
+        17.1.2 Matrix to Axis/Angle
+        17.1.3 Interpolation
+   17.2 Quaternions
+        17.2.1 The Linear Algebraic View of Quaternions
+        17.2.2 Rotation of a Vector
+        17.2.3 Product of Rotations
+        17.2.4 The Classical View of Quaternions
+        17.2.5 Axis/Angle to Quaternion
+        17.2.6 Quaternion to Axis/Angle
+        17.2.7 Matrix to Quaternion
+        17.2.8 Quaternion to Matrix
+        17.2.9 Interpolation
+   17.3 Euler Angles
+   17.4 Performance Issues
+        17.4.1 Memory Usage
+        17.4.2 Conversion Time
+        17.4.3 Transformation Time
+        17.4.4 Composition
+        17.4.5 Interpolation
+   17.5 The Curse of Nonuniform Scaling
+        17.5.1 Matrix Factorizations
+        17.5.2 Gram-Schmidt Orthonormalization
+        17.5.3 Polar Decomposition
+        17.5.4 Singular Value Decomposition
+18 Object-Oriented Infrastructure
+   18.1 Object-Oriented Software Construction
+        18.1.1 Software Quality
+        18.1.2 Modularity
+        18.1.3 Reusability
+        18.1.4 Functions and Data
+        18.1.5 Object Orientation
+   18.2 Style, Naming Conventions, and Namespaces
+   18.3 Run-Time Type Information
+        18.3.1 Single-Inheritance Systems
+        18.3.2 Multiple-Inheritance Systems
+        18.3.3 Macro Support
+   18.4 Templates
+   18.5 Shared Objects and Reference Counting
+   18.6 Streaming
+        18.6.1 The Stream API
+        18.6.2 The Object API
+   18.7 Names and Unique Identification
+        18.7.1 Name String
+        18.7.2 Unique Identification
+   18.8 Initialization and Termination
+        18.8.1 Potential Problems
+        18.8.2 A Generic Solution for Classes
+   18.9 An Application Layer
+        18.9.1 Processing Command Line Parameters
+        18.9.2 The Application Class
+        18.9.3 The ConsoleApplication Class
+        18.9.4 The WindowApplication Class
+        18.9.5 The WindowApplication3 Class
+        18.9.6 Managing the Engines
+19 Memory Management
+   19.1 Memory Budgets for Game Consoles
+   19.2 Leak Detection and Collecting Statistics
+   19.3 General Concepts for Memory Management
+        19.3.1 Allocation Using Sequential Fit Methods
+        19.3.2 Allocation Using Buddy System Methods
+        19.3.3 Allocation Using Segregated Storage Methods
+        19.3.4 Memory Compaction
+20 Special Effects Using Shaders
+  20.1  Vertex Colors
+  20.2  Lighting and Materials
+        20.2.1 Ambient Lights
+        20.2.2 Directional Lights
+        20.2.3 Point Lights
+        20.2.4 Spot Lights
+  20.3  Textures
+  20.4  Multitextures
+  20.5  Bump Maps
+        20.5.1 Generating Normal Maps
+        20.5.2 Generating Tangent-Space Information
+        20.5.3 The Shader Programs
+  20.6  Gloss Maps
+  20.7  Sphere Maps
+  20.8  Cube Maps
+  20.9  Refraction
+  20.10 Planar Reflections
+  20.11 Planar Shadows
+  20.12 Projected Textures
+  20.13 Shadow Maps
+  20.14 Volumetric Fog
+  20.15 Skinning
+  20.16 Iridescence
+  20.17 Water Effects
+       
+A Creating a Shader in Wild Magic
+  A.1 Shader Programs for an Illustrative Application
+  A.2 Creating the Geometric Data
+  A.3 A Classless Shader Effect
+  A.4 Creating a ShaderEffect-derived Class
+  A.5 Dynamic Updates for the Shader Constants
+Bibliography

@@ -1,0 +1,148 @@
+
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ix
+1. Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+What Is OpenCV? 1
+Who Uses OpenCV? 1
+What Is Computer Vision? 2
+The Origin of OpenCV 6
+Downloading and Installing OpenCV 8
+Getting the Latest OpenCV via CVS 10
+More OpenCV Documentation 11
+OpenCV Structure and Content 13
+Portability 14
+Exercises 15
+2. Introduction to OpenCV . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Getting Started 16
+First Program¡ªDisplay a Picture 16
+Second Program¡ªAVI Video 18
+Moving Around 19
+A Simple Transformation 22
+A Not-So-Simple Transformation 24
+Input from a Camera 26
+Writing to an AVI File 27
+Onward 29
+Exercises 29
+Contents
+FM-R4886-AT1.indd iii 9/15/08 4:26:40 PM
+www.it-ebooks.info
+iv | Contents
+3. Getting to Know OpenCV . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+OpenCV Primitive Data Types 31
+CvMat Matrix Structure 33
+IplImage Data Structure 42
+Matrix and Image Operators 47
+Drawing Things 77
+Data Persistence 82
+Integrated Performance Primitives 86
+Summary 87
+Exercises 87
+HighGUI4. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90
+A Portable Graphics Toolkit 90
+Creating a Window 91
+Loading an Image 92
+Displaying Images 93
+Working with Video 102
+ConvertImage 106
+Exercises 107
+5. Image Processing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
+Overview 109
+Smoothing 109
+Image Morphology 115
+Flood Fill 124
+Resize 129
+Image Pyramids 130
+Threshold 135
+Exercises 141
+6. Image Transforms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 144
+Overview 144
+Convolution 144
+Gradients and Sobel Derivatives 148
+Laplace 150
+Canny 151
+FM-R4886-AT1.indd iv 9/15/08 4:26:40 PM
+www.it-ebooks.info
+Contents | v
+Hough Transforms 153
+Remap 162
+Stretch, Shrink, Warp, and Rotate 163
+CartToPolar and PolarToCart 172
+LogPolar 174
+Discrete Fourier Transform (DFT) 177
+Discrete Cosine Transform (DCT) 182
+Integral Images 182
+Distance Transform 185
+Histogram Equalization 186
+Exercises 190
+7. Histograms and Matching . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+Basic Histogram Data Structure 195
+Accessing Histograms 198
+Basic Manipulations with Histograms 199
+Some More Complicated Stuff 206
+Exercises 219
+8. Contours . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 222
+Memory Storage 222
+Sequences 223
+Contour Finding 234
+Another Contour Example 243
+More to Do with Contours 244
+Matching Contours 251
+Exercises 262
+9. Image Parts and Segmentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265
+Parts and Segments 265
+Background Subtraction 265
+Watershed Algorithm 295
+Image Repair by Inpainting 297
+Mean-Shift Segmentation 298
+Delaunay Triangulation, Voronoi Tesselation 300
+Exercises 313
+FM-R4886-AT1.indd v 9/15/08 4:26:40 PM
+www.it-ebooks.info
+vi | Contents
+10. Tracking and Motion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 316
+The Basics of Tracking 316
+Corner Finding 316
+Subpixel Corners 319
+Invariant Features 321
+Optical Flow 322
+Mean-Shift and Camshift Tracking 337
+Motion Templates 341
+Estimators 348
+The Condensation Algorithm 364
+Exercises 367
+11. Camera Models and Calibration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 370
+Camera Model 371
+Calibration 378
+Undistortion 396
+Putting Calibration All Together 397
+Rodrigues Transform 401
+Exercises 403
+12. Projection and 3D Vision . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 405
+Projections 405
+Affine and Perspective Transformations 407
+POSIT: 3D Pose Estimation 412
+Stereo Imaging 415
+Structure from Motion 453
+Fitting Lines in Two and Three Dimensions 454
+Exercises 458
+13. Machine Learning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 459
+What Is Machine Learning 459
+Common Routines in the ML Library 471
+Mahalanobis Distance 476
+K-Means 479
+Na?ve/Normal Bayes Classifier 483
+Binary Decision Trees 486
+Boosting 495
+FM-R4886-AT1.indd vi 9/15/08 4:26:40 PM
+www.it-ebooks.info
+Contents | vii
+Random Trees 501
+Face Detection or Haar Classifier 506
+Other Machine Learning Algorithms 516
+Exercises 517
+14. OpenCV¡¯s Future . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 521
+Past and Future 521
+Directions 522
+OpenCV for Artists 525
+Afterword 526
+Bibliography . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 527
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 543

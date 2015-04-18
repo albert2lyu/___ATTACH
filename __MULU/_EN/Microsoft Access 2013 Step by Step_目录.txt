@@ -1,0 +1,211 @@
+
+Introduction                                                                                                                                                 xi
+Who this book is for. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xi
+How this book is organized . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xii
+Download the practice fies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xii
+Your companion ebook. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiv
+Get support and give feedback . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiv
+Errata . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiv
+We want to hear from you . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .xv
+Stay in touch . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .xv
+PART 1
+Simple database techniques
+1 Explore Microsoft Access 2013 3
+Identifying new features of Access 2013 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .4
+If you are upgrading from Access 2010 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+If you are upgrading from Access 2007 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+If you are upgrading from Access 2003 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Working in the Access 2013 user interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .8
+Identifying program window elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Working with the ribbon . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Sidebar: Adapting exercise steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Sidebar: Getting help with Access 2013 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+Understanding database concepts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .24
+Sidebar: Enabling macros and other active content. . . . . . . . . . . . . . . . . . . . . . . . . . 26
+Exploring tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .28
+Exploring forms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .33
+Exploring queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .38
+Contents
+Introduction                                                                                                                                                 xi
+Who this book is for. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xi
+How this book is organized . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xii
+Download the practice fies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xii
+Your companion ebook. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiv
+Get support and give feedback . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiv
+Errata . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiv
+We want to hear from you . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .xv
+Stay in touch . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .xv
+Simple database techniques 1
+Explore Microsoft Access 2013 3
+Identifying new features of Access 2013 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .4
+If you are upgrading from Access 2010 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+If you are upgrading from Access 2007 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+If you are upgrading from Access 2003 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Working in the Access 2013 user interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .8
+Identifying program window elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Working with the ribbon . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Adapting exercise steps 17
+Getting help with Access 2013 23
+Understanding database concepts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .24
+Enabling macros and other active content 26
+Exploring tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .28
+Exploring forms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .33
+Exploring queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .38
+Exploring reports . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .43
+Previewing and printing database objects. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .46
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .51
+iv  Contents
+Exploring reports . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .43
+Previewing and printing database objects. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .46
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .51
+2 Create databases and simple tables 53
+Creating databases from templates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .54
+Sidebar: Getting started with Access web apps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+Creating databases and tables manually . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64
+Sidebar: Database design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+Manipulating table columns and rows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .74
+Refiing table structure. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .77
+Defiing relationships between tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .83
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .89
+3 Create simple forms 91
+Creating forms by using the Form tool . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .92
+Formatting forms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .98
+Arranging the layout of forms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .107
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .113
+4 Display data 115
+Sorting information in tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .116
+Sidebar: How Access sorts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
+Filtering information in tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+Filtering information by using forms. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 125
+Sidebar: Wildcards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+Locating information that matches multiple criteria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+Sidebar: Saving fiters as queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .133
+Contents  v
+5 Create simple reports 135
+Creating reports by using a wizard . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 136
+Modifying report design. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .142
+Previewing and printing reports . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+PART 2
+Relational database techniques
+6 Maintain data integrity 157
+Specifying the type of data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+Setting the fild size . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .163
+Restricting the format of data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .165
+Sidebar: Creating custom formats. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 172
+Validating the data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .173
+Sidebar: Simple validation rules. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 176
+Allowing only values in lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 183
+Sidebar: Multicolumn lookup lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+Allowing only values in other tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+Sidebar: Multivalued filds . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .195
+7 Create queries 197
+Creating queries by using a wizard . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 198
+Creating queries manually . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 203
+Summarizing data by using queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 208
+Calculating by using queries. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 212
+Updating records by using queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .218
+Deleting records by using queries. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 222
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .225
+vi  Contents
+8 Create custom forms 227
+Modifying forms created by using a wizard . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 228
+Sidebar: Different types of forms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 230
+Adding controls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .237
+Displaying subforms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .245
+Sidebar: Selecting filds for main forms and subforms . . . . . . . . . . . . . . . . . . . . . . 245
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .253
+9 Create custom reports 255
+Creating reports manually . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .256
+Sidebar: Adding hyperlinks, charts, and buttons . . . . . . . . . . . . . . . . . . . . . . . . . . . 258
+Modifying report content. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .262
+Sidebar: Layouts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+Adding subreports . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .270
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .276
+PART 3
+Database management and security
+10 Import and export data 279
+Importing information. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 280
+Importing from other Access databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281
+Importing from Excel worksheets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 282
+Importing from text fies. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 282
+Importing from other database programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 283
+Importing from Outlook folders . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 283
+Importing from SharePoint lists. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 283
+Importing from .html fies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 285
+Importing from .xml fies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 286
+Sidebar: Linking to information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295
+Contents  vii
+Exporting information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295
+Exporting to other Access databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+Exporting to Excel worksheets. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+Exporting to Word documents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+Exporting to text fies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+Exporting to .pdf and .xps fies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 298
+Exporting to SharePoint lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 298
+Exporting to .html fies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 299
+Exporting to .xml fies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 299
+Copying to and from other Offie programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 306
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 309
+11 Make databases user friendly 311
+Designing navigation forms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .312
+Creating custom categories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .319
+Controlling which features are available . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .323
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .327
+12 Protect databases 329
+Assigning passwords to databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 330
+Splitting databases. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+Securing databases for distribution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .338
+Sidebar: Packaging and signing databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 341
+Preventing database problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 342
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 347
+13 Work in Access more effiiently 349
+Changing default program options. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .350
+Sidebar: Using add-ins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 362
+Customizing the ribbon. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 363
+Sidebar: Customizing the status bar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 369
+Manipulating the Quick Access Toolbar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .370
+Key points . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .375
+viii  Contents
+Glossary                                                                                                                                                    377
+Keyboard shortcuts                                                                                                                                 385
+Access 2013 keyboard shortcuts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 385
+Open, save, and print databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 385
+Work in Design, Layout, or Datasheet view. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 386
+Work in the Navigation pane. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 386
+Work in the Property Sheet pane . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 387
+Work in the Field List pane. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 387
+Edit controls in forms or reports in Design view. . . . . . . . . . . . . . . . . . . . . . . . . . . . 387
+Work with combo boxes or list boxes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 388
+Set properties for a table in Design view. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 388
+Work with text and data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 389
+Navigate records . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .391
+Navigate in Design view . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 391
+Navigate in Datasheet view . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 392
+Navigate in Form view . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 393
+Navigate in Print Preview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 394
+Navigate in the Query Designer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 394
+Access web app keyboard shortcuts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 396
+Customize a web app in Access. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 396
+Work with a web app in a web browser. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 396
+Offie 2013 keyboard shortcuts. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .397
+Work with menus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 397
+Use Open and Save As in the Backstage view. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 397
+Use the Open and Save As dialog boxes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 398
+Display and use windows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 398
+Navigate on the ribbon. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399
+Move around in text or cells . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399
+Work with text . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400
+Move around in and work in tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400
+Work with panes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400
+Work with wizards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 401
+Work with dialog boxes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 401
+Use edit boxes within dialog boxes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 402
+Use the Help window . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 402
+Contents  ix
+Index                                                                                                                                                         405
+About the authors                                                                                                                                   427
+How to download your ebook                                                                                                             431
+Survey page                                                                                                                                             432

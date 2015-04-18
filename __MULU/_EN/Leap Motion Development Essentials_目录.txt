@@ -1,0 +1,51 @@
+
+Preface 1
+Chapter 1: Leap Motion SDK 每 A Quick Start 5
+An overview of the SDK 5
+Quick start 7
+Major SDK components 10
+Controller 10
+Config	 10
+Screen 11
+Math 11
+Frame 11
+Hand 11
+Pointable 12
+Finger positioning 12
+An example of cursor control 14
+A gesture-triggered action 17
+Summary 22
+Chapter 2: Real Talk 每 Real Time 23
+A simple gesture recognizer 30
+Using the MIDI output 34
+Blocking and latency 36
+Multiprocessing with threads 37
+Refactoring for multithreading 38
+The producer-consumer race condition 42
+Summary 45
+Chapter 3: Actual Gestures 47
+Computer input 47
+Natural gestures 48
+Receiving gestures 50
+WindowFlinger 每 a high-level gesture application 52
+Window management abstraction 55
+Window docking 58
+Driver implementation 每 Mac OS X 62
+Accessibility API 62
+flinger::MacDriver	 63
+Summary 70
+Chapter 4: Leap and the Web 71
+HTML5 and Leap 71
+WebSocket 72
+The Leap Motion service 72
+LeapJS 73
+JavaScript visualization 76
+Summary 80
+Chapter 5: HTML5 Antics in 3D 81
+Cross-platform graphics party 81
+WebGL 82
+Three.js + LeapJS 每 the awesomesauce 83
+Animating rotation 87
+Summary 89
+Index 91
+

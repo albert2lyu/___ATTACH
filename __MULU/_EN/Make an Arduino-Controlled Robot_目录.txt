@@ -1,0 +1,121 @@
+
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  vii
+1. Introduction to Robot Building . . . . . . . . . . . . . . . . .  1
+Why Build a Robot? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+How Robots Move . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2. Building the Electronics . . . . . . . . . . . . . . . . . . . . . . . .  9
+Hardware Required . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Construction Techniques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Soldering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Building the Motor Controller . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Soldering the Reflectance Sensors . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Making a Line Sensor Mount . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Next Steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+3. Building the Two-Wheeled Mobile Platform . .  21
+Hardware Required . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+Mechanical Assembly . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+Lay Out the Chassis Parts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+Motor Assembly . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+Assemble the Chassis Components . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+Attaching the Control Electronics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+Mounting the IR sensors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+Mounting the IR Sensors for Edge Detection . . . . . . . . . . . . . . . . . . . 39
+Mounting the IR Sensors for Line Following . . . . . . . . . . . . . . . . . . . . 41
+iii
+Table of Contents
+Next Steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+4. Building the Four-Wheeled Mobile Platform . . .  45
+Hardware Required . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+Mechanical Assembly . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+Lay Out the Chassis Parts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+Motor Assembly . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+Assemble the Chassis Components . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+Solder the Power and Motor Connections . . . . . . . . . . . . . . . . . . . . . . 54
+Connecting the Battery Pack and Power Switch . . . . . . . . . . . . . . . . . 55
+Building the Optional Trickle Charger . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+Assemble the Chassis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Mounting Arduino and Connecting Wires to the Shield . . . . . . . . . 58
+Mounting the IR sensors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+Mounting the IR Sensors for Edge Detection . . . . . . . . . . . . . . . . . . . . 65
+Mounting the IR Sensors for Line Following . . . . . . . . . . . . . . . . . . . . . 67
+Next Steps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+5. Tutorial: Getting Started with Arduino . . . . . . . .  71
+Hardware Required . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+Arduino Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+Arduino Hardware . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+Installing the Integrated Development Environment (IDE) . . . . . . . . 74
+Installing Arduino on Windows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+Installing Arduino on OS X . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+Installing Arduino on Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+Driver Installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+Connecting the Arduino Board . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+Using the IDE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+Uploading and Running the Blink Sketch . . . . . . . . . . . . . . . . . . . . . . . . . 81
+Using Tabs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+Installing Third-Party Libraries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+6. Testing the Robot¡¯s Basic Functions . . . . . . . . . . .  85
+Hardware Required . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+Software Prerequisites . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+Sketches Used in This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+Load and Run helloRobot.ino . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 88
+About the Sketch . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+Troubleshooting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 98
+Making the Sketch Easy to Enhance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99
+7. Controlling Speed and Direction . . . . . . . . . . . . .  103
+Hardware Required . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+iv Make an Arduino-Controlled Robot
+Sketches Used in This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+Types of Motors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+Motor Controllers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+Controlling Motor Speed . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
+How Motor Speed Is Controlled . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
+Code for Motor Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
+Calibrating Rotation and Tracking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116
+Software Architecture for Robot Mobility . . . . . . . . . . . . . . . . . . . . . . . . 119
+Functions to Encapsulate Robot Movements . . . . . . . . . . . . . . . . . . . . 123
+Core Movement Code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+Additional Core Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+Functions to Rotate the Robot . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+Higher-Level Movement Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
+8. Tutorial: Introduction to Sensors . . . . . . . . . . . . .  133
+Hardware Discussed . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+Infrared Reflectance Sensors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+Sonar Distance Sensors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
+Maxbotix EZ1 Sonar Distance Sensor . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+Sharp IR Distance Sensor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 141
+Proximity Sensor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+Sound Sensor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+Arduino Cookbook . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 146
+9. Modifying the Robot to React to Edges and Lines
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  147
+Hardware Required . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+Sketches Used in This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+The Look Code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+Edge Detection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+Line Following . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+Seeing Sketch Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160
+10. Autonomous Movement . . . . . . . . . . . . . . . . . . . . . . .  163
+Hardware Required . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 163
+Sketches Used in This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 164
+Mounting a Ping Distance Sensor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 165
+Making a Mount for the Ping Sensor . . . . . . . . . . . . . . . . . . . . . . . . . . 166
+Mounting the Ping Sensor in a Fixed Position . . . . . . . . . . . . . . . . . . 168
+Mounting the Ping Sensor on a Servo . . . . . . . . . . . . . . . . . . . . . . . . . 168
+Letting the Robot Wander . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 170
+Table of Contents v
+Adding Scanning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 178
+11. Remote Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  185
+Hardware Required . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 185
+Sketches Used in This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 186
+Design of the Remote Control Code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 186
+Controlling the Robot with a TV Type IR Remote . . . . . . . . . . . . . . . . . 190
+Installing the IR Decoder Chip . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 190
+The IR Remote Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 192
+Appendix A. Enhancing Your Robot . . . . . . . . . . . . . . . .  201
+Appendix B. Using Other Hardware with Your Robot  205
+Appendix C. Debugging Your Robot . . . . . . . . . . . . . . . .  211
+Appendix D. Power Sources . . . . . . . . . . . . . . . . . . . . . . . .  221
+Appendix E. Programming Constructs . . . . . . . . . . . . .  231
+Appendix F. Arduino Pin and Timer Usage . . . . . . . . .  235

@@ -1,0 +1,125 @@
+
+Preface
+Acknowledgments
+1 Introduction to the Raspberry Pi
+Hardware
+Software
+Summary
+2 LED Blinker Project
+Prototype Board
+Soldering
+Accessing the GPIO Pins
+apt-get Command
+LED Project
+Summary
+3 MP3 Player Project
+Prototype Connector
+Portable Stereo Speaker
+Audio File Formats
+Hardware Switch Inputs
+Thinking in RasPi Time
+MP3 Project Requirements
+Summary
+4 Camera Controller
+Project Requirements
+Camera Shutter Operation
+Electronic Flash
+Optoisolator Interfaces
+Sound and Laser Modules
+Interface Connections
+Time-Lapse Function
+Summary
+5 GPS
+Introduction
+The Basics of How GPS Functions
+The Ultimate GPS Receiver
+NMEA Protocol
+The gpsd Apps
+Summary
+6 Earthquake Detector
+Introduction
+Seismology and Earthquakes
+Analog-to-Digital Conversion
+Serial Peripheral Interface
+Connecting and Testing the MCP3008 with the RasPi
+Seismic Data Analysis
+Operational System
+Summary
+7 Home Automation
+Introduction
+Z-Wave Mesh Network
+RasPi and Z-Wave Interface
+SSH Login
+Open Z-Wave Software
+Summary
+8 Home Security Controller
+Introduction
+Webcam Selection
+Laser Trip Assembly
+Motion Software Package
+Webcam Viewing
+Laser Trip Program
+Additional Sensors
+Summary
+9 NFC/RFID Reader
+Introduction
+How NFC Works
+Installing libnfc
+Hardware Installation
+Initial Checkout
+Project Program
+Future Expansion
+Summary
+10 1-Wire Weather Station
+Introduction
+Weather Station Design
+1-Wire Protocol
+1-Wire Sniffer
+Set Up the Weather Station Hardware
+1-Wire File System
+Viewing the Weather Data
+Packet Sniffing
+Future Expansion
+Summary
+11 Local and Remote Logic Controller
+Introduction
+1-Wire External Control Board
+1-Wire File System (owfs) Installation and Configuration
+Linux, Hardware, and FUSE
+Test Sequences for the 8 Channel I/O Board
+Python Test Program
+Sniffer Monitoring
+Android Remote Control
+Testing the Web Server with a Browser
+Summary
+12 Robotic Car: Part 1
+Introduction
+Overview
+Chassis and Drive Motors
+Servos
+13 Robotic Car: Part 2
+Introduction
+Robotic Car Block Diagram
+I2C Software
+Bluetooth Software
+Robot Car Program
+Operating the Robotic Car
+Future Expansions
+Summary
+14 Radon Detector
+Introduction
+Radioactivity and Radon
+K2645 Geiger-Muller Counter
+Initial Test Configuration
+Building a Portable Radiation Detector
+Operating the Portable Geiger Counter
+Modifications and Expansions
+Summary
+15 Serving Up Time with an RTC and NTP
+Introduction
+Real-Time Clock (RTC)
+RTC Software
+Introduction to the Network Time Protocol (NTP)
+Building a RasPi NTP Server
+Summary
+Index

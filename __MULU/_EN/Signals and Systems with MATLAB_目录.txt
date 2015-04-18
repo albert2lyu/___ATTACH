@@ -1,0 +1,263 @@
+
+1 Signals and Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.1 Signals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.1.1 Various Types of Signal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.1.2 Continuous/Discrete-Time Signals . . . . . . . . . . . . . . . . . . . . . 2
+1.1.3 Analog Frequency and Digital Frequency . . . . . . . . . . . . . . . . 6
+1.1.4 Properties of the Unit Impulse Function
+and Unit Sample Sequence . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+1.1.5 Several Models for the Unit Impulse Function . . . . . . . . . . . . 11
+1.2 Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+1.2.1 Linear System and Superposition Principle . . . . . . . . . . . . . . 13
+1.2.2 Time/Shift-Invariant System . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+1.2.3 Input-Output Relationship of Linear
+Time-Invariant (LTI) System . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+1.2.4 Impulse Response and System (Transfer) Function . . . . . . . . 17
+1.2.5 Step Response, Pulse Response, and Impulse Response . . . . 18
+1.2.6 Sinusoidal Steady-State Response
+and Frequency Response . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+1.2.7 Continuous/Discrete-Time Convolution . . . . . . . . . . . . . . . . . 22
+1.2.8 Bounded-Input Bounded-Output (BIBO) Stability . . . . . . . . 29
+1.2.9 Causality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+1.2.10 Invertibility . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+1.3 Systems Described by Differential/Difference Equations . . . . . . . . . 31
+1.3.1 Differential/Difference Equation and System Function . . . . . 31
+1.3.2 Block Diagrams and Signal Flow Graphs . . . . . . . . . . . . . . . . 32
+1.3.3 General Gain Formula 每 Mason＊s Formula . . . . . . . . . . . . . . . 34
+1.3.4 State Diagrams . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+1.4 Deconvolution and Correlation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+1.4.1 Discrete-Time Deconvolution . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+1.4.2 Continuous/Discrete-Time Correlation . . . . . . . . . . . . . . . . . . 39
+1.5 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+ix
+x Contents
+2 Continuous-Time Fourier Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+2.1 Continuous-Time Fourier Series (CTFS) of Periodic Signals . . . . . . 62
+2.1.1 Definition and Convergence Conditions
+of CTFS Representation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+2.1.2 Examples of CTFS Representation . . . . . . . . . . . . . . . . . . . . . 65
+2.1.3 Physical Meaning of CTFS Coefficients 每 Spectrum . . . . . . . 70
+2.2 Continuous-Time Fourier Transform of Aperiodic Signals . . . . . . . . 73
+2.3 (Generalized) Fourier Transform of Periodic Signals . . . . . . . . . . . . . 77
+2.4 Examples of the Continuous-Time Fourier Transform . . . . . . . . . . . . 78
+2.5 Properties of the Continuous-Time Fourier Transform . . . . . . . . . . . . 86
+2.5.1 Linearity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+2.5.2 (Conjugate) Symmetry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+2.5.3 Time/Frequency Shifting (Real/Complex Translation) . . . . . 88
+2.5.4 Duality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 88
+2.5.5 Real Convolution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+2.5.6 Complex Convolution (Modulation/Windowing) . . . . . . . . . . 90
+2.5.7 Time Differential/Integration 每 Frequency
+Multiplication/Division . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+2.5.8 Frequency Differentiation 每 Time Multiplication . . . . . . . . . . 95
+2.5.9 Time and Frequency Scaling . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+2.5.10 Parseval＊s Relation (Rayleigh Theorem) . . . . . . . . . . . . . . . . . 96
+2.6 Polar Representation and Graphical Plot of CTFT . . . . . . . . . . . . . . . 96
+2.6.1 Linear Phase . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+2.6.2 Bode Plot . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+2.7 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 98
+Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99
+3 Discrete-Time Fourier Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+3.1 Discrete-Time Fourier Transform (DTFT) . . . . . . . . . . . . . . . . . . . . . . 130
+3.1.1 Definition and Convergence Conditions of DTFT
+Representation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
+3.1.2 Examples of DTFT Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . 132
+3.1.3 DTFT of Periodic Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . 136
+3.2 Properties of the Discrete-Time Fourier Transform . . . . . . . . . . . . . . 138
+3.2.1 Periodicity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138
+3.2.2 Linearity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138
+3.2.3 (Conjugate) Symmetry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138
+3.2.4 Time/Frequency Shifting (Real/Complex Translation) . . . . . 139
+3.2.5 Real Convolution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+3.2.6 Complex Convolution (Modulation/Windowing) . . . . . . . . . . 139
+3.2.7 Differencing and Summation in Time . . . . . . . . . . . . . . . . . . . 143
+3.2.8 Frequency Differentiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+3.2.9 Time and Frequency Scaling . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+3.2.10 Parseval＊s Relation (Rayleigh Theorem) . . . . . . . . . . . . . . . . . 144
+Contents xi
+3.3 Polar Representation and Graphical Plot of DTFT . . . . . . . . . . . . . . . 144
+3.4 Discrete Fourier Transform (DFT) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+3.4.1 Properties of the DFT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+3.4.2 Linear Convolution with DFT . . . . . . . . . . . . . . . . . . . . . . . . . 152
+3.4.3 DFT for Noncausal or Infinite-Duration Sequence . . . . . . . . 155
+3.5 Relationship Among CTFS, CTFT, DTFT, and DFT . . . . . . . . . . . . . 160
+3.5.1 Relationship Between CTFS and DFT/DFS . . . . . . . . . . . . . . 160
+3.5.2 Relationship Between CTFT and DTFT . . . . . . . . . . . . . . . . . 161
+3.5.3 Relationship Among CTFS, CTFT, DTFT, and DFT/DFS . . 162
+3.6 Fast Fourier Transform (FFT) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 164
+3.6.1 Decimation-in-Time (DIT) FFT . . . . . . . . . . . . . . . . . . . . . . . . 165
+3.6.2 Decimation-in-Frequency (DIF) FFT . . . . . . . . . . . . . . . . . . . 168
+3.6.3 Computation of IDFT Using FFT Algorithm . . . . . . . . . . . . . 169
+3.7 Interpretation of DFT Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 170
+3.8 Effects of Signal Operations on DFT Spectrum . . . . . . . . . . . . . . . . . 178
+3.9 Short-Time Fourier Transform 每 Spectrogram . . . . . . . . . . . . . . . . . . 180
+3.10 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182
+Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182
+4 The z-Transform . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+4.1 Definition of the z-Transform . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 208
+4.2 Properties of the z-Transform . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 213
+4.2.1 Linearity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 213
+4.2.2 Time Shifting 每 Real Translation . . . . . . . . . . . . . . . . . . . . . . . 214
+4.2.3 Frequency Shifting 每 Complex Translation . . . . . . . . . . . . . . 215
+4.2.4 Time Reversal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 215
+4.2.5 Real Convolution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 215
+4.2.6 Complex Convolution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 216
+4.2.7 Complex Differentiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 216
+4.2.8 Partial Differentiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 217
+4.2.9 Initial Value Theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 217
+4.2.10 Final Value Theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 218
+4.3 The Inverse z-Transform . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 218
+4.3.1 Inverse z-Transform by Partial Fraction Expansion . . . . . . . . 219
+4.3.2 Inverse z-Transform by Long Division . . . . . . . . . . . . . . . . . . 223
+4.4 Analysis of LTI Systems Using the z-Transform . . . . . . . . . . . . . . . . . 224
+4.5 Geometric Evaluation of the z-Transform . . . . . . . . . . . . . . . . . . . . . . 231
+4.6 The z-Transform of Symmetric Sequences . . . . . . . . . . . . . . . . . . . . . 236
+4.6.1 Symmetric Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 236
+4.6.2 Anti-Symmetric Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . . 237
+4.7 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 240
+Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 240
+xii Contents
+5 Sampling and Reconstruction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 249
+5.1 Digital-to-Analog (DA) Conversion[J-1] . . . . . . . . . . . . . . . . . . . . . . . 250
+5.2 Analog-to-Digital (AD) Conversion[G-1, J-2, W-2] . . . . . . . . . . . . . . 251
+5.2.1 Counter (Stair-Step) Ramp ADC . . . . . . . . . . . . . . . . . . . . . . . 251
+5.2.2 Tracking ADC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 252
+5.2.3 Successive Approximation ADC . . . . . . . . . . . . . . . . . . . . . . . 253
+5.2.4 Dual-Ramp ADC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254
+5.2.5 Parallel (Flash) ADC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 256
+5.3 Sampling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 257
+5.3.1 Sampling Theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 257
+5.3.2 Anti-Aliasing and Anti-Imaging Filters . . . . . . . . . . . . . . . . . 262
+5.4 Reconstruction and Interpolation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 263
+5.4.1 Shannon Reconstruction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 263
+5.4.2 DFS Reconstruction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265
+5.4.3 Practical Reconstruction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 267
+5.4.4 Discrete-Time Interpolation . . . . . . . . . . . . . . . . . . . . . . . . . . . 269
+5.5 Sample-and-Hold (S/H) Operation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 272
+5.6 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 272
+Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 273
+6 Continuous-Time Systems and Discrete-Time Systems . . . . . . . . . . . . . . 277
+6.1 Concept of Discrete-Time Equivalent . . . . . . . . . . . . . . . . . . . . . . . . . . 277
+6.2 Input-Invariant Transformation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 280
+6.2.1 Impulse-Invariant Transformation . . . . . . . . . . . . . . . . . . . . . . 281
+6.2.2 Step-Invariant Transformation . . . . . . . . . . . . . . . . . . . . . . . . . 282
+6.3 Various Discretization Methods [P-1] . . . . . . . . . . . . . . . . . . . . . . . . . . 284
+6.3.1 Backward Difference Rule on Numerical Differentiation . . . 284
+6.3.2 Forward Difference Rule on Numerical Differentiation . . . . 286
+6.3.3 Left-Side (Rectangular) Rule on Numerical Integration . . . . 287
+6.3.4 Right-Side (Rectangular) Rule on Numerical Integration . . . 288
+6.3.5 Bilinear Transformation (BLT) 每 Trapezoidal Rule on
+Numerical Integration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 288
+6.3.6 Pole-Zero Mapping 每 Matched z-Transform [F-1] . . . . . . . . . 292
+6.3.7 Transport Delay 每 Dead Time . . . . . . . . . . . . . . . . . . . . . . . . . 293
+6.4 Time and Frequency Responses of Discrete-Time Equivalents . . . . . 293
+6.5 Relationship Between s-Plane Poles and z-Plane Poles . . . . . . . . . . . 295
+6.6 The Starred Transform and Pulse Transfer Function. . . . . . . . . . . . . . 297
+6.6.1 The Starred Transform . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+6.6.2 The Pulse Transfer Function . . . . . . . . . . . . . . . . . . . . . . . . . . . 298
+6.6.3 Transfer Function of Cascaded Sampled-Data System . . . . . 299
+6.6.4 Transfer Function of System in A/D-G[z]-D/A Structure . . . 300
+Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+Contents xiii
+7 Analog and Digital Filters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 307
+7.1 Analog Filter Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 307
+7.2 Digital Filter Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 320
+7.2.1 IIR Filter Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 321
+7.2.2 FIR Filter Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 331
+7.2.3 Filter Structure and System Model Available in MATLAB . 345
+7.2.4 Importing/Exporting a Filter Design . . . . . . . . . . . . . . . . . . . . 348
+7.3 How to Use SPTool . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350
+Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 357
+8 State Space Analysis of LTI Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 361
+8.1 State Space Description 每 State and Output Equations . . . . . . . . . . . . 362
+8.2 Solution of LTI State Equation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 364
+8.2.1 State Transition Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 364
+8.2.2 Transformed Solution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 365
+8.2.3 Recursive Solution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 368
+8.3 Transfer Function and Characteristic Equation . . . . . . . . . . . . . . . . . . 368
+8.3.1 Transfer Function. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 368
+8.3.2 Characteristic Equation and Roots . . . . . . . . . . . . . . . . . . . . . . 369
+8.4 Discretization of Continuous-Time State Equation . . . . . . . . . . . . . . . 370
+8.4.1 State Equation Without Time Delay . . . . . . . . . . . . . . . . . . . . 370
+8.4.2 State Equation with Time Delay . . . . . . . . . . . . . . . . . . . . . . . 374
+8.5 Various State Space Description 每 Similarity Transformation . . . . . . 376
+8.6 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 379
+Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 379
+A The Laplace Transform . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 385
+A.1 Definition of the Laplace Transform . . . . . . . . . . . . . . . . . . . . . . . . . . . 385
+A.2 Examples of the Laplace Transform . . . . . . . . . . . . . . . . . . . . . . . . . . . 385
+A.2.1 Laplace Transform of the Unit Step Function. . . . . . . . . . . . . 385
+A.2.2 Laplace Transform of the Unit Impulse Function . . . . . . . . . 386
+A.2.3 Laplace Transform of the Ramp Function. . . . . . . . . . . . . . . . 387
+A.2.4 Laplace Transform of the Exponential Function . . . . . . . . . . 387
+A.2.5 Laplace Transform of the Complex Exponential Function . . 387
+A.3 Properties of the Laplace Transform . . . . . . . . . . . . . . . . . . . . . . . . . . . 387
+A.3.1 Linearity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 388
+A.3.2 Time Differentiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 388
+A.3.3 Time Integration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 388
+A.3.4 Time Shifting 每 Real Translation . . . . . . . . . . . . . . . . . . . . . . . 389
+A.3.5 Frequency Shifting 每 Complex Translation . . . . . . . . . . . . . . 389
+A.3.6 Real Convolution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 389
+A.3.7 Partial Differentiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 390
+A.3.8 Complex Differentiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 390
+A.3.9 Initial Value Theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 391
+xiv Contents
+A.3.10 Final Value Theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 391
+A.4 Inverse Laplace Transform. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 392
+A.5 Using the Laplace Transform to Solve Differential Equations . . . . . . 394
+B Tables of Various Transforms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399
+C Operations on Complex Numbers, Vectors, and Matrices . . . . . . . . . . . . 409
+C.1 Complex Addition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 409
+C.2 Complex Multiplication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 409
+C.3 Complex Division . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 409
+C.4 Conversion Between Rectangular Form and Polar/Exponential Form409
+C.5 Operations on Complex Numbers Using MATLAB . . . . . . . . . . . . . . 410
+C.6 Matrix Addition and Subtraction[Y-1] . . . . . . . . . . . . . . . . . . . . . . . . . 410
+C.7 Matrix Multiplication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 411
+C.8 Determinant . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 411
+C.9 Eigenvalues and Eigenvectors of a Matrix1 . . . . . . . . . . . . . . . . . . . . . 412
+C.10 Inverse Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 412
+C.11 Symmetric/Hermitian Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 413
+C.12 Orthogonal/Unitary Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 413
+C.13 Permutation Matrix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 414
+C.14 Rank . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 414
+C.15 Row Space and Null Space . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 414
+C.16 Row Echelon Form . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 414
+C.17 Positive Definiteness. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 415
+C.18 Scalar(Dot) Product and Vector(Cross) Product . . . . . . . . . . . . . . . . . 416
+C.19 Matrix Inversion Lemma . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 416
+C.20 Differentiation w.r.t. a Vector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 416
+D Useful Formulas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 419
+E MATLAB . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 421
+E.1 Convolution and Deconvolution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 423
+E.2 Correlation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 424
+E.3 CTFS (Continuous-Time Fourier Series) . . . . . . . . . . . . . . . . . . . . . . . 425
+E.4 DTFT (Discrete-Time Fourier Transform) . . . . . . . . . . . . . . . . . . . . . . 425
+E.5 DFS/DFT (Discrete Fourier Series/Transform) . . . . . . . . . . . . . . . . . . 425
+E.6 FFT (Fast Fourier Transform) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 426
+E.7 Windowing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 427
+E.8 Spectrogram (FFT with Sliding Window) . . . . . . . . . . . . . . . . . . . . . . 427
+E.9 Power Spectrum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 429
+E.10 Impulse and Step Responses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 430
+E.11 Frequency Response . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 433
+E.12 Filtering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 434
+E.13 Filter Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 436
+Contents xv
+E.13.1 Analog Filter Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 436
+E.13.2 Digital Filter Design 每 IIR (Infinite-duration Impulse
+Response) Filter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 437
+E.13.3 Digital Filter Design 每 FIR (Finite-duration Impulse
+Response) Filter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 438
+E.14 Filter Discretization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 441
+E.15 Construction of Filters in Various Structures Using dfilt() . . . . . . . . . 443
+E.16 System Identification from Impulse/Frequency Response . . . . . . . . . 447
+E.17 Partial Fraction Expansion and (Inverse) Laplace/z-Transform . . . . . 449
+E.18 Decimation, Interpolation, and Resampling . . . . . . . . . . . . . . . . . . . . . 450
+E.19 Waveform Generation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 452
+E.20 Input/Output through File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 452
+F Simulink R . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 453
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 461
+Index for MATLAB routines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 467
+Index for Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 471
+Index for Remarks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473

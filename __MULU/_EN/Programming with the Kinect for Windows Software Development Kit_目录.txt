@@ -1,0 +1,113 @@
+
+Introduction                                                                                                           xi
+PART I KINECT AT A GLANCE
+Chapter 1 A bit of background 3
+The sensor                                                                                                               3
+Limits                                                                                                                         4
+The Kinect for Windows SDK                                                                               5
+Using a Kinect for Xbox 360 sensor with a developer computer       6
+Preparing a new project with C++                                                           6
+Preparing a new project with C#                                                              7
+Using the Kinect for Windows SDK                                                          8
+Chapter 2 Who¡¯s there? 11
+SDK architecture                                                                                                   11
+The video stream                                                                                                 .2
+Using the video stream                                                                            .2
+Getting frames                                                                                           13
+The depth stream                                                                                                 14
+Using the depth stream                                                                           14
+Getting frames                                                                                           15
+Computing depth data                                                                             16
+The audio stream                                                                                                 17
+Skeleton tracking                                                                                                 19
+Tracking skeletons                                                                                    .2
+Getting skeleton data                                                                              .2
+Browsing skeletons                                                                                  .2
+What do you think of this book? We want to hear from you!
+Microsoft is interested in hearing your feedback so we can continually improve our
+books and learning resources for you. To participate in a brief online survey, please visit:
+microsoft.com/learning/booksurvey
+viii Contents
+PART II INTEGRATE KINECT IN YOUR APPLICATION
+Chapter 3 Displaying Kinect data 27
+The color display manager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+The depth display manager  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+The skeleton display manager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+The audio display manager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .46
+Chapter 4 Recording and playing a Kinect session 49
+Kinect Studio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+Recording Kinect data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .50
+Recording the color stream . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+Recording the depth stream  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+Recording the skeleton frames  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+Putting it all together . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .54
+Replaying Kinect data  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Replaying color streams . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+Replaying depth streams  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+Replaying skeleton frames . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+Putting it all together . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+Controlling the record system with your voice . . . . . . . . . . . . . . . . . . . . . . . 69
+PART III POSTURES AND GESTURES
+Chapter 5 Capturing the context 75
+The skeleton¡¯s stability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+The skeleton¡¯s displacement speed . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+The skeleton¡¯s global orientation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+Complete ContextTracker tool code  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+Detecting the position of the skeleton¡¯s eyes  . . . . . . . . . . . . . . . . . . . . . . . .86
+Contents ix
+Chapter 6 Algorithmic gestures and postures 89
+Defiing a gesture with an algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+Creating a base class for gesture detection  . . . . . . . . . . . . . . . . . . . .90
+Detecting linear gestures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+Defiing a posture with an algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .98
+Creating a base class for posture detection  . . . . . . . . . . . . . . . . . . . .98
+Detecting simple postures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .99
+Chapter 7 Templated gestures and postures 103
+Pattern matching gestures  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .103
+The main concept in pattern matching . . . . . . . . . . . . . . . . . . . . . . . . . . . . .104
+Comparing the comparable . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .104
+The golden section search . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .110
+Creating a learning machine . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .116
+The RecordedPath class . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .116
+Building the learning machine . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .118
+Detecting a gesture  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .119
+Detecting a posture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .121
+Going further with combined gestures . . . . . . . . . . . . . . . . . . . . . . . . . . . . .123
+Chapter 8 Using gestures and postures in an application 127
+The Gestures Viewer application . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .127
+Creating the user interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .129
+Initializing the application  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .131
+Displaying Kinect data  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .136
+Controlling the angle of the Kinect sensor . . . . . . . . . . . . . . . . . . . .138
+Detecting gestures and postures with Gestures Viewer  . . . . . . . . . . . . . .139
+Recording and replaying a session  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .139
+Recording new gestures and postures . . . . . . . . . . . . . . . . . . . . . . . . 141
+Commanding Gestures Viewer with your voice . . . . . . . . . . . . . . . .143
+Using the beam angle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .143
+Cleaning resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .144
+x Contents
+PART IV CREATING A USER INTERFACE FOR KINECT
+Chapter 9 You are the mouse! 149
+Controlling the mouse pointer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .150
+Using skeleton analysis to move the mouse pointer  . . . . . . . . . . . . . . . . .152
+The basic approach . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .152
+Adding a smoothing fiter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .154
+Handling the left mouse click . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .157
+Chapter 10 Controls for Kinect 163
+Adapting the size of the elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .163
+Providing specifi feedback control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .164
+Replacing the mouse . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .168
+Magnetization!  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .173
+The magnetized controls  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .173
+Simulating a click . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 176
+Adding a behavior to integrate easily with XAML . . . . . . . . . . . . . .177
+Chapter 11 Creating augmented reality with Kinect 185
+Creating the XNA project  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .186
+Connecting to a Kinect sensor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .188
+Adding the background . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .189
+Adding the lightsaber  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .191
+Creating the saber shape . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .191
+Controlling the saber . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .195
+Creating a ¡°lightsaber¡± effect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .199
+Going further . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .199
+Index 201

@@ -1,0 +1,180 @@
+
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiii
+PART I GETTInG STARTED
+Chapter 1 An Introduction to Kinect 3
+The Kinect Sensor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+Getting Inside a Kinect Sensor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Recognizing People with Kinect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Programming the Kinect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Kinect for Xbox and Kinect for Windows . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+Chapter 2 Getting Started with Kinect 13
+Kinect for Windows SDK Prerequisites . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Kinect Device  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Visual Studio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+DirectX Studio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Installing the Kinect for Windows SDK . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Connecting the Kinect Sensor Bar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Powering the Kinect Sensor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Installing the Kinect Sensor USB Drivers . . . . . . . . . . . . . . . . . . . . . . . 18
+Testing the Kinect Sensor Bar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+The Kinect SDK Sample Browser . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+viii Contents
+Troubleshooting Your Kinect Installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+Remove Old SDK Installations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+Ensure That Visual Studio 2010 Is Installed but Not Running
+During Installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .22
+Ensure That There Are No Windows Updates in Progress . . . . . . . . 22
+Ensure That the Kinect Is Powered Correctly  . . . . . . . . . . . . . . . . . . . 22
+Remove Any Old USB Drivers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+Chapter 3 Writing Software for Kinect 25
+Making a Kinect Video Camera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+Creating a New Visual Studio Project for Kinect  . . . . . . . . . . . . . . . . 25
+Getting the Kinect Sensor Working  . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+Displaying a Video Frame . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+Adding Error Handling  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .38
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+PART II USInG ThE KInECT SEnSoR
+Chapter 4 Your first Kinect Application¡ªvideo Snapshots 43
+Image Storage in Computers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+Getting the Kinect Image Data onto the Screen  . . . . . . . . . . . . . . . .44
+Controlling the Color of the Pixels . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+Creating a Color Adjustment Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+Improving the Speed by Writing Unsafe Code . . . . . . . . . . . . . . . . . . 50
+Saving the Image to a File  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Improving Video Quality  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+Improving Performance by Waiting for Each Kinect Frame . . . . . . . . . . . . 61
+Creating a Video Display Thread . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+Updating the Image from a Different Thread . . . . . . . . . . . . . . . . . . . 63
+Stopping the Background Thread . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .66
+Contents ix
+Chapter 5 Moving Pictures 67
+Detecting Movement in Video Images . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+Storing a Video Image in Program Memory . . . . . . . . . . . . . . . . . . . .68
+Detecting Changes in Video Images  . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+Sounding the Alarm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+A Complete Alarm Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+Switching to Black and White  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .77
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .80
+Chapter 6 fun with the Depth Sensor 81
+Visualizing Kinect Depth Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+The Kinect Depth Sensor  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+Obtaining Depth Information from the Sensor . . . . . . . . . . . . . . . . . 82
+Visualizing Depth Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .84
+Using the Depth Information to Detect Intruders. . . . . . . . . . . . . . . . . . . . . 89
+Using the Depth and Video Sensors at the Same Time . . . . . . . . . . . 89
+Drawing in the Air . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .90
+Detecting Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
+Counting Depth Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+Making You into the Controller . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .96
+Using the Kinect Sensor with an XNA Game . . . . . . . . . . . . . . . . . . . . 97
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .101
+Chapter 7 fun with the Sound Sensor 103
+Capturing Sound Using Kinect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .103
+Sound and Computers  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .103
+Receiving Sound Signals from Kinect . . . . . . . . . . . . . . . . . . . . . . . . .106
+Playing Sound Using XNA  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .108
+Sound Signals and Latency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .111
+Visualizing a Sound Signal in XNA . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .112
+Storing Sound Data in a File and Replaying It . . . . . . . . . . . . . . . . . . . . . . .115
+Creating a WAV File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .116
+Playing a Recorded Sound . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .118
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .120
+x Contents
+PART III CREATInG ADvAnCED USER InTERfACES
+Chapter 8 Body Tracking with Kinect 123
+Kinect Body Tracking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .123
+Kinect Skeleton Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .124
+A Head Tracking Program . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .126
+The Joints Collection and C# Dictionaries . . . . . . . . . . . . . . . . . . . . .128
+Using Format Strings to Build a Message  . . . . . . . . . . . . . . . . . . . . .130
+Skeleton Information Quality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .131
+Joint Tracking State . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .132
+Drawing a Skeleton . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .133
+Drawing Lines in WPF . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .133
+Converting Joint Positions to Image Coordinates . . . . . . . . . . . . . .134
+Clearing the Canvas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .136
+Drawing a Complete Skeleton . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .136
+Detecting Gestures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .139
+Calculating the Distance Between Two Points in Space . . . . . . . . .139
+Using a Gesture to Trigger an Action . . . . . . . . . . . . . . . . . . . . . . . . .140
+Biometric Recognition with Kinect . . . . . . . . . . . . . . . . . . . . . . . . . . . 141
+Creating a ¡°Kiss-Detecting¡± Program  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 141
+Finding Two Skeletons That Are Being Tracked  . . . . . . . . . . . . . . . . 141
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .143
+Chapter 9 voice Control with Kinect 145
+Using the Microsoft Speech Platform . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .145
+Testing Voice Recognition  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .146
+Creating a Program That Recognizes Color Names . . . . . . . . . . . . . 147
+Adding the Speech Platform SDK Assemblies to a Project . . . . . . . 147
+Creating a Speech Recognition Engine  . . . . . . . . . . . . . . . . . . . . . . . 147
+Building the Commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .151
+Creating a Grammar  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .151
+Getting Audio into the Speech Recognizer . . . . . . . . . . . . . . . . . . . .152
+Responding to Recognized Words . . . . . . . . . . . . . . . . . . . . . . . . . . .153
+Contents xi
+Creating a Voice-Controlled Painting Program . . . . . . . . . . . . . . . . . . . . . .154
+Speech Commands  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .155
+Drawing a Skeleton Cursor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .157
+Drawing Using the Artist¡¯s Hand . . . . . . . . . . . . . . . . . . . . . . . . . . . . .158
+Saving the Drawing Canvas to a File . . . . . . . . . . . . . . . . . . . . . . . . . .158
+Tidying Up When the Program Ends  . . . . . . . . . . . . . . . . . . . . . . . . .160
+Improving the Drawing Program  . . . . . . . . . . . . . . . . . . . . . . . . . . . .162
+Adding Speech Output to Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .162
+Feedback Problems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .163
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .164
+Chapter 10 Augmented Reality with Kinect 165
+An Augmented-Reality Game . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .165
+Creating Sprites  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .166
+Creating Augmented Reality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175
+Isolating the Player Image from the Background . . . . . . . . . . . . . . .182
+Putting the Whole Game Together . . . . . . . . . . . . . . . . . . . . . . . . . . .192
+The Kinect Manager Class  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .193
+Improving the Game  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .196
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .196
+PART Iv KInECT In ThE REAl WoRlD
+Chapter 11 Real-World Control with Kinect 201
+Controlling MIDI Devices with Kinect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .201
+The MIDI Protocol  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .201
+Creating a Class to Manage a MIDI Connection . . . . . . . . . . . . . . . .203
+Constructing a MIDI Connection Class . . . . . . . . . . . . . . . . . . . . . . . .204
+Creating a MIDIControl Instance . . . . . . . . . . . . . . . . . . . . . . . . . . . . .205
+Creating MIDI Messages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .206
+Sending MIDI Messages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .207
+Making a Multi-Note Piano . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .210
+Playing a Proper Scale . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .214
+Creating a Human MIDI Keyboard . . . . . . . . . . . . . . . . . . . . . . . . . . .214
+Developing the MIDI Program. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .219
+xii Contents
+What do you think of this book? We want to hear from you!
+Microsoft is interested in hearing your feedback so we can continually improve our
+books and learning resources for you. to participate in a brief online survey, please visit:
+microsoft.com/learning/booksurvey
+Using the Kinect with a Serial Port. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .219
+Linking a Kinect Program to a Serial Port . . . . . . . . . . . . . . . . . . . . .221
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .227
+Chapter 12 Taking Kinect further 229
+Adjusting the Sensor Angle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .229
+Using Kinect to Track Multiple People  . . . . . . . . . . . . . . . . . . . . . . . . . . . . .230
+Identifying Particular People in a Scene  . . . . . . . . . . . . . . . . . . . . . .230
+Combining Skeleton and Person Depth Information  . . . . . . . . . . .232
+Sound Location with the Kinect Microphone Array . . . . . . . . . . . . . . . . . .234
+Using Kinect with the Microsoft Robotics Development Studio  . . . . . . .236
+Mobile Autonomous Reference Using Kinect . . . . . . . . . . . . . . . . . .236
+Emulating a Robot Environment . . . . . . . . . . . . . . . . . . . . . . . . . . . . .237
+Robots and Kinect in the Future . . . . . . . . . . . . . . . . . . . . . . . . . . . . .238
+Taking Kinect Further . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .239
+Mount the Sensor in Different Orientations . . . . . . . . . . . . . . . . . . .239
+Use Multiple Sensors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .239
+Move the Sensor Around . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .239
+Use Skeleton Tracking to Measure Things . . . . . . . . . . . . . . . . . . . . .239
+Investigate TransformSmoothParameters . . . . . . . . . . . . . . . . . . . . . 239
+Use Voice Response to Do Anything  . . . . . . . . . . . . . . . . . . . . . . . . .240
+Have Fun Playing with Video . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .240
+Make More of MIDI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .240
+Good Luck and Have Fun! . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .240
+Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .240
+Index 241
+About the Author 251

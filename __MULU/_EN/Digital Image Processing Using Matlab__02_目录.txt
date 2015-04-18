@@ -1,0 +1,256 @@
+
+Contents
+Preface 
+Acknowledgements 
+About the Authors 
+1 Introduction 
+Preview 
+1.1 Background 
+1.2 What Is Digital Image Processing? 
+1.3 Background on MATLAB and the Image Processing Toolbox 
+1.4 Areas of Image Processing Covered in the Book 
+1.5 The Book Web Site 
+1.6 Notation 
+1.7 Fundamentals 
+1.7.1 The MATLAB Desktop 
+1.7.2 Using the MATLAB Editor/Debugger 
+1.7.3 Getting Help 
+1.7.4 Saving and Retrieving Work Session Data 
+1.7.5 Digital Image Representation 
+1.7.6 Image I/O and Display 
+1.7.7 Classes and Image Types 
+1.7.8 M-Function Programming 
+1.8 How References Are Organized in the Book 
+Summary 
+2 Intensity Transformations and Spatial Filtering 
+Preview 
+2.1 Background 
+2.2 Intensity Transformation Functions 
+2.2.1 Functions imadjust and stretchlim 
+2.2.2 Logarithmic and Contrast- Stretching Transformations 
+2.2.3 Specifying Arbitrary Intensity Transformations 
+2.2.4 Some Utility M-functions for Intensity Transformations 
+2.3 Histogram Processing and Function Plotting 
+2.3.1 Generating and Plotting Image Histograms 
+2.3.2 Histogram Equalization 
+2.3.3 Histogram Matching (Specification) 
+2.3.4 Function adapthisteq 
+2.4 Spatial Filtering 
+2.4.1 Linear Spatial Filtering 
+2.4.2 Nonlinear Spatial Filtering 
+2.5 Image Processing Toolbox Standard Spatial Filters 
+2.5.1 Linear Spatial Filters 
+2.5.2 Nonlinear Spatial Filters 
+2.6 Using Fuzzy Techniques for Intensity Transformations and Spatial
+Filtering 
+2.6.1 Background 
+2.6.2 Introduction to Fuzzy Sets 
+2.6.3 Using Fuzzy Sets 
+2.6.4 A Set of Custom Fuzzy M-functions 
+2.6.5 Using Fuzzy Sets for Intensity Transformations 
+2.6.6 Using Fuzzy Sets for Spatial Filtering 
+Summary 
+3 Filtering in the Frequency Domain 
+Preview 
+3.1 The 2-D Discrete Fourier Transform 
+3.2 Computing and Visualizing the 2-D DFT in MATLAB 
+3.3 Filtering in the Frequency Domain 
+3.3.1 Fundamentals 
+3.3.2 Basic Steps in DFT Filtering 
+3.3.3 An M-function for Filtering in the Frequency Domain 
+3.4 Obtaining Frequency Domain Filters from Spatial Filters 
+3.5 Generating Filters Directly in the Frequency Domain 
+3.5.1 Creating Meshgrid Arrays for Use in Implementing Filters
+in the Frequency Domain 
+3.5.2 Lowpass (Smoothing) Frequency Domain Filters 
+3.5.3 Wireframe and Surface Plotting 
+3.6 Highpass (Sharpening) Frequency Domain Filters 
+3.6.1 A Function for Highpass Filtering 
+3.6.2 High-Frequency Emphasis Filtering 
+3.7 Selective Filtering 
+3.7.1 Bandreject and Bandpass Filters 
+3.7.2 Notchreject and Notchpass Filters 
+Summary 
+4 Image Restoration and Reconstruction 
+Preview 
+4.1 A Model of the Image Degradation/Restoration Process 
+4.2 Noise Models 
+4.2.1 Adding Noise to Images with Function imnoise 
+4.2.2 Generating Spatial Random Noise with a Specified
+Distribution 
+4.2.3 Periodic Noise 
+4.2.4 Estimating Noise Parameters 
+4.3 Restoration in the Presence of Noise Only¡ªSpatial Filtering 
+4.3.1 Spatial Noise Filters 
+4.3.2 Adaptive Spatial Filters 
+4.4 Periodic Noise Reduction Using Frequency Domain Filtering 
+4.5 Modeling the Degradation Function 
+4.6 Direct Inverse Filtering 
+4.7 Wiener Filtering 
+4.8 Constrained Least Squares (Regularized) Filtering 
+4.9 Iterative Nonlinear Restoration Using the Lucy-Richardson
+Algorithm 
+4.10 Blind Deconvolution 
+4.11 Image Reconstruction from Projections 
+4.11.1 Background 
+4.11.2 Parallel-Beam Projections and the Radon Transform 
+4.11.3 The Fourier Slice Theorem and Filtered Backprojections 
+4.11.4 Filter Implementation 
+4.11.5 Reconstruction Using Fan-Beam Filtered Backprojections 
+4.11.6 Function radon 
+4.11.7 Function iradon 
+4.11.8 Working with Fan-Beam Data 
+Summary 
+5 Geometric Transformations and Image
+Registration 
+Preview 
+5.1 Transforming Points 
+5.2 Affine Transformations 
+5.3 Projective Transformations 
+5.4 Applying Geometric Transformations to Images 
+5.5 Image Coordinate Systems in MATLAB 
+5.5.1 Output Image Location 
+5.5.2 Controlling the Output Grid 
+5.6 Image Interpolation 
+5.6.1 Interpolation in Two Dimensions 
+5.6.2 Comparing Interpolation Methods 
+5.7 Image Registration 
+5.7.1 Registration Process 
+5.7.2 Manual Feature Selection and Matching Using cpselect 
+5.7.3 Inferring Transformation Parameters Using cp2tform 
+5.7.4 Visualizing Aligned Images 
+5.7.5 Area-Based Registration 
+5.7.6 Automatic Feature-Based Registration 
+Summary 
+6 Color Image Processing 
+Preview 
+6.1 Color Image Representation in MATLAB 
+6.1.1 RGB Images 
+6.1.2 Indexed Images 
+6.1.3 Functions for Manipulating RGB and Indexed Images 
+6.2 Converting Between Color Spaces 
+6.2.1 NTSC Color Space 
+6.2.2 The YCbCr Color Space 
+6.2.3 The HSV Color Space 
+6.2.4 The CMY and CMYK Color Spaces 
+6.2.5 The HSI Color Space 
+6.2.6 Device-Independent Color Spaces 
+6.3 The Basics of Color Image Processing 
+6.4 Color Transformations 
+6.5 Spatial Filtering of Color Images 
+6.5.1 Color Image Smoothing 
+6.5.2 Color Image Sharpening 
+6.6 Working Directly in RGB Vector Space 
+6.6.1 Color Edge Detection Using the Gradient 
+6.6.2 Image Segmentation in RGB Vector Space 
+Summary 
+7 Wavelets 
+Preview 
+7.1 Background 
+7.2 The Fast Wavelet Transform 
+7.2.1 FWTs Using the Wavelet Toolbox 
+7.2.2 FWTs without the Wavelet Toolbox 
+7.3 Working with Wavelet Decomposition Structures 
+7.3.1 Editing Wavelet Decomposition Coefficients without the
+Wavelet Toolbox 
+7.3.2 Displaying Wavelet Decomposition Coefficients 
+7.4 The Inverse Fast Wavelet Transform 
+7.5 Wavelets in Image Processing 
+Summary 
+8 Image Compression 
+Preview 
+8.1 Background 
+8.2 Coding Redundancy 
+8.2.1 Huffman Codes 
+8.2.2 Huffman Encoding 
+8.2.3 Huffman Decoding 
+8.3 Spatial Redundancy 
+8.4 Irrelevant Information 
+8.5 JPEG Compression 
+8.5.1 JPEG 
+8.5.2 JPEG 2000 
+8.6 Video Compression 
+8.6.1 MATLAB Image Sequences and Movies 
+8.6.2 Temporal Redundancy and Motion Compensation 
+Summary 
+9 Morphological Image Processing 
+Preview 
+9.1 Preliminaries 
+9.1.1 Some Basic Concepts from Set Theory 
+9.1.2 Binary Images, Sets, and Logical Operators 
+9.2 Dilation and Erosion 
+9.2.1 Dilation 
+9.2.2 Structuring Element Decomposition 
+9.2.3 The strel Function 
+9.2.4 Erosion 
+9.3 Combining Dilation and Erosion 
+9.3.1 Opening and Closing 
+9.3.2 The Hit-or-Miss Transformation 
+9.3.3 Using Lookup Tables 
+9.3.4 Function bwmorph 
+9.4 Labeling Connected Components 
+9.5 Morphological Reconstruction 
+9.5.1 Opening by Reconstruction 
+9.5.2 Filling Holes 
+9.5.3 Clearing Border Objects 
+9.6 Gray-Scale Morphology 
+9.6.1 Dilation and Erosion 
+9.6.2 Opening and Closing 
+9.6.3 Reconstruction 
+Summary 
+10 Image Segmentation 
+Preview 
+10.1 Point, Line, and Edge Detection 
+10.1.1 Point Detection 
+10.1.2 Line Detection 
+10.1.3 Edge Detection Using Function edge 
+10.2 Line Detection Using the Hough Transform 
+10.2.1 Background 
+10.2.2 Toolbox Hough Functions 
+10.3 Thresholding 
+10.3.1 Foundation 
+10.3.2 Basic Global Thresholding 
+10.3.3 Optimum Global Thresholding Using Otsu£§s Method 
+10.3.4 Using Image Smoothing to Improve Global Thresholding 
+10.3.5 Using Edges to Improve Global Thresholding 
+10.3.6 Variable Thresholding Based on Local Statistics 
+10.3.7 Image Thresholding Using Moving Averages 
+10.4 Region-Based Segmentation 
+10.4.1 Basic Formulation 
+10.4.2 Region Growing 
+10.4.3 Region Splitting and Merging 
+10.5 Segmentation Using the Watershed Transform 
+10.5.1 Watershed Segmentation Using the Distance Transform 
+10.5.2 Watershed Segmentation Using Gradients 
+10.5.3 Marker-Controlled Watershed Segmentation 
+Summary 
+11 Representation and Description 
+Preview 
+11.1 Background 
+11.1.1 Functions for Extracting Regions and Their Boundaries 
+11.1.2 Some Additional MATLAB and Toolbox Functions Used
+in This Chapter 
+11.1.3 Some Basic Utility M-Functions 
+11.2 Representation 
+11.2.1 Chain Codes 
+11.2.2 Polygonal Approximations Using Minimum-Perimeter Polygons 
+11.2.3 Signatures 
+11.2.4 Boundary Segments 
+11.2.5 Skeletons 
+11.3 Boundary Descriptors 
+11.3.1 Some Simple Descriptors 
+11.3.2 Shape Numbers 
+11.3.3 Fourier Descriptors 
+11.3.4 Statistical Moments 
+11.3.5 Corners 
+11.4 Regional Descriptors 
+11.4.1 Function regionprops 
+11.4.2 Texture 
+11.4.3 Moment Invariants 
+11.5 Using Principal Components for Description 
+Summary 
+Appendix A M-Function Summary 
+Appendix B ICE and MATLAB Graphical User Interfaces 
+Appendix C Additional Custom M-functions 
+Bibliography 
+Index

@@ -1,0 +1,407 @@
+
+LIST OF FIGURES xvi
+PREFACE xix
+CHAPTER
+1 I NTRODUCTION 1
+1.1 WHAT I S G AME PHYSICS? 2
+1.2 WHAT I S A PHYSICS ENGINE? 2
+1.2.1 Advantages of a Physics Engine 3
+1.2.2 Weaknesses of a Physics Engine 4
+1.3 APPROACHES TO PHYSICS ENGINES 5
+1.3.1 Types of Object 5
+1.3.2 Contact Resolution 5
+1.3.3 Impulses and Forces 6
+1.3.4 What We＊re Building 7
+1.4 THE M ATHEMATICS OF PHYSICS ENGINES 7
+1.4.1 The Math You Need to Know 8
+1.4.2 The Math We＊ll Review 9
+1.4.3 The Math We＊ll Introduce 10
+1.5 THE SOURCE CODE IN THIS B OOK 10
+1.6 H OW THIS B OOK I S STRUCTURED 11
+PART I PARTICLE PHYSICS 13
+CHAPTER
+2 THE M ATHEMATICS OF PARTICLES 15
+2.1 VECTORS 15
+2.1.1 The Handedness of Space 19
+vii
+viii Contents
+2.1.2 Vectors and Directions 20
+2.1.3 Scalar and Vector Multiplication 23
+2.1.4 Vector Addition and Subtraction 24
+2.1.5 Multiplying Vectors 27
+2.1.6 The Component Product 28
+2.1.7 The Scalar Product 29
+2.1.8 The Vector Product 31
+2.1.9 The Orthonormal Basis 35
+2.2 CALCULUS 35
+2.2.1 Differential Calculus 36
+2.2.2 Integral Calculus 40
+2.3 SUMMARY 42
+CHAPTER
+3 THE L AWS OF M OTION 43
+3.1 A PARTICLE 43
+3.2 THE FIRST TWO L AWS 44
+3.2.1 The First Law 45
+3.2.2 The Second Law 46
+3.2.3 The Force Equations 46
+3.2.4 Adding Mass to Particles 47
+3.2.5 Momentum and Velocity 48
+3.2.6 The Force of Gravity 48
+3.3 THE I NTEGRATOR 50
+3.3.1 The Update Equations 51
+3.3.2 The Complete Integrator 52
+3.4 SUMMARY 54
+CHAPTER
+4 THE PARTICLE PHYSICS ENGINE 55
+4.1 B ALLISTICS 55
+4.1.1 Setting Projectile Properties 56
+4.1.2 Implementation 57
+4.2 FIREWORKS 60
+4.2.1 The Fireworks Data 60
+4.2.2 The Fireworks Rules 61
+4.2.3 The Implementation 63
+4.3 SUMMARY 66
+Physics Engine Design ix
+PART II M ASS-AGGREGATE PHYSICS 67
+CHAPTER
+5 ADDING GENERAL FORCES 69
+5.1 D＊ALEMBERT＊ S PRINCIPLE 69
+5.2 FORCE GENERATORS 72
+5.2.1 Interfaces and Polymorphism 73
+5.2.2 Implementation 73
+5.2.3 A Gravity Force Generator 76
+5.2.4 A Drag Force Generator 77
+5.3 B UILT-IN GRAVITY AND DAMPING 79
+5.4 SUMMARY 79
+CHAPTER
+6 SPRINGS AND SPRINGLIKE THINGS 81
+6.1 H OOK＊ S L AW 81
+6.1.1 The Limit of Elasticity 83
+6.1.2 Springlike Things 83
+6.2 SPRINGLIKE FORCE GENERATORS 83
+6.2.1 A Basic Spring Generator 84
+6.2.2 An Anchored Spring Generator 86
+6.2.3 An Elastic Bungee Generator 87
+6.2.4 A Buoyancy Force Generator 89
+6.3 STIFF SPRINGS 93
+6.3.1 The Problem of Stiff Springs 93
+6.3.2 Faking Stiff Springs 95
+6.4 SUMMARY 101
+CHAPTER
+7 H ARD CONSTRAINTS 103
+7.1 SIMPLE COLLISION RESOLUTION 103
+7.1.1 The Closing Velocity 104
+7.1.2 The Coefficient of Restitution 105
+7.1.3 The Collision Direction and the Contact Normal 105
+7.1.4 Impulses 107
+x Contents
+7.2 COLLISION PROCESSING 108
+7.2.1 Collision Detection 111
+7.2.2 Resolving Interpenetration 112
+7.2.3 Resting Contacts 116
+7.3 THE CONTACT RESOLVER ALGORITHM 119
+7.3.1 Resolution Order 120
+7.3.2 Time-Division Engines 124
+7.4 COLLISIONLIKE THINGS 125
+7.4.1 Cables 126
+7.4.2 Rods 128
+7.5 SUMMARY 131
+CHAPTER
+8 THE M ASS-AGGREGATE PHYSICS ENGINE 133
+8.1 OVERVIEW OF THE ENGINE 133
+8.2 U SING THE PHYSICS ENGINE 139
+8.2.1 Rope-Bridges and Cables 139
+8.2.2 Friction 140
+8.2.3 Blob Games 141
+8.3 SUMMARY 142
+PART III RIGID-BODY PHYSICS 143
+CHAPTER
+9 THE M ATHEMATICS OF ROTATIONS 145
+9.1 ROTATING OBJECTS IN TWO DIMENSIONS 145
+9.1.1 The Mathematics of Angles 146
+9.1.2 Angular Speed 148
+9.1.3 The Origin and the Center of Mass 148
+9.2 ORIENTATION IN THREE DIMENSIONS 152
+9.2.1 Euler Angles 153
+9.2.2 Axis每Angle 155
+9.2.3 Rotation Matrices 156
+9.2.4 Quaternions 157
+9.3 ANGULAR VELOCITY AND ACCELERATION 159
+9.3.1 The Velocity of a Point 160
+9.3.2 Angular Acceleration 160
+Physics Engine Design xi
+9.4 I MPLEMENTING THE M ATHEMATICS 161
+9.4.1 The Matrix Classes 161
+9.4.2 Matrix Multiplication 162
+9.4.3 The Matrix Inverse and Transpose 171
+9.4.4 Converting a Quaternion to a Matrix 178
+9.4.5 Transforming Vectors 180
+9.4.6 Changing the Basis of a Matrix 184
+9.4.7 The Quaternion Class 186
+9.4.8 Normalizing Quaternions 187
+9.4.9 Combining Quaternions 188
+9.4.10 Rotating 189
+9.4.11 Updating by the Angular Velocity 190
+9.5 SUMMARY 191
+CHAPTER
+10 L AWS OF M OTION FOR RIGID BODIES 193
+10.1 THE RIGID B ODY 193
+10.2 N EWTON 2 FOR ROTATION 196
+10.2.1 Torque 197
+10.2.2 The Moment of Inertia 198
+10.2.3 The Inertia Tensor in World Coordinates 202
+10.3 D＊ALEMBERT FOR ROTATION 205
+10.3.1 Force Generators 208
+10.4 THE RIGID-B ODY I NTEGRATION 210
+10.5 SUMMARY 212
+CHAPTER
+11 THE RIGID-BODY PHYSICS ENGINE 213
+11.1 OVERVIEW OF THE ENGINE 213
+11.2 U SING THE PHYSICS ENGINE 216
+11.2.1 A Flight Simulator 216
+11.2.2 A Sailing Simulator 222
+11.3 SUMMARY 227
+xii Contents
+PART IV COLLISION DETECTION 229
+CHAPTER
+12 COLLISION DETECTION 231
+12.1 COLLISION DETECTION PIPELINE 232
+12.2 COARSE COLLISION DETECTION 232
+12.3 B OUNDING VOLUMES 233
+12.3.1 Hierarchies 235
+12.3.2 Building the Hierarchy 241
+12.3.3 Sub-Object Hierarchies 250
+12.4 SPATIAL DATA STRUCTURES 251
+12.4.1 Binary Space Partitioning 251
+12.4.2 Oct-Trees and Quad-Trees 255
+12.4.3 Grids 258
+12.4.4 Multi-Resolution Maps 260
+12.5 SUMMARY 261
+CHAPTER
+13 GENERATING CONTACTS 263
+13.1 COLLISION GEOMETRY 264
+13.1.1 Primitive Assemblies 264
+13.1.2 Generating Collision Geometry 265
+13.2 CONTACT GENERATION 265
+13.2.1 Contact Data 267
+13.2.2 Point每Face Contacts 269
+13.2.3 Edge每Edge Contacts 269
+13.2.4 Edge每Face Contacts 271
+13.2.5 Face每Face Contacts 271
+13.2.6 Early-Outs 272
+13.3 PRIMITIVE COLLISION ALGORITHMS 273
+13.3.1 Colliding Two Spheres 274
+13.3.2 Colliding a Sphere and a Plane 276
+13.3.3 Colliding a Box and a Plane 279
+13.3.4 Colliding a Sphere and a Box 282
+13.3.5 Colliding Two Boxes 287
+13.3.6 Efficiency and General Polyhedra 297
+13.4 SUMMARY 297
+Physics Engine Design xiii
+PART V CONTACT PHYSICS 299
+CHAPTER
+14 COLLISION RESOLUTION 301
+14.1 I MPULSES AND I MPULSIVE TORQUES 301
+14.1.1 Impulsive Torque 302
+14.1.2 Rotating Collisions 304
+14.1.3 Handling Rotating Collisions 305
+14.2 COLLISION I MPULSES 306
+14.2.1 Change to Contact Coordinates 306
+14.2.2 Velocity Change by Impulse 313
+14.2.3 Impulse Change by Velocity 317
+14.2.4 Calculating the Desired Velocity Change 318
+14.2.5 Calculating the Impulse 319
+14.2.6 Applying the Impulse 320
+14.3 RESOLVING I NTERPENETRATION 321
+14.3.1 Choosing a Resolution Method 321
+14.3.2 Implementing Nonlinear Projection 325
+14.3.3 Avoiding Excessive Rotation 328
+14.4 THE COLLISION RESOLUTION PROCESS 330
+14.4.1 The Collision Resolution Pipeline 331
+14.4.2 Preparing Contact Data 333
+14.4.3 Resolving Penetration 337
+14.4.4 Resolving Velocity 344
+14.4.5 Alternative Update Algorithms 346
+14.5 SUMMARY 349
+CHAPTER
+15 RESTING CONTACTS AND FRICTION 351
+15.1 RESTING FORCES 352
+15.1.1 Force Calculations 353
+15.2 M ICRO-COLLISIONS 354
+15.2.1 Removing Accelerated Velocity 356
+15.2.2 Lowering the Restitution 357
+15.2.3 The New Velocity Calculation 357
+15.3 TYPES OF FRICTION 358
+15.3.1 Static and Dynamic Friction 359
+15.3.2 Isotropic and Anisotropic Friction 361
+15.4 I MPLEMENTING FRICTION 362
+15.4.1 Friction as Impulses 363
+xiv Contents
+15.4.2 Modifying the Velocity Resolution Algorithm 365
+15.4.3 Putting It All Together 371
+15.5 FRICTION AND SEQUENTIAL CONTACT RESOLUTION 373
+15.6 SUMMARY 374
+CHAPTER
+16 STABILITY AND OPTIMIZATION 375
+16.1 STABILITY 375
+16.1.1 Quaternion Drift 376
+16.1.2 Interpenetration on Slopes 377
+16.1.3 Integration Stability 379
+16.1.4 The Benefit of Pessimistic Collision Detection 380
+16.1.5 Changing Mathematical Accuracy 381
+16.2 OPTIMIZATIONS 383
+16.2.1 Sleep 383
+16.2.2 Margins of Error for Penetration and Velocity 390
+16.2.3 Contact Grouping 393
+16.2.4 Code Optimizations 394
+16.3 SUMMARY 397
+CHAPTER
+17 PUTTING I T ALL TOGETHER 399
+17.1 OVERVIEW OF THE ENGINE 399
+17.2 U SING THE PHYSICS ENGINE 401
+17.2.1 Ragdolls 402
+17.2.2 Fracture Physics 405
+17.2.3 Explosive Physics 411
+17.3 LIMITATIONS OF THE ENGINE 418
+17.3.1 Stacks 418
+17.3.2 Reaction Force Friction 419
+17.3.3 Joint Assemblies 419
+17.3.4 Stiff Springs 419
+17.4 SUMMARY 419
+PART VI WHAT COMES N EXT? 421
+CHAPTER
+18 OTHER TYPES OF PHYSICS 423
+18.1 SIMULTANEOUS CONTACT RESOLUTION 423
+Physics Engine Design xv
+18.1.1 The Jacobian 424
+18.1.2 The Linear Complementary Problem 425
+18.2 REDUCED COORDINATE APPROACHES 428
+18.3 SUMMARY 429
+APPENDICES
+A COMMON I NERTIA TENSORS 431
+A.1 DISCRETE M ASSES 431
+A.2 CONTINUOUS M ASSES 432
+A.3 COMMON SHAPES 432
+A.3.1 Cuboid 432
+A.3.2 Sphere 432
+A.3.3 Cylinder 433
+A.3.4 Cone 433
+B U SEFUL FRICTION COEFFICIENTS FOR G AMES 434
+C OTHER PROGRAMMING L ANGUAGES 435
+C.1 C 435
+C.2 J AVA 436
+C.3 COMMON L ANGUAGE RUNTIME (.NET) 436
+C.4 LUA 436
+D M ATHEMATICS SUMMARY 438
+D.1 VECTORS 438
+D.2 QUATERNIONS 439
+D.3 M ATRICES 440
+D.4 I NTEGRATION 441
+D.5 PHYSICS 442
+D.6 OTHER FORMULAE 443
+BIBLIOGRAPHY 445
+I NDEX 447
+LIST OF FIGURES
+1.1 Trigonometry and coordinate geometry 9
+2.1 Three-dimensional coordinates 16
+2.2 Left- and right-handed axes 20
+2.3 A vector as a movement in space 21
+2.4 The geometry of scalar每vector multiplication 25
+2.5 The geometry of vector addition 25
+2.6 Geometric interpretation of the scalar product 31
+2.7 Geometric interpretation of the vector product 34
+2.8 Same average velocity, different instantaneous velocity 37
+4.1 Screenshot of the ballistic demo 57
+4.2 Screenshot of the bigballistic demo 59
+4.3 Screenshot of the fireworks demo 60
+6.1 The game＊s camera attached to a spring 83
+6.2 A rope-bridge held up by springs 86
+6.3 A buoyant block submerged and partially submerged 89
+6.4 A non-stiff spring over time 93
+6.5 A stiff spring over time 94
+6.6 The rest length and the equilibrium position 99
+7.1 Contact normal is different from the vector between objects in contact 107
+7.2 Interpenetrating objects 112
+7.3 Interpenetration and reality 113
+7.4 Vibration on resting contact 116
+7.5 Resolving one contact may resolve another automatically 121
+8.1 Screenshot of the bridge demo 140
+8.2 Screenshot of the platform demo 141
+9.1 The angle that an object is facing 146
+9.2 The circle of orientation vectors 147
+9.3 The relative position of a car component 149
+xvi
+List of Figures xvii
+9.4 The car is rotated 150
+9.5 Aircraft rotation axes 153
+9.6 A matrix has its basis changed 185
+10.1 A force generating zero torque 198
+10.2 The moment of inertia is local to an object 202
+11.1 Screenshot of the flightsim demo 221
+11.2 Different centers of buoyancy 223
+11.3 Screenshot of the sailboat demo 227
+12.1 A spherical bounding volume 234
+12.2 A spherical bounding volume hierarchy 236
+12.3 Bottom-up hierarchy building in action 242
+12.4 Top-down hierarchy building in action 243
+12.5 Insertion hierarchy building in action 244
+12.6 Working out a parent bounding sphere 247
+12.7 Removing an object from a hierarchy 248
+12.8 A sub-object bounding volume hierarchy 250
+12.9 A binary space partition tree 255
+12.10 Identifying an object＊s location in a quad-tree 256
+12.11 A quad-tree forms a grid 258
+12.12 An object may occupy up to four same-sized grid cells 261
+13.1 An object approximated by an assembly of primitives 265
+13.2 Collision detection and contact generation 266
+13.3 Cases of contact 267
+13.4 The relationship between the collision point, collision normal,
+and penetration depth 268
+13.5 The point每face contact data 270
+13.6 The edge每edge contact data 270
+13.7 The edge每face contact data 271
+13.8 The face每face contact data 272
+13.9 The difference in contact normal for a plane and a half-space 278
+13.10 Contacts between a box and a plane 280
+13.11 The half-sizes of a box 281
+13.12 Contacts between a box and a sphere 282
+13.13 Separating axes between a box and a sphere 284
+13.14 Contact between two boxes 288
+13.15 Replacing face每face and edge每face contacts between boxes 289
+13.16 The projection of two boxes onto separating axes 290
+13.17 Sequence of contacts over two frames 292
+13.18 Projection of a point每face contact 294
+13.19 Determining edge每edge contacts 296
+xviii List of Figures
+14.1 The rotational and linear components of a collision 303
+14.2 Three objects with different bounce characteristics 305
+14.3 The three sets of coordinates: world, local, and contact 307
+14.4 Linear projection causes realism problems 322
+14.5 Velocity-based resolution introduces apparent friction 323
+14.6 Nonlinear projection is more believable 324
+14.7 Nonlinear projection does not add friction 324
+14.8 Angular motion cannot resolve the interpenetration 328
+14.9 Angular resolution causes other problems 329
+14.10 Data flow through the physics engine 331
+14.11 Resolution order is significant 338
+14.12 Repeating the same pair of resolutions 339
+14.13 Resolving penetration can cause unexpected contact changes 341
+15.1 A reaction force at a resting contact 352
+15.2 The long-distance dependence of reaction forces 354
+15.3 Micro-collisions replace reaction forces 355
+15.4 A microscopic view of static and dynamic friction 361
+15.5 Anisotropic friction 362
+15.6 The problem with sequential contact resolution 373
+16.1 Objects drift down angled planes 377
+16.2 Collisions can be missed if they aren＊t initially in contact 381
+16.3 A chain of collisions is awakened 390
+16.4 Iterative resolution makes microscopic changes 391
+16.5 Sets of independent contacts 393
+17.1 Data flow through the physics engine 401
+17.2 Screenshot of the ragdoll demo 402
+17.3 Closeup of a ragdoll joint 403
+17.4 Pre-created fractures can look very strange for large objects 406
+17.5 Screenshot of the fracture demo 407
+17.6 The fractures of a concrete block 408
+17.7 The cross section of force across a compression wave 415
+17.8 Screenshot of the explosion demo 418

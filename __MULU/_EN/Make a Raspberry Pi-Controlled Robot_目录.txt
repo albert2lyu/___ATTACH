@@ -1,0 +1,81 @@
+
+Preface
+Conventions Used in This Book
+Using Code Examples
+Safari? Books Online
+How to Contact Us
+Acknowledgments
+1. Introduction
+2. Intro to the Raspberry Pi
+Model A and Model B
+Model B+
+GPIO
+USB
+Power
+Shape
+Where to Get Help
+3. Intro to Linux
+Structure
+Commands
+Navigation
+4. Setting Up the Wireless
+Historical Problems
+The Ralink Chipset
+Making It Work: The GUI Way
+Making It Work: The Command-Line Way
+Setting a Static IP Address
+Running the Pi Headless
+Setting Up an Ad Hoc Network
+5. Parts Is Parts
+Body
+Wheels, Motors, and Power
+Sensors
+Miscellany
+Tools
+6. Installing ServoBlaster
+Servos
+PWM Control
+ServoBlaster
+7. Bot Construction
+The Body
+The Motors
+The Wheels
+The Rear Wheels
+The Front Wheels
+The Robotic Arm
+Pi Power
+Placing Everything
+8. Bot Control
+Connecting the Motors and Motor Controller
+Controlling the Robotic Arm
+9. Bot Location
+Preliminary Setup
+Communicating with the GPS Module
+Using the GPS Data
+10. Sensors, Sensors, Sensors
+SHT15 Temperature Sensor
+Ultrasonic Sensor
+Photoresistor
+Magnetic Sensor
+Reed Switch
+Motion Sensor
+I2C Sensors
+HMC5883L Compass
+BMP180P Barometer
+Nintendo Wii Devices
+Camera
+Live camera feed
+11. Final Code and Conclusion
+A. Setting Up the Pi
+Download NOOBS
+Download the SD Card Formatting Tool
+Format and Fill Your Card
+The raspi-config Tool
+B. Intro to Python
+Python on the Pi: A History in Four Paragraphs
+Using IDLE
+Python Scripts
+Index
+About the Author
+Colophon
+Copyright

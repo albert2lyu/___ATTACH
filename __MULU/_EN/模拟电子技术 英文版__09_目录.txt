@@ -1,0 +1,74 @@
+
+Chapter 1 Semiconductor Diodes
+　1.1 Introduction
+　1.2 Semiconductor Materials: Ge, Si, and GaAs
+　1.3 Covalent Bonding and Intrinsic Materials
+　1.4 Extrinsic Materials: n-Type and p-Type Materials
+　1.5 Semiconductor Diode
+　1.6 Ideal Versus Practical
+　1.7 Resistance Levels
+　1.8 Diode Equivalent Circuits
+　1.9 Transition and Diffusion Capacitance
+　1.10 Reverse Recovery Time
+　1.11 Diode Specification Sheets
+　1.12 Semiconductor Diode Notation
+　1.13 Zener Diodes
+　1.14 Summary
+　1.15 Computer Analysis
+Problems
+Chapter 2 Diode Applications
+　2.1 Introduction
+　2.2 Load-Line Analysis
+　2.3 Equivalent Model Analysis
+　2.4 AND/OR Gates
+　2.5 Sinusoidal Inputs; Half-Wave Rectification
+　2.6 Fu]l-Wave Rectification
+　2.7 Clippers
+　2.8 Clampers
+　2.9 Zener Diodes
+　2.10 Summary
+Problems
+Chapter 3 Bipolar Junction Transistors
+　3.] Introduction
+　3.2 Transistor Construction
+　3.3 Transistor Operation
+　3.4 Common-Base Configuration
+　3.5 Transistor Amplifying Action
+　3.6 Common-Emitter Configuration
+　3.7 Common-Collector Configuration
+　3.8 Limits of Operation
+　3.9 Transistor Specification Sheet
+　3.10 Transistor Casing and Terminal Identification
+　3.11 Summary
+　Problems
+Chapter4 DC BiasingmBJTs
+　4.1 Introduction
+　4.2 Operating Poim
+　4.3 Fixed-Bias Circuit
+4.4 Emitter Bias
+　4.5 Voltage-Divider Bias
+　4.6 DC Bias with Voltage Feedback
+　4.7 Miscellaneous Bias Configurations
+　4.8 Transistor Switching Networks
+　4.9 pnp Transistors
+　4.10 Bias Stabilization
+　4.11 Summary
+　Problems
+Chapter 5 BJT AC Analysis
+5.1 Introduction
+5.2 Amplification in the AC Domain
+5.3 BJT Transistor Modeling
+5.4 The re Transistor Model
+　5.5 The Hybrid Equivalent Model
+　5.6 Hybrid ,r Model
+　5.7 Variations of Transistor Parameters
+　5.8 Common-Emitter Fixed-Bias Configuration
+´´　
+Chapter 6 Field-Effect Transistors
+Chapter 7 FET Biasing
+Chapter 8 FET Amplifiers
+Chapter 9 BJT and JFET Frequency Response
+Chapter 10 Operational Amplifiers
+Chapter 11 Op-Amp Applications
+Chapter 12 Power Amplifiers
+Chapter 13 Feedback Circuits 

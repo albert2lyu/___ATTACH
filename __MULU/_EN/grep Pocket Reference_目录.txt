@@ -1,0 +1,15 @@
+
+grep Pocket Reference 1
+Introduction 1
+Conceptual Overview 5
+Introduction to Regular Expressions 7
+grep Basics 24
+Basic Regular Expressions (grep or grep -G) 27
+Extended Regular Expressions (egrep or grep -E) 38
+Fixed Strings (fgrep or grep -F) 41
+Perl-Style Regular Expressions (grep -P) 43
+Introduction to grep-Relevant Environment Variables 49
+Choosing Between grep Types and Performance Considerations 54
+Advanced Tips and Tricks with grep 57
+References 67
+Index 69

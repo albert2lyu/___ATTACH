@@ -1,0 +1,83 @@
+
+Preface 1
+Chapter 1: Getting Started with a Raspberry Pi Computer 7
+Introduction 7
+Connecting the Raspberry Pi 10
+Using NOOBS to set up your Raspberry Pi SD card 14
+Networking and connecting your Raspberry Pi to the Internet via
+the LAN connector 24
+Configuring your network manually 26
+Networking directly to a laptop or computer 28
+Networking and connecting your Raspberry Pi to the Internet via
+a USB Wi-Fi dongle 39
+Connecting to the Internet through a proxy server 44
+Connecting remotely to the Raspberry Pi over the network using VNC 47
+Connecting remotely to the Raspberry Pi over the network using SSH
+(and X11 Forwarding) 49
+Sharing the home folder of the Raspberry Pi with SMB 53
+Keeping the Raspberry Pi up to date 55
+Chapter 2: Starting with Python Strings, Files, and Menus 57
+Introduction 57
+Working with text and strings 58
+Using files and handling errors 67
+Creating a boot-up menu 71
+Creating a self-defining menu 74
+Chapter 3: Using Python for Automation and Productivity 79
+Introduction 79
+Using Tkinter to create graphical user interfaces 80
+Creating a graphical application Start menu 84
+Displaying photo information in an application 89
+Organizing your photos automatically 98
+Chapter 4: Creating Games and Graphics 103
+Introduction 103
+Using IDLE3 to debug your programs 104
+Drawing lines using a mouse on Tkinter Canvas 107
+Creating a bat and ball game 109
+Creating an overhead scrolling game 116
+Chapter 5: Creating 3D Graphics 125
+Introduction 125
+Starting with 3D coordinates and vertices 126
+Creating and importing 3D models 134
+Creating a 3D world to roam in 139
+Building 3D maps and mazes 143
+Chapter 6: Using Python to Drive Hardware 155
+Introduction 155
+Controlling an LED 158
+Responding to a button 163
+A controlled shutdown button 168
+The GPIO keypad input 176
+Multiplexed color LEDs 182
+Chapter 7: Sense and Display Real-world Data 193
+Introduction 193
+Using devices with the I2C bus 194
+Reading analog data using an analog-to-digital converter 201
+Logging and plotting data 208
+Extending the Raspberry Pi GPIO with an I/O expander 216
+Sensing and sending data to online services 223
+Chapter 8: Creating Projects with the Raspberry Pi Camera Module 229
+Introduction 229
+Getting started with the Raspberry Pi camera module 230
+Using the camera with Python 233
+Generating a time-lapse video 241
+Creating a stop frame animation 250
+Making a QR code reader 260
+Chapter 9: Building Robots 267
+Introduction 267
+Building a Rover-Pi robot with forward driving motors 268
+Using advanced motor control 281
+Building a six-legged Pi-Bug robot 287
+Avoiding objects and obstacles 298
+Getting a sense of direction 305
+Chapter 10: Interfacing with Technology 317
+Introduction 317
+Automating your home with remote sockets 318
+Using SPI to control an LED matrix 326
+Communicating using a serial interface 339
+Controlling the Raspberry Pi over Bluetooth 352
+Controlling USB devices 357
+Appendix: Hardware and Software List 369
+Introduction 369
+General component sources 370
+Hardware list 371
+Software list 375
+Index 379

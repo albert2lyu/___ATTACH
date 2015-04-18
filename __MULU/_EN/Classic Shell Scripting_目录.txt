@@ -1,0 +1,124 @@
+
+Foreword . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ix
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xi
+1. Background . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.1 Unix History 1
+1.2 Software Tools Principles 4
+1.3 Summary 6
+2. Getting Started . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+2.1 Scripting Languages Versus Compiled Languages 8
+2.2 Why Use a Shell Script? 9
+2.3 A Simple Script 9
+2.4 Self-Contained Scripts: The #! First Line 10
+2.5 Basic Shell Constructs 12
+2.6 Accessing Shell Script Arguments 23
+2.7 Simple Execution Tracing 24
+2.8 Internationalization and Localization 25
+2.9 Summary 28
+3. Searching and Substitutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+3.1 Searching for Text 30
+3.2 Regular Expressions 31
+3.3 Working with Fields 56
+3.4 Summary 65
+4. Text Processing Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+4.1 Sorting Text 67
+4.2 Removing Duplicates 75
+4.3 Reformatting Paragraphs 76
+4.4 Counting Lines, Words, and Characters 77
+4.5 Printing 78
+4.6 Extracting the First and Last Lines 83
+4.7 Summary 86
+5. Pipelines Can Do Amazing Things . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+5.1 Extracting Data from Structured Text Files 87
+5.2 Structured Data for the Web 94
+5.3 Cheating at Word Puzzles 100
+5.4 Word Lists 102
+5.5 Tag Lists 105
+5.6 Summary 107
+6. Variables, Making Decisions, and Repeating Actions . . . . . . . . . . . . . . . . . . 109
+6.1 Variables and Arithmetic 109
+6.2 Exit Statuses 120
+6.3 The case Statement 129
+6.4 Looping 130
+6.5 Functions 135
+6.6 Summary 138
+7. Input and Output, Files, and Command Evaluation . . . . . . . . . . . . . . . . . . . . 140
+7.1 Standard Input, Output, and Error 140
+7.2 Reading Lines with read 140
+7.3 More About Redirections 143
+7.4 The Full Story on printf 147
+7.5 Tilde Expansion and Wildcards 152
+7.6 Command Substitution 155
+7.7 Quoting 161
+7.8 Evaluation Order and eval 162
+7.9 Built-in Commands 168
+7.10 Summary 175
+8. Production Scripts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177
+8.1 Path Searching 177
+8.2 Automating Software Builds 192
+8.3 Summary 222
+9. Enough awk to Be Dangerous . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 223
+9.1 The awk Command Line 224
+9.2 The awk Programming Model 225
+9.3 Program Elements 226
+9.4 Records and Fields 236
+9.5 Patterns and Actions 238
+9.6 One-Line Programs in awk 240
+9.7 Statements 244
+9.8 User-Defined Functions 252
+9.9 String Functions 255
+9.10 Numeric Functions 264
+9.11 Summary 266
+10. Working with Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 267
+10.1 Listing Files 267
+10.2 Updating Modification Times with touch 273
+10.3 Creating and Using Temporary Files 274
+10.4 Finding Files 279
+10.5 Running Commands: xargs 293
+10.6 Filesystem Space Information 295
+10.7 Comparing Files 299
+10.8 Summary 307
+11. Extended Example: Merging User Databases . . . . . . . . . . . . . . . . . . . . . . . . . 308
+11.1 The Problem 308
+11.2 The Password Files 309
+11.3 Merging Password Files 310
+11.4 Changing File Ownership 317
+11.5 Other Real-World Issues 321
+11.6 Summary 323
+12. Spellchecking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+12.1 The spell Program 325
+12.2 The Original Unix Spellchecking Prototype 326
+12.3 Improving ispell and aspell 327
+12.4 A Spellchecker in awk 331
+12.5 Summary 350
+13. Processes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 352
+13.1 Process Creation 353
+13.2 Process Listing 354
+13.3 Process Control and Deletion 360
+13.4 Process System-Call Tracing 368
+13.5 Process Accounting 372
+13.6 Delayed Scheduling of Processes 373
+13.7 The /proc Filesystem 378
+13.8 Summary 379
+14. Shell Portability Issues and Extensions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 381
+14.1 Gotchas 381
+14.2 The bash shopt Command 385
+14.3 Common Extensions 389
+14.4 Download Information 402
+14.5 Other Extended Bourne-Style Shells 405
+14.6 Shell Versions 405
+14.7 Shell Initialization and Termination 406
+14.8 Summary 412
+15. Secure Shell Scripts: Getting Started . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 413
+15.1 Tips for Secure Shell Scripts 413
+15.2 Restricted Shell 416
+15.3 Trojan Horses 418
+15.4 Setuid Shell Scripts: A Bad Idea 419
+15.5 ksh93 and Privileged Mode 421
+15.6 Summary 422
+A. Writing Manual Pages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 423
+B. Files and Filesystems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 437
+C. Important Unix Commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473
+Bibliography . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 478
+Glossary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 484
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 509

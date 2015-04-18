@@ -1,0 +1,72 @@
+
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  vii
+1. Getting Up and Running . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+How the Kinect Works 1
+How the Kinect Was Hacked 3
+Choose a Framework and Driver 4
+Hack 01. Install OpenNI, SensorKinect, and NITE for Windows 7 5
+Hack 02. Install OpenNI, NITE, and SensorKinect for OS X 7
+Hack 03. Install OpenNI, NITE, and SensorKinect for Ubuntu 9
+Hack 04. Install libfreenect for Mac OS X 14
+Hack 05. Install libfreenect for Ubuntu 15
+Hack 06. Install libfreenect for Windows 7 16
+Hack 07. Install the Kinect for Windows SDK 21
+2. Programming Options . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  25
+Hack 08. Get to Know openFrameworks 26
+Hack 09. Install openFrameworks for Windows 26
+Hack 10. Install openFrameworks for OS X 27
+Hack 11. Install openFrameworks for Ubuntu 28
+Hack 12. Install the ofxKinect Add-on for openFrameworks 29
+Hack 13. Use Processing 31
+Hack 14. Install SimpleOpenNI and OpenKinect Processing Libraries 33
+Hack 15. Install Cinder-Kinect for Mac OS X 33
+3. Visual Effects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  37
+Hack 16. Use Quartz Composer with Synapse for Kinect 37
+Hack 17. Draw in the Air with Processing 42
+Hack 18. Create a Gravitational Particle Effect 50
+Hack 19. Make Objects Follow a Tracked User¡¯s Hand 54
+Hack 20. Dynamically Change Colors and Background Perspective 59
+Hack 21. Create a Live 3D Rendered Effect with Processing 62
+iii
+Hack 22. Create a Hairy Effect 80
+Hack 23. Create Hand Tracking Trails Using Cinder 84
+4. Gestural Interfaces for Making Music . . . . . . . . . . . . . . . . . . . . . .  91
+Hack 24. Install OSCeleton 91
+Hack 25. Install Kinectar 94
+Hack 26. Map Parameters in Ableton Live with Kinectar 98
+Hack 27. Set Up a Drum Kit with Kinectar 100
+Hack 28. Create a Dubstep Wobble Bassline with Kinectar 104
+5. Motion Capture and Animation . . . . . . . . . . . . . . . . . . . . . . . . .  111
+Hack 29. Use Blender and NI Mate for Motion Capture 112
+Hack 30. Record Motion Capture with Blender and NI Mate 115
+Hack 31. Control a Rig in Blender with NI Mate 117
+Hack 32. Use NI Mate with Animata 120
+6. 3D Object and Scene Reconstruction . . . . . . . . . . . . . . . . . . . . .  125
+Hack 33. Install RGBDemo and Skanect 125
+Hack 34. Import RGBDemo Output into Blender 128
+Hack 35. Use Skanect to Create a Scene Mesh 131
+Hack 36. Use Processing to Create a 3D Scanner with Mesh Viewer 133
+Hack 37. Import a Scanned Object for Printing with MakerBot 136
+Hack 38. Set Up PCL and OpenCV 140
+Hack 39. Display a Colored Point Cloud 142
+Hack 40. Use Features to Track Camera Image Motion 145
+Hack 41. Fuse Point Clouds into a Consistent 3D Model 151
+Hack 42. Add Convenience Functionality to a 3D Model 167
+Hack 43. Next Steps: SLAM, OctoMaps, Surface Reconstruction 174
+7. Web Applications and Gaming . . . . . . . . . . . . . . . . . . . . . . . . . .  177
+Hack 44. Install the Zigfu SDK 177
+Hack 45. Create an HTML User Radar Using Zigfu SDK 178
+Hack 46. Install Scratch and Kinect2Scratch 184
+Hack 47. Create a Basic Tennis Game Using Scratch 186
+Hack 48. Build a Defender-Style Shooter Game with Scratch 192
+Hack 49. Build a Kinect Space Shooter Game in Processing 207
+Hack 50. Build a Processing Fridge Magnet Game 218
+8. Robotics and Natural User Interfaces . . . . . . . . . . . . . . . . . . . . .  241
+Hack 51. Control a Robotic Arm 241
+Hack 52. Control a Robot¡¯s Navigation 248
+Hack 53. Use Candescent NUI 248
+Hack 54. Use Kinect Jesture for Mac 250
+Hack 55. Use Linux Gesture-Based Mouse Control 252
+iv TABLE OF CONTENTS
+Hack 56. Use Winect for Windows 254
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  255

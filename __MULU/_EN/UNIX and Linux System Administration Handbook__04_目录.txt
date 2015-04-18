@@ -1,0 +1,1635 @@
+
+FOREWORD xlii
+PREFACE xliv
+ACKNOWLEDGMENTS xlvi
+SECTION ONE: BASIC ADMINISTRATION
+CHAPTER 1 WHERE TO START 3
+Essential duties of the system administrator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Account provisioning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Adding and removing hardware. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Performing backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Installing and upgrading software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Monitoring the system . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Troubleshooting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Maintaining local documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Vigilantly monitoring security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Fire fighting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Suggested background . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Friction between UNIX and Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+Linux distributions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Example systems used in this book . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Example Linux distributions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+Example UNIX distributions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+ptg
+vi UNIX and Linux System Administration Handbook
+System-specific administration tools. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Notation and typographical conventions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Units . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Man pages and other on-line documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Organization of the man pages. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+man: read man pages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Storage of man pages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+GNU Texinfo. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+Other authoritative documentation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+System-specific guides . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+Package-specific documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+Books . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+RFCs and other Internet documents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+The Linux Documentation Project . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+Other sources of information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+Ways to find and install software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+Determining whether software has already been installed . . . . . . . . . . . . . . . 22
+Adding new software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+Building software from source code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+System administration under duress . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+System administration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+Essential tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+CHAPTER 2 SCRIPTING AND THE SHELL 29
+Shell basics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+Command editing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+Pipes and redirection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+Variables and quoting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+Common filter commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+cut: separate lines into fields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+sort: sort lines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+uniq: print unique lines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+wc: count lines, words, and characters . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+tee: copy input to two places . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+head and tail: read the beginning or end of a file . . . . . . . . . . . . . . . . . . 36
+grep: search text . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+
+ptg
+Table of Contents vii
+bash scripting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+From commands to scripts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38
+Input and output. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+Command-line arguments and functions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+Variable scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42
+Control flow. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+Loops . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+Arrays and arithmetic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+Regular expressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+The matching process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+Literal characters. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+Special characters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+Example regular expressions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51
+Captures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+Greediness, laziness, and catastrophic backtracking . . . . . . . . . . . . . . . . . . . . 53
+Perl programming . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 54
+Variables and arrays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+Array and string literals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+Function calls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+Type conversions in expressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+String expansions and disambiguation of variable references . . . . . . . . . . . . 57
+Hashes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+References and autovivification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+Regular expressions in Perl . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+Input and output. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+Control flow. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+Accepting and validating input. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+Perl as a filter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64
+Add-on modules for Perl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+Python scripting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 66
+Python quick start. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+Objects, strings, numbers, lists, dictionaries, tuples, and files . . . . . . . . . . . . 69
+Input validation example. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
+Loops . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 71
+Scripting best practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+Shell basics and bash scripting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+Regular expressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+Perl scripting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+Python scripting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+
+ptg
+viii UNIX and Linux System Administration Handbook
+CHAPTER 3 BOOTING AND SHUTTING DOWN 77
+Bootstrapping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+Recovery boot to a shell . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+Steps in the boot process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+Kernel initialization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+Hardware configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+Creation of kernel processes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+Operator intervention (recovery mode only). . . . . . . . . . . . . . . . . . . . . . . . . . 80
+Execution of startup scripts. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+Boot process completion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+Booting PCs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+GRUB: The GRand Unified Boot loader. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+Kernel options. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+Multibooting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+Booting to single-user mode . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+Single-user mode with GRUB. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+Single-user mode on SPARC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+HP-UX single-user mode . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+AIX single-user mode . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+Working with startup scripts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+init and its run levels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 88
+Overview of startup scripts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+Red Hat startup scripts. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+SUSE startup scripts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+Ubuntu startup scripts and the Upstart daemon . . . . . . . . . . . . . . . . . . . . . . . 94
+HP-UX startup scripts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+AIX startup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+Booting Solaris . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+The Solaris Service Management Facility . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+A brave new world: booting with SMF . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99
+Rebooting and shutting down . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100
+shutdown: the genteel way to halt the system . . . . . . . . . . . . . . . . . . . . . . . . 100
+halt and reboot: simpler ways to shut down . . . . . . . . . . . . . . . . . . . . . . . . . 101
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102
+CHAPTER 4 ACCESS CONTROL AND ROOTLY POWERS 103
+Traditional UNIX access control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+Filesystem access control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+Process ownership . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+The root account. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+Setuid and setgid execution. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+
+ptg
+Table of Contents ix
+Modern access control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+Role-based access control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+SELinux: security-enhanced Linux. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
+POSIX capabilities (Linux) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
+PAM: Pluggable Authentication Modules . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
+Kerberos: third-party cryptographic authentication . . . . . . . . . . . . . . . . . . . 110
+Access control lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
+Real-world access control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
+Choosing a root password . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+Logging in to the root account . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+su: substitute user identity. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+sudo: limited su. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+Password vaults and password escrow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 117
+Pseudo-users other than root . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 118
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 119
+CHAPTER 5 CONTROLLING PROCESSES 120
+Components of a process. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
+PID: process ID number . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+PPID: parent PID . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+UID and EUID: real and effective user ID . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+GID and EGID: real and effective group ID . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+Niceness . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+Control terminal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+The life cycle of a process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+Signals. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+kill: send signals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+Process states . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
+nice and renice: influence scheduling priority. . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+ps: monitor processes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
+Dynamic monitoring with top, prstat, and topas . . . . . . . . . . . . . . . . . . . . . . . . . 133
+The /proc filesystem. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+strace, truss, and tusc: trace signals and system calls . . . . . . . . . . . . . . . . . . . . . . 136
+Runaway processes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+CHAPTER 6 THE FILESYSTEM 140
+Pathnames . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+Absolute and relative paths . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+Spaces in filenames . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+Filesystem mounting and unmounting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+The organization of the file tree . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145
+
+ptg
+x UNIX and Linux System Administration Handbook
+File types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+Regular files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+Directories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+Character and block device files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+Local domain sockets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+Named pipes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+Symbolic links . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+File attributes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 152
+The permission bits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 152
+The setuid and setgid bits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+The sticky bit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+ls: list and inspect files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+chmod: change permissions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 156
+chown and chgrp: change ownership and group . . . . . . . . . . . . . . . . . . . . . 157
+umask: assign default permissions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+Linux bonus flags . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+Access control lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 159
+A short and brutal history of UNIX ACLs . . . . . . . . . . . . . . . . . . . . . . . . . . . 160
+ACL implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 161
+ACL support by system . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162
+POSIX ACLs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162
+Interaction between traditional modes and ACLs . . . . . . . . . . . . . . . . . 163
+Access determination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 165
+ACL inheritance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 166
+NFSv4 ACLs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 166
+NFSv4 entities for which permissions can be specified. . . . . . . . . . . . . 168
+Access determination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 168
+ACL inheritance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169
+NFSv4 ACL viewing in Solaris . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169
+Interactions between ACLs and modes . . . . . . . . . . . . . . . . . . . . . . . . . . 171
+Modifying NFSv4 ACLs in Solaris . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 172
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 173
+CHAPTER 7 ADDING NEW USERS 174
+The /etc/passwd file . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 176
+Login name . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 176
+Encrypted password . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 179
+UID (user ID) number. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 180
+Default GID number . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 181
+GECOS field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 181
+Home directory. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182
+Login shell . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182
+The /etc/shadow and /etc/security/passwd files . . . . . . . . . . . . . . . . . . . . . . . . . . 183
+The /etc/group file . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 186
+
+ptg
+Table of Contents xi
+Adding users: the basic steps. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 187
+Editing the passwd and group files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+Setting a password . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+Creating the home directory and installing startup files. . . . . . . . . . . . . . . . 189
+Setting permissions and ownerships . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 190
+Setting a mail home . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 190
+Configuring roles and administrative privileges . . . . . . . . . . . . . . . . . . . . . . 190
+Final steps. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 191
+Adding users with useradd . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 191
+useradd on Ubuntu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 192
+useradd on SUSE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+useradd on Red Hat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+useradd on Solaris . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+useradd on HP-UX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+useradd on AIX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 195
+useradd example. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 197
+Adding users in bulk with newusers (Linux) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 197
+Removing users. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 198
+Disabling logins. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 200
+Managing users with system-specific tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201
+Reducing risk with PAM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201
+Centralizing account management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201
+LDAP and Active Directory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 202
+Single sign-on systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 202
+Identity management systems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 203
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 204
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+CHAPTER 8 STORAGE 206
+I just want to add a disk! . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+Linux recipe . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+Solaris recipe . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 208
+HP-UX recipe . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 208
+AIX recipe . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+Storage hardware . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209
+Hard disks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 210
+Solid state disks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 212
+Storage hardware interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 213
+The PATA interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 215
+The SATA interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 215
+Parallel SCSI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 216
+Serial SCSI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 219
+Which is better, SCSI or SATA? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 219
+Peeling the onion: the software side of storage . . . . . . . . . . . . . . . . . . . . . . . . . . . 220
+
+ptg
+xii UNIX and Linux System Administration Handbook
+Attachment and low-level management of drives . . . . . . . . . . . . . . . . . . . . . . . . . 223
+Installation verification at the hardware level . . . . . . . . . . . . . . . . . . . . . . . . 223
+Disk device files. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+Disk devices for Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+Disk devices for Solaris . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225
+Disk devices for HP-UX. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225
+Disk devices for AIX. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 226
+Formatting and bad block management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 226
+ATA secure erase . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 227
+hdparm: set disk and interface parameters (Linux) . . . . . . . . . . . . . . . . . . . 229
+Hard disk monitoring with SMART . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 230
+Disk partitioning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 231
+Traditional partitioning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 233
+Windows-style partitioning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 234
+GPT: GUID partition tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 235
+Linux partitioning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 236
+Solaris partitioning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 236
+HP-UX partitioning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 237
+RAID: redundant arrays of inexpensive disks . . . . . . . . . . . . . . . . . . . . . . . . . . . . 237
+Software vs. hardware RAID. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 237
+RAID levels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 238
+Disk failure recovery . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 241
+Drawbacks of RAID 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 241
+mdadm: Linux software RAID . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+Logical volume management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 246
+LVM implementations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 246
+Linux logical volume management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 247
+Volume snapshots. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 249
+Resizing filesystems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 250
+HP-UX logical volume management. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 251
+AIX logical volume management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 253
+Filesystems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254
+Linux filesystems: the ext family. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 255
+HP-UX filesystems: VxFS and HFS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 256
+AIX¡¯s JFS2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 257
+Filesystem terminology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 257
+Filesystem polymorphism . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 258
+mkfs: format filesystems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 258
+fsck: check and repair filesystems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 259
+Filesystem mounting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 260
+Setup for automatic mounting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 260
+USB drive mounting. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 263
+Enabling swapping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+
+ptg
+Table of Contents xiii
+ZFS: all your storage problems solved . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+ZFS architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265
+Example: Solaris disk addition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 266
+Filesystems and properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 266
+Property inheritance. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 268
+One filesystem per user . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 269
+Snapshots and clones . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 269
+Raw volumes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 271
+Filesystem sharing filesystem through NFS, CIFS, and iSCSI . . . . . . . . . . . 271
+Storage pool management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 272
+Storage area networking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 274
+SAN networks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 275
+iSCSI: SCSI over IP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 276
+Booting from an iSCSI volume . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 277
+Vendor specifics for iSCSI initiators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 277
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281
+CHAPTER 9 PERIODIC PROCESSES 283
+cron: schedule commands. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 283
+The format of crontab files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 284
+Crontab management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 286
+Linux and Vixie-cron extensions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 287
+Some common uses for cron  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 288
+Simple reminders . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 288
+Filesystem cleanup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 289
+Network distribution of configuration files . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+Log file rotation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 291
+CHAPTER 10 BACKUPS 292
+Motherhood and apple pie . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 293
+Perform all backups from a central location. . . . . . . . . . . . . . . . . . . . . . . . . . 293
+Label your media. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 293
+Pick a reasonable backup interval . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 294
+Choose filesystems carefully . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 294
+Make daily dumps fit on one piece of media . . . . . . . . . . . . . . . . . . . . . . . . . 294
+Keep media off-site. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295
+Protect your backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295
+Limit activity during backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 296
+Verify your media . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+Develop a media life cycle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297
+Design your data for backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 298
+Prepare for the worst . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 298
+
+ptg
+xiv UNIX and Linux System Administration Handbook
+Backup devices and media. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 299
+Optical media: CD-R/RW, DVD¡ÀR/RW, DVD-RAM, and Blu-ray . . . . . 299
+Portable and removable hard disks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300
+Magnetic tapes in general . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+Small tape drives: 8mm and DDS/DAT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+DLT/S-DLT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+AIT and SAIT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 302
+VXA/VXA-X . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 302
+LTO. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 302
+Jukeboxes, stackers, and tape libraries. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 302
+Hard disks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+Internet and cloud backup services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+Summary of media types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 304
+What to buy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 304
+Saving space and time with incremental backups . . . . . . . . . . . . . . . . . . . . . . . . . 305
+A simple schedule . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 306
+A moderate schedule . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 307
+Setting up a backup regime with dump  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 307
+Dumping filesystems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 308
+Restoring from dumps with restore  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 310
+Restoring entire filesystems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313
+Restoring to new hardware . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314
+Dumping and restoring for upgrades . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314
+Using other archiving programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 315
+tar: package files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 315
+dd: twiddle bits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 316
+ZFS backups. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 316
+Using multiple files on a single tape . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 317
+Bacula . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 318
+The Bacula model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 319
+Setting up Bacula . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 320
+Installing the database and Bacula daemons . . . . . . . . . . . . . . . . . . . . . . . . . 320
+Configuring the Bacula daemons . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 321
+Common configuration sections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 322
+bacula-dir.conf: director configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 324
+Catalog resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 324
+Storage resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 324
+Pool resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+Schedule resources. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+Client resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+FileSet resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326
+Job resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326
+
+ptg
+Table of Contents xv
+bacula-sd.conf: storage daemon configuration . . . . . . . . . . . . . . . . . . . . . . . 327
+The Director resource . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 327
+The Storage resource . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 327
+Device resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 327
+Autochanger resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 328
+bconsole.conf: console configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 328
+Installing and configuring the client file daemon . . . . . . . . . . . . . . . . . . . . . 328
+Starting the Bacula daemons. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 329
+Adding media to pools. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 329
+Running a manual backup. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 330
+Running a restore job. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 330
+Backing up Windows clients. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 333
+Monitoring Bacula configurations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+Bacula tips and tricks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+Alternatives to Bacula. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 335
+Commercial backup products. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 335
+ADSM/TSM. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 336
+Veritas NetBackup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 336
+EMC NetWorker. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 337
+Other alternatives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 337
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 337
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 337
+CHAPTER 11 SYSLOG AND LOG FILES 340
+Finding log files. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 341
+Files not to manage. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 342
+Vendor specifics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 344
+Syslog: the system event logger. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 344
+Syslog architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+Configuring syslogd . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+Config file examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349
+Stand-alone machine . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349
+Network logging client. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349
+Central logging host . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350
+Syslog debugging. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 351
+Alternatives to syslog . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 351
+Linux kernel and boot-time logging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 352
+AIX logging and error handling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 353
+Syslog configuration under AIX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 355
+logrotate: manage log files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 356
+Condensing log files to useful information. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 358
+Logging policies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 359
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 361
+
+ptg
+xvi UNIX and Linux System Administration Handbook
+CHAPTER 12 SOFTWARE INSTALLATION AND MANAGEMENT 362
+Installing Linux and OpenSolaris. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 363
+Netbooting PCs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 363
+Setting up PXE for Linux. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 364
+Netbooting non-PCs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 364
+Using Kickstart: the automated installer for Red Hat Enterprise Linux. . . 365
+Setting up a Kickstart configuration file . . . . . . . . . . . . . . . . . . . . . . . . . 365
+Building a Kickstart server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 366
+Pointing Kickstart at your config file. . . . . . . . . . . . . . . . . . . . . . . . . . . . 367
+Using AutoYaST: SUSE¡¯s automated installation tool . . . . . . . . . . . . . . . . . 367
+Automating installation with the Ubuntu installer . . . . . . . . . . . . . . . . . . . . 368
+Installing Solaris . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 370
+Network installations with JumpStart . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 371
+Network installations with the Automated Installer . . . . . . . . . . . . . . . . . . . 375
+Installing HP-UX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 377
+Automating Ignite-UX installations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 379
+Installing AIX with the Network Installation Manager . . . . . . . . . . . . . . . . . . . . 380
+Managing packages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 381
+Managing Linux packages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 382
+rpm: manage RPM packages. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 382
+dpkg: manage .deb packages in Ubuntu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 383
+Using high-level Linux package management systems. . . . . . . . . . . . . . . . . . . . . 384
+Package repositories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 385
+RHN: the Red Hat Network . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 387
+APT: the Advanced Package Tool . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 387
+apt-get configuration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 388
+An example /etc/apt/sources.list file . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 389
+Creation of a local repository mirror. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 390
+apt-get automation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 391
+yum: release management for RPM. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 391
+Zypper package management for SUSE: now with more ZYpp! . . . . . . . . . 392
+Managing packages for UNIX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 393
+Solaris packaging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 394
+HP-UX packaging. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 394
+Software management in AIX. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 396
+Revision control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 397
+Backup file creation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 397
+Formal revision control systems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 398
+Subversion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399
+Git . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 401
+Software localization and configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 404
+Organizing your localization. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 405
+Testing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 406
+Compiling locally . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 407
+Distributing localizations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 408
+
+ptg
+Table of Contents xvii
+Using configuration management tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 408
+cfengine: computer immune system . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 408
+LCFG: a large-scale configuration system. . . . . . . . . . . . . . . . . . . . . . . . . . . . 409
+Template Tree 2: cfengine helper. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 410
+DMTF/CIM: the Common Information Model . . . . . . . . . . . . . . . . . . . . . . 410
+Sharing software over NFS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 411
+Package namespaces. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 411
+Dependency management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 412
+Wrapper scripts. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 413
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 413
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 414
+CHAPTER 13 DRIVERS AND THE KERNEL 415
+Kernel adaptation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 416
+Drivers and device files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 417
+Device files and device numbers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 418
+Device file creation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 419
+Naming conventions for devices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 420
+Custom kernels versus loadable modules . . . . . . . . . . . . . . . . . . . . . . . . . . . . 420
+Linux kernel configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 421
+Tuning Linux kernel parameters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 421
+Building a Linux kernel . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 423
+If it ain¡¯t broke, don¡¯t fix it. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 423
+Configuring kernel options . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 423
+Building the kernel binary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425
+Adding a Linux device driver . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425
+Solaris kernel configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 427
+The Solaris kernel area . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 427
+Configuring the kernel with /etc/system  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 428
+Adding a Solaris device driver . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 430
+Debugging a Solaris configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 430
+HP-UX kernel configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 431
+Management of the AIX kernel . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 432
+The Object Data Manager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 432
+Kernel tuning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 434
+Loadable kernel modules. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 434
+Loadable kernel modules in Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 435
+Loadable kernel modules in Solaris . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 436
+Linux udev for fun and profit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 437
+Linux sysfs: a window into the souls of devices . . . . . . . . . . . . . . . . . . . . . . . 438
+Exploring devices with udevadm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 439
+Constructing rules and persistent names . . . . . . . . . . . . . . . . . . . . . . . . . . . . 439
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 443
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 444
+
+ptg
+xviii UNIX and Linux System Administration Handbook
+SECTION TWO: NETWORKING
+CHAPTER 14 TCP/IP NETWORKING 447
+TCP/IP and its relationship to the Internet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 447
+Who runs the Internet? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 448
+Network standards and documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 449
+Networking road map . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 450
+IPv4 and IPv6 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 451
+Packets and encapsulation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 452
+Ethernet framing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 453
+Maximum transfer unit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 453
+Packet addressing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 454
+Hardware (MAC) addressing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 454
+IP addressing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 455
+Hostname ¡°addressing¡± . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 456
+Ports . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 456
+Address types. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 456
+IP addresses: the gory details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 457
+IPv4 address classes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 457
+Subnetting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 458
+Tricks and tools for subnet arithmetic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 459
+CIDR: Classless Inter-Domain Routing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 460
+Address allocation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 461
+Private addresses and network address translation (NAT) . . . . . . . . . . . . . 462
+IPv6 addressing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 464
+Routing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 465
+Routing tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 466
+ICMP redirects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 467
+ARP: the Address Resolution Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 468
+DHCP: the Dynamic Host Configuration Protocol . . . . . . . . . . . . . . . . . . . . . . . 469
+DHCP software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 470
+How DHCP works . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 470
+ISC¡¯s DHCP software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 471
+Security issues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 472
+IP forwarding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 472
+ICMP redirects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473
+Source routing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473
+Broadcast pings and other directed broadcasts . . . . . . . . . . . . . . . . . . . . . . . 473
+IP spoofing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473
+Host-based firewalls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 474
+Virtual private networks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 475
+PPP: the Point-to-Point Protocol. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 476
+
+ptg
+Table of Contents xix
+Basic network configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 476
+Hostname and IP address assignment. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 477
+ifconfig: configure network interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 478
+Network hardware options . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 481
+route: configure static routes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 481
+DNS configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 483
+System-specific network configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 484
+Linux networking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 484
+NetworkManager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 485
+Ubuntu network configuration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 486
+SUSE network configuration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 486
+Red Hat network configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 487
+Linux network hardware options . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 489
+Linux TCP/IP options . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 490
+Security-related kernel variables. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 492
+Linux NAT and packet filtering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 493
+Solaris networking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 494
+Solaris basic network configuration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 494
+Solaris configuration examples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 496
+Solaris DHCP configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 497
+ndd: TCP/IP and interface tuning for Solaris. . . . . . . . . . . . . . . . . . . . . . . . . 498
+Solaris security. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 499
+Solaris firewalls and filtering. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 499
+Solaris NAT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 500
+Solaris networking quirks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 501
+HP-UX networking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 501
+Basic network configuration for HP-UX. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 501
+HP-UX configuration examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 502
+HP-UX DHCP configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 504
+HP-UX dynamic reconfiguration and tuning . . . . . . . . . . . . . . . . . . . . . . . . 504
+HP-UX security, firewalls, filtering, and NAT . . . . . . . . . . . . . . . . . . . . . . . . 505
+AIX networking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 506
+no: manage AIX network tuning parameters . . . . . . . . . . . . . . . . . . . . . . . . . 507
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 508
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 509
+CHAPTER 15 ROUTING 511
+Packet forwarding: a closer look. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 512
+Routing daemons and routing protocols . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 515
+Distance-vector protocols . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 515
+Link-state protocols . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 516
+Cost metrics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 517
+Interior and exterior protocols . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 517
+
+ptg
+xx UNIX and Linux System Administration Handbook
+Protocols on parade . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 518
+RIP and RIPng: Routing Information Protocol . . . . . . . . . . . . . . . . . . . . . . . 518
+OSPF: Open Shortest Path First . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 519
+EIGRP: Enhanced Interior Gateway Routing Protocol. . . . . . . . . . . . . . . . . 519
+IS-IS: the ISO ¡°standard¡±. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 520
+Router Discovery Protocol and Neighbor Discovery Protocol . . . . . . . . . . 520
+BGP: the Border Gateway Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 520
+Routing strategy selection criteria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 521
+Routing daemons . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 522
+routed: obsolete RIP implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 522
+gated: first-generation multiprotocol routing daemon . . . . . . . . . . . . . . . . 523
+Quagga: mainstream routing daemon. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 523
+ramd: multiprotocol routing system for HP-UX. . . . . . . . . . . . . . . . . . . . . . 524
+XORP: router in a box . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 524
+Vendor specifics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 525
+Cisco routers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 525
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 528
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 530
+CHAPTER 16 NETWORK HARDWARE 531
+Ethernet: the Swiss Army knife of networking. . . . . . . . . . . . . . . . . . . . . . . . . . . . 532
+How Ethernet works . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 532
+Ethernet topology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 533
+Unshielded twisted pair cabling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 534
+Optical fiber. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 536
+Connecting and expanding Ethernets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 537
+Hubs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 537
+Switches . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 538
+VLAN-capable switches. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 539
+Routers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 539
+Autonegotiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 539
+Power over Ethernet. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 540
+Jumbo frames . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 541
+Wireless: ethernet for nomads . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 541
+Wireless security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 543
+Wireless switches and lightweight access points . . . . . . . . . . . . . . . . . . . . . . 543
+DSL and cable modems: the last mile . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 543
+Network testing and debugging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 544
+Building wiring . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 545
+UTP cabling options. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 545
+Connections to offices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 546
+Wiring standards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 546
+
+ptg
+Table of Contents xxi
+Network design issues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 547
+Network architecture vs. building architecture . . . . . . . . . . . . . . . . . . . . . . . 547
+Expansion. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 548
+Congestion. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 548
+Maintenance and documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 549
+Management issues. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 549
+Recommended vendors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 550
+Cables and connectors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 550
+Test equipment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 550
+Routers/switches . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 550
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 550
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 551
+CHAPTER 17 DNS: THE DOMAIN NAME SYSTEM 552
+Who needs DNS? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 554
+Managing your DNS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 554
+How DNS works . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 555
+Resource records. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 555
+Delegation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 555
+Caching and efficiency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 556
+Multiple answers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 557
+DNS for the impatient . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 558
+Adding a new machine to DNS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 558
+Configuring a DNS client . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 561
+Name servers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 563
+Authoritative and caching-only servers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 563
+Recursive and nonrecursive servers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 565
+The DNS namespace . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 566
+Registering a second-level domain name . . . . . . . . . . . . . . . . . . . . . . . . . . . . 567
+Creating your own subdomains . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 567
+Designing your DNS environment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 568
+Namespace management. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 568
+Authoritative servers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 569
+Caching servers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 569
+Hardware requirements. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 570
+Security. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 571
+Summing up . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 571
+What¡¯s new in DNS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 572
+The DNS database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574
+Commands in zone files. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574
+Resource records. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 576
+The SOA record . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 579
+NS records . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 581
+A records . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 582
+
+ptg
+xxii UNIX and Linux System Administration Handbook
+PTR records . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 582
+MX records . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 583
+CNAME records . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 585
+The CNAME hack . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 585
+SRV records . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 587
+TXT records. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 588
+IPv6 resource records. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 589
+IPv6 forward records ¨C AAAA . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 589
+IPv6 reverse records ¨C PTR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 589
+SPF records . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 590
+DKIM and ADSP records . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 591
+SSHFP resource records. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 594
+DNSSEC resource records. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 595
+Glue records: links between zones . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 596
+The BIND software. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 597
+Version determination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 598
+Components of BIND . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 600
+Configuration files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 600
+The include statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 602
+The options statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 602
+The acl statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 609
+The (TSIG) key statement. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 609
+The trusted-keys statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 610
+The server statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 610
+The masters statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611
+The logging statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 612
+The statistics-channels statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 612
+The zone statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 612
+Configuring the master server for a zone . . . . . . . . . . . . . . . . . . . . . . . . 613
+Configuring a slave server for a zone. . . . . . . . . . . . . . . . . . . . . . . . . . . . 614
+Setting up the root server hints. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 614
+Setting up a forwarding zone . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 615
+The controls statement for rndc  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 615
+Split DNS and the view statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 617
+BIND configuration examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 618
+The localhost zone . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 619
+A small security company . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 620
+The Internet Systems Consortium, isc.org . . . . . . . . . . . . . . . . . . . . . . . . . . . 623
+The NSD/Unbound software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 625
+Installing and configuring NSD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 625
+Fundamental differences from BIND . . . . . . . . . . . . . . . . . . . . . . . . . . . 626
+NSD configuration example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 627
+NSD key definitions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 628
+NSD global configuration options . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 629
+NSD zone-specific configuration options . . . . . . . . . . . . . . . . . . . . . . . . 631
+
+ptg
+Table of Contents xxiii
+Running nsd  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 632
+Installing and configuring Unbound . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 632
+Updating zone files. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 638
+Zone transfers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 639
+BIND dynamic updates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 640
+Security issues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 642
+Access control lists in BIND, revisited . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 643
+Open resolvers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 644
+Running in a chrooted jail. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 645
+Secure server-to-server communication with TSIG and TKEY . . . . . . . . . 645
+Setting up TSIG for BIND . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 646
+TSIG in NSD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 648
+DNSSEC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 648
+DNSSEC policy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 652
+DNSSEC resource records. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653
+Turning on DNSSEC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 654
+Key pair generation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 655
+Zone signing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 657
+The DNSSEC chain of trust. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 660
+DLV: domain lookaside validation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 661
+DNSSEC key rollover . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 662
+DNSSEC tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 663
+ldns tools, nlnetlabs.nl/projects/ldns . . . . . . . . . . . . . . . . . . . . . . . . . . . . 664
+Sparta tools, dnssec-tools.org . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 664
+RIPE tools, ripe.net. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 665
+Vantages tools, vantage-points.org . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 665
+Debugging DNSSEC. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 665
+Microsoft and DNS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 667
+Testing and debugging. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 667
+Logging in BIND. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 667
+Channels. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 668
+Categories. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 669
+Log Messages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 669
+Sample BIND logging configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . 671
+Debug levels in BIND. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 672
+Logging in NSD/Unbound . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 673
+Name server control programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 674
+Using BIND¡¯s rndc . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 674
+Using NSD¡¯s nsdc . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 675
+Using unbound-control  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 675
+Name server statistics. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 676
+Debugging with dig  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 677
+Lame delegations. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 678
+DNS sanity checking tools. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 679
+Performance issues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 680
+
+ptg
+xxiv UNIX and Linux System Administration Handbook
+Vendor specifics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 681
+Specifics for Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 681
+Specifics for Solaris. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 684
+Specifics for HP-UX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 684
+Specifics for AIX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 685
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 686
+Mailing lists and newsgroups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 686
+Books and other documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 687
+On-line resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 688
+The RFCs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 688
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 688
+CHAPTER 18 THE NETWORK FILE SYSTEM 690
+Introduction to network file services. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 690
+Issues of state. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 691
+Performance concerns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 691
+Security. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 691
+The NFS approach . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 692
+Protocol versions and history . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 692
+Transport protocols . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 693
+State. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 693
+File system exports . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 693
+File locking. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 694
+Security concerns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 695
+Identity mapping in version 4. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 696
+Root access and the nobody account . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 697
+Performance considerations in version 4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 698
+Disk quotas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 698
+Server-side NFS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 698
+The share command and dfstab file (Solaris, HP-UX) . . . . . . . . . . . . . . . . 700
+The exportfs command and the exports file (Linux, AIX) . . . . . . . . . . . . . 702
+Exports in AIX . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 702
+Exports in Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 703
+nfsd: serve files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 705
+Client-side NFS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 706
+Mounting remote filesystems at boot time . . . . . . . . . . . . . . . . . . . . . . . . . . . 708
+Restricting exports to privileged ports. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 709
+Identity mapping for NFS version 4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 709
+nfsstat: dump NFS statistics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 710
+Dedicated NFS file servers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 711
+Automatic mounting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 711
+Indirect maps. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 713
+Direct maps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 713
+Master maps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 714
+
+ptg
+Table of Contents xxv
+Executable maps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 714
+Automount visibility . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 715
+Replicated filesystems and automount . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 715
+Automatic automounts (V3; all but Linux) . . . . . . . . . . . . . . . . . . . . . . . . . . 716
+Specifics for Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 717
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 717
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 718
+CHAPTER 19 SHARING SYSTEM FILES 719
+What to share . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 720
+Copying files around . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 721
+The NFS option. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 721
+Push systems vs. pull systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 722
+rdist: push files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 722
+rsync: transfer files more securely . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 725
+Pulling files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 727
+LDAP: the Lightweight Directory Access Protocol . . . . . . . . . . . . . . . . . . . . . . . . 728
+The structure of LDAP data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 728
+The point of LDAP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 730
+LDAP documentation and specifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . 731
+OpenLDAP: the traditional open source LDAP server. . . . . . . . . . . . . . . . . 731
+389 Directory Server: alternative open source LDAP server . . . . . . . . . . . . 732
+LDAP instead of /etc/passwd and /etc/group . . . . . . . . . . . . . . . . . . . . . . . . 733
+LDAP querying . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 734
+LDAP and security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 735
+NIS: the Network Information Service . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 736
+The NIS model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 736
+Understanding how NIS works . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 736
+NIS security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 738
+Prioritizing sources of administrative information . . . . . . . . . . . . . . . . . . . . . . . . 739
+nscd: cache the results of lookups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 740
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 741
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 741
+CHAPTER 20 ELECTRONIC MAIL 742
+Mail systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 744
+User agents. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 744
+Submission agents. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 745
+Transport agents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 746
+Local delivery agents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 746
+Message stores . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 746
+Access agents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 747
+So many pieces, so little time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 747
+
+ptg
+xxvi UNIX and Linux System Administration Handbook
+The anatomy of a mail message . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 748
+Reading mail headers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 748
+The SMTP protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 750
+You had me at EHLO. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 751
+SMTP error codes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 751
+SMTP authentication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 752
+Mail system design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 753
+Using mail servers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 754
+Mail aliases. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 756
+Getting aliases from files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 758
+Mailing to files. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 759
+Mailing to programs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 759
+Aliasing by example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 760
+Building the hashed alias database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 760
+Using mailing lists and list wrangling software . . . . . . . . . . . . . . . . . . . . . . . 760
+Software packages for maintaining mailing lists . . . . . . . . . . . . . . . . . . . . . . 761
+Content scanning: spam and malware . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 761
+Spam . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 762
+Forgeries. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 763
+Message privacy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 763
+Spam filtering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 764
+When to filter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 764
+Greylisting/DCC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 765
+SpamAssassin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 765
+Blacklists. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 766
+Whitelists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 766
+Miltering: mail filtering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 767
+SPF and Sender ID . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 767
+DomainKeys, DKIM, and ADSP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 768
+MTA-specific antispam features. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 768
+MailScanner. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 769
+amavisd-new. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 769
+How amavisd works. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 770
+amavisd installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 771
+Basic amavisd configuration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 771
+amavisd-new tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 772
+Tests of your MTA¡¯s scanning effectiveness. . . . . . . . . . . . . . . . . . . . . . . . . . 773
+Email configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 774
+sendmail  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 775
+The switch file . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 776
+Starting sendmail . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 776
+Mail queues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 778
+
+ptg
+Table of Contents xxvii
+sendmail configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 778
+The m4 preprocessor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 779
+The sendmail configuration pieces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 779
+A configuration file built from a sample .mc file . . . . . . . . . . . . . . . . . . . . . . 781
+sendmail configuration primitives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 782
+Tables and databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 782
+Generic macros and features. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 783
+OSTYPE macro . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 783
+DOMAIN macro. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 784
+MAILER macro. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 784
+FEATURE macro . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 784
+use_cw_file feature. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 784
+redirect feature . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 785
+always_add_domain feature . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 785
+access_db feature . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 785
+virtusertable feature . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 786
+ldap_routing feature . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 786
+Masquerading features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 787
+MAIL_HUB and SMART_HOST macros. . . . . . . . . . . . . . . . . . . . . . . . . . 787
+Client configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 788
+Configuration options . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 789
+Spam-related features in sendmail  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 789
+Relay control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 791
+User or site blacklisting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 792
+Throttles, rates, and connection limits . . . . . . . . . . . . . . . . . . . . . . . . . . 792
+Milter configuration in sendmail. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 794
+amavisd and sendmail connection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 794
+Security and sendmail . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 795
+Ownerships . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 796
+Permissions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 797
+Safer mail to files and programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 798
+Privacy options . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 799
+Running a chrooted sendmail (for the truly paranoid) . . . . . . . . . . . . . . . . 800
+Denial of service attacks. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 800
+SASL: the Simple Authentication and Security Layer . . . . . . . . . . . . . . . . . . 801
+TLS: Transport Layer Security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 801
+sendmail performance. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 802
+Delivery modes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 802
+Queue groups and envelope splitting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 802
+Queue runners. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 802
+Load average controls. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 803
+Undeliverable messages in the queue . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 803
+Kernel tuning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 804
+
+ptg
+xxviii UNIX and Linux System Administration Handbook
+sendmail testing and debugging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 805
+Queue monitoring . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 806
+Logging. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 806
+Exim . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 807
+Exim installation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 808
+Exim startup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 810
+Exim utilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 811
+Exim configuration language . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 811
+Exim configuration file . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 812
+Global options. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 813
+Options. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 813
+Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 814
+Macros . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 814
+ACLs (access control lists). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 815
+Content scanning at ACL time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 818
+Scanning for viruses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 818
+Scanning for spam . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 819
+Authenticators. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 820
+Routers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 821
+The accept router . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 821
+The dnslookup router . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 822
+The manualroute router. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 822
+The redirect router. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 823
+Per-user filtering via .forward files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 823
+Transports . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 824
+The appendfile transport . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 824
+The smtp transport . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 824
+Retry configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 825
+Rewriting configuration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 825
+Local scan function. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 825
+amavisd and Exim connection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 826
+Logging. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 826
+Debugging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 827
+Postfix. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 828
+Postfix architecture. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 828
+Receiving mail . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 829
+Managing mail-waiting queues. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 829
+Sending mail . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 830
+Security. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 830
+Postfix commands and documentation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 830
+Postfix configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 831
+What to put in main.cf . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 831
+Basic settings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 831
+Use of postconf. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 832
+
+ptg
+Table of Contents xxix
+Lookup tables. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 833
+Local delivery. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 834
+Virtual domains . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 835
+Virtual alias domains . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 835
+Virtual mailbox domains . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 836
+Access control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 837
+Access tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 838
+Authentication of clients and encryption . . . . . . . . . . . . . . . . . . . . . . . . 839
+Fighting spam and viruses. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 840
+Blacklists. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 840
+Spam-fighting example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 841
+SpamAssassin and procmail . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 841
+Policy daemons . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 841
+Content filtering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 842
+Content filtering with amavisd. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 842
+Debugging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 844
+Looking at the queue . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 844
+Soft-bouncing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 845
+Testing access control. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 845
+DKIM Configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 845
+DKIM: DomainKeys Identified Mail . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 846
+DKIM miltering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 846
+DKIM configuration in amavisd-new. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 849
+DKIM in sendmail . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 850
+DKIM in Exim. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 850
+Signing outgoing messages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 850
+Verifying incoming signed messages . . . . . . . . . . . . . . . . . . . . . . . . . . . . 851
+A complete example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 851
+DKIM in Postfix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 852
+Integrated email solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 853
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 854
+General spam references . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 854
+sendmail references . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 854
+Exim references. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 854
+Postfix references . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 855
+RFCs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 855
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 855
+sendmail-specific exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 857
+Exim-specific exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 858
+Postfix-specific exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 858
+CHAPTER 21 NETWORK MANAGEMENT AND DEBUGGING 859
+Network troubleshooting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 860
+ping: check to see if a host is alive . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 861
+
+ptg
+xxx UNIX and Linux System Administration Handbook
+SmokePing: gather ping statistics over time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 864
+traceroute: trace IP packets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 865
+netstat: get network statistics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 868
+Inspecting interface configuration information. . . . . . . . . . . . . . . . . . . . . . . 868
+Monitoring the status of network connections . . . . . . . . . . . . . . . . . . . . . . . 870
+Identifying listening network services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 871
+Examining the routing table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 871
+Viewing operational statistics for network protocols . . . . . . . . . . . . . . . . . . 872
+Inspection of live interface activity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 873
+Packet sniffers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 874
+tcpdump: industry-standard packet sniffer . . . . . . . . . . . . . . . . . . . . . . . . . . 875
+Wireshark and TShark: tcpdump on steroids . . . . . . . . . . . . . . . . . . . . . . . . 877
+The ICSI Netalyzr . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 878
+Network management protocols . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 879
+SNMP: the Simple Network Management Protocol . . . . . . . . . . . . . . . . . . . . . . . 880
+SNMP organization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 881
+SNMP protocol operations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 882
+RMON: remote monitoring MIB . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 883
+The NET-SNMP agent. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 883
+Network management applications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 884
+The NET-SNMP tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 885
+SNMP data collection and graphing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 886
+Nagios: event-based service monitoring . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 887
+The ultimate network monitoring package: still searching . . . . . . . . . . . . . 888
+Commercial management platforms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 889
+NetFlow: connection-oriented monitoring . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 890
+Monitoring NetFlow data with nfdump and NfSen . . . . . . . . . . . . . . . . . . . 890
+Setting up NetFlow on a Cisco router . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 892
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 893
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 894
+CHAPTER 22 SECURITY 896
+Is UNIX secure? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 897
+How security is compromised . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 898
+Social engineering. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 898
+Software vulnerabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 899
+Configuration errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 900
+Security tips and philosophy. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 901
+Patches . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 901
+Unnecessary services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 902
+Remote event logging. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 902
+Backups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 903
+Viruses and worms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 903
+Trojan horses. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 903
+
+ptg
+Table of Contents xxxi
+Rootkits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 904
+Packet filtering . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 904
+Passwords. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 905
+Vigilance. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 905
+General philosophy. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 905
+Passwords and user accounts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 906
+Password aging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 906
+Group logins and shared logins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 907
+User shells . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 907
+Rootly entries. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 907
+PAM: cooking spray or authentication wonder? . . . . . . . . . . . . . . . . . . . . . . . . . . 908
+System support for PAM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 908
+PAM configuration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 908
+A detailed Linux configuration example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 911
+Setuid programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 912
+Effective use of chroot . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 913
+Security power tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 914
+Nmap: network port scanner . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 914
+Nessus: next-generation network scanner . . . . . . . . . . . . . . . . . . . . . . . . . . . 916
+John the Ripper: finder of insecure passwords. . . . . . . . . . . . . . . . . . . . . . . . 916
+hosts_access: host access control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 917
+Bro: the programmable network intrusion detection system. . . . . . . . . . . . 918
+Snort: the popular network intrusion detection system . . . . . . . . . . . . . . . . 918
+OSSEC: host-based intrusion detection. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 919
+OSSEC basic concepts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 920
+OSSEC installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 920
+OSSEC configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 921
+Mandatory Access Control (MAC) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 922
+Security-enhanced Linux (SELinux) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 923
+Cryptographic security tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 924
+Kerberos: a unified approach to network security . . . . . . . . . . . . . . . . . . . . . 924
+PGP: Pretty Good Privacy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 925
+SSH: the secure shell. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 926
+Stunnel . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 930
+Firewalls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 932
+Packet-filtering firewalls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 932
+How services are filtered . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 933
+Stateful inspection firewalls. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 934
+Firewalls: how safe are they? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 935
+Linux firewall features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 935
+Rules, chains, and tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 935
+Rule targets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 936
+iptables firewall setup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 937
+A complete example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 937
+IPFilter for UNIX systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 939
+
+ptg
+xxxii UNIX and Linux System Administration Handbook
+Virtual private networks (VPNs) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 942
+IPsec tunnels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 943
+All I need is a VPN, right? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 943
+Certifications and standards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 944
+Certifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 945
+Security standards. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 945
+ISO 27002. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 946
+PCI DSS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 946
+NIST 800 series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 947
+Common Criteria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 947
+OWASP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 947
+Sources of security information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 947
+CERT: a registered service mark of Carnegie Mellon University . . . . . . . . 948
+SecurityFocus.com and the BugTraq mailing list . . . . . . . . . . . . . . . . . . . . . 948
+Schneier on Security. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 948
+SANS: the System Administration, Networking, and Security Institute . . 948
+Vendor-specific security resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 949
+Other mailing lists and web sites . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 950
+What to do when your site has been attacked . . . . . . . . . . . . . . . . . . . . . . . . . . . . 950
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 952
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 954
+CHAPTER 23 WEB HOSTING 956
+Web hosting basics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 957
+Resource locations on the web . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 957
+Uniform resource locators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 957
+How HTTP works. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 958
+Content generation on the fly . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 959
+Embedded interpreters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 959
+FastCGI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 959
+Script security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 960
+Application servers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 960
+Load balancing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 961
+HTTP server installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 963
+Choosing a server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 963
+Installing Apache . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 964
+Configuring Apache . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 965
+Running Apache . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 966
+Analyzing log files. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 966
+Optimizing for high-performance hosting of static content . . . . . . . . . . . . 967
+Virtual interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 967
+Using name-based virtual hosts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 968
+
+ptg
+Table of Contents xxxiii
+Configuring virtual interfaces. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 968
+Linux virtual interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 968
+Solaris virtual interfaces. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 969
+HP-UX virtual interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 970
+AIX virtual interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 970
+Telling Apache about virtual interfaces. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 971
+The Secure Sockets Layer (SSL) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 971
+Generating a Certificate Signing Request . . . . . . . . . . . . . . . . . . . . . . . . . . . . 972
+Configuring Apache to use SSL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 973
+Caching and proxy servers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 974
+Using the Squid cache and proxy server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 975
+Setting up Squid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 975
+Reverse-proxying with Apache. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 976
+Scaling beyond your limits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 977
+Cloud computing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 978
+Co-lo hosting. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 978
+Content distribution networks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 978
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 979
+SECTION THREE: BUNCH O' STUFF
+CHAPTER 24 VIRTUALIZATION 983
+Virtual vernacular. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 984
+Full virtualization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 985
+Paravirtualization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 986
+Operating system virtualization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 986
+Native virtualization. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 987
+Cloud computing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 987
+Live migration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 988
+Comparison of virtualization technologies. . . . . . . . . . . . . . . . . . . . . . . . . . . 988
+Benefits of virtualization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 988
+A practical approach . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 989
+Virtualization with Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 991
+Introduction to Xen . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 991
+Xen essentials. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 992
+Xen guest installation with virt-install . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 993
+Xen live migration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 994
+KVM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 995
+KVM installation and usage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 996
+Solaris zones and containers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 997
+AIX workload partitions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1001
+
+ptg
+xxxiv UNIX and Linux System Administration Handbook
+Integrity Virtual Machines in HP-UX. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1003
+Creating and installing virtual machines . . . . . . . . . . . . . . . . . . . . . . . . . . . 1003
+VMware: an operating system in its own right . . . . . . . . . . . . . . . . . . . . . . . . . . 1005
+Amazon Web Services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1005
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1010
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1010
+CHAPTER 25 THE X WINDOW SYSTEM 1011
+The display manager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1013
+Process for running an X application . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1014
+The DISPLAY environment variable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1015
+Client authentication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1016
+X connection forwarding with SSH . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1017
+X server configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1019
+Device sections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1021
+Monitor sections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1021
+Screen sections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1022
+InputDevice sections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1022
+ServerLayout sections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1024
+xrandr: not your father¡¯s X server configurator. . . . . . . . . . . . . . . . . . . . . . 1025
+Kernel mode setting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1025
+X server troubleshooting and debugging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1026
+Special keyboard combinations for X . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1026
+When X servers attack . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1027
+A brief note on desktop environments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1028
+KDE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1029
+GNOME. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1029
+Which is better, GNOME or KDE? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1030
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1030
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1031
+CHAPTER 26 PRINTING 1032
+Printing-system architecture. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1033
+Major printing systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1033
+Print spoolers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1034
+CUPS printing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1034
+Interfaces to the printing system . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1034
+The print queue. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1035
+Multiple printers and queues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1036
+Printer instances . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1036
+Network printing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1036
+Filters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1037
+CUPS server administration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1038
+
+ptg
+Table of Contents xxxv
+Network print server setup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1039
+Printer autoconfiguration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1040
+Network printer configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1040
+Printer configuration examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1041
+Printer class setup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1041
+Service shutoff . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1041
+Other configuration tasks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1042
+Printing from desktop environments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1043
+kprinter: print documents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1044
+Konqueror and printing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1045
+System V printing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1045
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1045
+Destinations and classes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1046
+A brief description of lp . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1047
+lpsched and lpshut: start and stop printing . . . . . . . . . . . . . . . . . . . . . . . . .1047
+lpadmin: configure the printing environment. . . . . . . . . . . . . . . . . . . . . . .1048
+lpadmin examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1050
+lpstat: get status information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1051
+cancel: remove print jobs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1051
+accept and reject: control spooling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1051
+enable and disable: control printing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1052
+lpmove: transfer jobs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1052
+Interface programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1052
+What to do when the printing system is completely hosed . . . . . . . . . . . .1053
+BSD and AIX printing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1054
+An overview of the BSD printing architecture . . . . . . . . . . . . . . . . . . . . . . .1054
+Printing environment control. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1055
+lpd: spool print jobs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1056
+lpr: submit print jobs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1056
+lpq: view the printing queue . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1056
+lprm: remove print jobs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1057
+lpc: make administrative changes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1057
+The /etc/printcap file. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1059
+printcap variables. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1060
+sd: spool directory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1061
+lf: error log file. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1061
+lp: device name . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1062
+rw: device open mode . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1062
+af: accounting file . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1062
+mx: file size limits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1062
+rm and rp: remote access information. . . . . . . . . . . . . . . . . . . . . . . . . .1062
+of, if: printing filters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1063
+printcap variables for serial devices. . . . . . . . . . . . . . . . . . . . . . . . . . . .1064
+printcap extensions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1064
+
+ptg
+xxxvi UNIX and Linux System Administration Handbook
+What a long, strange trip it¡¯s been . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1065
+Printing history and the rise of print systems . . . . . . . . . . . . . . . . . . . . . . . 1065
+Printer diversity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1066
+Common printing software. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1067
+Printer languages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1068
+PostScript . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1069
+PCL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1069
+PDF . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1070
+XPS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1070
+PJL. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1070
+Printer drivers and their handling of PDLs . . . . . . . . . . . . . . . . . . . . . . . . . 1071
+PPD files. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1072
+Paper sizes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1073
+Printer practicalities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1075
+Printer selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1075
+GDI printers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1076
+Double-sided printing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1076
+Other printer accessories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1077
+Serial and parallel printers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1077
+Network printers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1077
+Other printer advice . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1077
+Use banner pages only if you have to. . . . . . . . . . . . . . . . . . . . . . . . . . . 1078
+Fan your paper . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1078
+Provide recycling bins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1078
+Use previewers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1078
+Buy cheap printers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1079
+Keep extra toner cartridges on hand . . . . . . . . . . . . . . . . . . . . . . . . . . . 1079
+Pay attention to the cost per page. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1080
+Consider printer accounting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1081
+Secure your printers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1081
+Troubleshooting tips . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1081
+Restarting a print daemon. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1081
+Logging. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1082
+Problems with direct printing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1082
+Network printing problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1082
+Distribution-specific problems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1083
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1083
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1084
+CHAPTER 27 DATA CENTER BASICS 1085
+Data center reliability tiers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1086
+Cooling. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1087
+Electronic gear. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1088
+Light fixtures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1088
+
+ptg
+Table of Contents xxxvii
+Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1089
+Total heat load. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1089
+Hot aisles and cold aisles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1089
+Humidity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1091
+Environmental monitoring . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1091
+Power . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1091
+Rack power requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1092
+kVA vs. kW . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1093
+Remote control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1094
+Racks. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1094
+Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1095
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1095
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1096
+CHAPTER 28 GREEN IT 1097
+Green IT initiation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1098
+The green IT eco-pyramid. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1099
+Green IT strategies: data center . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1100
+Application consolidation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1101
+Server consolidation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1102
+SAN storage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1103
+Server virtualization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1103
+Only-as-needed servers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1104
+Granular utilization and capacity planning . . . . . . . . . . . . . . . . . . . . . . . . .1104
+Energy-optimized server configuration. . . . . . . . . . . . . . . . . . . . . . . . . . . . .1104
+Power-saving options for Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1104
+Filesystem power savings. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1105
+Cloud computing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1106
+Free cooling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1106
+Efficient data center cooling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1106
+Degraded mode for outages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1106
+Equipment life extension. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1107
+Warmer temperature in the data center . . . . . . . . . . . . . . . . . . . . . . . . . . . .1108
+Low-power equipment. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1108
+Green IT strategies: user workspace . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1108
+Green IT friends . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1110
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1111
+CHAPTER 29 PERFORMANCE ANALYSIS 1112
+What you can do to improve performance. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1114
+Factors that affect performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1115
+How to analyze performance problems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1117
+
+ptg
+xxxviii UNIX and Linux System Administration Handbook
+System performance checkup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1118
+Taking stock of your hardware. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1118
+Gathering performance data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1121
+Analyzing CPU usage. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1121
+How the system manages memory. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1124
+Analyzing memory usage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1125
+Analyzing disk I/O . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1127
+xdd: analyze disk subsystem performance . . . . . . . . . . . . . . . . . . . . . . . . . . 1129
+sar: collect and report statistics over time. . . . . . . . . . . . . . . . . . . . . . . . . . . 1129
+nmon and nmon_analyser: monitor in AIX . . . . . . . . . . . . . . . . . . . . . . . . 1130
+Choosing a Linux I/O scheduler. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1130
+oprofile: profile Linux systems in detail . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1131
+Help! My system just got really slow! . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1131
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1133
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1134
+CHAPTER 30 COOPERATING WITH WINDOWS 1135
+Logging in to a UNIX system from Windows . . . . . . . . . . . . . . . . . . . . . . . . . . . 1135
+Accessing remote desktops . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1136
+X server running on a Windows computer . . . . . . . . . . . . . . . . . . . . . . . . . 1136
+VNC: Virtual Network Computing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1138
+Windows RDP: Remote Desktop Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . 1138
+Running Windows and Windows-like applications . . . . . . . . . . . . . . . . . . . . . . 1139
+Dual booting, or why you shouldn¡¯t . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1140
+Microsoft Office alternatives. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1140
+Using command-line tools with Windows. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1140
+Windows compliance with email and web standards . . . . . . . . . . . . . . . . . . . . . 1141
+Sharing files with Samba and CIFS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1142
+Samba: CIFS server for UNIX. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1142
+Samba installation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1143
+Filename encoding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1145
+User authentication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1145
+Basic file sharing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1146
+Group shares . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1146
+Transparent redirection with MS DFS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1147
+smbclient: a simple CIFS client . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1148
+Linux client-side support for CIFS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1148
+Sharing printers with Samba. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1149
+Installing a printer driver from Windows. . . . . . . . . . . . . . . . . . . . . . . . . . . 1151
+Installing a printer driver from the command line . . . . . . . . . . . . . . . . . . . 1152
+Debugging Samba. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1152
+Active Directory authentication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1154
+Getting ready for Active Directory integration . . . . . . . . . . . . . . . . . . . . . . 1155
+Configuring Kerberos for Active Directory integration . . . . . . . . . . . . . . . 1156
+
+ptg
+Table of Contents xxxix
+Samba as an Active Directory domain member. . . . . . . . . . . . . . . . . . . . . .1157
+PAM configuration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1159
+Alternatives to winbind . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1160
+Recommended reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1160
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1161
+CHAPTER 31 SERIAL DEVICES AND TERMINALS 1162
+The RS-232C standard . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1163
+Alternative connectors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1165
+The DB-9 variant . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1166
+The RJ-45 variant . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1166
+Hard and soft carrier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1167
+Hardware flow control. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1168
+Serial device files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1168
+setserial: set serial port parameters under Linux. . . . . . . . . . . . . . . . . . . . . . . . .1169
+Pseudo-terminals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1170
+Configuration of terminals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1171
+The login process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1171
+The /etc/ttytype file . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1172
+The /etc/gettytab file . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1173
+The /etc/gettydefs file . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1173
+The /etc/inittab file . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1174
+getty configuration for Linux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1175
+Ubuntu Upstart. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1176
+Solaris and sacadm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1176
+Special characters and the terminal driver . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1177
+stty: set terminal options . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1178
+tset: set options automatically . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1178
+Terminal unwedging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1179
+Debugging a serial line. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1180
+Connecting to serial device consoles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1180
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1182
+CHAPTER 32 MANAGEMENT, POLICY, AND POLITICS 1183
+The purpose of IT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1184
+Budgeting and spending . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1184
+IT policy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1185
+Service level agreements. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1186
+Scope and descriptions of services . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1187
+Queue management policies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1188
+Roles and responsibilities. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1189
+Conformance measurements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1189
+
+ptg
+xl UNIX and Linux System Administration Handbook
+The structure of an IT organization. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1190
+The foundation: the ticketing and task management system. . . . . . . . . . . 1191
+Common functions of ticketing systems. . . . . . . . . . . . . . . . . . . . . . . . . . . . 1191
+Ticket ownership . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1192
+User acceptance of ticketing systems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1192
+Sample ticketing systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1193
+Ticket dispatching . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1194
+Skill sets within IT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1195
+Time management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1196
+The help desk . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1196
+Scope of services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1196
+Help desk availability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1196
+Help desk addiction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1196
+The enterprise architects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1197
+Make processes reproducible . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1197
+Leave a trail of bread crumbs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1198
+Recognize the criticality of documentation . . . . . . . . . . . . . . . . . . . . . . . . . 1198
+Customize and write code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1198
+Keep the system clean . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1198
+The operations group. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1199
+Aim for minimal downtime . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1199
+Document dependencies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1199
+Repurpose or eliminate older hardware . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1200
+Maintain local documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1200
+Standardized documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1202
+Hardware labeling. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1203
+Network documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1204
+User documentation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1204
+Keep environments separate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1204
+Automate, automate, automate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1205
+Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1206
+Leadership . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1206
+Personnel management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1207
+Hiring . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1207
+Firing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1208
+Mechanics of personnel management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1209
+Quality control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1209
+Management without meddling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1210
+Community relations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1210
+Management of upper management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1211
+Purchasing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1212
+Conflict resolution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1213
+Mediation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1213
+Rogue users and departments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1214
+
+ptg
+Table of Contents xli
+Policies and procedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1215
+The difference between policies and procedures . . . . . . . . . . . . . . . . . . . . .1215
+Policy best practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1216
+Procedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1216
+Disaster recovery. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1217
+Risk assessment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1217
+Disaster management. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1218
+Staff for a disaster . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1220
+Power and HVAC. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1220
+Internet connection redundancy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1221
+Security incidents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1222
+Compliance: regulations and standards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1222
+ITIL: the Information Technology Infrastructure Library . . . . . . . . . . . . .1225
+NIST: the National Institute for Standards and Technology . . . . . . . . . . .1225
+Legal issues. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1226
+Privacy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1226
+Policy enforcement. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1227
+Control = liability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1228
+Software licenses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1228
+Organizations, conferences, and other resources . . . . . . . . . . . . . . . . . . . . . . . .1229
+Recommended Reading. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1231
+Exercises. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1231
+INDEX 1233
+A BRIEF HISTORY OF SYSTEM ADMINISTRATION 1264
+IN DEFENSE OF AIX 1274
+COLOPHON 1277
+ABOUT THE CONTRIBUTORS 1278
+ABOUT THE AUTHORS 1279
