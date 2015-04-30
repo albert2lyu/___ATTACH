@@ -1,0 +1,181 @@
+
+Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xi
+1. Getting Ready . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Buying an XBee Radio 1
+Hardware 1
+Antennas 4
+Vendors 6
+Buying an Adapter 6
+Digi Evaluation Board 7
+USB Adapters 7
+Breakout Boards 10
+Arduino Board Adapter Hack 12
+What Are All Those Pins? 15
+Choosing a Terminal Program 15
+Firmware Update Software 17
+Terminal Software for Configuring Settings 17
+Summary 20
+2. Up and Running . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+Radio Basics 23
+Electromagnetic Spectrum 24
+Inverse Square Law 24
+Introduction to ZigBee 25
+Network Topology 27
+Addressing Basics 28
+PAN Addresses 29
+Channels 29
+All Together Now 29
+XBee Firmware Updates 32
+Reading Current Firmware and Configuration 35
+Configuring XBee 40
+Settings 40
+Connecting from Windows 41
+Connecting from Macintosh 43
+Command Mode and Transparent Mode 46
+AT Commands (Are Your Friend) 47
+Using AT Commands 49
+Basic ZigBee Chat 50
+Parts 50
+Addresses 50
+Coordinator 51
+Router 53
+Two Computers 53
+One Computer 54
+Chat 54
+Troubleshooting 55
+Success! 56
+3. Build a Better Doorbell . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+ZigBee and Arduino 57
+About Arduino 57
+Arduino Basics 59
+Connecting to Arduino 65
+Doorbell Projects 67
+Parts 67
+Prepare Your Radios 68
+Connect Power from Arduino to Breadboard 68
+XBee Breakout Board 68
+XBee Connections 69
+Doorbell Introduction 72
+Switch Input... 72
+...and Buzzer Output 73
+Configure Your XBees 75
+Program the Arduino Doorbell 77
+Feedback Doorbell 80
+Feedback Light 81
+Program the Arduino Feedback Doorbell 81
+Extra: Nap Doorbells and More 83
+4. Ins and Outs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+The Story of Data 85
+Direct, Indirect, Subtext 85
+I/O Concepts 87
+Why XBee Direct? 88
+XBee Direct Limitations 88
+XBee I/O Features 89
+AT Configuration I/O Commands 90
+Advanced I/O Commands 93
+Romantic Lighting Sensor 93
+Basic Romantic Lighting Sensor 93
+Prepare the Sensor Board 97
+Prepare the Base Station 99
+Romantic Lighting Sensor with Feedback 104
+API Ahead 109
+5. API and a Sensor Network . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+What¡¯s an API? 111
+Protocols 113
+Humans 113
+Computers 113
+XBee API Protocol 116
+Start Delimiter 117
+Length Bytes 118
+Frame Data Bytes 118
+Checksum 118
+API Frame Types 119
+AT Commands 120
+AT Responses 122
+ZigBee Transmit Request 124
+ZigBee Transmit Status 127
+ZigBee Receive Packet 129
+I/O Data Sample Rx Indicator 131
+Remote AT Command Request 135
+Remote Command Response 137
+Using What You Need 138
+Libraries 141
+Simple Sensor Network 142
+Parts 142
+Prepare Your Coordinator Radio 143
+Prepare Your Router Radios 144
+Prepare the Sensor Boards 144
+Prepare the Base Station 148
+Program the Base Station 152
+Yay! 160
+6. Sleeping, Then Changing the World . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 161
+Sleep Mode 161
+End Devices 161
+Configuring Sleep 163
+Easy Sleeping 167
+Simple Sensor with Sleep Project 167
+Parts 168
+Prepare Your End Device Radios 168
+Configure Your End Device XBees 168
+Direct Actuation 171
+Direct Actuation Example 172
+Parts 172
+Prepare Your Coordinator Radio 173
+Prepare Your Router Radios 174
+Prepare the Actuator Boards 174
+Configure Your Router XBees 174
+Prepare the Base Station 177
+Simple Actuator Node Code in Processing 180
+Summary 187
+7. Over the Borders . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 189
+Gateways 189
+XBee as Embedded Gateway 190
+Other Embedded Gateways 190
+Internet Gateways 192
+Internet Media 194
+Computers Versus Dedicated Devices 194
+ConnectPorts 195
+Selecting a ConnectPort 196
+Setting Up a ConnectPort 197
+Configuring a ConnectPort 198
+Remote Management 203
+iDigi Connectivity Server 204
+iDigi Features 204
+Adding a ConnectPort 206
+Viewing Configurations 209
+Firmware Updates and Remote Reboot 210
+Viewing an XBee Network 212
+XBee Internet Gateway (XIG) 214
+Installing and Configuring XIG 216
+Testing XIG 218
+XIG Example 220
+Twitter Reader 221
+Parts 222
+Prepare Your ConnectPort with XBee Internet Gateway 223
+Prepare Your Router Radio 223
+Configure Your Router Radio 223
+Prepare the Twitter Reader Board 224
+Program the Arduino 227
+Moving Forward 233
+8. More to Love . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 235
+Advanced ZigBee 235
+ZigBee Stack Layers 236
+Application Support Layer 237
+Routing 240
+Security 242
+ZigBee Protocol References 243
+Serial Flow Control 244
+RTS and CTS 244
+Sharing Data 245
+Pachube 245
+Simple Sensor Network with Pachube 246
+API Key 248
+Build the Simple Sensor Network in Chapter 5 248
+Program the Base Station 249
+Simple Sensor Network Pachube Code in Processing 250
+The Future of ZigBee 257
+Next Steps for You 258
+Making Stuff 258
+Sharing Your Work 259
+Appendix: Resource Guide . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 261
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 293

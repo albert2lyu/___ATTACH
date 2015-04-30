@@ -1,0 +1,100 @@
+
+Preface. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . vii
+1/Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Intended Audience. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+What Is Interaction Design?. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+What Is Physical Computing?. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2/The Arduino Way. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Prototyping. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Tinkering. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Patching. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+Circuit Bending. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Keyboard Hacks. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+We Love Junk!. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+Hacking Toys. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Collaboration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+3/The Arduino Platform. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+The Arduino Hardware. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+The Software Integrated Development Environment (IDE). . . . . . . . . . . . . . . . 18
+Installing Arduino on Your Computer. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+Installing the IDE: Macintosh. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+Confiuring the Drivers: Macintosh. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+Port Identifiation: Macintosh. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+Installing the IDE: Windows. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+Confiuring the Drivers: Windows. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+Port Identifiation: Windows. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+4/Really Getting Started with Arduino. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+Anatomy of an Interactive Device. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+Sensors and Actuators. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25
+Blinking an LED. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+Pass Me the Parmesan. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+iii
+Arduino Is Not for Quitters. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+Real Tinkerers Write Comments. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+The Code, Step by Step. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+What We Will Be Building. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+What Is Electricity?. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37
+Using a Pushbutton to Control the LED. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40
+How Does This Work?. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+One Circuit, a Thousand Behaviours. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+5/Advanced Input and Output. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+Trying Out Other On/O? Sensors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+Homemade (DIY) Switches. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+Controlling Light with PWM. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+Use a Light Sensor Instead of the Pushbutton. . . . . . . . . . . . . . . . . . . . . . . . . 64
+Analogue Input. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 66
+Try Other Analogue Sensors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+Serial Communication. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
+Driving Bigger Loads (Motors, Lamps, and the Like). . . . . . . . . . . . . . . . . . . . 72
+Complex Sensors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+6/The Arduino Leonardo. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+How Is This Arduino Di?erent from All Other Arduinos?. . . . . . . . . . . . . . . . . . 77
+Other Di?erences Between the Arduino Leonardo and the Arduino Uno. . . . 78
+Leonardo Keyboard Message Example. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+How Does This Work?. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+Leonardo Button Mouse Control Example. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+How Does This Work?. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+More Leonardo Di?erences. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+7/Talking to the Cloud. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+Planning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+Coding. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+Assembling the Circuit. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+Here¡¯s How to Assemble It. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+8/Automatic Garden-Irrigation System. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+Planning. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+Testing the Real Time Clock (RTC). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
+Testing the Relays. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116
+Electronic Schematic Diagrams. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 119
+Testing the Temperature and Humidity Sensor. . . . . . . . . . . . . . . . . . . . . . . . 132
+iv Contents
+Coding. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
+Setting the On and O? Times. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
+Checking Whether It¡¯s Time to Turn a Valve On or O?. . . . . . . . . . . . . . . . . 143
+Checking for Rain. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+Putting It All Together. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+Assembling the Circuit. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+The Proto Shield. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162
+Laying Out Your Project on the Proto Shield. . . . . . . . . . . . . . . . . . . . . . . . . 164
+Soldering Your Project on the Proto Shield. . . . . . . . . . . . . . . . . . . . . . . . . . 170
+Testing Your Assembled Proto Shield. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 184
+Assembling Your Project into a Case. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 186
+Testing the Finished Automatic Garden Irrigation System. . . . . . . . . . . . . . 190
+Things to Try on Your Own. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 191
+Irrigation Project Shopping List. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 191
+9/Troubleshooting. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+Understanding. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193
+Simplifiation and Segmentation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+Exclusion and Certainty. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+Testing the Arduino Board. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194
+Testing Your Breadboarded Circuit. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 196
+Isolating Problems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 198
+Problems Installing Drivers on Windows. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 199
+Problems with the IDE on Windows. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 199
+Identifying the Arduino COM Port on Windows. . . . . . . . . . . . . . . . . . . . . . . . 200
+Other Debugging Techniques. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201
+How to Get Help Online. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 203
+A/The Breadboard. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+B/Reading Resistors and Capacitors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 211
+C/Arduino Quick Reference. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 215
+D/Reading Schematic Diagrams. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 233
+Index. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 237
